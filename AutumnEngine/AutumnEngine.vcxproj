@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="2DRenderer.cpp" />
     <ClCompile Include="Framework\Application.cpp" />
     <ClCompile Include="Framework\AssetManager.cpp" />
     <ClCompile Include="Framework\BaseScene.cpp" />
@@ -32,6 +33,7 @@
     <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="2DRenderer.h" />
     <ClInclude Include="Framework\Application.h" />
     <ClInclude Include="Framework\AssetManager.h" />
     <ClInclude Include="Framework\BaseScene.h" />

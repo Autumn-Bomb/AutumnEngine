@@ -35,11 +35,9 @@ void AutumnEngine::TestScene::UnloadAssets()
 
 void AutumnEngine::TestScene::Awake()
 {
-	for (int i = 0; i < 3000; ++i)
+	for (int i = 0; i < 1; ++i)
 	{
-		sf::Vector2f randomPos = sf::Vector2f(rand() % 100 + 1, rand() % GetRenderWindow()->getSize().y + 1);
-
-		AutumnEngine::Entity m_Entity = AutumnEngine::Entity(m_SpriteTexture, randomPos, { 128, 128 }, i);
+		AutumnEngine::Entity m_Entity = AutumnEngine::Entity(m_SpriteTexture, { 100, 100 }, { 128, 128 }, i);
 		m_Entities.push_back(m_Entity);
 	}
 
@@ -66,7 +64,7 @@ void AutumnEngine::TestScene::Update(float dt)
 	//m_Entity.SetRotation(m_Entity.GetRotation() + 100 * dt);
 	for (AutumnEngine::Entity entity : m_Entities)
 	{
-		entity.SetPosition(entity.GetPosition().x + 10 * dt, entity.GetPosition().y);
+		entity.SetPosition(entity.GetPosition().x + 0.01f * dt, entity.GetPosition().y);
 	}
 }
 

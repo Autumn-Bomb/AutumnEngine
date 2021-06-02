@@ -20,7 +20,11 @@ namespace AutumnEngine
 			AutumnEngine::Sprite& GetSprite() { return m_Sprite; }
 			sf::Transformable GetTransform() { return *m_Transform; }
 
+			sf::FloatRect GetCollisionBox() { return m_CollisionBox; }
+
 		private:
+			sf::FloatRect m_CollisionBox;
+
 			sf::Transformable* m_Transform;
 			AutumnEngine::Sprite m_Sprite;
 	};
