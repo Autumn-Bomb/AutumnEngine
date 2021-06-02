@@ -2,18 +2,134 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Framework">
-      <UniqueIdentifier>{7024d5e4-7b5c-43f8-80a3-610785ff693b}</UniqueIdentifier>
+      <UniqueIdentifier>{8a2ac361-80d3-46e4-9ab3-70a922cb372a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend">
+      <UniqueIdentifier>{938c723b-c09c-43d3-b256-9111d072d30f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Tools">
+      <UniqueIdentifier>{18b132b6-f2a3-4fa4-9334-31c07cd7fd5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Window">
+      <UniqueIdentifier>{a0e10f28-497a-49eb-b8c8-fcd19ad90f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Application">
+      <UniqueIdentifier>{31331c1d-f8fc-432c-b3b5-23f5b27a08b0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game">
-      <UniqueIdentifier>{0efc824e-16f0-4fa0-8baf-47b167418c50}</UniqueIdentifier>
+      <UniqueIdentifier>{19580ab7-22b6-47c4-adb0-12e636772a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Scene Management">
+      <UniqueIdentifier>{c29a48ae-d361-4465-b59a-4b35347555c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Scene Management\Scene Manager">
+      <UniqueIdentifier>{6840c432-124c-49e3-b5f6-cf738ebaa136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Scene Management\Base Scene">
+      <UniqueIdentifier>{e98e95dd-f236-40af-9124-68faae963291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scenes">
+      <UniqueIdentifier>{5e44969e-fefc-4acd-84de-50c42dea461a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scenes\Test Scene">
+      <UniqueIdentifier>{b5a6568d-b4b8-40e9-a2bf-a2050874216f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\Main">
-      <UniqueIdentifier>{8f4a9af1-94f1-4b69-87be-310acb266f64}</UniqueIdentifier>
+      <UniqueIdentifier>{c57bf1db-416d-4863-ae41-201ed45c430f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scenes\MainMenu">
+      <UniqueIdentifier>{2125d8a4-baf3-4ee0-a225-7adc7d0bc932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering">
+      <UniqueIdentifier>{cc5d24dd-9b6c-4a36-96ed-d08bb1bd8343}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\Sprite">
+      <UniqueIdentifier>{241ddf83-cb06-42eb-9fbf-945ed9b08cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Tools\BubbleSort">
+      <UniqueIdentifier>{6a532090-0d12-41e6-b3ec-2842b7309520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Asset Management">
+      <UniqueIdentifier>{21ba74b8-9962-4e2d-a14e-57b1aadc22d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entities">
+      <UniqueIdentifier>{9a30c459-e25c-4467-9c7d-c69fb1a99d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entities\Entity">
+      <UniqueIdentifier>{37e95b4d-9b61-451b-aa6c-572c5f4781b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entities\Entity Component System">
+      <UniqueIdentifier>{e9624359-011e-4f82-a184-65bde7aa37ef}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Game\Main.cpp">
       <Filter>Game\Main</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\Application.cpp">
+      <Filter>Framework\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Sprite.cpp">
+      <Filter>Framework\Backend\Rendering\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseScene.cpp">
+      <Filter>Framework\Backend\Scene Management\Base Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\SceneManager.cpp">
+      <Filter>Framework\Backend\Scene Management\Scene Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Window.cpp">
+      <Filter>Framework\Backend\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\AssetManager.cpp">
+      <Filter>Framework\Backend\Asset Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp">
+      <Filter>Game\Scenes\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp">
+      <Filter>Game\Scenes\Test Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\EntityComponentSystem.cpp">
+      <Filter>Framework\Backend\Entities\Entity Component System</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Entity.cpp">
+      <Filter>Framework\Backend\Entities\Entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework\Application.h">
+      <Filter>Framework\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Sprite.h">
+      <Filter>Framework\Backend\Rendering\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseScene.h">
+      <Filter>Framework\Backend\Scene Management\Base Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\SceneManager.h">
+      <Filter>Framework\Backend\Scene Management\Scene Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Window.h">
+      <Filter>Framework\Backend\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BubbleSort.h">
+      <Filter>Framework\Tools\BubbleSort</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\AssetManager.h">
+      <Filter>Framework\Backend\Asset Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h">
+      <Filter>Game\Scenes\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Scenes\Test Scene\TestScene.h">
+      <Filter>Game\Scenes\Test Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\EntityComponentSystem.h">
+      <Filter>Framework\Backend\Entities\Entity Component System</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Entity.h">
+      <Filter>Framework\Backend\Entities\Entity</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

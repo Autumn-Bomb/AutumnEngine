@@ -19,7 +19,30 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Framework\Application.cpp" />
+    <ClCompile Include="Framework\AssetManager.cpp" />
+    <ClCompile Include="Framework\BaseScene.cpp" />
+    <ClCompile Include="Framework\Entity.cpp" />
+    <ClCompile Include="Framework\EntityComponentSystem.cpp" />
+    <ClCompile Include="Framework\SceneManager.cpp" />
+    <ClCompile Include="Framework\Sprite.cpp" />
+    <ClCompile Include="Framework\Window.cpp" />
+    <ClCompile Include="Game\Main.cpp" />
+    <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
+    <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework\Application.h" />
+    <ClInclude Include="Framework\AssetManager.h" />
+    <ClInclude Include="Framework\BaseScene.h" />
+    <ClInclude Include="Framework\BubbleSort.h" />
+    <ClInclude Include="Framework\Entity.h" />
+    <ClInclude Include="Framework\EntityComponentSystem.h" />
+    <ClInclude Include="Framework\SceneManager.h" />
+    <ClInclude Include="Framework\Sprite.h" />
+    <ClInclude Include="Framework\Window.h" />
+    <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
+    <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -95,6 +118,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,7 +134,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -131,6 +155,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,7 +175,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

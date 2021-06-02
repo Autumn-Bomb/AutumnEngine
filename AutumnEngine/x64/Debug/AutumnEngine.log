@@ -1,2 +1,17 @@
-﻿  Main.cpp
-  AutumnEngine.vcxproj -> D:\Autumn Bomb LTD\Current Projects\AutumnEngine\AutumnEngine\x64\Debug\AutumnEngine.exe
+﻿  TestScene.cpp
+C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(40,99): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(40,54): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(52,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  AutumnEngine.vcxproj -> C:\Users\danie\Desktop\AutumnEngine\x64\Debug\AutumnEngine.exe
