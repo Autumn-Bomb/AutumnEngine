@@ -1,3 +1,6 @@
-﻿  TestScene.cpp
-D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(50,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+﻿  Application.cpp
+  Window.cpp
+  Main.cpp
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   AutumnEngine.vcxproj -> D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

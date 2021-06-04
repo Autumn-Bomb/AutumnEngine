@@ -46,6 +46,14 @@ void AutumnEngine::SceneManager::ChangeScene(std::string sceneName)
 	}
 }
 
+void AutumnEngine::SceneManager::UnloadScene()
+{
+	m_CurrentScene->UnloadAssets();
+	delete m_CurrentScene;
+	m_CurrentScene = nullptr;
+	std::cout << m_CurrentScene->GetSceneName() << " -> " << "Deleted" << std::endl;
+}
+
 // Used to update all relevant methods needed for the current scene, called while the window is open passing in DeltaTime
 void AutumnEngine::SceneManager::UpdateScene(float dt)
 {

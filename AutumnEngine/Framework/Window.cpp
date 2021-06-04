@@ -14,10 +14,10 @@ void AutumnEngine::Window::SetupWindow(const unsigned int width, const unsigned 
 	m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title);
 	m_Window->setVerticalSyncEnabled(vSync);
 		
-	InitialiseScenes();
+	InitialiseGame();
 }
 
-void AutumnEngine::Window::InitialiseScenes()
+void AutumnEngine::Window::InitialiseGame()
 {
 	// Adds 2 scenes to the "Scene Manager", setting the first scene and then changing it to the second scene
 	m_MainMenu = new MainMenu(m_Window);
@@ -29,7 +29,7 @@ void AutumnEngine::Window::InitialiseScenes()
 	m_SceneManager.ChangeScene("Test Scene");
 }
 
-void AutumnEngine::Window::WindowEvents()
+void AutumnEngine::Window::HandleWindowEvents()
 {
 	while (m_Window->pollEvent(m_Event))
 	{
@@ -54,18 +54,15 @@ void AutumnEngine::Window::WindowEvents()
 	}
 }
 
-void AutumnEngine::Window::OpenWindow()
+void AutumnEngine::Window::RunWindow()
 {
-	sf::Clock clock;
-	float currentTime;
-
 	// While the current window is open
 	while (m_Window->isOpen())
 	{
 		// Handle all window events
-		WindowEvents();
+		HandleWindowEvents();
 
-		currentTime = clock.restart().asSeconds();
-		m_SceneManager.UpdateScene(currentTime);
+		m_DeltaTime = m_Clock.restart().asSeconds();
+		m_SceneManager.UpdateScene(m_DeltaTime);
 	}
 }

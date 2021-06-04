@@ -6,10 +6,7 @@ AutumnEngine::TestScene::TestScene(sf::RenderWindow* window)
 	SetRenderWindow(window);
 }
 
-AutumnEngine::TestScene::~TestScene()
-{
-
-}
+AutumnEngine::TestScene::~TestScene(){}
 
 void AutumnEngine::TestScene::LoadAssets()
 {
@@ -31,6 +28,8 @@ void AutumnEngine::TestScene::LoadAssets()
 void AutumnEngine::TestScene::UnloadAssets()
 {
 	std::cout << "unloading Assets -> " << GetSceneName() << std::endl;
+	delete m_SpriteTexture;
+	delete m_FpsFont;
 }
 
 void AutumnEngine::TestScene::Awake()
