@@ -16,6 +16,11 @@ void AutumnEngine::MainMenu::LoadAssets()
 	std::cout << "Loading Assets -> " << GetSceneName() << std::endl;
 }
 
+void AutumnEngine::MainMenu::UnloadAssets()
+{
+	std::cout << "Unloading Assets -> " << GetSceneName() << std::endl;
+}
+
 void AutumnEngine::MainMenu::Awake()
 {
 	std::cout << "Awake Initialised -> " << GetSceneName() << std::endl;
@@ -36,9 +41,4 @@ void AutumnEngine::MainMenu::Render()
 	Begin(sf::Color::White);
 
 	End();
-}
-
-void AutumnEngine::MainMenu::UnloadAssets()
-{
-	std::cout << "Unloading Assets -> " << GetSceneName() << std::endl;
 }

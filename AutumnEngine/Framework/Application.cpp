@@ -5,7 +5,7 @@ AutumnEngine::Application::~Application(){}
 
 void AutumnEngine::Application::StartApplication()
 {
-	// Initialises the instance of window and calls its "OpenWindow" function
-	m_Window = AutumnEngine::Window(1024, 768, "Autumn Engine", false);
+	// Initialises the instance of window and calls its "OpenWindow" function passing in the size, window title, Vsync toggle and fullscreen toggle
+	m_Window = AutumnEngine::Window(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height, "Autumn Engine", false, false);
 	m_Window.RunWindow();
 }

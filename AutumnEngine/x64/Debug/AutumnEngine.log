@@ -1,6 +1,3 @@
-﻿  Application.cpp
-  Window.cpp
-  Main.cpp
-D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  TestScene.cpp
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(53,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   AutumnEngine.vcxproj -> D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

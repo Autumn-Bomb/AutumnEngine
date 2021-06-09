@@ -11,10 +11,10 @@ namespace AutumnEngine
 	{
 		public:
 			Window();
-			Window(const unsigned int width, const unsigned int height, const char* title, const bool vSync);
+			Window(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen);
 			~Window();
 
-			void SetupWindow(const unsigned int width, const unsigned int height, const char* title, const bool vSync);
+			void SetupWindow(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen);
 			void InitialiseGame();
 			void HandleWindowEvents();
 			void RunWindow();

@@ -1,6 +1,5 @@
 #pragma once
 #include <SFML/Graphics/RenderWindow.hpp>
-#include "Entity.h"
 #include <iostream>
 
 namespace AutumnEngine
@@ -40,7 +39,6 @@ namespace AutumnEngine
 			sf::RenderWindow* m_Window;
 
 		protected:
-			std::vector<Entity> m_Entities;
-			float m_FPS{ 0 };
+			int m_FPS{ 0 };
 	};
 }

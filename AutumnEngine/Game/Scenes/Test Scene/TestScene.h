@@ -1,7 +1,5 @@
 #pragma once
 #include "../../Framework/BaseScene.h"
-#include "../../Framework/BubbleSort.h"
-#include "../../Framework/Entity.h"
 
 #include "SFML/Graphics.hpp"
 
@@ -22,10 +20,6 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
-			AutumnEngine::Entity m_Entity;			
-
-			sf::Texture* m_SpriteTexture;
-
 			sf::Text m_FpsText;
 			sf::Font* m_FpsFont;
 	};

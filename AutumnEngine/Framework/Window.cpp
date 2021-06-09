@@ -1,19 +1,20 @@
 #include "Window.h"
 
 AutumnEngine::Window::Window() { m_Window = nullptr; }
-AutumnEngine::Window::Window(const unsigned int width, const unsigned int height, const char* title, const bool vSync)
+AutumnEngine::Window::Window(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen)
 {
 	// Calls the SetupWindow method passing in the width, height, title of the window and whether vSync is enabled or not
-	SetupWindow(width, height, title, vSync);
+	SetupWindow(width, height, title, vSync, fullscreen);
 }
 AutumnEngine::Window::~Window(){}
 
-void AutumnEngine::Window::SetupWindow(const unsigned int width, const unsigned int height, const char* title, const bool vSync)
+void AutumnEngine::Window::SetupWindow(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen)
 {
 	// Initialises the window and enables or disables vSync based on parameter
-	m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title);
+	fullscreen ? m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Fullscreen) : m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Default);
 	m_Window->setVerticalSyncEnabled(vSync);
 		
+	// Calls the InitialiseGame method to add all scenes to the game
 	InitialiseGame();
 }
 
@@ -36,14 +37,14 @@ void AutumnEngine::Window::HandleWindowEvents()
 		// Switch the current window event type
 		switch (m_Event.type)
 		{
-			// If the event is close
+			// If the event is Window Close
 			case sf::Event::Closed:
 			{
 				// Close the current window
 				m_Window->close();
 			}
 				break;
-			// If the event is Resized
+			// If the event is Window Resized
 			case sf::Event::Resized:
 			{
 				// Set the windows current view to the new size of the window
