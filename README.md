@@ -1,4 +1,4 @@
-# AutumnEngine
+# Autumn Engine
 Autumn Bomb LTD 2D Engine made with SFML for graphics and C++ for the language
 
 Autumn Engine is a 2D engine designed to be used in-house by Autumn Bomb LTD and for various Game Jams. This engine will be used to build multiple 2D games of varying genres with multiple systems that can be utilised. 
