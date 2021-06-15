@@ -40,26 +40,29 @@
     <Filter Include="Framework\Backend\Rendering">
       <UniqueIdentifier>{cc5d24dd-9b6c-4a36-96ed-d08bb1bd8343}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Backend\Rendering\Sprite">
-      <UniqueIdentifier>{241ddf83-cb06-42eb-9fbf-945ed9b08cf4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Backend\Asset Management">
       <UniqueIdentifier>{21ba74b8-9962-4e2d-a14e-57b1aadc22d9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Backend\Entities">
-      <UniqueIdentifier>{9a30c459-e25c-4467-9c7d-c69fb1a99d2d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entities\Entity">
-      <UniqueIdentifier>{37e95b4d-9b61-451b-aa6c-572c5f4781b2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entities\Entity Component System">
-      <UniqueIdentifier>{e9624359-011e-4f82-a184-65bde7aa37ef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\2D Renderer">
-      <UniqueIdentifier>{e74bcf21-37c7-485e-8267-1757a2ca6c51}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Backend\Camera">
       <UniqueIdentifier>{e24f5a0e-4b40-4ee6-9f46-0ad59a0b3e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entity Component System">
+      <UniqueIdentifier>{77dc6d54-52e1-4c8f-a53f-e48b12505bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entity Component System\Systems">
+      <UniqueIdentifier>{dc7aba4a-aa44-42a4-8214-7f249dad0799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entity Component System\Entity">
+      <UniqueIdentifier>{ee8ff31e-98f3-4f01-bdba-2f2c16d7cda0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entity Component System\Components">
+      <UniqueIdentifier>{ef37eade-4479-4d3e-b042-1fcd6928c9c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI">
+      <UniqueIdentifier>{95b8e526-4c37-4d33-8808-094c4ca38b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\Sprite">
+      <UniqueIdentifier>{4bfe9324-c62e-41bd-bd08-8811295398f5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +93,12 @@
     <ClCompile Include="Framework\Camera.cpp">
       <Filter>Framework\Backend\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\GUI.cpp">
+      <Filter>Framework\Backend\Rendering\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Sprite.cpp">
+      <Filter>Framework\Backend\Rendering\Sprite</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Application.h">
@@ -115,6 +124,15 @@
     </ClInclude>
     <ClInclude Include="Framework\Camera.h">
       <Filter>Framework\Backend\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GUI.h">
+      <Filter>Framework\Backend\Rendering\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Sprite.h">
+      <Filter>Framework\Backend\Rendering\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Framework\Backend\Entity Component System\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

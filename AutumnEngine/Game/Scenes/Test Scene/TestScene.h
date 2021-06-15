@@ -2,6 +2,7 @@
 #include "../../Framework/BaseScene.h"
 
 #include "SFML/Graphics.hpp"
+#include "../../Framework/GUI.h"
 
 namespace AutumnEngine
 {
@@ -20,7 +21,6 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
-			sf::Text m_FpsText;
-			sf::Font* m_FpsFont;
+			AutumnEngine::GUI m_GUIManager;
 	};
 }
