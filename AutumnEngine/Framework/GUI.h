@@ -20,10 +20,15 @@ namespace AutumnEngine
 			void UpdateTextElement(const int index, int text);
 			sf::Text& GetTextElement(const int index) { return m_TextElements[index]; }
 
-			// Creation and Updating of Screen Sprites
-			void CreateSpriteUIElement(const std::string textureName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color color, const int layer);
+			// Creation and Updating of Sprite Elements
+			void CreateSpriteUIElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color color, const int layer);
 			AutumnEngine::Sprite& GetSpriteUIElement(const int index) { return m_SpriteElements[index]; }
 
+			// Creation and Updating of Button Elements
+			void CreateButtonElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color color, const int layer);
+
+			// Creation and Updating of Slider Elements
+			// Creation and Updating of Toggle Elements
 		private:
 			void LoadFont(std::string fontName);
 

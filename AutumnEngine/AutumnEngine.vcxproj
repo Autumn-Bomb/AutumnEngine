@@ -23,6 +23,7 @@
     <ClCompile Include="Framework\AssetManager.cpp" />
     <ClCompile Include="Framework\BaseScene.cpp" />
     <ClCompile Include="Framework\Camera.cpp" />
+    <ClCompile Include="Framework\Entity.cpp" />
     <ClCompile Include="Framework\GUI.cpp" />
     <ClCompile Include="Framework\SceneManager.cpp" />
     <ClCompile Include="Framework\Sprite.cpp" />
@@ -32,11 +33,12 @@
     <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Component.h" />
     <ClInclude Include="Framework\Application.h" />
     <ClInclude Include="Framework\AssetManager.h" />
     <ClInclude Include="Framework\BaseScene.h" />
     <ClInclude Include="Framework\Camera.h" />
+    <ClInclude Include="Framework\Component.h" />
+    <ClInclude Include="Framework\Entity.h" />
     <ClInclude Include="Framework\GUI.h" />
     <ClInclude Include="Framework\SceneManager.h" />
     <ClInclude Include="Framework\Sprite.h" />
@@ -176,6 +178,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

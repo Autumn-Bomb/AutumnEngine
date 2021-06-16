@@ -64,6 +64,18 @@
     <Filter Include="Framework\Backend\Rendering\Sprite">
       <UniqueIdentifier>{4bfe9324-c62e-41bd-bd08-8811295398f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\GUIManager">
+      <UniqueIdentifier>{9bae6ca1-db94-4049-a99a-d9359372d7eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\Slider">
+      <UniqueIdentifier>{ec7f1f53-a094-458a-9c3c-c83fe2cfb78b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\Toggle">
+      <UniqueIdentifier>{e1e5bb19-9b22-44ea-9b67-65fda6666276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\Button">
+      <UniqueIdentifier>{0d05a671-ed63-4a0e-b834-ff727d45df2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -93,11 +105,14 @@
     <ClCompile Include="Framework\Camera.cpp">
       <Filter>Framework\Backend\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\GUI.cpp">
-      <Filter>Framework\Backend\Rendering\GUI</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\Sprite.cpp">
       <Filter>Framework\Backend\Rendering\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GUI.cpp">
+      <Filter>Framework\Backend\Rendering\GUI\GUIManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Entity.cpp">
+      <Filter>Framework\Backend\Entity Component System\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,14 +140,17 @@
     <ClInclude Include="Framework\Camera.h">
       <Filter>Framework\Backend\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\GUI.h">
-      <Filter>Framework\Backend\Rendering\GUI</Filter>
-    </ClInclude>
     <ClInclude Include="Framework\Sprite.h">
       <Filter>Framework\Backend\Rendering\Sprite</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
+    <ClInclude Include="Framework\GUI.h">
+      <Filter>Framework\Backend\Rendering\GUI\GUIManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Component.h">
       <Filter>Framework\Backend\Entity Component System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Entity.h">
+      <Filter>Framework\Backend\Entity Component System\Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

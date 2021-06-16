@@ -1,8 +1,9 @@
 #pragma once
 #include "../../Framework/BaseScene.h"
+#include "../../Framework/GUI.h"
+#include "../../Framework/Entity.h"
 
 #include "SFML/Graphics.hpp"
-#include "../../Framework/GUI.h"
 
 namespace AutumnEngine
 {
@@ -22,5 +23,6 @@ namespace AutumnEngine
 
 		private:
 			AutumnEngine::GUI m_GUIManager;
+			AutumnEngine::Entity m_Entity;
 	};
 }

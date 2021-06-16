@@ -20,8 +20,8 @@ void AutumnEngine::TestScene::UnloadAssets()
 void AutumnEngine::TestScene::Awake()
 {
 	m_GUIManager.CreateTextElement("arial", "FPS: ", { 315, 10 }, 22, sf::Color::White);
-	m_GUIManager.CreateSpriteUIElement("healthbar", { 5, 10 }, { 300, 50 }, sf::Color::White, 0);
-	m_GUIManager.CreateSpriteUIElement("background", { 0, 0 }, { 1920, 1080 }, sf::Color::White, 1);
+	m_GUIManager.CreateSpriteUIElement("healthbar", "HealthBar", { 5, 10 }, { 300, 50 }, sf::Color::White, 0);
+	m_GUIManager.CreateSpriteUIElement("background", "Background", { 0, 0 }, { 1920, 1080 }, sf::Color::White, 1);
 
 	std::cout << "Awake Called -> " << GetSceneName() << std::endl;
 }

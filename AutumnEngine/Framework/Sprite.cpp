@@ -1,19 +1,20 @@
 #include "../Framework/Sprite.h"
 
 AutumnEngine::Sprite::Sprite() {}
-AutumnEngine::Sprite::Sprite(const sf::Texture* spriteTexture, const sf::Vector2f position, const sf::Vector2f size, const int layer)
+AutumnEngine::Sprite::Sprite(const sf::Texture* spriteTexture, std::string name, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
 	state = new sf::RenderStates();
-
-	m_Layer = layer;
-	m_TextureSize = spriteTexture->getSize();
 
 	// Initialise m_Quad with a PrimitiveType of Quad with 4 Vertices
 	m_Quad = sf::VertexArray(sf::PrimitiveType::Quads, 4);
 
-	state->texture = spriteTexture;
+	m_SpriteName = name;
+	m_Layer = layer;
+	m_TextureSize = spriteTexture->getSize();
 
-	SetColour(sf::Color::White);
+	SetColour(colour);
+
+	state->texture = spriteTexture;
 
 	// Initialise Quad with position, size, layer and sprite
 	InitialiseQuad(position, size);
