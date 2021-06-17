@@ -22,11 +22,14 @@
     <ClCompile Include="Framework\Application.cpp" />
     <ClCompile Include="Framework\AssetManager.cpp" />
     <ClCompile Include="Framework\BaseScene.cpp" />
+    <ClCompile Include="Framework\Button.cpp" />
     <ClCompile Include="Framework\Camera.cpp" />
     <ClCompile Include="Framework\Entity.cpp" />
     <ClCompile Include="Framework\GUI.cpp" />
     <ClCompile Include="Framework\SceneManager.cpp" />
+    <ClCompile Include="Framework\Slider.cpp" />
     <ClCompile Include="Framework\Sprite.cpp" />
+    <ClCompile Include="Framework\Toggle.cpp" />
     <ClCompile Include="Framework\Window.cpp" />
     <ClCompile Include="Game\Main.cpp" />
     <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
@@ -36,12 +39,15 @@
     <ClInclude Include="Framework\Application.h" />
     <ClInclude Include="Framework\AssetManager.h" />
     <ClInclude Include="Framework\BaseScene.h" />
+    <ClInclude Include="Framework\Button.h" />
     <ClInclude Include="Framework\Camera.h" />
     <ClInclude Include="Framework\Component.h" />
     <ClInclude Include="Framework\Entity.h" />
     <ClInclude Include="Framework\GUI.h" />
     <ClInclude Include="Framework\SceneManager.h" />
+    <ClInclude Include="Framework\Slider.h" />
     <ClInclude Include="Framework\Sprite.h" />
+    <ClInclude Include="Framework\Toggle.h" />
     <ClInclude Include="Framework\Window.h" />
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
     <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />
@@ -121,6 +127,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,6 +165,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

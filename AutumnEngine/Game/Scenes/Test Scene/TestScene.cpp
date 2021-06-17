@@ -20,8 +20,12 @@ void AutumnEngine::TestScene::UnloadAssets()
 void AutumnEngine::TestScene::Awake()
 {
 	m_GUIManager.CreateTextElement("arial", "FPS: ", { 315, 10 }, 22, sf::Color::White);
+
 	m_GUIManager.CreateSpriteUIElement("healthbar", "HealthBar", { 5, 10 }, { 300, 50 }, sf::Color::White, 0);
 	m_GUIManager.CreateSpriteUIElement("background", "Background", { 0, 0 }, { 1920, 1080 }, sf::Color::White, 1);
+
+	m_GUIManager.CreateSliderElement("SliderBackground", "SliderHandle", { 100, 200 }, { 168, 19 }, { 15, 32 }, 0, 100);
+	m_GUIManager.CreateToggleElement("ToggleDeactivated", "ToggleActivated", { 100, 400 }, { 50, 50 }, sf::Color::White, 1);
 
 	std::cout << "Awake Called -> " << GetSceneName() << std::endl;
 }
@@ -44,6 +48,9 @@ void AutumnEngine::TestScene::Render()
 	GetRenderWindow()->draw(m_GUIManager.GetSpriteUIElement(1), m_GUIManager.GetSpriteUIElement(1).GetRenderState());
 	GetRenderWindow()->draw(m_GUIManager.GetSpriteUIElement(0), m_GUIManager.GetSpriteUIElement(0).GetRenderState());
 	GetRenderWindow()->draw(m_GUIManager.GetTextElement(0));
+
+	m_GUIManager.GetSliderElement(0).Render(GetRenderWindow());
+	m_GUIManager.GetToggleElement(0).Render(GetRenderWindow());
 
 	End();
 }
