@@ -1,6 +1,6 @@
 #include "../Framework/GUI.h"
 
-AutumnEngine::GUI::GUI(){}
+AutumnEngine::GUI::GUI() { m_Font = nullptr; }
 AutumnEngine::GUI::~GUI(){}
 
 // Creation and Updating of Text Elements

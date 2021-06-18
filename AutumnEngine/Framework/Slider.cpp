@@ -5,7 +5,7 @@ AutumnEngine::Slider::Slider(sf::Texture* background, sf::Texture* handle, sf::V
 {
 	m_Background = AutumnEngine::Sprite(background, "Slider_Background", backgroundPosition, backgroundSize, sf::Color::White, 1);
 	m_Handle = AutumnEngine::Sprite(handle, "Slider_Handle", { 0, 0 }, handleSize, sf::Color::White, 1);
-	
+
 	m_Handle.SetPosition(sf::Vector2f(m_Background.GetPosition().x + m_Background.GetTextureSize().x / 2, m_Background.GetPosition().y - m_Handle.GetTextureSize().y / 4.5));
 
 	m_Min = min;
@@ -15,6 +15,6 @@ AutumnEngine::Slider::~Slider() {}
 
 void AutumnEngine::Slider::Render(sf::RenderWindow* window)
 {
-	window->draw(m_Background);
-	window->draw(m_Handle);
+	window->draw(m_Background, m_Background.GetRenderState());
+	window->draw(m_Handle, m_Handle.GetRenderState());
 }

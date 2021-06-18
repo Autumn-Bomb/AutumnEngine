@@ -12,8 +12,8 @@ namespace AutumnEngine
 			Toggle(sf::Texture* disabledTexture, sf::Texture* enabledTexture, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
 			~Toggle();
 
-			void SetToggleState(State state) { m_ToggleState = state; ChangeState(); }
-			void ChangeState();
+			void SetToggleState(State state) { m_ToggleState = state; ChangeToggleState(); }
+			void ChangeToggleState();
 
 			void Render(sf::RenderWindow* window);
 
