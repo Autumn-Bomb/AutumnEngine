@@ -18,6 +18,6 @@ namespace AutumnEngine
 			void LoadFont(std::string fontName);
 
 			sf::Font* m_Font;
-			sf::Text m_Text;	
+			sf::Text* m_Text;	
 	};
 }

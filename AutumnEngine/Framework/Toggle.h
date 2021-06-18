@@ -3,19 +3,19 @@
 
 namespace AutumnEngine
 {
+	enum class State { disabled, enabled, inactive };
+
 	class Toggle
 	{
 		public:
-			enum class State { disabled, enabled, inactive };
-
 			Toggle();
 			Toggle(sf::Texture* disabledTexture, sf::Texture* enabledTexture, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
 			~Toggle();
 
-			void SetToggleState(State state) { m_ToggleState = state; ChangeToggleState(); }
-			void ChangeToggleState();
-
+			void SetToggleEnabled(bool enabled);
 			void Render(sf::RenderWindow* window);
+
+			State GetToggleState() { return m_ToggleState; }
 
 		private:
 			State m_ToggleState;

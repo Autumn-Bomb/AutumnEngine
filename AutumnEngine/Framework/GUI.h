@@ -4,6 +4,7 @@
 #include "Toggle.h"
 #include "Slider.h"
 #include "Text.h"
+#include "Button.h"
 
 #include <string>
 #include <vector>
@@ -19,7 +20,6 @@ namespace AutumnEngine
 
 			// Creation and Updating of Text Elements
 			void CreateTextElement(const std::string fontName, const std::string text, sf::Vector2f position, const int fontSize, const sf::Color colour);
-			void UpdateTextElement(const int index, std::string text);
 			AutumnEngine::Text& GetTextElement(const int index) { return m_TextElements[index]; }
 
 			// Creation and Updating of Sprite Elements
@@ -27,7 +27,8 @@ namespace AutumnEngine
 			AutumnEngine::Sprite& GetSpriteUIElement(const int index) { return m_SpriteElements[index]; }
 
 			// Creation and Updating of Button Elements
-			void CreateButtonElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color color, const int layer);
+			void CreateButtonElement(const std::string idleTextureName, const std::string hoverTextureName, const std::string pressedTextureName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
+			AutumnEngine::Button& GetButtonElement(const int index) { return m_ButtonElements[index]; }
 
 			// Creation and Updating of Slider Elements
 			void CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, const float min, const float max);
@@ -37,10 +38,12 @@ namespace AutumnEngine
 			void CreateToggleElement(std::string sliderBackgroundName, std::string sliderHandleName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
 			AutumnEngine::Toggle& GetToggleElement(const int index) { return m_ToggleElements[index]; }
 
-	private:
+		private:
+			// Containers for all UI elements
 			std::vector<AutumnEngine::Text> m_TextElements;
 			std::vector<AutumnEngine::Sprite> m_SpriteElements;
 			std::vector<AutumnEngine::Toggle> m_ToggleElements;
 			std::vector<AutumnEngine::Slider> m_SliderElements;
+			std::vector<AutumnEngine::Button> m_ButtonElements;
 	};
 }

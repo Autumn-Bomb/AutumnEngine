@@ -13,8 +13,6 @@ AutumnEngine::Slider::Slider(sf::Texture* background, sf::Texture* handle, sf::V
 
 	m_Max = max;
 	m_Min = min;
-
-	ChangeValue(100);
 }
 AutumnEngine::Slider::~Slider() {}
 
@@ -22,20 +20,20 @@ void AutumnEngine::Slider::ChangeValue(float value)
 {
 	if (value > m_Max)
 	{
-		value = 100;
-
+		value = m_Max;
 		m_Handle.SetPosition({ m_Background.GetPosition().x + m_Background.GetSize().x * (value / m_Max), m_Handle.GetPosition().y });
 	}
 	else if (value < m_Min)
 	{
-		value = 0;
-
-		m_Handle.SetPosition({ m_Background.GetPosition().x + m_Background.GetSize().x * (value / m_Min) + m_Handle.GetSize().x / 2, m_Handle.GetPosition().y });
+		value = m_Min;
+		m_Handle.SetPosition({ m_Background.GetPosition().x + m_Background.GetSize().x * (value / m_Min) + m_Handle.GetSize().x, m_Handle.GetPosition().y });
 	}
 	else
 	{
 		m_Handle.SetPosition({ m_Background.GetPosition().x + m_Background.GetSize().x * (value / m_Max) - m_Handle.GetSize().x, m_Handle.GetPosition().y });
 	}
+
+	m_CurrentValue = value;
 }
 
 void AutumnEngine::Slider::Render(sf::RenderWindow* window)

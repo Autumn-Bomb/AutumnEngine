@@ -5,16 +5,11 @@ AutumnEngine::GUI::~GUI(){}
 
 void AutumnEngine::GUI::CreateTextElement(const std::string fontName, const std::string text, sf::Vector2f position, const int characterSize, const sf::Color colour)
 {	
-	AutumnEngine::Text t_Text = AutumnEngine::Text(fontName, text, position, characterSize, colour);
-	m_TextElements.push_back(t_Text);
+	AutumnEngine::Text* t_Text = new AutumnEngine::Text(fontName, text, position, characterSize, colour);
+	m_TextElements.push_back(*t_Text);
 }
 
-void AutumnEngine::GUI::UpdateTextElement(const int index, std::string text)
-{
-	GetTextElement(index).UpdateText(text);
-}
-////
-
+// Creation of Sprite Elements
 void AutumnEngine::GUI::CreateSpriteUIElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
 	sf::Texture* t_Texture = new sf::Texture();
@@ -29,19 +24,31 @@ void AutumnEngine::GUI::CreateSpriteUIElement(const std::string textureName, con
 }
 ////
 
-// Creation and updating of Button Elements
-void AutumnEngine::GUI::CreateButtonElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+// Creation of Button Elements
+void AutumnEngine::GUI::CreateButtonElement(const std::string idleTextureName, const std::string hoverTextureName, const std::string pressedTextureName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
-	sf::Texture* t_Texture = new sf::Texture();
-	if (!t_Texture->loadFromFile("Resources/Sprites/" + textureName + ".png"))
-		std::cout << "Couldn't locate Sprite named: " << textureName << ".png" << std::endl;
+	sf::Texture* t_TextureIdle = new sf::Texture();
+	sf::Texture* t_TextureHover = new sf::Texture();
+	sf::Texture* t_TexturePressed = new sf::Texture();
 
-	AutumnEngine::Sprite t_Sprite = AutumnEngine::Sprite(t_Texture, spriteName, position, size, colour, layer);
-	m_SpriteElements.push_back(t_Sprite);
+	if (!t_TextureIdle->loadFromFile("Resources/Sprites/" + idleTextureName + ".png"))
+		std::cout << "Couldn't locate Sprite named: " << idleTextureName << ".png" << std::endl;
+
+	if (!t_TextureHover->loadFromFile("Resources/Sprites/" + hoverTextureName + ".png"))
+		std::cout << "Couldn't locate Sprite named: " << hoverTextureName << ".png" << std::endl;
+
+	if (!t_TexturePressed->loadFromFile("Resources/Sprites/" + pressedTextureName + ".png"))
+		std::cout << "Couldn't locate Sprite named: " << pressedTextureName << ".png" << std::endl;
+
+	AutumnEngine::Button* t_Button = new AutumnEngine::Button(t_TextureIdle, t_TextureHover, t_TexturePressed, position, size, colour, layer);
+	m_ButtonElements.push_back(*t_Button);
+
+	delete t_Button;
+	t_Button = nullptr;
 }
 ////
 
-// Creation and Updating of Slider Elements
+// Creation of Slider Elements
 void AutumnEngine::GUI::CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize,  sf::Vector2f handleSize, const float min, const float max)
 {
 	sf::Texture* BackgroundTexture = new sf::Texture();
@@ -59,6 +66,7 @@ void AutumnEngine::GUI::CreateSliderElement(std::string sliderBackgroundName, st
 	t_Slider = nullptr;
 }
 
+// Creation of Toggle Elements
 void AutumnEngine::GUI::CreateToggleElement(std::string toggleDeactiveSprite, std::string toggleActiveSprite, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 {
 	sf::Texture* DeactiveTexture = new sf::Texture();
