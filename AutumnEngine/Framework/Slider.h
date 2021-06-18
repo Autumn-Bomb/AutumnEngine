@@ -9,12 +9,19 @@ namespace AutumnEngine
 	{
 		public:
 			Slider();
-			Slider(sf::Texture* background, sf::Texture* handle, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, const float min, const float max);
+			Slider(sf::Texture* background, sf::Texture* handle, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, float min, float max);
 			~Slider();
 
 			void Render(sf::RenderWindow* window);
+			void ChangeValue(float value);
+
+			sf::Vector2f GetBackgroundPos() { return m_BackgroundPosition; }
+			sf::Vector2f GetHandlePosition() { return m_HandlePosition; }
 
 		private:
+			sf::Vector2f m_BackgroundPosition;
+			sf::Vector2f m_HandlePosition;
+
 			AutumnEngine::Sprite m_Background;
 			AutumnEngine::Sprite m_Handle;
 

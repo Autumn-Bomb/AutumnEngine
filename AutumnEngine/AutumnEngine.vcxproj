@@ -29,6 +29,7 @@
     <ClCompile Include="Framework\SceneManager.cpp" />
     <ClCompile Include="Framework\Slider.cpp" />
     <ClCompile Include="Framework\Sprite.cpp" />
+    <ClCompile Include="Framework\Text.cpp" />
     <ClCompile Include="Framework\Toggle.cpp" />
     <ClCompile Include="Framework\Window.cpp" />
     <ClCompile Include="Game\Main.cpp" />
@@ -47,6 +48,7 @@
     <ClInclude Include="Framework\SceneManager.h" />
     <ClInclude Include="Framework\Slider.h" />
     <ClInclude Include="Framework\Sprite.h" />
+    <ClInclude Include="Framework\Text.h" />
     <ClInclude Include="Framework\Toggle.h" />
     <ClInclude Include="Framework\Window.h" />
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
