@@ -7,7 +7,7 @@ The systems planned for implementation are:
 
 Scene Manager - Used for adding scenes, managing the current scene, loading and unloading scenes (Done)\
 GUI/UI Library - This will be used for creating UI elements such as HUD components, buttons, titles, menus (Done)\
-Entity Component System - This will be used to manage every entity that exists in the game, ability to add components such as Transforms and Rigidbodys(Implementing)\
+Entity Component System - This will be used to manage every entity that exists in the game, ability to add components such as Transforms and Rigidbodys(Implementing)
 
 2D Renderer - Renders anything 2D to the screen, has optimisations such as Sprite Batching to reduce draw calls\
 Resource Loader - Used to load assets such as sprites, textures, sounds, txt/json files and caches them so they can't be loaded more than once\
