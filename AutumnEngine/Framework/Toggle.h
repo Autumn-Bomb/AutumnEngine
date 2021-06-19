@@ -20,6 +20,7 @@ namespace AutumnEngine
 		private:
 			State m_ToggleState;
 
+			sf::RectangleShape m_CollisionBox;
 			AutumnEngine::Sprite* m_CurrentSprite;
 
 			AutumnEngine::Sprite* m_DisabledToggle;

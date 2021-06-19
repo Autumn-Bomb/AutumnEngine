@@ -1,6 +1,8 @@
 #pragma once
 
 #include "../../Framework/BaseScene.h"
+#include "../../Framework/Collision.h"
+#include "../../Framework/SceneManager.h"
 
 namespace AutumnEngine
 {
@@ -8,7 +10,7 @@ namespace AutumnEngine
 	{
 		public:
 			MainMenu();
-			MainMenu(sf::RenderWindow* target);
+			MainMenu(sf::RenderWindow* target, AutumnEngine::Input* input, AutumnEngine::GUI* guiManager, AutumnEngine::SceneManager* sceneManager);
 			~MainMenu();
 
 			void Awake();
@@ -19,5 +21,6 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
+			AutumnEngine::SceneManager* m_SceneManager;
 	};
 }

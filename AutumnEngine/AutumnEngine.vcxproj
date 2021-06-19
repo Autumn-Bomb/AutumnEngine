@@ -24,8 +24,10 @@
     <ClCompile Include="Framework\BaseScene.cpp" />
     <ClCompile Include="Framework\Button.cpp" />
     <ClCompile Include="Framework\Camera.cpp" />
+    <ClCompile Include="Framework\Collision.cpp" />
     <ClCompile Include="Framework\Entity.cpp" />
     <ClCompile Include="Framework\GUI.cpp" />
+    <ClCompile Include="Framework\Input.cpp" />
     <ClCompile Include="Framework\SceneManager.cpp" />
     <ClCompile Include="Framework\Slider.cpp" />
     <ClCompile Include="Framework\Sprite.cpp" />
@@ -42,9 +44,11 @@
     <ClInclude Include="Framework\BaseScene.h" />
     <ClInclude Include="Framework\Button.h" />
     <ClInclude Include="Framework\Camera.h" />
+    <ClInclude Include="Framework\Collision.h" />
     <ClInclude Include="Framework\Component.h" />
     <ClInclude Include="Framework\Entity.h" />
     <ClInclude Include="Framework\GUI.h" />
+    <ClInclude Include="Framework\Input.h" />
     <ClInclude Include="Framework\SceneManager.h" />
     <ClInclude Include="Framework\Slider.h" />
     <ClInclude Include="Framework\Sprite.h" />

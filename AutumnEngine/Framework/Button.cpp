@@ -9,6 +9,9 @@ AutumnEngine::Button::Button(sf::Texture* idleTexture, sf::Texture* hoverTexture
 
 	m_Position = position;
 	m_Size = size;
+
+	m_CollisionBox.setSize(m_Size);
+	m_CollisionBox.setPosition(m_Position);
 }
 AutumnEngine::Button::~Button(){}
 

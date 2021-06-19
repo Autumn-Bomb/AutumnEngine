@@ -20,9 +20,13 @@ namespace AutumnEngine
 
 			void Render(sf::RenderWindow* window);
 
+			sf::RectangleShape* GetCollisionBox() { return &m_CollisionBox; }
+
 			m_State m_ButtonState;
 
 		private:
+			sf::RectangleShape m_CollisionBox;
+
 			sf::Vector2f m_Position;
 			sf::Vector2f m_Size;
 

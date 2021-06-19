@@ -11,7 +11,7 @@ namespace AutumnEngine
 	{
 		public:
 			TestScene();
-			TestScene(sf::RenderWindow* target);
+			TestScene(sf::RenderWindow* target, AutumnEngine::Input* input, AutumnEngine::GUI* guiManager);
 			~TestScene();
 
 			void Awake() override;
@@ -22,7 +22,5 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
-			AutumnEngine::GUI m_GUIManager;
-			AutumnEngine::Entity m_Entity;
 	};
 }

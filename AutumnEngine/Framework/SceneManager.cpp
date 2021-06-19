@@ -13,8 +13,6 @@ void AutumnEngine::SceneManager::AddScene(int sceneIndex, std::string sceneName,
 	scene->SetSceneIndex(sceneIndex);
 	m_Scenes.push_back(scene);
 
-	m_CurrentScene = m_Scenes[0];
-
 	std::cout << scene->GetSceneName() << " -> " << "Added with Index: " << scene->GetSceneIndex() << std::endl;
 }
 

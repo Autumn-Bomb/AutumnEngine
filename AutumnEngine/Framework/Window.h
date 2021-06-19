@@ -20,13 +20,16 @@ namespace AutumnEngine
 			void RunWindow();
 
 		private:
+			AutumnEngine::Input* m_Input;
+			AutumnEngine::GUI* m_GUIManager;
+			AutumnEngine::SceneManager* m_SceneManager;
+
 			sf::Clock m_Clock;
 			float m_DeltaTime;
 
 			sf::RenderWindow* m_Window;
 			sf::Event m_Event;
 
-			SceneManager m_SceneManager;
 			TestScene* m_TestScene;
 			MainMenu* m_MainMenu;
 	};

@@ -13,7 +13,7 @@ namespace AutumnEngine
 			~Slider();
 
 			void Render(sf::RenderWindow* window);
-			void ChangeValue(float value);
+			void SetValue(float value);
 
 			sf::Vector2f GetBackgroundPos() { return m_BackgroundPosition; }
 			sf::Vector2f GetHandlePosition() { return m_HandlePosition; }
@@ -21,6 +21,8 @@ namespace AutumnEngine
 			float GetCurrentValue() { return m_CurrentValue; }
 
 		private:
+			sf::RectangleShape m_CollisionBox;
+
 			sf::Vector2f m_BackgroundPosition;
 			sf::Vector2f m_HandlePosition;
 

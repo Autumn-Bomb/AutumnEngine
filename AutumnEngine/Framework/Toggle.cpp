@@ -5,6 +5,9 @@ AutumnEngine::Toggle::Toggle(sf::Texture* disabledTexture, sf::Texture* enabledT
 {
 	m_DisabledToggle = new AutumnEngine::Sprite(disabledTexture, "Toggle_Background", position, size, colour, layer);
 	m_EnabledToggle = new AutumnEngine::Sprite(enabledTexture, "Toggle_Handle", position, size, colour, layer);
+
+	m_CollisionBox.setSize(size);
+	m_CollisionBox.setPosition(position);
 }
 AutumnEngine::Toggle::~Toggle() {}
 
