@@ -1,4 +1,5 @@
 #include "Text.h"
+
 AutumnEngine::Text::Text() {}
 AutumnEngine::Text::Text(const std::string fontName, const std::string text, sf::Vector2f position, const int characterSize, const sf::Color colour)
 {
@@ -9,6 +10,7 @@ AutumnEngine::Text::Text(const std::string fontName, const std::string text, sf:
 	m_Text->setCharacterSize(characterSize);
 	m_Text->setPosition(position);
 	m_Text->setFillColor(colour);
+	m_Text->setString(text);
 }
 AutumnEngine::Text::~Text() {}
 
@@ -24,6 +26,8 @@ void AutumnEngine::Text::LoadFont(std::string fontName)
 		}
 	}
 }
+
+void AutumnEngine::Text::HandleCollisions(AutumnEngine::Input input) {}
 
 void AutumnEngine::Text::UpdateText(std::string text)
 {

@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "Input.h"
-#include "GUI.h"
+#include "GUILayer.h"
 
 #include <iostream>
 
@@ -34,19 +34,15 @@ namespace AutumnEngine
 			void SetInput(AutumnEngine::Input* input) { m_Input = input; }
 			AutumnEngine::Input& GetInput() { return *m_Input; }
 
-			void SetGUIManager(AutumnEngine::GUI* guiManager) { m_GUIManager = guiManager; }
-			AutumnEngine::GUI& GetGUIManager() { return *m_GUIManager; }
-
-			/*void SetSceneManager(AutumnEngine::SceneManager* sceneManager) { m_SceneManager = sceneManager; }
-			AutumnEngine::SceneManager& GetSceneManager() { return *m_SceneManager; }*/
+			void SetGUILayer(AutumnEngine::GUILayer* guiManager) { m_GUILayer = guiManager; }
+			AutumnEngine::GUILayer* GetGUILayer() { return m_GUILayer; }
 
 			void Begin();
 			void Begin(sf::Color color);
 			void End();
 
 		private:
-			//AutumnEngine::SceneManager* m_SceneManager;
-			AutumnEngine::GUI* m_GUIManager;
+			AutumnEngine::GUILayer* m_GUILayer;
 			AutumnEngine::Input* m_Input;
 
 			int m_SceneIndex;

@@ -12,11 +12,8 @@ namespace AutumnEngine
 			Entity();
 			~Entity();
 
-			template <typename Component>
-			void AddComponent(Component component);
-
-			template <typename Component>
-			void RemoveComponent(Component component);
+			void AddComponent(AutumnEngine::Component component);
+			void RemoveComponent(AutumnEngine::Component component);
 
 			void ListAttachedComponents();
 

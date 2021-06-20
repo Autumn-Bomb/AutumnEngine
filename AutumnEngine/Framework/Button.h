@@ -1,15 +1,16 @@
 #pragma once
 #include "Sprite.h"
+#include "UIComponent.h"
 
 namespace AutumnEngine
 {
-	class Button
+	class Button : public UIComponent
 	{
 		enum class m_State { Idle, Hover, Pressed, Inactive };
 
 		public:
 			Button();
-			Button(sf::Texture* idleTexture, sf::Texture* hoverTexter, sf::Texture* pressedTexture, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
+			Button(sf::Texture* idleTexture, sf::Texture* hoverTexter, sf::Texture* pressedTexture, const std::string elementName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
 			~Button();
 
 			void ChangeButtonState(m_State buttonState);
@@ -18,10 +19,10 @@ namespace AutumnEngine
 			void OnIdle();
 			void OnPressed();
 
-			void Render(sf::RenderWindow* window);
+			void Render(sf::RenderWindow* window) override;
+			void HandleCollisions(AutumnEngine::Input input) override;
 
 			sf::RectangleShape* GetCollisionBox() { return &m_CollisionBox; }
-
 			m_State m_ButtonState;
 
 		private:

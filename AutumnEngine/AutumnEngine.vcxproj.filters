@@ -85,6 +85,24 @@
     <Filter Include="Framework\Backend\Collision">
       <UniqueIdentifier>{07af4773-3c39-4cc5-94d1-3b1b2cbb280f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Backend\Layers">
+      <UniqueIdentifier>{e721cdf0-e62f-4baa-8ece-211e2686f22c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Layers\GUI Layer">
+      <UniqueIdentifier>{b60cb53e-63af-41e5-b2f4-b5b740eb30c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Layers\Scene Layer">
+      <UniqueIdentifier>{e36a3ef1-3306-4201-b623-72334f532bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\UIComponent">
+      <UniqueIdentifier>{2302595f-b322-455d-865d-0b110de6392f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Tools">
+      <UniqueIdentifier>{16f48a11-fd21-4843-be2a-fc52c74c4f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Tools\Bubblesort">
+      <UniqueIdentifier>{1265dd49-59d1-4e5e-9f6d-d3d36d293346}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -141,6 +159,12 @@
     <ClCompile Include="Framework\Collision.cpp">
       <Filter>Framework\Backend\Collision</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\GUILayer.cpp">
+      <Filter>Framework\Backend\Layers\GUI Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\SceneLayer.cpp">
+      <Filter>Framework\Backend\Layers\Scene Layer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Application.h">
@@ -196,6 +220,18 @@
     </ClInclude>
     <ClInclude Include="Framework\Collision.h">
       <Filter>Framework\Backend\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GUILayer.h">
+      <Filter>Framework\Backend\Layers\GUI Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\SceneLayer.h">
+      <Filter>Framework\Backend\Layers\Scene Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\UIComponent.h">
+      <Filter>Framework\Backend\Rendering\GUI\UIComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Bubblesort.h">
+      <Filter>Framework\Backend\Tools\Bubblesort</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

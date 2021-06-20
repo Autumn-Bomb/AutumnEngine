@@ -1,7 +1,7 @@
 #include "Button.h"
 
 AutumnEngine::Button::Button(){}
-AutumnEngine::Button::Button(sf::Texture* idleTexture, sf::Texture* hoverTexture, sf::Texture* pressedTexture, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+AutumnEngine::Button::Button(sf::Texture* idleTexture, sf::Texture* hoverTexture, sf::Texture* pressedTexture, const std::string elementName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
 	m_Idle = AutumnEngine::Sprite(idleTexture, "Button_Idle", position, size, colour, layer);
 	m_Hover = AutumnEngine::Sprite(hoverTexture, "Button_Hover", position, size, colour, layer);
@@ -12,6 +12,9 @@ AutumnEngine::Button::Button(sf::Texture* idleTexture, sf::Texture* hoverTexture
 
 	m_CollisionBox.setSize(m_Size);
 	m_CollisionBox.setPosition(m_Position);
+
+	SetComponentName(elementName);
+	OnIdle();
 }
 AutumnEngine::Button::~Button(){}
 
@@ -54,6 +57,23 @@ void AutumnEngine::Button::ChangeButtonState(m_State buttonState)
 			m_CurrentSprite = &m_Idle;
 		}
 			break;
+	}
+}
+
+void AutumnEngine::Button::HandleCollisions(AutumnEngine::Input input)
+{
+	sf::Vector2i mousePos = sf::Vector2i(input.GetMouseX(), input.GetMouseY());
+
+	if (AutumnEngine::Collision::CheckBoundingBox(GetCollisionBox(), mousePos))
+	{
+		OnHover();
+
+		if (input.IsLeftMouseDown())
+			OnPressed();
+	}
+	else
+	{
+		OnIdle();
 	}
 }
 

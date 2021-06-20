@@ -16,6 +16,21 @@ void AutumnEngine::SceneManager::AddScene(int sceneIndex, std::string sceneName,
 	std::cout << scene->GetSceneName() << " -> " << "Added with Index: " << scene->GetSceneIndex() << std::endl;
 }
 
+void AutumnEngine::SceneManager::SetDefaultScene(std::string sceneName)
+{
+	for (BaseScene* scene : m_Scenes)
+	{
+		if (scene->GetSceneName() == sceneName)
+		{
+			m_CurrentScene = scene;
+			std::cout << m_CurrentScene->GetSceneName() << " -> " << "Default Scene" << std::endl;
+			m_CurrentScene->LoadAssets();
+			m_CurrentScene->Awake();
+			return;
+		}
+	}
+}
+
 // Used to unload all assets from the previous scene, load all assets in for the new scene and change the current scene
 void AutumnEngine::SceneManager::ChangeScene(std::string sceneName)
 {
@@ -49,6 +64,7 @@ void AutumnEngine::SceneManager::UnloadScene()
 	m_CurrentScene->UnloadAssets();
 	delete m_CurrentScene;
 	m_CurrentScene = nullptr;
+
 	std::cout << m_CurrentScene->GetSceneName() << " -> " << "Deleted" << std::endl;
 }
 

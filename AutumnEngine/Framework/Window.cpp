@@ -22,16 +22,16 @@ void AutumnEngine::Window::InitialiseGame()
 {
 	m_Input = new AutumnEngine::Input();
 	m_SceneManager = new AutumnEngine::SceneManager();
-	m_GUIManager = new AutumnEngine::GUI();
+	m_GUILayer = new AutumnEngine::GUILayer(sf::Vector2f(m_Window->getSize().x / 2, m_Window->getSize().y / 2), sf::Vector2f(m_Window->getSize().x, m_Window->getSize().y));
 
 	// Adds 2 scenes to the "Scene Manager", setting the first scene and then changing it to the second scene
-	m_MainMenu = new MainMenu(m_Window, m_Input, m_GUIManager, m_SceneManager);
-	m_TestScene = new TestScene(m_Window, m_Input, m_GUIManager);
+	m_MainMenu = new MainMenu(m_Window, m_Input, m_GUILayer, m_SceneManager);
+	m_TestScene = new TestScene(m_Window, m_Input, m_GUILayer);
 
 	m_SceneManager->AddScene(0, "Main Menu", m_MainMenu);
 	m_SceneManager->AddScene(1, "Test Scene", m_TestScene);
 
-	m_SceneManager->ChangeScene("Main Menu");
+	m_SceneManager->SetDefaultScene("Main Menu");
 }
 
 void AutumnEngine::Window::HandleWindowEvents()

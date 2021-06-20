@@ -21,7 +21,7 @@ namespace AutumnEngine
 
 		private:
 			AutumnEngine::Input* m_Input;
-			AutumnEngine::GUI* m_GUIManager;
+			AutumnEngine::GUILayer* m_GUILayer;
 			AutumnEngine::SceneManager* m_SceneManager;
 
 			sf::Clock m_Clock;

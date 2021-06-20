@@ -17,7 +17,7 @@ AutumnEngine::Sprite::Sprite(const sf::Texture* spriteTexture, std::string name,
 	SetColour(colour);
 
 	state->texture = spriteTexture;
-
+	
 	// Initialise Quad with position, size, layer and sprite
 	InitialiseQuad();
 }

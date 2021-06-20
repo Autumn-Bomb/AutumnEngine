@@ -1,10 +1,10 @@
 #include "MainMenu.h"
 
 AutumnEngine::MainMenu::MainMenu() {}
-AutumnEngine::MainMenu::MainMenu(sf::RenderWindow* window, AutumnEngine::Input* input, AutumnEngine::GUI* guiManager, AutumnEngine::SceneManager* sceneManager)
+AutumnEngine::MainMenu::MainMenu(sf::RenderWindow* window, AutumnEngine::Input* input, AutumnEngine::GUILayer* guiLayer, AutumnEngine::SceneManager* sceneManager)
 {
 	SetRenderWindow(window);
-	SetGUIManager(guiManager);
+	SetGUILayer(guiLayer);
 	SetInput(input);
 
 	m_SceneManager = sceneManager;
@@ -12,7 +12,8 @@ AutumnEngine::MainMenu::MainMenu(sf::RenderWindow* window, AutumnEngine::Input* 
 
 AutumnEngine::MainMenu::~MainMenu()
 {
-
+	delete m_SceneManager;
+	m_SceneManager = nullptr;
 }
 
 void AutumnEngine::MainMenu::LoadAssets()
@@ -27,26 +28,22 @@ void AutumnEngine::MainMenu::UnloadAssets()
 
 void AutumnEngine::MainMenu::Awake()
 {
-	GetGUIManager().CreateButtonElement("ButtonIdle", "ButtonHover", "ButtonPressed", { 100, 100 }, { 150, 50 }, sf::Color::White, 1);
-	GetGUIManager().GetButtonElement(0).OnIdle();
+	GetGUILayer()->ClearComponents();
+
+	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateSpriteUIElement("background", "Background", { 0, 0 }, { 1920, 1080 }, sf::Color::White, 0));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateSpriteUIElement("logo", "Logo", { 835, 200 }, { 250, 250 }, sf::Color::White, 0));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateTextElement("arial", "Ping Pong", "MainMenuTitle", { 740, 10 }, 100, sf::Color::White));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateTextElement("arial", "Autumn Engine - v1.0.0 - Autumn Bomb LTD 2021", "VersionNumber", { 10, 1045 }, 22, sf::Color::White));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateButtonElement("ButtonIdle", "ButtonHover", "ButtonPressed", "MainMenuPlayButton", { 900, 500 }, { 150, 175 }, sf::Color::White, 1));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateButtonElement("ExitButtonIdle", "ExitButtonHover", "ExitButtonPressed", "MainMenuExitButton", { 900, 700 }, { 150, 175 }, sf::Color::White, 1));
 
 	std::cout << "Awake Initialised -> " << GetSceneName() << std::endl;
 }
 
 void AutumnEngine::MainMenu::HandleInput(float dt)
 {
-	if (AutumnEngine::Collision::CheckBoundingBox(GetGUIManager().GetButtonElement(0).GetCollisionBox(), sf::Vector2i(GetInput().GetMouseX(), GetInput().GetMouseY())))
-	{
-		GetGUIManager().GetButtonElement(0).OnHover();
-
-		if (GetInput().IsLeftMousePressed())
-			m_SceneManager->ChangeScene("Test Scene");
-			
-	}
-	else
-	{
-		GetGUIManager().GetButtonElement(0).OnIdle();
-	}
+	GetGUILayer()->GetUIComponent("MainMenuPlayButton")->HandleCollisions(GetInput());
+	GetGUILayer()->GetUIComponent("MainMenuExitButton")->HandleCollisions(GetInput());
 }
 
 void AutumnEngine::MainMenu::Update(float dt)
@@ -57,6 +54,8 @@ void AutumnEngine::MainMenu::Update(float dt)
 void AutumnEngine::MainMenu::Render()
 {
 	Begin();
-	GetGUIManager().GetButtonElement(0).Render(GetRenderWindow());
+
+	GetGUILayer()->Render(GetRenderWindow());
+
 	End();
 }

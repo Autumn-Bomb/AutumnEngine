@@ -1,9 +1,10 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "UIComponent.h"
 
 namespace AutumnEngine
 {
-	class Sprite : public sf::Drawable
+	class Sprite : public sf::Drawable, public UIComponent
 	{
 		public:
 			Sprite();
@@ -22,6 +23,9 @@ namespace AutumnEngine
 			sf::Vector2f GetPosition() { return m_Position; }
 			void SetSize(sf::Vector2f size) { m_Size = size; InitialiseQuad(); }
 			sf::Vector2f GetSize() { return m_Size; }
+
+			void Render(sf::RenderWindow* window) override { window->draw(*this, GetRenderState()); }
+			void HandleCollisions(AutumnEngine::Input input) override {}
 
 			// Sets the Quads entire colour - can be used for tinting effects on sprites
 			void SetColour(sf::Color colour)

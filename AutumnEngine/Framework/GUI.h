@@ -19,31 +19,20 @@ namespace AutumnEngine
 			~GUI();
 
 			// Creation and Updating of Text Elements
-			void CreateTextElement(const std::string fontName, const std::string text, sf::Vector2f position, const int fontSize, const sf::Color colour);
-			AutumnEngine::Text& GetTextElement(const int index) { return m_TextElements[index]; }
+			AutumnEngine::Text* CreateTextElement(const std::string fontName, const std::string text, const std::string componentName, sf::Vector2f position, const int fontSize, const sf::Color colour);
 
 			// Creation and Updating of Sprite Elements
-			void CreateSpriteUIElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color color, const int layer);
-			AutumnEngine::Sprite& GetSpriteUIElement(const int index) { return m_SpriteElements[index]; }
+			AutumnEngine::Sprite* CreateSpriteUIElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color color, const int layer);
 
 			// Creation and Updating of Button Elements
-			void CreateButtonElement(const std::string idleTextureName, const std::string hoverTextureName, const std::string pressedTextureName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
-			AutumnEngine::Button& GetButtonElement(const int index) { return m_ButtonElements[index]; }
+			AutumnEngine::Button* CreateButtonElement(const std::string idleTextureName, const std::string hoverTextureName, const std::string pressedTextureName, const std::string componentName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
 
 			// Creation and Updating of Slider Elements
-			void CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, const float min, const float max);
-			AutumnEngine::Slider& GetSliderElement(const int index) { return m_SliderElements[index]; }
+			AutumnEngine::Slider* CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, const std::string componentName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, const float min, const float max, const int layer);
 
 			// Creation and Updating of Toggle Elements
-			void CreateToggleElement(std::string sliderBackgroundName, std::string sliderHandleName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
-			AutumnEngine::Toggle& GetToggleElement(const int index) { return m_ToggleElements[index]; }
+			AutumnEngine::Toggle* CreateToggleElement(std::string toggleActiveSpriteName, std::string toggleDeactiveSpriteName, const std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
 
 		private:
-			// Containers for all UI elements
-			std::vector<AutumnEngine::Text> m_TextElements;
-			std::vector<AutumnEngine::Sprite> m_SpriteElements;
-			std::vector<AutumnEngine::Toggle> m_ToggleElements;
-			std::vector<AutumnEngine::Slider> m_SliderElements;
-			std::vector<AutumnEngine::Button> m_ButtonElements;
 	};
 }

@@ -11,6 +11,7 @@ namespace AutumnEngine
 			~SceneManager();
 
 			void ChangeScene(std::string sceneName);
+			void SetDefaultScene(std::string sceneName);
 			void UnloadScene();
 
 			void AddScene(int sceneIndex, std::string sceneName, BaseScene* scene);

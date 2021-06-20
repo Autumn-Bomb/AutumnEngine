@@ -1,7 +1,8 @@
 #pragma once
 #include "../../Framework/BaseScene.h"
-#include "../../Framework/GUI.h"
+#include "../../Framework/GUILayer.h"
 #include "../../Framework/Entity.h"
+#include "../../Framework/Collision.h"
 
 #include "SFML/Graphics.hpp"
 
@@ -11,7 +12,7 @@ namespace AutumnEngine
 	{
 		public:
 			TestScene();
-			TestScene(sf::RenderWindow* target, AutumnEngine::Input* input, AutumnEngine::GUI* guiManager);
+			TestScene(sf::RenderWindow* target, AutumnEngine::Input* input, AutumnEngine::GUILayer* guiManager);
 			~TestScene();
 
 			void Awake() override;

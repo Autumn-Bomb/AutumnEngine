@@ -1,30 +1,36 @@
 #pragma once
 
 #include "SFML/Graphics.hpp"
+#include "UIComponent.h"
 #include "Sprite.h"
 
 namespace AutumnEngine
 {
-	class Slider
+	class Slider : public UIComponent
 	{
 		public:
 			Slider();
-			Slider(sf::Texture* background, sf::Texture* handle, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, float min, float max);
+			Slider(sf::Texture* background, sf::Texture* handle, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, float min, float max, int layer);
 			~Slider();
 
-			void Render(sf::RenderWindow* window);
+			void Render(sf::RenderWindow* window) override;
+			void HandleCollisions(AutumnEngine::Input input) override;
+
 			void SetValue(float value);
 
-			sf::Vector2f GetBackgroundPos() { return m_BackgroundPosition; }
-			sf::Vector2f GetHandlePosition() { return m_HandlePosition; }
+			sf::Vector2f GetBackgroundPosition() { return m_Background.GetPosition(); }
+			sf::Vector2f GetHandlePosition() { return m_Handle.GetPosition(); }
 
 			float GetCurrentValue() { return m_CurrentValue; }
 
-		private:
-			sf::RectangleShape m_CollisionBox;
+			sf::RectangleShape* GetHandleCollisionBox() { return &m_CollisionBoxHandle; }
+			sf::RectangleShape* GetBackgroundCollisionBox() { return &m_CollisionBoxBackground; }
 
-			sf::Vector2f m_BackgroundPosition;
-			sf::Vector2f m_HandlePosition;
+			sf::Vector2f GetMinAndMax() { return sf::Vector2f(m_Min, m_Max); }
+
+		private:
+			sf::RectangleShape m_CollisionBoxHandle;
+			sf::RectangleShape m_CollisionBoxBackground;
 
 			AutumnEngine::Sprite m_Background;
 			AutumnEngine::Sprite m_Handle;
