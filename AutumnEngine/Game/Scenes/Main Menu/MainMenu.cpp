@@ -1,6 +1,6 @@
 #include "MainMenu.h"
 
-AutumnEngine::MainMenu::MainMenu() {}
+AutumnEngine::MainMenu::MainMenu() { m_SceneManager = nullptr; }
 AutumnEngine::MainMenu::MainMenu(sf::RenderWindow* window, AutumnEngine::Input* input, AutumnEngine::GUILayer* guiLayer, AutumnEngine::SceneManager* sceneManager)
 {
 	SetRenderWindow(window);
@@ -42,8 +42,8 @@ void AutumnEngine::MainMenu::Awake()
 
 void AutumnEngine::MainMenu::HandleInput(float dt)
 {
-	GetGUILayer()->GetUIComponent("MainMenuPlayButton")->HandleCollisions(GetInput());
-	GetGUILayer()->GetUIComponent("MainMenuExitButton")->HandleCollisions(GetInput());
+	GetGUILayer()->GetUIComponent("MainMenuPlayButton").HandleCollisions(GetInput());
+	GetGUILayer()->GetUIComponent("MainMenuExitButton").HandleCollisions(GetInput());
 }
 
 void AutumnEngine::MainMenu::Update(float dt)

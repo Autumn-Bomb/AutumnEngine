@@ -1,6 +1,6 @@
 #include "Text.h"
 
-AutumnEngine::Text::Text() {}
+AutumnEngine::Text::Text() { m_Font = nullptr; m_Text = nullptr; }
 AutumnEngine::Text::Text(const std::string fontName, const std::string text, sf::Vector2f position, const int characterSize, const sf::Color colour)
 {
 	m_Text = new sf::Text();

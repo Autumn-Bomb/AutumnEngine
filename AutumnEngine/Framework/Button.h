@@ -10,7 +10,7 @@ namespace AutumnEngine
 
 		public:
 			Button();
-			Button(sf::Texture* idleTexture, sf::Texture* hoverTexter, sf::Texture* pressedTexture, const std::string elementName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
+			Button(const sf::Texture* idleTexture, const sf::Texture* hoverTexture, const sf::Texture* pressedTexture, const std::string elementName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
 			~Button();
 
 			void ChangeButtonState(m_State buttonState);
@@ -22,7 +22,7 @@ namespace AutumnEngine
 			void Render(sf::RenderWindow* window) override;
 			void HandleCollisions(AutumnEngine::Input input) override;
 
-			sf::RectangleShape* GetCollisionBox() { return &m_CollisionBox; }
+			sf::RectangleShape& GetCollisionBox() { return m_CollisionBox; }
 			m_State m_ButtonState;
 
 		private:
@@ -33,8 +33,8 @@ namespace AutumnEngine
 
 			AutumnEngine::Sprite* m_CurrentSprite;
 
-			AutumnEngine::Sprite m_Idle;
-			AutumnEngine::Sprite m_Hover;
-			AutumnEngine::Sprite m_Pressed;
+			AutumnEngine::Sprite m_IdleSprite;
+			AutumnEngine::Sprite m_HoverSprite;
+			AutumnEngine::Sprite m_PressedSprite;
 	};
 }

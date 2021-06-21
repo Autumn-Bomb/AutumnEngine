@@ -1,2 +1,92 @@
-﻿  SceneManager.cpp
+﻿  Application.cpp
+  BaseScene.cpp
+  GUILayer.cpp
+  SceneLayer.cpp
+  SceneManager.cpp
+  Slider.cpp
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Slider.cpp(9,129): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Slider.cpp(11,110): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Slider.cpp(11,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Slider.cpp(14,98): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Slider.cpp(14,69): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  Window.cpp
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Window.cpp(37,165): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Window.cpp(37,142): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Window.cpp(37,104): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Window.cpp(37,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  Main.cpp
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  MainMenu.cpp
+  TestScene.cpp
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(34,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\GUILayer.cpp(41): warning C4715: 'AutumnEngine::GUILayer::GetUIComponent': not all control paths return a value
   AutumnEngine.vcxproj -> D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

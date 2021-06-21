@@ -7,6 +7,7 @@ AutumnEngine::Text* AutumnEngine::GUI::CreateTextElement(const std::string fontN
 {	
 	AutumnEngine::Text* t_Text = new AutumnEngine::Text(fontName, text, position, characterSize, colour);
 	t_Text->SetComponentName(componentName);
+
 	return t_Text;
 }
 
@@ -20,6 +21,7 @@ AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(const std::string
 	AutumnEngine::Sprite* t_Sprite = new AutumnEngine::Sprite(t_Texture, spriteName, position, size, colour, layer);
 	t_Sprite->SetComponentName(spriteName);
 	t_Sprite->SetRenderingLayer(layer);
+
 	return t_Sprite;
 }
 ////
@@ -43,6 +45,7 @@ AutumnEngine::Button* AutumnEngine::GUI::CreateButtonElement(const std::string i
 	AutumnEngine::Button* t_Button = new AutumnEngine::Button(t_TextureIdle, t_TextureHover, t_TexturePressed, componentName, position, size, colour, layer);
 	t_Button->SetComponentName(componentName);
 	t_Button->SetRenderingLayer(layer);
+
 	return t_Button;
 }
 ////
@@ -61,6 +64,7 @@ AutumnEngine::Slider* AutumnEngine::GUI::CreateSliderElement(std::string sliderB
 	AutumnEngine::Slider* t_Slider = new AutumnEngine::Slider(BackgroundTexture, Handletexture, backgroundPosition, backgroundSize, handleSize, min, max, layer);
 	t_Slider->SetComponentName(componentName);
 	t_Slider->SetRenderingLayer(layer);
+
 	return t_Slider;
 }
 
@@ -78,5 +82,6 @@ AutumnEngine::Toggle* AutumnEngine::GUI::CreateToggleElement(std::string toggleA
 	AutumnEngine::Toggle* t_Toggle = new AutumnEngine::Toggle(DeactiveTexture, ActiveTexture, position, size, colour, layer);
 	t_Toggle->SetComponentName(componentName);
 	t_Toggle->SetRenderingLayer(layer);
+
 	return t_Toggle;
 }

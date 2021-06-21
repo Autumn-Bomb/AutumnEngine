@@ -1,6 +1,6 @@
 #include "Slider.h"
 
-AutumnEngine::Slider::Slider() { m_Min = 0; m_Max = 0; }
+AutumnEngine::Slider::Slider() { m_Min = 0; m_Max = 0; m_CurrentValue = 100; }
 AutumnEngine::Slider::Slider(sf::Texture* background, sf::Texture* handle, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, float min, float max, int layer)
 {
 	m_Background = AutumnEngine::Sprite(background, "Slider_Background", backgroundPosition, backgroundSize, sf::Color::White, 1);

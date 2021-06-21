@@ -1,6 +1,18 @@
 #include "Window.h"
 
-AutumnEngine::Window::Window() { m_Window = nullptr; }
+AutumnEngine::Window::Window()
+{
+	m_Window = nullptr; 
+	m_GUILayer = nullptr; 
+	m_MainMenu = nullptr; 
+	m_SceneManager = nullptr;
+	m_TestScene = nullptr;
+	m_Input = nullptr;
+
+	m_DeltaTime = 0; 
+	m_Event = sf::Event(); 
+	
+}
 AutumnEngine::Window::Window(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen)
 {
 	// Calls the SetupWindow method passing in the width, height, title of the window and whether vSync is enabled or not
@@ -109,5 +121,7 @@ void AutumnEngine::Window::RunWindow()
 
 		m_DeltaTime = m_Clock.restart().asSeconds();
 		m_SceneManager->UpdateScene(m_DeltaTime);
+
+		m_Input->Update();
 	}
 }

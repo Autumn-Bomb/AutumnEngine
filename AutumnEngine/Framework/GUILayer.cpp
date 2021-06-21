@@ -1,6 +1,6 @@
 #include "GUILayer.h"
 
-AutumnEngine::GUILayer::GUILayer(){}
+AutumnEngine::GUILayer::GUILayer() { m_GUICamera = nullptr; }
 AutumnEngine::GUILayer::GUILayer(sf::Vector2f position, sf::Vector2f size)
 {
 	m_GUICamera = new sf::View(position, size);
@@ -29,13 +29,13 @@ void AutumnEngine::GUILayer::AddUIComponent(AutumnEngine::UIComponent* uiCompone
 	m_UIElements.push_back(uiComponent);
 }
 
-AutumnEngine::UIComponent* AutumnEngine::GUILayer::GetUIComponent(std::string componentName)
+AutumnEngine::UIComponent& AutumnEngine::GUILayer::GetUIComponent(std::string componentName)
 {
 	for (AutumnEngine::UIComponent* component : m_UIElements)
 	{
 		if (component->GetElementName() == componentName)
 		{
-			return component;
+			return *component;
 		}
 	}
 }

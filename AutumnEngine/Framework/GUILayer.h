@@ -3,7 +3,6 @@
 #include "SFML/Graphics.hpp"
 #include "UIComponent.h"
 #include "GUI.h"
-#include "Bubblesort.h"
 
 namespace AutumnEngine
 {
@@ -19,11 +18,11 @@ namespace AutumnEngine
 			void Render(sf::RenderWindow* window);
 
 			void AddUIComponent(AutumnEngine::UIComponent* uiComponent);
-			AutumnEngine::UIComponent* GetUIComponent(std::string componentName);
+			AutumnEngine::UIComponent& GetUIComponent(std::string componentName);
 
 			void ClearComponents() { m_UIElements.clear(); }
 
-			AutumnEngine::GUI GetGUIManager() { return m_GUIManager; }
+			AutumnEngine::GUI& GetGUIManager() { return m_GUIManager; }
 
 			private:
 				std::vector<UIComponent*> m_UIElements;

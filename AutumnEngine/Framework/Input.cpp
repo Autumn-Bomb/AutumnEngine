@@ -10,7 +10,7 @@ AutumnEngine::Input::Input()
 
 void AutumnEngine::Input::SetKeyDown(int key)
 {
-	if (key >= 0)
+	if (key >= 0 && key <= 256)
 	{
 		m_Keys[key] = true;
 	}
@@ -18,7 +18,7 @@ void AutumnEngine::Input::SetKeyDown(int key)
 
 void AutumnEngine::Input::SetKeyUp(int key)
 {
-	if (key >= 0)
+	if (key >= 0 && key <= 256)
 	{
 		m_Keys[key] = false;
 	}
@@ -26,7 +26,7 @@ void AutumnEngine::Input::SetKeyUp(int key)
 
 bool AutumnEngine::Input::IsKeyDown(int key)
 {
-	if (key >= 0)
+	if (key >= 0 && key <= 256)
 	{
 		return m_Keys[key];
 	}

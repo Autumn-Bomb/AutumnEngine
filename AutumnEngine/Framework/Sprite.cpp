@@ -1,6 +1,6 @@
 #include "../Framework/Sprite.h"
 
-AutumnEngine::Sprite::Sprite() {}
+AutumnEngine::Sprite::Sprite() { m_Layer = 0; state = nullptr; }
 AutumnEngine::Sprite::Sprite(const sf::Texture* spriteTexture, std::string name, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
 	state = new sf::RenderStates();

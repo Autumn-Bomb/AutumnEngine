@@ -1,6 +1,6 @@
 #include "Toggle.h"
 
-AutumnEngine::Toggle::Toggle() { m_CurrentSprite = nullptr; m_DisabledToggle = nullptr; m_EnabledToggle = nullptr; }
+AutumnEngine::Toggle::Toggle() { m_CurrentSprite = nullptr; m_DisabledToggle = nullptr; m_EnabledToggle = nullptr; m_Enabled = true; m_ToggleState = State::enabled; }
 AutumnEngine::Toggle::Toggle(sf::Texture* disabledTexture, sf::Texture* enabledTexture, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
 	m_DisabledToggle = new AutumnEngine::Sprite(disabledTexture, "Toggle_Background", position, size, colour, layer);

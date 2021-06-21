@@ -1,7 +1,6 @@
 #pragma once
 #include "../../Framework/BaseScene.h"
 #include "../../Framework/GUILayer.h"
-#include "../../Framework/Entity.h"
 #include "../../Framework/Collision.h"
 
 #include "SFML/Graphics.hpp"

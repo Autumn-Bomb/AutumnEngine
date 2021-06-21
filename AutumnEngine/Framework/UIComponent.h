@@ -22,6 +22,6 @@ namespace AutumnEngine
 		private:
 			int m_Layer;
 			std::string m_ComponentName;
-			sf::RenderStates* m_State;
+			sf::RenderStates* m_State = nullptr;
 	};	
 }

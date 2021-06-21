@@ -1,6 +1,6 @@
 #include "BaseScene.h"
 
-AutumnEngine::BaseScene::BaseScene(){}
+AutumnEngine::BaseScene::BaseScene() { m_GUILayer = nullptr; m_Input = nullptr; m_Window = nullptr; m_SceneIndex = 0; m_SceneName = ""; }
 AutumnEngine::BaseScene::~BaseScene(){}
 
 void AutumnEngine::BaseScene::Begin()
