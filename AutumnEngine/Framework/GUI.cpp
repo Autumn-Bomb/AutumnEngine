@@ -16,7 +16,7 @@ AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(const std::string
 {
 	sf::Texture* t_Texture = new sf::Texture();
 	if (!t_Texture->loadFromFile("Resources/Sprites/" + textureName + ".png"))
-		std::cout << "Couldn't locate Font named: " << textureName << ".png" << std::endl;
+		std::cout << "Couldn't locate Sprite named: " << textureName << ".png" << std::endl;
 
 	AutumnEngine::Sprite* t_Sprite = new AutumnEngine::Sprite(t_Texture, spriteName, position, size, colour, layer);
 	t_Sprite->SetComponentName(spriteName);

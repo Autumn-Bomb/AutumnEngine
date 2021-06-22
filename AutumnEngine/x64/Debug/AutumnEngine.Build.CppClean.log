@@ -11,7 +11,6 @@ d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\scenemanager.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\scenelayer.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\input.obj
-d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\guilayer.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\gui.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\entity.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\collision.obj
@@ -20,8 +19,9 @@ d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\basescene.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\assetmanager.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\application.obj
-d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.ilk
+d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\guilayer.obj
 d:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.exe
+d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.ilk
 d:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.pdb
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.command.1.tlog
 d:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.read.1.tlog

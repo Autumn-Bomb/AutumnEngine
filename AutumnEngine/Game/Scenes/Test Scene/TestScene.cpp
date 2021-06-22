@@ -1,11 +1,11 @@
 #include "TestScene.h"
 
 AutumnEngine::TestScene::TestScene() {}
-AutumnEngine::TestScene::TestScene(sf::RenderWindow* window, AutumnEngine::Input* input, AutumnEngine::GUILayer* guiLayer)
+AutumnEngine::TestScene::TestScene(sf::RenderWindow& window, AutumnEngine::Input& input, AutumnEngine::GUILayer& guiLayer)
 {
-	SetRenderWindow(window);
-	SetGUILayer(guiLayer);
-	SetInput(input);
+	SetRenderWindow(&window);
+	SetGUILayer(&guiLayer);
+	SetInput(&input);
 }
 AutumnEngine::TestScene::~TestScene(){}
 

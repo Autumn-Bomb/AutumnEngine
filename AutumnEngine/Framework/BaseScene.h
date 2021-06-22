@@ -2,6 +2,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "Input.h"
 #include "GUILayer.h"
+#include "AssetManager.h"
 
 #include <iostream>
 

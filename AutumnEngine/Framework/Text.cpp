@@ -20,7 +20,7 @@ void AutumnEngine::Text::LoadFont(std::string fontName)
 	if (m_Font == nullptr)
 	{
 		m_Font = new sf::Font;
-		if (!m_Font->loadFromFile("Resources/Font/" + fontName + ".ttf"))
+		if (!m_Font->loadFromFile("Resources/Fonts/" + fontName + ".ttf"))
 		{
 			std::cout << "Couldn't locate Font named: " << fontName << ".ttf" << std::endl;
 		}

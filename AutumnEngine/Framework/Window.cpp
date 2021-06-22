@@ -2,13 +2,7 @@
 
 AutumnEngine::Window::Window()
 {
-	m_Window = nullptr; 
-	m_GUILayer = nullptr; 
-	m_MainMenu = nullptr; 
-	m_SceneManager = nullptr;
-	m_TestScene = nullptr;
-	m_Input = nullptr;
-
+	m_Window = nullptr;
 	m_DeltaTime = 0; 
 	m_Event = sf::Event(); 
 	
@@ -27,23 +21,16 @@ void AutumnEngine::Window::SetupWindow(const unsigned int width, const unsigned 
 	m_Window->setVerticalSyncEnabled(vSync);
 		
 	// Calls the InitialiseGame method to add all scenes to the game
-	InitialiseGame();
+	InitialiseGameLayer();
 }
 
-void AutumnEngine::Window::InitialiseGame()
+void AutumnEngine::Window::InitialiseGameLayer()
 {
-	m_Input = new AutumnEngine::Input();
-	m_SceneManager = new AutumnEngine::SceneManager();
-	m_GUILayer = new AutumnEngine::GUILayer(sf::Vector2f(m_Window->getSize().x / 2, m_Window->getSize().y / 2), sf::Vector2f(m_Window->getSize().x, m_Window->getSize().y));
+	// Creates a new Game Layer passing in the current Window
+	m_GameLayer = AutumnEngine::GameLayer(m_Window);
 
-	// Adds 2 scenes to the "Scene Manager", setting the first scene and then changing it to the second scene
-	m_MainMenu = new MainMenu(m_Window, m_Input, m_GUILayer, m_SceneManager);
-	m_TestScene = new TestScene(m_Window, m_Input, m_GUILayer);
-
-	m_SceneManager->AddScene(0, "Main Menu", m_MainMenu);
-	m_SceneManager->AddScene(1, "Test Scene", m_TestScene);
-
-	m_SceneManager->SetDefaultScene("Main Menu");
+	// Calls the Game Layers initialise method to initialise the Game Layer
+	m_GameLayer.InitialiseGame();
 }
 
 void AutumnEngine::Window::HandleWindowEvents()
@@ -70,41 +57,41 @@ void AutumnEngine::Window::HandleWindowEvents()
 			case sf::Event::KeyPressed:
 			{
 				// Set the key pressed to down
-				m_Input->SetKeyDown(m_Event.key.code);
+				m_GameLayer.GetInput()->SetKeyDown(m_Event.key.code);
 			}
 				break;
 			case sf::Event::KeyReleased:
 			{
 				// Set the key pressed to up
-				m_Input->SetKeyUp(m_Event.key.code);
+				m_GameLayer.GetInput()->SetKeyUp(m_Event.key.code);
 			}
 				break;
 			case sf::Event::MouseMoved:
 			{
 				// Sets the mouses position to the current position
-				m_Input->SetMousePosition(m_Event.mouseMove.x, m_Event.mouseMove.y);
+				m_GameLayer.GetInput()->SetMousePosition(m_Event.mouseMove.x, m_Event.mouseMove.y);
 			}
 				break;
 			case sf::Event::MouseButtonPressed:
 			{
 				// Sets the left mouse left button to down
 				if (m_Event.key.code == sf::Mouse::Left)
-					m_Input->SetLeftMouse(AutumnEngine::Input::MouseState::DOWN);
+					m_GameLayer.GetInput()->SetLeftMouse(AutumnEngine::Input::MouseState::DOWN);
 
 				// Sets the right mouse left button to down
 				if (m_Event.key.code == sf::Mouse::Right)
-					m_Input->SetRightMouse(AutumnEngine::Input::MouseState::DOWN);
+					m_GameLayer.GetInput()->SetRightMouse(AutumnEngine::Input::MouseState::DOWN);
 			}
 				break;
 			case sf::Event::MouseButtonReleased:
 			{
 				// Sets the left mouse left button to up
 				if (m_Event.key.code == sf::Mouse::Left)
-					m_Input->SetLeftMouse(AutumnEngine::Input::MouseState::UP);
+					m_GameLayer.GetInput()->SetLeftMouse(AutumnEngine::Input::MouseState::UP);
 
 				// Sets the left mouse left button to up
 				if (m_Event.key.code == sf::Mouse::Right)
-					m_Input->SetRightMouse(AutumnEngine::Input::MouseState::UP);
+					m_GameLayer.GetInput()->SetRightMouse(AutumnEngine::Input::MouseState::UP);
 			}
 				break;
 		}
@@ -119,9 +106,8 @@ void AutumnEngine::Window::RunWindow()
 		// Handle all window events
 		HandleWindowEvents();
 
+		// Calculate Delta Time and Update the running Game Layer passing in the current Delta Time
 		m_DeltaTime = m_Clock.restart().asSeconds();
-		m_SceneManager->UpdateScene(m_DeltaTime);
-
-		m_Input->Update();
+		m_GameLayer.Update(m_DeltaTime);
 	}
 }

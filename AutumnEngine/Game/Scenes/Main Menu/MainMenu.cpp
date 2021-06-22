@@ -1,13 +1,13 @@
 #include "MainMenu.h"
 
 AutumnEngine::MainMenu::MainMenu() { m_SceneManager = nullptr; }
-AutumnEngine::MainMenu::MainMenu(sf::RenderWindow* window, AutumnEngine::Input* input, AutumnEngine::GUILayer* guiLayer, AutumnEngine::SceneManager* sceneManager)
+AutumnEngine::MainMenu::MainMenu(sf::RenderWindow& window, AutumnEngine::Input& input, AutumnEngine::GUILayer& guiLayer, AutumnEngine::SceneManager& sceneManager)
 {
-	SetRenderWindow(window);
-	SetGUILayer(guiLayer);
-	SetInput(input);
+	SetRenderWindow(&window);
+	SetGUILayer(&guiLayer);
+	SetInput(&input);
 
-	m_SceneManager = sceneManager;
+	m_SceneManager = &sceneManager;
 }
 
 AutumnEngine::MainMenu::~MainMenu()

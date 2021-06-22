@@ -10,7 +10,7 @@ namespace AutumnEngine
 	{
 		public:
 			MainMenu();
-			MainMenu(sf::RenderWindow* target, AutumnEngine::Input* input, AutumnEngine::GUILayer* guiLayer, AutumnEngine::SceneManager* sceneManager);
+			MainMenu(sf::RenderWindow& target, AutumnEngine::Input& input, AutumnEngine::GUILayer& guiLayer, AutumnEngine::SceneManager& sceneManager);
 			~MainMenu();
 
 			void Awake();
