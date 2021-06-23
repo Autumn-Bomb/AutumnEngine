@@ -12,12 +12,8 @@ AutumnEngine::Text* AutumnEngine::GUI::CreateTextElement(const std::string fontN
 }
 
 // Creation of Sprite Elements
-AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(const std::string textureName, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(sf::Texture* t_Texture, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
-	sf::Texture* t_Texture = new sf::Texture();
-	if (!t_Texture->loadFromFile("Resources/Sprites/" + textureName + ".png"))
-		std::cout << "Couldn't locate Sprite named: " << textureName << ".png" << std::endl;
-
 	AutumnEngine::Sprite* t_Sprite = new AutumnEngine::Sprite(t_Texture, spriteName, position, size, colour, layer);
 	t_Sprite->SetComponentName(spriteName);
 	t_Sprite->SetRenderingLayer(layer);
@@ -27,22 +23,9 @@ AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(const std::string
 ////
 
 // Creation of Button Elements
-AutumnEngine::Button* AutumnEngine::GUI::CreateButtonElement(const std::string idleTextureName, const std::string hoverTextureName, const std::string pressedTextureName, const std::string componentName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+AutumnEngine::Button* AutumnEngine::GUI::CreateButtonElement(sf::Texture* buttonIdle, sf::Texture* buttonHover, sf::Texture* buttonPressed, const std::string componentName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
 {
-	sf::Texture* t_TextureIdle = new sf::Texture();
-	sf::Texture* t_TextureHover = new sf::Texture();
-	sf::Texture* t_TexturePressed = new sf::Texture();
-
-	if (!t_TextureIdle->loadFromFile("Resources/Sprites/" + idleTextureName + ".png"))
-		std::cout << "Couldn't locate Sprite named: " << idleTextureName << ".png" << std::endl;
-
-	if (!t_TextureHover->loadFromFile("Resources/Sprites/" + hoverTextureName + ".png"))
-		std::cout << "Couldn't locate Sprite named: " << hoverTextureName << ".png" << std::endl;
-
-	if (!t_TexturePressed->loadFromFile("Resources/Sprites/" + pressedTextureName + ".png"))
-		std::cout << "Couldn't locate Sprite named: " << pressedTextureName << ".png" << std::endl;
-
-	AutumnEngine::Button* t_Button = new AutumnEngine::Button(t_TextureIdle, t_TextureHover, t_TexturePressed, componentName, position, size, colour, layer);
+	AutumnEngine::Button* t_Button = new AutumnEngine::Button(buttonIdle, buttonHover, buttonPressed, componentName, position, size, colour, layer);
 	t_Button->SetComponentName(componentName);
 	t_Button->SetRenderingLayer(layer);
 

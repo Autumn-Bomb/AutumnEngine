@@ -26,6 +26,7 @@ void AutumnEngine::GameLayer::CheckIfGameDirectoriesExist()
 {
 	m_AssetManager->CheckIfDirectoriesExist("Resources");
 	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/UI");
+	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/Textures");
 	m_AssetManager->CheckIfDirectoriesExist("Resources/Sounds");
 	m_AssetManager->CheckIfDirectoriesExist("Resources/Fonts");
 
@@ -37,7 +38,7 @@ void AutumnEngine::GameLayer::CheckIfGameDirectoriesExist()
 
 void AutumnEngine::GameLayer::AddScenesToGame()
 {
-	m_MainMenu = new AutumnEngine::MainMenu(*m_Window, *m_Input, *m_GUILayer, *m_SceneManager);
+	m_MainMenu = new AutumnEngine::MainMenu(*m_Window, *m_Input, *m_GUILayer, *m_SceneManager, *m_AssetManager);
 	m_TestScene = new AutumnEngine::TestScene(*m_Window, *m_Input, *m_GUILayer);
 
 	m_SceneManager->AddScene(0, "Main Menu", m_MainMenu);

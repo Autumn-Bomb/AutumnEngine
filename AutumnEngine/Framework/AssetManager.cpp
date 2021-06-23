@@ -5,31 +5,33 @@ AutumnEngine::AssetManager::~AssetManager() {}
 
 void AutumnEngine::AssetManager::LoadTexture(std::string textureName, std::string resourceName, SpriteType spriteType, ImageFormat imageFormat)
 {
+	m_NewTexture = new sf::Texture();
+
 	switch (spriteType)
 	{
 		case SpriteType::Sprite:
 		{
 			if (imageFormat == ImageFormat::PNG)
 			{
-				sf::Texture m_Texture;
-				
-				if (!m_Texture.loadFromFile("Resources/Sprites/Textures" + textureName + ".png"))
+				if (!m_NewTexture->loadFromFile("Resources/Sprites/" + textureName + ".png"))
 				{
-					std::cout << "Couldn't locate: Resources/Sprites/Textures" << textureName << ".png" << std::endl;
+					std::cout << "Couldn't locate: Resources/Sprites/" << textureName << ".png" << std::endl;
 				}
 
-				m_LoadedSprites.push_back(&m_Texture);
+				m_LoadedTextures[resourceName] = m_NewTexture;
+				m_LoadedTextures.try_emplace(resourceName, m_NewTexture);
+
+				std::cout << "Key : " << m_LoadedTextures.at(resourceName) << std::endl;
 			}
 			else if (imageFormat == ImageFormat::JPG)
 			{
-				sf::Texture m_Texture;
-
-				if (!m_Texture.loadFromFile("Resources/Sprites/Textures" + textureName + ".jpg"))
+				if (!m_NewTexture->loadFromFile("Resources/Sprites/" + textureName + ".jpg"))
 				{
-					std::cout << "Couldn't locate: Resources/Sprites/Textures" << textureName << ".jpg" << std::endl;
+					std::cout << "Couldn't locate: Resources/Sprites/" << textureName << ".jpg" << std::endl;
 				}
 
-				m_LoadedSprites.push_back(&m_Texture);
+				m_LoadedTextures[resourceName] = m_NewTexture;
+				m_LoadedTextures.try_emplace(resourceName, m_NewTexture);
 			}
 		}
 			break;
@@ -43,6 +45,23 @@ void AutumnEngine::AssetManager::LoadTexture(std::string textureName, std::strin
 
 		}
 		break;
+	}
+}
+
+sf::Texture& AutumnEngine::AssetManager::GetTexture(std::string fileName)
+{
+	auto pairFound = m_LoadedTextures.find(fileName);
+
+	if (pairFound != m_LoadedTextures.end())
+	{
+		return *pairFound->second;
+	}
+	else
+	{
+		std::cout << "Resource: " << fileName << " doesn't exist in Asset Manager, searching for file now" << std::endl;
+		auto texture = m_LoadedTextures[fileName];
+		texture->loadFromFile("Resources/Sprites/Textures/" + fileName + ".png");
+		return *texture;
 	}
 }
 

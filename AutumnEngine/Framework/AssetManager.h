@@ -25,8 +25,11 @@ namespace AutumnEngine
 			void LoadSound(std::string soundName, SoundType soundType);
 			void LoadTileMapJson(std::string fileName);
 
+			sf::Texture& GetTexture(std::string fileName);
+
 		private:
-			std::vector<sf::Texture*> m_LoadedSprites;
+			std::map<std::string, sf::Texture*> m_LoadedTextures;
+			sf::Texture* m_NewTexture;
 		    nlohmann::json m_TileMapFile;
 	};
 }

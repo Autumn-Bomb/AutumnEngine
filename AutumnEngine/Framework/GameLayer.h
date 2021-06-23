@@ -17,6 +17,7 @@ namespace AutumnEngine
 			void InitialiseGame();
 			void CheckIfGameDirectoriesExist();
 			void AddScenesToGame();
+
 			void Update(float deltaTime);
 
 			AutumnEngine::Input* GetInput() { return m_Input; }

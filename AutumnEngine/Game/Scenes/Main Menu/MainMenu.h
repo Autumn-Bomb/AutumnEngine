@@ -10,7 +10,7 @@ namespace AutumnEngine
 	{
 		public:
 			MainMenu();
-			MainMenu(sf::RenderWindow& target, AutumnEngine::Input& input, AutumnEngine::GUILayer& guiLayer, AutumnEngine::SceneManager& sceneManager);
+			MainMenu(sf::RenderWindow& target, AutumnEngine::Input& input, AutumnEngine::GUILayer& guiLayer, AutumnEngine::SceneManager& sceneManager, AutumnEngine::AssetManager& m_AssetManager);
 			~MainMenu();
 
 			void Awake();
@@ -22,5 +22,6 @@ namespace AutumnEngine
 
 		private:
 			AutumnEngine::SceneManager* m_SceneManager;
+			AutumnEngine::AssetManager* m_AssetManager;
 	};
 }
