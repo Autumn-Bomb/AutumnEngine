@@ -27,6 +27,8 @@ void AutumnEngine::GameLayer::CheckIfGameDirectoriesExist()
 	m_AssetManager->CheckIfDirectoriesExist("Resources");
 	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/UI");
 	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/Textures");
+	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/TextureAtlases");
+	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/SpriteSheets");
 	m_AssetManager->CheckIfDirectoriesExist("Resources/Sounds");
 	m_AssetManager->CheckIfDirectoriesExist("Resources/Fonts");
 

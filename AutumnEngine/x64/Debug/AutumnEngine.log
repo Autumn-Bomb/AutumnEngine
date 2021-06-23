@@ -1,2 +1,40 @@
-﻿  MainMenu.cpp
-  AutumnEngine.vcxproj -> D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe
+﻿  AssetManager.cpp
+  GameLayer.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,165): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,142): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,104): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  Generating Code...
+  AutumnEngine.vcxproj -> C:\Users\Daniel\Desktop\AutumnEngine\x64\Debug\AutumnEngine.exe

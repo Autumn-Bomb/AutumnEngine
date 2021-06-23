@@ -21,8 +21,8 @@ void AutumnEngine::MainMenu::LoadAssets()
 {
 	std::cout << "Loading Assets -> " << GetSceneName() << std::endl;
 
-	m_AssetManager->LoadTexture("background", "Background", AutumnEngine::AssetManager::SpriteType::Sprite, AutumnEngine::AssetManager::ImageFormat::PNG);
-	m_AssetManager->LoadTexture("logo", "Logo", AutumnEngine::AssetManager::SpriteType::Sprite, AutumnEngine::AssetManager::ImageFormat::PNG);
+	m_AssetManager->LoadTexture("background", "Background", AutumnEngine::AssetManager::SpriteType::Texture, AutumnEngine::AssetManager::ImageFormat::PNG);
+	m_AssetManager->LoadTexture("logo", "Logo", AutumnEngine::AssetManager::SpriteType::Texture, AutumnEngine::AssetManager::ImageFormat::PNG);
 
 	m_AssetManager->LoadTexture("ButtonIdle", "ButtonIdle", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
 	m_AssetManager->LoadTexture("ButtonHover", "ButtonHover", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);

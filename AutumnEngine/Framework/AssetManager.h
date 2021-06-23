@@ -11,7 +11,7 @@ namespace AutumnEngine
 	class AssetManager
 	{
 		public:
-			enum class SpriteType { UI, Sprite, Logo };
+			enum class SpriteType { UI, Sprite, Texture, Logo, TextureAtlas, SpriteSheet };
 			enum class ImageFormat { PNG, JPG };
 
 			enum class SoundType { WAV, MP3 };
@@ -28,6 +28,8 @@ namespace AutumnEngine
 			sf::Texture& GetTexture(std::string fileName);
 
 		private:
+			std::string m_FileExtension;
+			std::string m_FilePath;
 			std::map<std::string, sf::Texture*> m_LoadedTextures;
 			sf::Texture* m_NewTexture;
 		    nlohmann::json m_TileMapFile;

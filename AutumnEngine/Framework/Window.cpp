@@ -2,10 +2,10 @@
 
 AutumnEngine::Window::Window()
 {
+	// Initialise default values should the overloaded Constructor not be called
 	m_Window = nullptr;
 	m_DeltaTime = 0; 
 	m_Event = sf::Event(); 
-	
 }
 AutumnEngine::Window::Window(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen)
 {
@@ -16,7 +16,7 @@ AutumnEngine::Window::~Window(){}
 
 void AutumnEngine::Window::SetupWindow(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen)
 {
-	// Initialises the window and enables or disables vSync based on parameter
+	// Initialises the window and enables or disables vSync based on parameter and the same for Fullscreen
 	fullscreen ? m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Fullscreen) : m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Default);
 	m_Window->setVerticalSyncEnabled(vSync);
 		
