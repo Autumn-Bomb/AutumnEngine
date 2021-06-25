@@ -1,40 +1,7 @@
-﻿  AssetManager.cpp
-  GameLayer.cpp
-C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,165): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,142): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,104): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\GameLayer.cpp(20,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
+﻿  GUILayer.cpp
+  SceneManager.cpp
+  TestScene.cpp
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(41,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Generating Code...
-  AutumnEngine.vcxproj -> C:\Users\Daniel\Desktop\AutumnEngine\x64\Debug\AutumnEngine.exe
+D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\GUILayer.cpp(38): warning C4715: 'AutumnEngine::GUILayer::GetUIComponent': not all control paths return a value
+  AutumnEngine.vcxproj -> D:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

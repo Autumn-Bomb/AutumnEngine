@@ -19,9 +19,15 @@ namespace AutumnEngine
 
 			UIComponent GetCurrentUIComponent() { return *this; }
 
+			// Used for Button Detection
+			bool GetIsButtonPressed() { return m_IsPressed; }
+			void SetIsButtonPressed(bool isPressed) { m_IsPressed = isPressed; }
+
 		private:
-			int m_Layer;
-			std::string m_ComponentName;
+			bool m_IsPressed{ false };
+
+			int m_Layer{ 0 };
+			std::string m_ComponentName{ "" };
 			sf::RenderStates* m_State = nullptr;
 	};	
 }

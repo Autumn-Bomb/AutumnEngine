@@ -1,7 +1,9 @@
 #include "Button.h"
 
 AutumnEngine::Button::Button() { m_ButtonState = m_State::Idle; m_CurrentSprite = nullptr; }
-AutumnEngine::Button::Button(const sf::Texture* idleTexture, const sf::Texture* hoverTexture, const sf::Texture* pressedTexture, const std::string elementName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+AutumnEngine::Button::Button(
+	
+	sf::Texture* idleTexture, sf::Texture* hoverTexture, sf::Texture* pressedTexture, std::string elementName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 {
 	m_IdleSprite = AutumnEngine::Sprite(idleTexture, "Button_Idle", position, size, colour, layer);
 	m_HoverSprite = AutumnEngine::Sprite(hoverTexture, "Button_Hover", position, size, colour, layer);
@@ -39,16 +41,19 @@ void AutumnEngine::Button::ChangeButtonState(m_State buttonState)
 	{
 		case m_State::Idle:
 		{
+			SetIsButtonPressed(false);
 			m_CurrentSprite = &m_IdleSprite;
 		}
 			break;
 		case m_State::Hover:
 		{
+			SetIsButtonPressed(false);
 			m_CurrentSprite = &m_HoverSprite;
 		}
 			break;
 		case m_State::Pressed:
 		{
+			SetIsButtonPressed(true);
 			m_CurrentSprite = &m_PressedSprite;
 		}
 			break;

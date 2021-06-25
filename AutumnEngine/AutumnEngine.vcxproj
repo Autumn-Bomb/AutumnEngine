@@ -47,6 +47,7 @@
     <ClInclude Include="Framework\Camera.h" />
     <ClInclude Include="Framework\Collision.h" />
     <ClInclude Include="Framework\GameLayer.h" />
+    <ClInclude Include="Framework\GameState.h" />
     <ClInclude Include="Framework\GUI.h" />
     <ClInclude Include="Framework\GUILayer.h" />
     <ClInclude Include="Framework\Input.h" />

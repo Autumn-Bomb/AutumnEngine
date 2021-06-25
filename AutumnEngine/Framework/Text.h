@@ -9,7 +9,7 @@ namespace AutumnEngine
 	{
 		public:
 			Text();
-			Text(const std::string fontName, const std::string text, sf::Vector2f position, const int characterSize, const sf::Color colour);
+			Text(sf::Font* font, std::string textElementName, std::string text, sf::Vector2f position, int characterSize, sf::Color colour);
 			~Text();
 
 			void UpdateText(std::string text);
@@ -17,9 +17,6 @@ namespace AutumnEngine
 			void HandleCollisions(AutumnEngine::Input input) override;
 
 		private:
-			void LoadFont(std::string fontName);
-
-			sf::Font* m_Font;
-			sf::Text* m_Text;	
+			sf::Text* m_Text;
 	};
 }

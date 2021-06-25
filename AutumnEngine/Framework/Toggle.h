@@ -10,7 +10,9 @@ namespace AutumnEngine
 	{
 		public:
 			Toggle();
-			Toggle(sf::Texture* disabledTexture, sf::Texture* enabledTexture, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
+			Toggle(sf::Texture* disabledTexture, sf::Texture* enabledTexture, 
+				sf::Vector2f position,
+				sf::Vector2f size, sf::Color colour, int layer);
 			~Toggle();
 
 			void SetToggleEnabled(bool enabled);

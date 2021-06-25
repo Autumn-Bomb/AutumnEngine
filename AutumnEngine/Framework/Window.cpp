@@ -7,14 +7,14 @@ AutumnEngine::Window::Window()
 	m_DeltaTime = 0; 
 	m_Event = sf::Event(); 
 }
-AutumnEngine::Window::Window(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen)
+AutumnEngine::Window::Window(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen)
 {
 	// Calls the SetupWindow method passing in the width, height, title of the window and whether vSync is enabled or not
 	SetupWindow(width, height, title, vSync, fullscreen);
 }
 AutumnEngine::Window::~Window(){}
 
-void AutumnEngine::Window::SetupWindow(const unsigned int width, const unsigned int height, const char* title, const bool vSync, const bool fullscreen)
+void AutumnEngine::Window::SetupWindow(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen)
 {
 	// Initialises the window and enables or disables vSync based on parameter and the same for Fullscreen
 	fullscreen ? m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Fullscreen) : m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Default);

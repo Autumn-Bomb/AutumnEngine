@@ -8,7 +8,7 @@ namespace AutumnEngine
 	{
 		public:
 			Sprite();
-			Sprite(const sf::Texture* spriteTexture, std::string name, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
+			Sprite(sf::Texture* spriteTexture, std::string name, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
 			~Sprite();
 
 			void InitialiseQuad();

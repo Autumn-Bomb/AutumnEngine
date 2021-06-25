@@ -6,10 +6,7 @@ AutumnEngine::GUILayer::GUILayer(sf::Vector2f position, sf::Vector2f size)
 	m_GUICamera = new sf::View(position, size);
 }
 
-void AutumnEngine::GUILayer::Awake()
-{
-	
-}
+void AutumnEngine::GUILayer::Awake(){}
 
 void AutumnEngine::GUILayer::Update(float dt)
 {

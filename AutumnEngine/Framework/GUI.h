@@ -19,19 +19,19 @@ namespace AutumnEngine
 			~GUI();
 
 			// Creation and Updating of Text Elements
-			AutumnEngine::Text* CreateTextElement(const std::string fontName, const std::string text, const std::string componentName, sf::Vector2f position, const int fontSize, const sf::Color colour);
+			AutumnEngine::Text* CreateTextElement(sf::Font* font, std::string componentName, std::string text, sf::Vector2f position, int fontSize, sf::Color colour);
 
 			// Creation and Updating of Sprite Elements
-			AutumnEngine::Sprite* CreateSpriteUIElement(sf::Texture* t_Texture, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color color, const int layer);
+			AutumnEngine::Sprite* CreateSpriteUIElement(sf::Texture* t_Texture, std::string spriteName, sf::Vector2f position, sf::Vector2f size, sf::Color color, int layer);
 
 			// Creation and Updating of Button Elements
-			AutumnEngine::Button* CreateButtonElement(sf::Texture* buttonIdle, sf::Texture* buttonHover, sf::Texture* buttonPressed, const std::string componentName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer);
+			AutumnEngine::Button* CreateButtonElement(sf::Texture* buttonIdle, sf::Texture* buttonHover, sf::Texture* buttonPressed, std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
 
 			// Creation and Updating of Slider Elements
-			AutumnEngine::Slider* CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, const std::string componentName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, const float min, const float max, const int layer);
+			AutumnEngine::Slider* CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, std::string componentName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, float min, float max, int layer);
 
 			// Creation and Updating of Toggle Elements
-			AutumnEngine::Toggle* CreateToggleElement(std::string toggleActiveSpriteName, std::string toggleDeactiveSpriteName, const std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
+			AutumnEngine::Toggle* CreateToggleElement(std::string toggleActiveSpriteName, std::string toggleDeactiveSpriteName, std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
 
 		private:
 	};

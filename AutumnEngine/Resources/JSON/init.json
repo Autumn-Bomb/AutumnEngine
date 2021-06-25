@@ -1,0 +1,13 @@
+{
+  "ResourcePaths": [
+    "Resources",
+    "Resources/Sprites/UI",
+    "Resources/Sprites/Textures",
+    "Resources/Sprites/TextureAtlases",
+    "Resources/Sprites/SpriteSheets",
+    "Resources/Sounds",
+    "Resources/Fonts",
+    "Resources/JSON",
+    "Resources/JSON/TileMaps"
+  ]
+}

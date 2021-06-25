@@ -56,7 +56,26 @@ void AutumnEngine::AssetManager::LoadTexture(std::string textureName, std::strin
 	}
 
 	m_LoadedTextures[resourceName] = m_NewTexture;
-	m_LoadedTextures.try_emplace(resourceName, m_NewTexture);
+}
+
+void AutumnEngine::AssetManager::LoadFont(std::string fontName, std::string resourceName)
+{
+	if (m_NewFont == nullptr)
+	{
+		m_NewFont = new sf::Font();
+
+		if (!m_NewFont->loadFromFile("Resources/Fonts/" + fontName + ".ttf"))
+		{
+			std::cout << "Unable to load in font: " << fontName << ".ttf";
+			return;
+		}
+
+		m_LoadedFonts[resourceName] = m_NewFont;
+	}
+	else
+	{
+		return;
+	}
 }
 
 sf::Texture& AutumnEngine::AssetManager::GetTexture(std::string fileName)
@@ -71,12 +90,31 @@ sf::Texture& AutumnEngine::AssetManager::GetTexture(std::string fileName)
 	{
 		sf::Texture* newTexture = new sf::Texture();
 
-		std::cout << "Resource: " << fileName << " doesn't exist in Asset Manager, searching for file now" << std::endl;
+		std::cout << "Resource: " << fileName << m_FileExtension << " doesn't exist in Asset Manager, searching for file now" << std::endl;
 		newTexture->loadFromFile(m_FilePath + fileName + m_FileExtension);
-		m_LoadedTextures[fileName] = m_NewTexture;
-		m_LoadedTextures.try_emplace(fileName, m_NewTexture);
+		m_LoadedTextures[fileName] = newTexture;
 
 		return *newTexture;
+	}
+}
+
+sf::Font& AutumnEngine::AssetManager::GetFont(std::string fontName)
+{
+	auto pairFound = m_LoadedFonts.find(fontName);
+
+	if (pairFound != m_LoadedFonts.end())
+	{
+		return *pairFound->second;
+	}
+	else
+	{
+		sf::Font* newFont = new sf::Font();
+
+		std::cout << "Resource: " << fontName << ".ttf doesn't exist in Asset Manager, searching for file now" << std::endl;
+		newFont->loadFromFile("Resources/Fonts/" + fontName + ".ttf");
+		m_LoadedFonts[fontName] = newFont;
+
+		return *newFont;
 	}
 }
 
@@ -85,10 +123,37 @@ void AutumnEngine::AssetManager::LoadSound(std::string soundName, SoundType soun
 
 }
 
-void AutumnEngine::AssetManager::LoadTileMapJson(std::string fileName)
+void AutumnEngine::AssetManager::LoadJSON(std::string fileName, std::string jsonFileName)
 {
-	std::ifstream filePath("Resources/JSON/TileMaps/" + fileName + ".json"); // create a new ifStream called "filePath" and load in the json file specified
-	filePath >> m_TileMapFile; // copy all contents of the loaded file into the JSON
+	m_JsonFile = new nlohmann::json;
+
+	std::ifstream filePath("Resources/JSON/" + fileName + ".json"); // create a new ifStream called "filePath" and load in the json file specified
+	filePath >> *m_JsonFile; // copy all contents of the loaded file into the JSON
+
+	m_LoadedJSON[jsonFileName] = m_JsonFile;
+
+	std::cout << "JSON File " << fileName << " loaded successfully" << std::endl;
+}
+
+nlohmann::json& AutumnEngine::AssetManager::GetJSON(std::string fileName)
+{
+	auto pairFound = m_LoadedJSON.find(fileName);
+
+	if (pairFound != m_LoadedJSON.end())
+	{
+		return *pairFound->second;
+	}
+	else
+	{
+		nlohmann::json* newJson = new nlohmann::json;
+
+		std::cout << "Resource: " << fileName << " doesn't exist in Asset Manager, searching for file now" << std::endl;
+		std::ifstream filePath("Resources/JSON/" + fileName + ".json"); // create a new ifStream called "filePath" and load in the json file specified
+		filePath >> *m_JsonFile; // copy all contents of the loaded file into the JSON
+		m_LoadedJSON[fileName] = newJson;
+
+		return *newJson;
+	}
 }
 
 void AutumnEngine::AssetManager::CheckIfDirectoriesExist(std::string folderPath)

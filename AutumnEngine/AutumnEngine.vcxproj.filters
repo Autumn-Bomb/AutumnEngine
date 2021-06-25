@@ -94,11 +94,11 @@
     <Filter Include="Framework\Backend\Rendering\GUI\UIComponent">
       <UniqueIdentifier>{2302595f-b322-455d-865d-0b110de6392f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Backend\Tools">
-      <UniqueIdentifier>{16f48a11-fd21-4843-be2a-fc52c74c4f7c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Backend\Layers\Game Layer">
       <UniqueIdentifier>{fd9c2c79-3ef3-41b8-8152-cededa6bade1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Gamestate">
+      <UniqueIdentifier>{ee3fa0f5-efd0-40d9-bc42-a0a280152689}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +217,9 @@
     </ClInclude>
     <ClInclude Include="Framework\GameLayer.h">
       <Filter>Framework\Backend\Layers\Game Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GameState.h">
+      <Filter>Framework\Backend\Gamestate</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

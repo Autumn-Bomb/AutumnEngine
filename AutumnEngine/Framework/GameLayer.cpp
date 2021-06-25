@@ -1,6 +1,17 @@
 #include "GameLayer.h"
 
-AutumnEngine::GameLayer::GameLayer() {}
+AutumnEngine::GameLayer::GameLayer()
+{ 
+	m_Window = nullptr;
+
+	m_Input = nullptr;
+	m_AssetManager = nullptr;
+	m_SceneManager = nullptr;
+	m_GUILayer = nullptr;
+
+	m_MainMenu = nullptr;
+	m_TestScene = nullptr;
+}
 AutumnEngine::GameLayer::GameLayer(sf::RenderWindow* window)
 {
 	m_Window = window;
@@ -9,6 +20,9 @@ AutumnEngine::GameLayer::GameLayer(sf::RenderWindow* window)
 	m_AssetManager = nullptr;
 	m_SceneManager = nullptr;
 	m_GUILayer = nullptr;
+
+	m_MainMenu = nullptr;
+	m_TestScene = nullptr;
 }
 AutumnEngine::GameLayer::~GameLayer(){}
 
@@ -24,16 +38,13 @@ void AutumnEngine::GameLayer::InitialiseGame()
 
 void AutumnEngine::GameLayer::CheckIfGameDirectoriesExist()
 {
-	m_AssetManager->CheckIfDirectoriesExist("Resources");
-	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/UI");
-	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/Textures");
-	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/TextureAtlases");
-	m_AssetManager->CheckIfDirectoriesExist("Resources/Sprites/SpriteSheets");
-	m_AssetManager->CheckIfDirectoriesExist("Resources/Sounds");
-	m_AssetManager->CheckIfDirectoriesExist("Resources/Fonts");
+	m_AssetManager->LoadJSON("init", "EngineInitialiser");
+	nlohmann::json json = m_AssetManager->GetJSON("EngineInitialiser");
 
-	m_AssetManager->CheckIfDirectoriesExist("Resources/JSON");
-	m_AssetManager->CheckIfDirectoriesExist("Resources/JSON/TileMaps");
+	for (int line = 0; line < json["ResourcePaths"].size(); line++)
+	{
+		m_AssetManager->CheckIfDirectoriesExist(json["ResourcePaths"][line]);
+	}
 
 	AddScenesToGame();
 }
@@ -41,7 +52,7 @@ void AutumnEngine::GameLayer::CheckIfGameDirectoriesExist()
 void AutumnEngine::GameLayer::AddScenesToGame()
 {
 	m_MainMenu = new AutumnEngine::MainMenu(*m_Window, *m_Input, *m_GUILayer, *m_SceneManager, *m_AssetManager);
-	m_TestScene = new AutumnEngine::TestScene(*m_Window, *m_Input, *m_GUILayer);
+	m_TestScene = new AutumnEngine::TestScene(*m_Window, *m_Input, *m_GUILayer, *m_AssetManager);
 
 	m_SceneManager->AddScene(0, "Main Menu", m_MainMenu);
 	m_SceneManager->AddScene(1, "Test Scene", m_TestScene);

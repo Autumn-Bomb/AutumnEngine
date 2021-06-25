@@ -1,16 +1,16 @@
 #include "../Framework/Sprite.h"
 
 AutumnEngine::Sprite::Sprite() { m_Layer = 0; state = nullptr; }
-AutumnEngine::Sprite::Sprite(const sf::Texture* spriteTexture, std::string name, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+AutumnEngine::Sprite::Sprite(sf::Texture* spriteTexture, std::string name, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 {
 	state = new sf::RenderStates();
 
 	// Initialise m_Quad with a PrimitiveType of Quad with 4 Vertices
 	m_Quad = sf::VertexArray(sf::PrimitiveType::Quads, 4);
 
-	m_SpriteName = name;
 	m_Layer = layer;
-	
+
+	SetComponentName(name);
 	SetTextureSize(spriteTexture->getSize());
 	SetPosition(position);
 	SetSize(size);

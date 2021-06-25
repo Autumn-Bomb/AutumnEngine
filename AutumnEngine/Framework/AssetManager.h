@@ -13,8 +13,7 @@ namespace AutumnEngine
 		public:
 			enum class SpriteType { UI, Sprite, Texture, Logo, TextureAtlas, SpriteSheet };
 			enum class ImageFormat { PNG, JPG };
-
-			enum class SoundType { WAV, MP3 };
+			enum class SoundType { WAV, MP3, OGG };
 
 			AssetManager();
 			~AssetManager();
@@ -23,15 +22,37 @@ namespace AutumnEngine
 
 			void LoadTexture(std::string textureName, std::string resourceName, SpriteType spriteType, ImageFormat imageFormat);
 			void LoadSound(std::string soundName, SoundType soundType);
-			void LoadTileMapJson(std::string fileName);
+			void LoadJSON(std::string fileName, std::string jsonFileName);
+			void LoadFont(std::string fontName, std::string resourceName);
+
+			void ClearAssets() { DeleteAssets(m_LoadedTextures); };
+
+			template <typename M>
+			void DeleteAssets(M& amap)
+			{
+				for (typename M::iterator it = amap.begin(); it != amap.end(); ++it)
+				{
+					std::cout << "Deleting: " << it->first << std::endl;
+					delete it->second;
+				}
+				amap.clear();
+			}
 
 			sf::Texture& GetTexture(std::string fileName);
+			sf::Font& GetFont(std::string fontName);
+			nlohmann::json& GetJSON(std::string jsonName);
 
 		private:
 			std::string m_FileExtension;
 			std::string m_FilePath;
+
 			std::map<std::string, sf::Texture*> m_LoadedTextures;
+			std::map<std::string, sf::Font*> m_LoadedFonts;
+			std::map<std::string, nlohmann::json*> m_LoadedJSON;
+
 			sf::Texture* m_NewTexture;
-		    nlohmann::json m_TileMapFile;
+			sf::Font* m_NewFont;
+
+			nlohmann::json* m_JsonFile;
 	};
 }

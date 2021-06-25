@@ -3,16 +3,14 @@
 AutumnEngine::GUI::GUI() { }
 AutumnEngine::GUI::~GUI(){}
 
-AutumnEngine::Text* AutumnEngine::GUI::CreateTextElement(const std::string fontName, const std::string text, const std::string componentName, sf::Vector2f position, const int characterSize, const sf::Color colour)
+AutumnEngine::Text* AutumnEngine::GUI::CreateTextElement(sf::Font* font, std::string componentName, std::string text, sf::Vector2f position, int characterSize, sf::Color colour)
 {	
-	AutumnEngine::Text* t_Text = new AutumnEngine::Text(fontName, text, position, characterSize, colour);
-	t_Text->SetComponentName(componentName);
-
+	AutumnEngine::Text* t_Text = new AutumnEngine::Text(font, componentName, text, position, characterSize, colour);
 	return t_Text;
 }
 
 // Creation of Sprite Elements
-AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(sf::Texture* t_Texture, const std::string spriteName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(sf::Texture* t_Texture, std::string spriteName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 {
 	AutumnEngine::Sprite* t_Sprite = new AutumnEngine::Sprite(t_Texture, spriteName, position, size, colour, layer);
 	t_Sprite->SetComponentName(spriteName);
@@ -23,7 +21,7 @@ AutumnEngine::Sprite* AutumnEngine::GUI::CreateSpriteUIElement(sf::Texture* t_Te
 ////
 
 // Creation of Button Elements
-AutumnEngine::Button* AutumnEngine::GUI::CreateButtonElement(sf::Texture* buttonIdle, sf::Texture* buttonHover, sf::Texture* buttonPressed, const std::string componentName, const sf::Vector2f position, const sf::Vector2f size, const sf::Color colour, const int layer)
+AutumnEngine::Button* AutumnEngine::GUI::CreateButtonElement(sf::Texture* buttonIdle, sf::Texture* buttonHover, sf::Texture* buttonPressed, std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 {
 	AutumnEngine::Button* t_Button = new AutumnEngine::Button(buttonIdle, buttonHover, buttonPressed, componentName, position, size, colour, layer);
 	t_Button->SetComponentName(componentName);
@@ -34,7 +32,7 @@ AutumnEngine::Button* AutumnEngine::GUI::CreateButtonElement(sf::Texture* button
 ////
 
 // Creation of Slider Elements
-AutumnEngine::Slider* AutumnEngine::GUI::CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, const std::string componentName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize,  sf::Vector2f handleSize, const float min, const float max, const int layer)
+AutumnEngine::Slider* AutumnEngine::GUI::CreateSliderElement(std::string sliderBackgroundName, std::string sliderHandleName, std::string componentName, sf::Vector2f backgroundPosition, sf::Vector2f backgroundSize, sf::Vector2f handleSize, float min, float max, int layer)
 {
 	sf::Texture* BackgroundTexture = new sf::Texture();
 	sf::Texture* Handletexture = new sf::Texture();
@@ -52,7 +50,7 @@ AutumnEngine::Slider* AutumnEngine::GUI::CreateSliderElement(std::string sliderB
 }
 
 // Creation of Toggle Elements
-AutumnEngine::Toggle* AutumnEngine::GUI::CreateToggleElement(std::string toggleActiveSpriteName, std::string toggleDeactiveSpriteName, const std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
+AutumnEngine::Toggle* AutumnEngine::GUI::CreateToggleElement(std::string toggleActiveSpriteName, std::string toggleDeactiveSpriteName, std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 {
 	sf::Texture* DeactiveTexture = new sf::Texture();
 	sf::Texture* ActiveTexture = new sf::Texture();
