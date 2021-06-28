@@ -7,21 +7,18 @@ AutumnEngine::Window::Window()
 	m_DeltaTime = 0; 
 	m_Event = sf::Event(); 
 }
-AutumnEngine::Window::Window(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen, int maxFPS)
+AutumnEngine::Window::Window(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen)
 {
 	// Calls the SetupWindow method passing in the width, height, title of the window, whether vSync is enabled or not and maxFPS
-	SetupWindow(width, height, title, vSync, fullscreen, maxFPS);
+	SetupWindow(width, height, title, vSync, fullscreen);
 }
 AutumnEngine::Window::~Window(){}
 
-void AutumnEngine::Window::SetupWindow(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen, int maxFPS)
+void AutumnEngine::Window::SetupWindow(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen)
 {
 	// Initialises the window and enables or disables vSync based on parameter and the same for Fullscreen
 	fullscreen ? m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Fullscreen) : m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Default);
 	m_Window->setVerticalSyncEnabled(vSync);
-
-	if (maxFPS != 0)
-		m_Window->setFramerateLimit(maxFPS);
 		
 	// Calls the InitialiseGame method to add all scenes to the game
 	InitialiseGameLayer();

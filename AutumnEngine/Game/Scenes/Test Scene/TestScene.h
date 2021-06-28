@@ -13,7 +13,7 @@ namespace AutumnEngine
 			TestScene();
 			TestScene(sf::RenderWindow& window, AutumnEngine::Input& input, AutumnEngine::GUILayer& guiManager, AutumnEngine::AssetManager& assetManager);
 			~TestScene();
-
+	
 			void Awake() override;
 			void LoadAssets() override;
 			void UnloadAssets() override;

@@ -4,7 +4,7 @@ AutumnEngine::Text::Text() { m_Text = nullptr; }
 AutumnEngine::Text::Text(sf::Font* font, std::string textElementName, std::string text, sf::Vector2f position, int characterSize, sf::Color colour)
 {
 	m_Text = new sf::Text();
-	
+
 	SetComponentName(textElementName);
 
 	m_Text->setFont(*font);
@@ -12,6 +12,8 @@ AutumnEngine::Text::Text(sf::Font* font, std::string textElementName, std::strin
 	m_Text->setPosition(position);
 	m_Text->setFillColor(colour);
 	m_Text->setString(text);
+
+	SetTextComponent(m_Text);
 }
 AutumnEngine::Text::~Text() {}
 
@@ -19,10 +21,10 @@ void AutumnEngine::Text::HandleCollisions(AutumnEngine::Input input) {}
 
 void AutumnEngine::Text::UpdateText(std::string text)
 {
-	m_Text->setString(text);
+	UpdateTextComponent(text);
 }
 
 void AutumnEngine::Text::Render(sf::RenderWindow* window)
 {
-	window->draw(*m_Text);
+	window->draw(GetTextComponent());
 }

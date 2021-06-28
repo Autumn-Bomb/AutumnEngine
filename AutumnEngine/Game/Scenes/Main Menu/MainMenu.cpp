@@ -33,12 +33,15 @@ void AutumnEngine::MainMenu::LoadAssets()
 	m_AssetManager->LoadTexture("ExitButtonIdle", "ExitButtonIdle", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
 	m_AssetManager->LoadTexture("ExitButtonHover", "ExitButtonHover", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
 	m_AssetManager->LoadTexture("ExitButtonPressed", "ExitButtonPressed", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
+	
+	std::cout << "Loaded Assets -> " << GetSceneName() << std::endl;
 }
 
 void AutumnEngine::MainMenu::UnloadAssets()
 {
-	m_AssetManager->ClearAssets();
 	std::cout << "Unloading Assets -> " << GetSceneName() << std::endl;
+	m_AssetManager->ClearAssets();
+	std::cout << "Unloaded Assets -> " << GetSceneName() << std::endl;
 }
 
 void AutumnEngine::MainMenu::Awake()
@@ -79,8 +82,6 @@ void AutumnEngine::MainMenu::Update(float dt)
 void AutumnEngine::MainMenu::Render()
 {
 	Begin();
-
 	GetGUILayer()->Render(GetRenderWindow());
-
 	End();
 }

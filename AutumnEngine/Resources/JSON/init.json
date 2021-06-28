@@ -6,6 +6,8 @@
     "Resources/Sprites/TextureAtlases",
     "Resources/Sprites/SpriteSheets",
     "Resources/Sounds",
+    "Resources/Sounds/MainMenu",
+    "Resources/Sounds/InGame",
     "Resources/Fonts",
     "Resources/JSON",
     "Resources/JSON/TileMaps"

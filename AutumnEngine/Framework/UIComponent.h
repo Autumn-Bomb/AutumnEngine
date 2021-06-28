@@ -23,7 +23,12 @@ namespace AutumnEngine
 			bool GetIsButtonPressed() { return m_IsPressed; }
 			void SetIsButtonPressed(bool isPressed) { m_IsPressed = isPressed; }
 
+			void SetTextComponent(sf::Text* text) { m_TextComponent = text; }
+			void UpdateTextComponent(std::string text) { m_TextComponent->setString(text); }
+			sf::Text& GetTextComponent() { return *m_TextComponent; }
+
 		private:
+			sf::Text* m_TextComponent;
 			bool m_IsPressed{ false };
 
 			int m_Layer{ 0 };

@@ -11,7 +11,7 @@ void AutumnEngine::GUILayer::Awake(){}
 void AutumnEngine::GUILayer::Update(float dt)
 {
 	// used for updating elements
-}
+}                                                                      
 
 void AutumnEngine::GUILayer::HandleCollisions(AutumnEngine::Input input)
 {
