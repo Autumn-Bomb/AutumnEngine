@@ -9,36 +9,12 @@ void AutumnEngine::AssetManager::LoadTexture(std::string textureName, std::strin
 
 	switch (spriteType)
 	{
-		case SpriteType::Sprite:
-		{
-			m_FilePath = "Resources/Sprites/";
-		}
-			break;
-		case SpriteType::Texture:
-		{
-			m_FilePath = "Resources/Sprites/Textures/";
-		}
-			break;
-		case SpriteType::Logo:
-		{
-			m_FilePath = "Resources/Sprites/Logo/";
-		}
-			break;
-		case SpriteType::UI:
-		{			
-			m_FilePath = "Resources/Sprites/UI/";
-		}
-			break;
-		case SpriteType::TextureAtlas:
-		{
-			m_FilePath = "Resources/Sprites/TextureAtlases/";
-		}
-			break;
-		case SpriteType::SpriteSheet:
-		{
-			m_FilePath = "Resources/Sprites/SpriteSheets/";
-		}
-			break;
+		case SpriteType::Sprite: m_FilePath = "Resources/Sprites/"; break;
+		case SpriteType::Texture: m_FilePath = "Resources/Sprites/Textures/"; break;
+		case SpriteType::Logo: m_FilePath = "Resources/Sprites/Logo/"; break;
+		case SpriteType::UI: m_FilePath = "Resources/Sprites/UI/"; break;
+		case SpriteType::TextureAtlas: m_FilePath = "Resources/Sprites/TextureAtlases/"; break;
+		case SpriteType::SpriteSheet: m_FilePath = "Resources/Sprites/SpriteSheets/"; break;
 	}
 
 	if (imageFormat == ImageFormat::PNG)

@@ -65,3 +65,16 @@ void AutumnEngine::GameLayer::Update(float deltaTime)
 	m_SceneManager->UpdateScene(deltaTime);
 	m_Input->Update();
 }
+
+void AutumnEngine::GameLayer::SwitchState(std::string sceneName)
+{
+	switch (m_GameState->GetGameState())
+	{
+		case AutumnEngine::GameState::gameState::SPLASHSCREEN: m_SceneManager->ChangeScene("Splashscreen"); break;
+		case AutumnEngine::GameState::gameState::MAINMENU: m_SceneManager->ChangeScene("Main Menu"); break;
+		case AutumnEngine::GameState::gameState::INGAME: m_SceneManager->ChangeScene("Game Scene"); break;
+		case AutumnEngine::GameState::gameState::PAUSED: break;
+		case AutumnEngine::GameState::gameState::SETTINGS: break;
+		case AutumnEngine::GameState::gameState::QUIT: m_Window->close(); break;
+	}
+}

@@ -1,6 +1,7 @@
 #pragma once
 #include "SceneManager.h"
 #include "AssetManager.h"
+#include "GameState.h"
 
 #include "../Game/Scenes/Main Menu/MainMenu.h"
 #include "../Game/Scenes/Test Scene/TestScene.h"
@@ -20,9 +21,12 @@ namespace AutumnEngine
 
 			void Update(float deltaTime);
 
+			void SwitchState(std::string sceneName);
+
 			AutumnEngine::Input* GetInput() { return m_Input; }
 
 		private:			
+			AutumnEngine::GameState* m_GameState;
 			AutumnEngine::MainMenu* m_MainMenu;
 			AutumnEngine::TestScene* m_TestScene;
 

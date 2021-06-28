@@ -8,10 +8,10 @@ namespace AutumnEngine
 	{
 		public:
 			Window();
-			Window(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen);
+			Window(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen, int maxFPS);
 			~Window();
 
-			void SetupWindow(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen);
+			void SetupWindow(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen, int maxFPS);
 			void InitialiseGameLayer();
 			void HandleWindowEvents();
 			void RunWindow();
