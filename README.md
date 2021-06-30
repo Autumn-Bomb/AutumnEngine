@@ -7,15 +7,16 @@ The systems planned for implementation are:
 
 Scene Manager - Used for adding scenes, managing the current scene, loading and unloading scenes (Done)\
 GUI/UI Library - This will be used for creating UI elements such as HUD components, buttons, titles, menus (Done)\
+Input handling - Ability to get input from multiple sources such as a Keyboard (Done)\
+Resource Loader - Used to load assets such as sprites, textures, sounds, txt/json files and caches them so they can't be loaded more than once (Done)\
+
 Entity Component System - This will be used to manage every entity that exists in the game, ability to add components such as Transforms and Rigidbodys(Implementing)
+Game State System - This will be used to control the state of the game going from the SplashScreen -> Main Menu -> Game(Implementing)
 
 2D Renderer - Renders anything 2D to the screen, has optimisations such as Sprite Batching to reduce draw calls\
-Resource Loader - Used to load assets such as sprites, textures, sounds, txt/json files and caches them so they can't be loaded more than once\
-Input handling - Ability to get input from multiple sources such as a Keyboard, Controller\
 Collision Detection - This will be an overall system to detect collisions from multiple objects such as AABB, Circle v Cirlce, Circle v Point\
 Particle System - Used to add effect to entities such as smoke, blood, ground dust\
 2D Animation System - Used to animate different Entities and GUI components, such as buttons, sprites, splashscreen\
-Game State System - This will be used to control the state of the game going from the SplashScreen -> Main Menu -> Game\
 Shaders - This class will be used to add effects to sprites and other entities\
 Physics System - Used to apply gravity, force and velocity to entities during gameplay \
 Level Editor - Will be used with an application called "Tiled" for 2D games to fast-track level building instead of placing each tile by coords in code\
