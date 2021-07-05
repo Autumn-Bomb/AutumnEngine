@@ -100,6 +100,9 @@
     <Filter Include="Framework\Backend\Gamestate">
       <UniqueIdentifier>{ee3fa0f5-efd0-40d9-bc42-a0a280152689}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Scenes\Splashscreen">
+      <UniqueIdentifier>{35fe2572-2572-4d9c-be7e-d5ebd36192b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -158,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="Framework\GameLayer.cpp">
       <Filter>Framework\Backend\Layers\Game Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp">
+      <Filter>Game\Scenes\Splashscreen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +226,9 @@
     </ClInclude>
     <ClInclude Include="Framework\GameState.h">
       <Filter>Framework\Backend\Gamestate</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h">
+      <Filter>Game\Scenes\Splashscreen</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

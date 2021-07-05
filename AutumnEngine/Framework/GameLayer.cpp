@@ -51,13 +51,15 @@ void AutumnEngine::GameLayer::CheckIfGameDirectoriesExist()
 
 void AutumnEngine::GameLayer::AddScenesToGame()
 {
+	m_Splashscreen = new AutumnEngine::Splashscreen(*m_Window, *m_Input, *m_GUILayer, *m_AssetManager, *m_SceneManager);
 	m_MainMenu = new AutumnEngine::MainMenu(*m_Window, *m_Input, *m_GUILayer, *m_SceneManager, *m_AssetManager);
 	m_TestScene = new AutumnEngine::TestScene(*m_Window, *m_Input, *m_GUILayer, *m_AssetManager);
 
-	m_SceneManager->AddScene(0, "Main Menu", m_MainMenu);
-	m_SceneManager->AddScene(1, "Test Scene", m_TestScene);
+	m_SceneManager->AddScene(0, "Splash Screen", m_Splashscreen);
+	m_SceneManager->AddScene(1, "Main Menu", m_MainMenu);
+	m_SceneManager->AddScene(2, "Test Scene", m_TestScene);
 
-	m_SceneManager->SetDefaultScene("Main Menu");
+	m_SceneManager->SetDefaultScene("Splash Screen");
 }
 
 void AutumnEngine::GameLayer::Update(float deltaTime)

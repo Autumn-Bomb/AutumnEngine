@@ -37,6 +37,7 @@
     <ClCompile Include="Framework\Window.cpp" />
     <ClCompile Include="Game\Main.cpp" />
     <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
+    <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp" />
     <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +60,7 @@
     <ClInclude Include="Framework\UIComponent.h" />
     <ClInclude Include="Framework\Window.h" />
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
+    <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h" />
     <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

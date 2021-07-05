@@ -38,6 +38,9 @@ namespace AutumnEngine
 			void SetGUILayer(AutumnEngine::GUILayer* guiManager) { m_GUILayer = guiManager; }
 			AutumnEngine::GUILayer* GetGUILayer() { return m_GUILayer; }
 
+			void SetAssetManager(AutumnEngine::AssetManager* assetManager) { m_AssetManager = assetManager; }
+			AutumnEngine::AssetManager* GetAssetManager() { return m_AssetManager; }
+
 			void Begin();
 			void Begin(sf::Color color);
 			void End();
@@ -45,6 +48,7 @@ namespace AutumnEngine
 		private:
 			AutumnEngine::GUILayer* m_GUILayer;
 			AutumnEngine::Input* m_Input;
+			AutumnEngine::AssetManager* m_AssetManager;
 
 			int m_SceneIndex;
 			std::string m_SceneName;

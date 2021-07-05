@@ -5,6 +5,7 @@
 
 #include "../Game/Scenes/Main Menu/MainMenu.h"
 #include "../Game/Scenes/Test Scene/TestScene.h"
+#include "../Game/Scenes/Splashscreen/Splashscreen.h"
 
 namespace AutumnEngine
 {
@@ -26,12 +27,13 @@ namespace AutumnEngine
 			AutumnEngine::Input* GetInput() { return m_Input; }
 
 		private:			
-			AutumnEngine::GameState* m_GameState;
+			AutumnEngine::Splashscreen* m_Splashscreen;
 			AutumnEngine::MainMenu* m_MainMenu;
 			AutumnEngine::TestScene* m_TestScene;
 
 			sf::RenderWindow* m_Window;
 
+			AutumnEngine::GameState* m_GameState;
 			AutumnEngine::Input* m_Input;
 			AutumnEngine::GUILayer* m_GUILayer;
 			AutumnEngine::SceneManager* m_SceneManager;

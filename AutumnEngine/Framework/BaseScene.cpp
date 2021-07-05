@@ -5,6 +5,8 @@ AutumnEngine::BaseScene::BaseScene()
 	m_GUILayer = nullptr; 
 	m_Input = nullptr; 
 	m_Window = nullptr; 
+	m_AssetManager = nullptr;
+
 	m_SceneIndex = 0; 
 	m_SceneName = ""; 
 }

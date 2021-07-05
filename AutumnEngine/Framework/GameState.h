@@ -6,6 +6,7 @@ namespace AutumnEngine
 	class GameState
 	{
 		public:
+			// Used to set the state of the game
 			enum class gameState { SPLASHSCREEN, MAINMENU, INGAME, PAUSED, SETTINGS, QUIT };
 			gameState m_GameState;
 
