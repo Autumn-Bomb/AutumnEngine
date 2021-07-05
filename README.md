@@ -21,6 +21,6 @@ Physics System - Used to apply gravity, force and velocity to entities during ga
 Level Editor - Will be used with an application called "Tiled" for 2D games to fast-track level building instead of placing each tile by coords in code\
 Sound Class - Used to add sounds, music and access each sound and music in-game by name
 
-2D Renderer - Renders anything 2D to the screen, has optimisations such as Sprite Batching to reduce draw calls (Backburner)\
+2D Renderer - Renders anything 2D to the screen, has optimisations such as Sprite Batching to reduce draw calls (Backburner)
 
 Once all these systems are in place, the developers will design and build a test scene with everything included to show off the engines capabilities. The engine will also be tested through Game Jams to figure out if there are any issues, missing features or bugs that need to be fixed.
