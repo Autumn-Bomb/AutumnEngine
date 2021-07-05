@@ -5,12 +5,13 @@ namespace AutumnEngine
 	// Creating an Enum to store all possible Game States
 	class GameState
 	{
+		// STATE CONTROL ENUMS
 		public:
-			// Used to set the state of the game
 			enum class gameState { SPLASHSCREEN, MAINMENU, INGAME, PAUSED, SETTINGS, QUIT };
 			gameState m_GameState;
 
-			// Getters and Setters for changing and getting the current Game State
+		// GETTERS AND SETTERS
+		public:
 			void SetGameState(gameState gameState) { m_GameState = gameState; }
 			gameState GetGameState() { return m_GameState; }
 	};

@@ -1,6 +1,6 @@
 #include "AssetManager.h"
 
-AutumnEngine::AssetManager::AssetManager() { m_NewTexture = nullptr; }
+AutumnEngine::AssetManager::AssetManager() { m_NewTexture = nullptr; m_JsonFile = nullptr; m_NewFont = nullptr; }
 AutumnEngine::AssetManager::~AssetManager() {}
 
 void AutumnEngine::AssetManager::LoadTexture(std::string textureName, std::string resourceName, SpriteType spriteType, ImageFormat imageFormat)

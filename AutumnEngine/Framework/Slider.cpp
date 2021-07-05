@@ -6,12 +6,12 @@ AutumnEngine::Slider::Slider(sf::Texture* background, sf::Texture* handle, sf::V
 	m_Background = AutumnEngine::Sprite(background, "Slider_Background", backgroundPosition, backgroundSize, sf::Color::White, 1);
 	m_Handle = AutumnEngine::Sprite(handle, "Slider_Handle", { 0, 0 }, handleSize, sf::Color::White, 1);
 
-	m_Handle.SetPosition(sf::Vector2f(m_Background.GetPosition().x + m_Background.GetTextureSize().x, m_Background.GetPosition().y - m_Handle.GetTextureSize().y / 4.5));
+	m_Handle.SetPosition(sf::Vector2f(static_cast<float>(m_Background.GetPosition().x + m_Background.GetTextureSize().x), static_cast<float>(m_Background.GetPosition().y - m_Handle.GetTextureSize().y / 4.5)));
 
-	m_CollisionBoxBackground.setSize(sf::Vector2f(m_Background.GetTextureSize().x, m_Background.GetTextureSize().y));
+	m_CollisionBoxBackground.setSize(sf::Vector2f(static_cast<float>(m_Background.GetTextureSize().x), static_cast<float>(m_Background.GetTextureSize().y)));
 	m_CollisionBoxBackground.setPosition(GetBackgroundPosition());
 
-	m_CollisionBoxHandle.setSize(sf::Vector2f(m_Handle.GetTextureSize().x, m_Handle.GetTextureSize().y));
+	m_CollisionBoxHandle.setSize(sf::Vector2f(static_cast<float>(m_Handle.GetTextureSize().x), static_cast<float>(m_Handle.GetTextureSize().y)));
 	m_CollisionBoxHandle.setPosition(GetHandlePosition());
 
 	m_Max = max;

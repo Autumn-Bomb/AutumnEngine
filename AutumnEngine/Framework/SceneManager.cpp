@@ -59,13 +59,14 @@ void AutumnEngine::SceneManager::ChangeScene(std::string sceneName)
 	}
 }
 
+// Unloads all assets related to the current scene and deletes the scene from memory
 void AutumnEngine::SceneManager::UnloadScene()
 {
 	m_CurrentScene->UnloadAssets();
 	delete m_CurrentScene;
 	m_CurrentScene = nullptr;
 
-	std::cout << m_CurrentScene->GetSceneName() << " -> " << "Deleted" << std::endl;
+	std::cout << m_CurrentScene->GetSceneName() << " -> " << "Unloaded" << std::endl;
 }
 
 // Used to update all relevant methods needed for the current scene, called while the window is open passing in DeltaTime
@@ -77,4 +78,18 @@ void AutumnEngine::SceneManager::UpdateScene(float dt)
 	m_CurrentScene->HandleInput(dt);
 	m_CurrentScene->Update(dt);
 	m_CurrentScene->Render();
+}
+
+// Used to switch the games current state
+void AutumnEngine::SceneManager::SwitchState(AutumnEngine::GameState::gameState gameState)
+{
+	switch (gameState)
+	{
+		case AutumnEngine::GameState::gameState::SPLASHSCREEN: ChangeScene("Splash Screen"); break;
+		case AutumnEngine::GameState::gameState::MAINMENU: ChangeScene("Main Menu"); break;
+		case AutumnEngine::GameState::gameState::INGAME: ChangeScene("Game Scene"); break;
+		case AutumnEngine::GameState::gameState::PAUSED: break;
+		case AutumnEngine::GameState::gameState::SETTINGS: ChangeScene("Settings"); break;
+		case AutumnEngine::GameState::gameState::QUIT: break;
+	}
 }

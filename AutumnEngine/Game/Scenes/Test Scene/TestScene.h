@@ -22,6 +22,5 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
-			AutumnEngine::AssetManager* m_AssetManager;
 	};
 }

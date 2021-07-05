@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "GUILayer.h"
 #include "AssetManager.h"
+#include "GameState.h"
 
 #include <iostream>
 

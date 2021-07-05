@@ -48,12 +48,12 @@ void AutumnEngine::MainMenu::Awake()
 {
 	GetGUILayer()->ClearComponents();
 	
-	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateSpriteUIElement(&m_AssetManager->GetTexture("Background"), "Background", {0, 0}, {1920, 1080}, sf::Color::White, 0));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateSpriteUIElement(&m_AssetManager->GetTexture("Logo"), "Logo", { 835, 200 }, { 250, 250 }, sf::Color::White, 0));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateTextElement(&m_AssetManager->GetFont("arial"), "MainMenuTitle", "Ping Pong", {740, 10}, 100, sf::Color::White));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateTextElement(&m_AssetManager->GetFont("arial"), "VersionNumber", "Autumn Engine - v1.0.0 - Autumn Bomb LTD 2021", { 10, 1045 }, 22, sf::Color::White));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateButtonElement(&m_AssetManager->GetTexture("ButtonIdle"), &m_AssetManager->GetTexture("ButtonHover"), &m_AssetManager->GetTexture("ButtonPressed"), "MainMenuPlayButton", { 900, 500 }, { 150, 175 }, sf::Color::White, 1));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->GetGUIManager().CreateButtonElement(&m_AssetManager->GetTexture("ExitButtonIdle"), &m_AssetManager->GetTexture("ExitButtonHover"), &m_AssetManager->GetTexture("ExitButtonPressed"), "MainMenuExitButton", { 900, 700 }, { 150, 175 }, sf::Color::White, 1));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateSpriteUIElement(&m_AssetManager->GetTexture("Background"), "Background", {0, 0}, {1920, 1080}, sf::Color::White, 0));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateSpriteUIElement(&m_AssetManager->GetTexture("Logo"), "Logo", { 835, 200 }, { 250, 250 }, sf::Color::White, 0));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateTextElement(&m_AssetManager->GetFont("arial"), "MainMenuTitle", "Ping Pong", {740, 10}, 100, sf::Color::White));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateTextElement(&m_AssetManager->GetFont("arial"), "VersionNumber", "Autumn Engine - v1.0.0 - Autumn Bomb LTD 2021", { 10, 1045 }, 22, sf::Color::White));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateButtonElement(&m_AssetManager->GetTexture("ButtonIdle"), &m_AssetManager->GetTexture("ButtonHover"), &m_AssetManager->GetTexture("ButtonPressed"), "MainMenuPlayButton", { 900, 500 }, { 150, 175 }, sf::Color::White, 1));
+	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateButtonElement(&m_AssetManager->GetTexture("ExitButtonIdle"), &m_AssetManager->GetTexture("ExitButtonHover"), &m_AssetManager->GetTexture("ExitButtonPressed"), "MainMenuExitButton", { 900, 700 }, { 150, 175 }, sf::Color::White, 1));
 
 	std::cout << "Awake Initialised -> " << GetSceneName() << std::endl;
 }
@@ -68,7 +68,7 @@ void AutumnEngine::MainMenu::Update(float dt)
 {
 	if(GetGUILayer()->GetUIComponent("MainMenuPlayButton").GetIsButtonPressed())
 	{
-		m_SceneManager->ChangeScene("Test Scene");
+		m_SceneManager->SwitchState(AutumnEngine::GameState::gameState::INGAME);
 	}
 	else
 	{

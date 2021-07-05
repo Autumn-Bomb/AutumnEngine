@@ -2,7 +2,7 @@
 
 int main()
 {
-	srand(time(NULL));
+	srand(time(0));
 
 	// Creates a new instance of "Application" and calls the applications "startApplication" function
 	AutumnEngine::Application application = AutumnEngine::Application();
