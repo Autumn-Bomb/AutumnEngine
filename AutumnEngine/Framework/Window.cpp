@@ -9,7 +9,7 @@ AutumnEngine::Window::Window()
 }
 AutumnEngine::Window::Window(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen)
 {
-	// Calls the SetupWindow method passing in the width, height, title of the window, whether vSync is enabled or not and maxFPS
+	// Calls the SetupWindow function passing in the width, height, title of the window, whether vSync is enabled or not and maxFPS
 	SetupWindow(width, height, title, vSync, fullscreen);
 }
 AutumnEngine::Window::~Window(){}
@@ -20,7 +20,7 @@ void AutumnEngine::Window::SetupWindow(unsigned int width, unsigned int height, 
 	fullscreen ? m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Fullscreen) : m_Window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Default);
 	m_Window->setVerticalSyncEnabled(vSync);
 		
-	// Calls the InitialiseGame method to add all scenes to the game
+	// Calls the InitialiseGame function to add all scenes to the game
 	InitialiseGameLayer();
 }
 
@@ -29,7 +29,7 @@ void AutumnEngine::Window::InitialiseGameLayer()
 	// Creates a new Game Layer passing in the current Window
 	m_GameLayer = AutumnEngine::GameLayer(m_Window);
 
-	// Calls the Game Layers initialise method to initialise the Game Layer
+	// Calls the Game Layers initialise function to initialise the Game Layer
 	m_GameLayer.InitialiseGame();
 }
 

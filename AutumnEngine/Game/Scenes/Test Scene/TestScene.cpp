@@ -38,7 +38,7 @@ void AutumnEngine::TestScene::Awake()
 
 void AutumnEngine::TestScene::HandleInput(float dt)
 {
-	
+
 }
 
 void AutumnEngine::TestScene::Update(float dt)

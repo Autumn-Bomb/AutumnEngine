@@ -11,7 +11,7 @@ namespace AutumnEngine
 			Window(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen);
 			~Window();
 
-		// METHOD DEFINITIONS
+		// FUNCTION DEFINITIONS
 		public:
 			void SetupWindow(unsigned int width, unsigned int height, std::string title, bool vSync, bool fullscreen);
 			void InitialiseGameLayer();

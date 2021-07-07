@@ -13,7 +13,7 @@ namespace AutumnEngine
 		public:
 			Input();
 
-		// METHOD DEFINITIONS
+		// FUNCTION DEFINITIONS
 		public:
 			void Update();
 		

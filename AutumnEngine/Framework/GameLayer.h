@@ -17,7 +17,7 @@ namespace AutumnEngine
 			GameLayer(sf::RenderWindow* window);
 			~GameLayer();
 
-		// METHOD DEFINITIONS
+		// FUNCTION DEFINITIONS
 		public:
 			void InitialiseGame();
 			void CheckIfGameDirectoriesExist();

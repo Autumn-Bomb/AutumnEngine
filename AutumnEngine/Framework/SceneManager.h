@@ -10,7 +10,7 @@ namespace AutumnEngine
 			SceneManager();
 			~SceneManager();
 
-		// METHOD DEFINITIONS
+		// FUNCTION DEFINITIONS
 		public:
 			void AddScene(int sceneIndex, std::string sceneName, BaseScene* scene);
 			void SetDefaultScene(std::string sceneName);

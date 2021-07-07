@@ -6,7 +6,7 @@ namespace AutumnEngine
 {
 	class Collision
 	{
-		// METHOD DEFINITIONS
+		// FUNCTION DEFINITIONS
 		public:
 			static bool CheckBoundingBox(sf::RectangleShape* object1, sf::RectangleShape* object2);
 			static bool CheckBoundingBox(sf::RectangleShape* object1, sf::Vector2i mouse);
