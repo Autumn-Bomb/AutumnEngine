@@ -36,6 +36,7 @@ namespace AutumnEngine
 				}
 			}
 
+			// Sets the Quads entire colour with alpha for opacity - can be used for tinting effects on sprites
 			void SetColour(int r, int g, int b, int a)
 			{
 				for (size_t vertex = 0; vertex < m_Quad.getVertexCount(); ++vertex)

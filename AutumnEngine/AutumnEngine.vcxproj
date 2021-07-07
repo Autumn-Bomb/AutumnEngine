@@ -25,6 +25,7 @@
     <ClCompile Include="Framework\Button.cpp" />
     <ClCompile Include="Framework\Camera.cpp" />
     <ClCompile Include="Framework\Collision.cpp" />
+    <ClCompile Include="Framework\Entity.cpp" />
     <ClCompile Include="Framework\GameLayer.cpp" />
     <ClCompile Include="Framework\GUI.cpp" />
     <ClCompile Include="Framework\GUILayer.cpp" />
@@ -47,6 +48,7 @@
     <ClInclude Include="Framework\Button.h" />
     <ClInclude Include="Framework\Camera.h" />
     <ClInclude Include="Framework\Collision.h" />
+    <ClInclude Include="Framework\Entity.h" />
     <ClInclude Include="Framework\GameLayer.h" />
     <ClInclude Include="Framework\GameState.h" />
     <ClInclude Include="Framework\GUI.h" />

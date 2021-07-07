@@ -46,18 +46,6 @@
     <Filter Include="Framework\Backend\Camera">
       <UniqueIdentifier>{e24f5a0e-4b40-4ee6-9f46-0ad59a0b3e31}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Backend\Entity Component System">
-      <UniqueIdentifier>{77dc6d54-52e1-4c8f-a53f-e48b12505bc6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entity Component System\Systems">
-      <UniqueIdentifier>{dc7aba4a-aa44-42a4-8214-7f249dad0799}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entity Component System\Entity">
-      <UniqueIdentifier>{ee8ff31e-98f3-4f01-bdba-2f2c16d7cda0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entity Component System\Components">
-      <UniqueIdentifier>{ef37eade-4479-4d3e-b042-1fcd6928c9c7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Backend\Rendering\GUI">
       <UniqueIdentifier>{95b8e526-4c37-4d33-8808-094c4ca38b00}</UniqueIdentifier>
     </Filter>
@@ -102,6 +90,9 @@
     </Filter>
     <Filter Include="Game\Scenes\Splashscreen">
       <UniqueIdentifier>{35fe2572-2572-4d9c-be7e-d5ebd36192b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entity">
+      <UniqueIdentifier>{f8331b88-6e06-4c57-8064-f211a61934bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +155,9 @@
     </ClCompile>
     <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp">
       <Filter>Game\Scenes\Splashscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Entity.cpp">
+      <Filter>Framework\Backend\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +223,9 @@
     </ClInclude>
     <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h">
       <Filter>Game\Scenes\Splashscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Entity.h">
+      <Filter>Framework\Backend\Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
