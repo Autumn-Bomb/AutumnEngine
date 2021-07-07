@@ -30,10 +30,16 @@ namespace AutumnEngine
 				{
 					return m_GUIManager.CreateTextElement(font, componentName, text, position, fontSize, colour);
 				}
+
 				AutumnEngine::Sprite* CreateSpriteUIElement(sf::Texture* t_Texture, std::string spriteName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 				{
 					return m_GUIManager.CreateSpriteUIElement(t_Texture, spriteName, position, size, colour, layer);
 				}
+				AutumnEngine::Sprite* CreateSpriteUIElement(sf::Texture* t_Texture, std::string spriteName, sf::Vector2f position, sf::Vector2f size, int r, int g, int b, int a, int layer)
+				{
+					return m_GUIManager.CreateSpriteUIElement(t_Texture, spriteName, position, size, sf::Color(r, g, b, a), layer);
+				}
+
 				AutumnEngine::Button* CreateButtonElement(sf::Texture* buttonIdle, sf::Texture* buttonHover, sf::Texture* buttonPressed, std::string componentName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer) 
 				{
 					return m_GUIManager.CreateButtonElement(buttonIdle, buttonHover, buttonPressed, componentName, position, size, colour, layer);

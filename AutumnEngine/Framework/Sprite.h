@@ -30,10 +30,18 @@ namespace AutumnEngine
 			// Sets the Quads entire colour - can be used for tinting effects on sprites
 			void SetColour(sf::Color colour)
 			{
-				m_Quad[0].color = colour;
-				m_Quad[1].color = colour;
-				m_Quad[2].color = colour;
-				m_Quad[3].color = colour;
+				for (size_t vertex = 0; vertex < m_Quad.getVertexCount(); ++vertex)
+				{
+					m_Quad[vertex].color = colour;
+				}
+			}
+
+			void SetColour(int r, int g, int b, int a)
+			{
+				for (size_t vertex = 0; vertex < m_Quad.getVertexCount(); ++vertex)
+				{
+					m_Quad[vertex].color = sf::Color(r, g, b, a);
+				}
 			}
 
 		private:
