@@ -30,7 +30,6 @@
     <ClCompile Include="Framework\GUILayer.cpp" />
     <ClCompile Include="Framework\Input.cpp" />
     <ClCompile Include="Framework\SceneManager.cpp" />
-    <ClCompile Include="Framework\Entity.cpp" />
     <ClCompile Include="Framework\Slider.cpp" />
     <ClCompile Include="Framework\Sprite.cpp" />
     <ClCompile Include="Framework\Text.cpp" />
@@ -48,7 +47,6 @@
     <ClInclude Include="Framework\Button.h" />
     <ClInclude Include="Framework\Camera.h" />
     <ClInclude Include="Framework\Collision.h" />
-    <ClInclude Include="Framework\Entity.h" />
     <ClInclude Include="Framework\GameLayer.h" />
     <ClInclude Include="Framework\GameState.h" />
     <ClInclude Include="Framework\GUI.h" />

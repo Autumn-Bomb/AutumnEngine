@@ -103,9 +103,6 @@
     <Filter Include="Game\Scenes\Splashscreen">
       <UniqueIdentifier>{35fe2572-2572-4d9c-be7e-d5ebd36192b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Backend\Entity">
-      <UniqueIdentifier>{5b9b2dc4-3832-47ce-94ed-ac86e259317e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -167,9 +164,6 @@
     </ClCompile>
     <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp">
       <Filter>Game\Scenes\Splashscreen</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Entity.cpp">
-      <Filter>Framework\Backend\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -235,9 +229,6 @@
     </ClInclude>
     <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h">
       <Filter>Game\Scenes\Splashscreen</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Entity.h">
-      <Filter>Framework\Backend\Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ namespace AutumnEngine
 			Application();
 			~Application();
 
-		// FUNCTION DEFINITIONS
+		// METHOD DEFINITIONS
 		public:
 			void StartApplication();
 

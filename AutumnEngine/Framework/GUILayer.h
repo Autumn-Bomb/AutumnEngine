@@ -11,7 +11,7 @@ namespace AutumnEngine
 				GUILayer();
 				GUILayer(sf::Vector2f position, sf::Vector2f size);
 		
-			// FUNCTION DEFINITIONS
+			// METHOD DEFINITIONS
 			public:
 				void Awake();
 				void Update(float dt);
@@ -24,7 +24,7 @@ namespace AutumnEngine
 			public:
 				AutumnEngine::UIComponent& GetUIComponent(std::string componentName);
 
-			// FUNCTION DEFINITIONS FOR CREATING UI ELEMENTS
+			// METHOD DEFINITIONS FOR CREATING UI ELEMENTS
 			public:
 				AutumnEngine::Text* CreateTextElement(sf::Font* font, std::string componentName, std::string text, sf::Vector2f position, int fontSize, sf::Color colour)
 				{

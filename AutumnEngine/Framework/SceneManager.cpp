@@ -69,7 +69,7 @@ void AutumnEngine::SceneManager::UnloadScene()
 	std::cout << m_CurrentScene->GetSceneName() << " -> " << "Unloaded" << std::endl;
 }
 
-// Used to update all relevant functions needed for the current scene, called while the window is open passing in DeltaTime
+// Used to update all relevant methods needed for the current scene, called while the window is open passing in DeltaTime
 void AutumnEngine::SceneManager::UpdateScene(float dt)
 {
 	if (m_CurrentScene == nullptr)
@@ -90,6 +90,6 @@ void AutumnEngine::SceneManager::SwitchState(AutumnEngine::GameState::gameState 
 		case AutumnEngine::GameState::gameState::INGAME: ChangeScene("Game Scene"); break;
 		case AutumnEngine::GameState::gameState::PAUSED: break;
 		case AutumnEngine::GameState::gameState::SETTINGS: ChangeScene("Settings"); break;
-		case AutumnEngine::GameState::gameState::QUIT: UnloadScene(); break;
+		case AutumnEngine::GameState::gameState::QUIT: break;
 	}
 }

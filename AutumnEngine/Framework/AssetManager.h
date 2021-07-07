@@ -21,7 +21,7 @@ namespace AutumnEngine
 			enum class ImageFormat { PNG, JPG };
 			enum class SoundType { WAV, MP3, OGG };
 			
-		// FUNCTION DEFINITIONS
+		// METHOD DEFINITIONS
 		public:
 			void CheckIfDirectoriesExist(std::string folderPath);
 			void LoadTexture(std::string textureName, std::string resourceName, SpriteType spriteType, ImageFormat imageFormat);

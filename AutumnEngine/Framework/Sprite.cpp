@@ -39,7 +39,7 @@ void AutumnEngine::Sprite::InitialiseQuad()
 	m_Quad[3].texCoords = sf::Vector2f(0, static_cast<float>(GetTextureSize().y));
 }
 
-// DOESN'T NEED TO BE CALLED, SPRITE CAN BE RENDERED WITHOUT CALLING THIS DRAW FUNCTION
+// DOESN'T NEED TO BE CALLED, SPRITE CAN BE RENDERED WITHOUT CALLING THIS DRAW METHOD
 void AutumnEngine::Sprite::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(m_Quad, states);
