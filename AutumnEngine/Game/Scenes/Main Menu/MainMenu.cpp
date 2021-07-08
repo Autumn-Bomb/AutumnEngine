@@ -21,18 +21,18 @@ void AutumnEngine::MainMenu::LoadAssets()
 {
 	std::cout << "Loading Assets -> " << GetSceneName() << std::endl;
 
-	m_AssetManager->LoadFont("arial", "MainFont");
+	m_AssetManager->LoadFont("Resources/Fonts/arial.ttf", "MainFont");
 
-	m_AssetManager->LoadTexture("background", "Background", AutumnEngine::AssetManager::SpriteType::Texture, AutumnEngine::AssetManager::ImageFormat::PNG);
-	m_AssetManager->LoadTexture("logo", "Logo", AutumnEngine::AssetManager::SpriteType::Texture, AutumnEngine::AssetManager::ImageFormat::PNG);
+	m_AssetManager->LoadTexture("Resources/Sprites/Textures/background.png", "Background");
+	m_AssetManager->LoadTexture("Resources/Sprites/Textures/logo.png", "Logo");
 
-	m_AssetManager->LoadTexture("ButtonIdle", "ButtonIdle", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
-	m_AssetManager->LoadTexture("ButtonHover", "ButtonHover", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
-	m_AssetManager->LoadTexture("ButtonPressed", "ButtonPressed", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
+	m_AssetManager->LoadTexture("Resources/Sprites/UI/ButtonIdle.png", "ButtonIdle");
+	m_AssetManager->LoadTexture("Resources/Sprites/UI/ButtonHover.png", "ButtonHover");
+	m_AssetManager->LoadTexture("Resources/Sprites/UI/ButtonPressed.png", "ButtonPressed");
 
-	m_AssetManager->LoadTexture("ExitButtonIdle", "ExitButtonIdle", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
-	m_AssetManager->LoadTexture("ExitButtonHover", "ExitButtonHover", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
-	m_AssetManager->LoadTexture("ExitButtonPressed", "ExitButtonPressed", AutumnEngine::AssetManager::SpriteType::UI, AutumnEngine::AssetManager::ImageFormat::PNG);
+	m_AssetManager->LoadTexture("Resources/Sprites/UI/ExitButtonIdle.png", "ExitButtonIdle");
+	m_AssetManager->LoadTexture("Resources/Sprites/UI/ExitButtonHover.png", "ExitButtonHover");
+	m_AssetManager->LoadTexture("Resources/Sprites/UI/ExitButtonPressed.png", "ExitButtonPressed");
 	
 	std::cout << "Loaded Assets -> " << GetSceneName() << std::endl;
 }
@@ -46,35 +46,35 @@ void AutumnEngine::MainMenu::UnloadAssets()
 
 void AutumnEngine::MainMenu::Awake()
 {
-	GetGUILayer()->ClearComponents();
+	GetGUILayer().ClearComponents();
 	
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateSpriteUIElement(&m_AssetManager->GetTexture("Background"), "Background", {0, 0}, {1920, 1080}, sf::Color::White, 0));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateSpriteUIElement(&m_AssetManager->GetTexture("Logo"), "Logo", { 835, 200 }, { 250, 250 }, sf::Color::White, 0));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateTextElement(&m_AssetManager->GetFont("arial"), "MainMenuTitle", "Ping Pong", {740, 10}, 100, sf::Color::White));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateTextElement(&m_AssetManager->GetFont("arial"), "VersionNumber", "Autumn Engine - v1.0.0 - Autumn Bomb LTD 2021", { 10, 1045 }, 22, sf::Color::White));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateButtonElement(&m_AssetManager->GetTexture("ButtonIdle"), &m_AssetManager->GetTexture("ButtonHover"), &m_AssetManager->GetTexture("ButtonPressed"), "MainMenuPlayButton", { 900, 500 }, { 150, 175 }, sf::Color::White, 1));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateButtonElement(&m_AssetManager->GetTexture("ExitButtonIdle"), &m_AssetManager->GetTexture("ExitButtonHover"), &m_AssetManager->GetTexture("ExitButtonPressed"), "MainMenuExitButton", { 900, 700 }, { 150, 175 }, sf::Color::White, 1));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateSpriteUIElement(&m_AssetManager->GetTexture("Background"), "Background", {0, 0}, {1920, 1080}, sf::Color::White, 0));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateSpriteUIElement(&m_AssetManager->GetTexture("Logo"), "Logo", { 835, 200 }, { 250, 250 }, sf::Color::White, 0));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateTextElement(&m_AssetManager->GetFont("arial"), "MainMenuTitle", "Ping Pong", {740, 10}, 100, sf::Color::White));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateTextElement(&m_AssetManager->GetFont("arial"), "VersionNumber", "Autumn Engine - v1.0.0 - Autumn Bomb LTD 2021", { 10, 1045 }, 22, sf::Color::White));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateButtonElement(&m_AssetManager->GetTexture("ButtonIdle"), &m_AssetManager->GetTexture("ButtonHover"), &m_AssetManager->GetTexture("ButtonPressed"), "MainMenuPlayButton", { 900, 500 }, { 150, 175 }, sf::Color::White, 1));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateButtonElement(&m_AssetManager->GetTexture("ExitButtonIdle"), &m_AssetManager->GetTexture("ExitButtonHover"), &m_AssetManager->GetTexture("ExitButtonPressed"), "MainMenuExitButton", { 900, 700 }, { 150, 175 }, sf::Color::White, 1));
 
 	std::cout << "Awake Initialised -> " << GetSceneName() << std::endl;
 }
 
 void AutumnEngine::MainMenu::HandleInput(float dt)
 {
-	GetGUILayer()->GetUIComponent("MainMenuPlayButton").HandleCollisions(GetInput());
-	GetGUILayer()->GetUIComponent("MainMenuExitButton").HandleCollisions(GetInput());
+	GetGUILayer().GetUIComponent("MainMenuPlayButton").HandleCollisions(GetInput());
+	GetGUILayer().GetUIComponent("MainMenuExitButton").HandleCollisions(GetInput());
 }
 
 void AutumnEngine::MainMenu::Update(float dt)
 {
-	if(GetGUILayer()->GetUIComponent("MainMenuPlayButton").GetIsButtonPressed())
+	if(GetGUILayer().GetUIComponent("MainMenuPlayButton").GetIsButtonPressed())
 	{
 		m_SceneManager->SwitchState(AutumnEngine::GameState::gameState::INGAME);
 	}
 	else
 	{
-		if (GetGUILayer()->GetUIComponent("MainMenuExitButton").GetIsButtonPressed())
+		if (GetGUILayer().GetUIComponent("MainMenuExitButton").GetIsButtonPressed())
 		{
-			GetRenderWindow()->close();
+			m_SceneManager->SwitchState(AutumnEngine::GameState::gameState::QUIT);
 		}
 	}
 }
@@ -82,6 +82,6 @@ void AutumnEngine::MainMenu::Update(float dt)
 void AutumnEngine::MainMenu::Render()
 {
 	Begin();
-	GetGUILayer()->Render(GetRenderWindow());
+	GetGUILayer().Render(GetRenderWindow());
 	End();
 }

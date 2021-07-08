@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../Framework/BaseScene.h"
-#include "../../Framework/Collision.h"
-#include "../../Framework/SceneManager.h"
+#include "../../Framework/BaseScene/BaseScene.h"
+#include "../../Framework/Collision/Collision.h"
+#include "../../Framework/SceneManager/SceneManager.h"
 
 namespace AutumnEngine
 {

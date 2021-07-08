@@ -1,7 +1,9 @@
 #pragma once
-#include "../../Framework/BaseScene.h"
-#include "../../Framework/GUILayer.h"
-#include "../../Framework/Collision.h"
+#include "../../Framework/BaseScene/BaseScene.h"
+#include "../../Framework/Layers/GUILayer/GUILayer.h"
+#include "../../../Framework/Collision/Collision.h"
+
+#include "../../Entities/Batman/I'mBatman.h"
 
 #include "SFML/Graphics.hpp"
 
@@ -22,5 +24,7 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
+			AutumnEngine::ImBatman* m_Batman;
+			std::vector<AutumnEngine::Entity*> m_Entities;
 	};
 }

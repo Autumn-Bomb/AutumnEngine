@@ -17,8 +17,8 @@ void AutumnEngine::Splashscreen::LoadAssets()
 {
 	std::cout << "Loading Assets -> " << GetSceneName() << std::endl;
 
-	GetAssetManager()->LoadTexture("background", "Background", AutumnEngine::AssetManager::SpriteType::Texture, AutumnEngine::AssetManager::ImageFormat::PNG);
-	GetAssetManager()->LoadTexture("companyLogo", "Logo", AutumnEngine::AssetManager::SpriteType::Texture, AutumnEngine::AssetManager::ImageFormat::PNG);
+	GetAssetManager().LoadTexture("Resources/Sprites/Textures/background.png", "Background");
+	GetAssetManager().LoadTexture("Resources/Sprites/Textures/companyLogo.png", "Logo");
 
 	std::cout << "Loaded Assets -> " << GetSceneName() << std::endl;
 }
@@ -26,16 +26,16 @@ void AutumnEngine::Splashscreen::LoadAssets()
 void AutumnEngine::Splashscreen::UnloadAssets()
 {
 	std::cout << "Unloading Assets -> " << GetSceneName() << std::endl;
-	GetAssetManager()->ClearAssets();
+	GetAssetManager().ClearAssets();
 	std::cout << "Unloaded Assets -> " << GetSceneName() << std::endl;
 }
 
 void AutumnEngine::Splashscreen::Awake()
 {
-	GetGUILayer()->ClearComponents();
+	GetGUILayer().ClearComponents();
 
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateSpriteUIElement(&GetAssetManager()->GetTexture("Background"), "Background", { 0, 0 }, { 1920, 1080 }, sf::Color::White, 0));
-	GetGUILayer()->AddUIComponent(GetGUILayer()->CreateSpriteUIElement(&GetAssetManager()->GetTexture("Logo"), "Logo", { 600, 300 }, { 500, 500 }, sf::Color::White, 0));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateSpriteUIElement(&GetAssetManager().GetTexture("Background"), "Background", { 0, 0 }, { 1920, 1080 }, sf::Color::White, 0));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateSpriteUIElement(&GetAssetManager().GetTexture("Logo"), "Logo", { 600, 300 }, { 500, 500 }, sf::Color::White, 0));
 
 	std::cout << "Awake Initialised -> " << GetSceneName() << std::endl;
 }
@@ -59,6 +59,6 @@ void AutumnEngine::Splashscreen::Update(float dt)
 void AutumnEngine::Splashscreen::Render()
 {
 	Begin();
-	GetGUILayer()->Render(GetRenderWindow());
+	GetGUILayer().Render(GetRenderWindow());
 	End();
 }

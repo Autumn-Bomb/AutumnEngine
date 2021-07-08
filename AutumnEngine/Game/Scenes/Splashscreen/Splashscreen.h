@@ -1,7 +1,7 @@
 #pragma once
-#include "../../Framework/BaseScene.h"
-#include "../../Framework/GUILayer.h"
-#include "../../Framework/SceneManager.h"
+#include "../../Framework/BaseScene/BaseScene.h"
+#include "../../Framework/Layers/GUILayer/GUILayer.h"
+#include "../../Framework/SceneManager/SceneManager.h"
 
 #include "SFML/Graphics.hpp"
 
