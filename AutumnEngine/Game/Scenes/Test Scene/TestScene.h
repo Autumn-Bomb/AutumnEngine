@@ -3,8 +3,6 @@
 #include "../../Framework/Layers/GUILayer/GUILayer.h"
 #include "../../../Framework/Collision/Collision.h"
 
-#include "../../Entities/Batman/I'mBatman.h"
-
 #include "SFML/Graphics.hpp"
 
 namespace AutumnEngine
@@ -24,7 +22,6 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
-			AutumnEngine::ImBatman* m_Batman;
-			std::vector<AutumnEngine::Entity*> m_Entities;
+			
 	};
 }

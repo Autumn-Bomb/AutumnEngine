@@ -53,7 +53,5 @@ void AutumnEngine::TestScene::Update(float dt)
 
 void AutumnEngine::TestScene::Render()
 {
-	Begin();
 	GetGUILayer().Render(GetRenderWindow());
-	End();
 }

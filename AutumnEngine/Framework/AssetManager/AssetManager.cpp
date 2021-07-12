@@ -1,6 +1,6 @@
 #include "AssetManager.h"
 
-AutumnEngine::AssetManager::AssetManager() { m_NewTexture = nullptr; m_JsonFile = nullptr; m_NewFont = nullptr; }
+AutumnEngine::AssetManager::AssetManager() { m_NewTexture = nullptr; m_JsonFile = nullptr; m_NewFont = nullptr; m_NewTextureAtlas = nullptr; }
 AutumnEngine::AssetManager::~AssetManager() {}
 
 void AutumnEngine::AssetManager::LoadTexture(std::string filePath, std::string resourceName)
@@ -11,8 +11,18 @@ void AutumnEngine::AssetManager::LoadTexture(std::string filePath, std::string r
 	{
 		std::cout << "Couldn't locate: " << filePath << std::endl;
 	}
-
 	m_LoadedTextures[resourceName] = m_NewTexture;
+}
+
+void AutumnEngine::AssetManager::LoadTextureAtlas(std::string filePath, std::string resourceName)
+{
+	m_NewTextureAtlas = new sf::Texture();
+
+	if (!m_NewTextureAtlas->loadFromFile(filePath))
+	{
+		std::cout << "Couldn't locate: " << filePath << std::endl;
+	}
+	m_LoadedTextureAtlases[resourceName] = m_NewTextureAtlas;
 }
 
 void AutumnEngine::AssetManager::LoadFont(std::string filePath, std::string resourceName)
@@ -26,7 +36,6 @@ void AutumnEngine::AssetManager::LoadFont(std::string filePath, std::string reso
 			std::cout << "Unable to load in font from: " << filePath;
 			return;
 		}
-
 		m_LoadedFonts[resourceName] = m_NewFont;
 	}
 	else
@@ -40,6 +49,16 @@ sf::Texture& AutumnEngine::AssetManager::GetTexture(std::string fileName)
 	auto pairFound = m_LoadedTextures.find(fileName);
 
 	if (pairFound != m_LoadedTextures.end())
+	{
+		return *pairFound->second;
+	}
+}
+
+sf::Texture& AutumnEngine::AssetManager::GetTextureAtlas(std::string fileName)
+{
+	auto pairFound = m_LoadedTextureAtlases.find(fileName);
+
+	if (pairFound != m_LoadedTextureAtlases.end())
 	{
 		return *pairFound->second;
 	}
@@ -64,21 +83,6 @@ sf::Font& AutumnEngine::AssetManager::GetFont(std::string fontName)
 		return *newFont;
 	}
 }
-
-//void AutumnEngine::AssetManager::LoadSound(std::string filePath, std::string soundName)
-//{
-//	m_NewSound.loadFromFile(filePath);
-//}
-//
-//sf::SoundBuffer& AutumnEngine::AssetManager::GetSound(std::string soundName)
-//{
-//	auto pairFound = m_LoadedSounds.find(soundName);
-//
-//	if (pairFound != m_LoadedSounds.end())
-//	{
-//		return *pairFound->second;
-//	}
-//}
 
 void AutumnEngine::AssetManager::LoadJSON(std::string filePath, std::string jsonFileName)
 {

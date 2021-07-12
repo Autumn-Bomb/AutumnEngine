@@ -58,7 +58,5 @@ void AutumnEngine::Splashscreen::Update(float dt)
 
 void AutumnEngine::Splashscreen::Render()
 {
-	Begin();
 	GetGUILayer().Render(GetRenderWindow());
-	End();
 }

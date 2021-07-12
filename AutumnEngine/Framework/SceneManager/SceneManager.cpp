@@ -75,9 +75,13 @@ void AutumnEngine::SceneManager::UpdateScene(float dt)
 	if (m_CurrentScene == nullptr)
 		return;
 
+	m_CurrentScene->Begin();
+
 	m_CurrentScene->HandleInput(dt);
 	m_CurrentScene->Update(dt);
 	m_CurrentScene->Render();
+
+	m_CurrentScene->End();
 }
 
 // Used to switch the games current state
@@ -85,9 +89,9 @@ void AutumnEngine::SceneManager::SwitchState(AutumnEngine::GameState::gameState 
 {
 	switch (gameState)
 	{
-		case AutumnEngine::GameState::gameState::SPLASHSCREEN: ChangeScene("Splash Screen"); break;
-		case AutumnEngine::GameState::gameState::MAINMENU: ChangeScene("Main Menu"); break;
-		case AutumnEngine::GameState::gameState::INGAME: ChangeScene("Game Scene"); break;
+		case AutumnEngine::GameState::gameState::SPLASHSCREEN: ChangeScene("SplashScreen"); break;
+		case AutumnEngine::GameState::gameState::MAINMENU: ChangeScene("MainMenu"); break;
+		case AutumnEngine::GameState::gameState::INGAME: ChangeScene("GameScene"); break;
 		case AutumnEngine::GameState::gameState::PAUSED: break;
 		case AutumnEngine::GameState::gameState::SETTINGS: ChangeScene("Settings"); break;
 		case AutumnEngine::GameState::gameState::QUIT: m_CurrentScene->GetRenderWindow()->close(); break;

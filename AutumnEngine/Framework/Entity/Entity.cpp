@@ -4,6 +4,8 @@ AutumnEngine::Entity::Entity(){ m_IsAlive = false; m_MovementSpeed = 0.f; }
 AutumnEngine::Entity::~Entity() {}
 AutumnEngine::Entity::Entity(sf::Texture* spriteTexture, std::string name, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer)
 {
+	m_Sprite = new AutumnEngine::Sprite(spriteTexture, name, position, size, colour, layer);
+
 	m_IsAlive = true;
 	m_MovementSpeed = 0;
 }

@@ -81,7 +81,5 @@ void AutumnEngine::MainMenu::Update(float dt)
 
 void AutumnEngine::MainMenu::Render()
 {
-	Begin();
 	GetGUILayer().Render(GetRenderWindow());
-	End();
 }

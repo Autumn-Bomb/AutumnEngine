@@ -33,9 +33,9 @@ namespace AutumnEngine
 			float m_MovementSpeed;
 			bool m_IsAlive;
 			sf::Vector2f m_Position;
+			AutumnEngine::Sprite* m_Sprite;
 
 		// VARIABLES WE WANT EACH ENTITY TO HAVE ACCESS TO
 		protected:
-			AutumnEngine::Sprite* m_Sprite;
 	};
 }

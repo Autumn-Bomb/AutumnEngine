@@ -13,9 +13,6 @@
     <Filter Include="Framework\Application">
       <UniqueIdentifier>{31331c1d-f8fc-432c-b3b5-23f5b27a08b0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game">
-      <UniqueIdentifier>{19580ab7-22b6-47c4-adb0-12e636772a1a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Backend\Scene Management">
       <UniqueIdentifier>{c29a48ae-d361-4465-b59a-4b35347555c7}</UniqueIdentifier>
     </Filter>
@@ -24,18 +21,6 @@
     </Filter>
     <Filter Include="Framework\Backend\Scene Management\Base Scene">
       <UniqueIdentifier>{e98e95dd-f236-40af-9124-68faae963291}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Scenes">
-      <UniqueIdentifier>{5e44969e-fefc-4acd-84de-50c42dea461a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Scenes\Test Scene">
-      <UniqueIdentifier>{b5a6568d-b4b8-40e9-a2bf-a2050874216f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Main">
-      <UniqueIdentifier>{c57bf1db-416d-4863-ae41-201ed45c430f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Scenes\MainMenu">
-      <UniqueIdentifier>{2125d8a4-baf3-4ee0-a225-7adc7d0bc932}</UniqueIdentifier>
     </Filter>
     <Filter Include="Framework\Backend\Rendering">
       <UniqueIdentifier>{cc5d24dd-9b6c-4a36-96ed-d08bb1bd8343}</UniqueIdentifier>
@@ -88,31 +73,64 @@
     <Filter Include="Framework\Backend\Gamestate">
       <UniqueIdentifier>{ee3fa0f5-efd0-40d9-bc42-a0a280152689}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Scenes\Splashscreen">
-      <UniqueIdentifier>{35fe2572-2572-4d9c-be7e-d5ebd36192b8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Backend\Entity">
       <UniqueIdentifier>{e7f224eb-7ec7-4dae-bf88-77aeb83b7fcd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Entities">
-      <UniqueIdentifier>{5beafbf9-7bbd-48af-8c6d-76eae5129a38}</UniqueIdentifier>
+    <Filter Include="Framework\Backend\TOADD">
+      <UniqueIdentifier>{82697686-ad99-4b3d-a8f8-01dc3187b2fb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Entities\Batman">
-      <UniqueIdentifier>{a471e749-0e0e-4b12-a2a6-6f5adfce2d9f}</UniqueIdentifier>
+    <Filter Include="Framework\Backend\TOADD\TiledParser">
+      <UniqueIdentifier>{7194efca-ba5a-4c00-beb8-a03bfa4ce2ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\TOADD\Particles">
+      <UniqueIdentifier>{6121c9ef-71f5-43dd-809e-dcaaa168ca45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\TOADD\Shaders">
+      <UniqueIdentifier>{4fc53bbb-c328-45e2-988d-7a5034609580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\TOADD\EntityComponentSystem">
+      <UniqueIdentifier>{5003ae9e-ec1d-44da-ba1e-2579c58da903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\TOADD\Sound">
+      <UniqueIdentifier>{16b1e1d8-9272-4bbf-a133-5e94bbb50386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\TOADD\Physics %28Component in ECS%29">
+      <UniqueIdentifier>{4a83ad8e-1f72-4571-b1dc-2082cdbbc878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo">
+      <UniqueIdentifier>{19580ab7-22b6-47c4-adb0-12e636772a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Scenes">
+      <UniqueIdentifier>{5e44969e-fefc-4acd-84de-50c42dea461a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Scenes\Test Scene">
+      <UniqueIdentifier>{b5a6568d-b4b8-40e9-a2bf-a2050874216f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Scenes\MainMenu">
+      <UniqueIdentifier>{2125d8a4-baf3-4ee0-a225-7adc7d0bc932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Scenes\Splashscreen">
+      <UniqueIdentifier>{35fe2572-2572-4d9c-be7e-d5ebd36192b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Main">
+      <UniqueIdentifier>{c57bf1db-416d-4863-ae41-201ed45c430f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Entities">
+      <UniqueIdentifier>{5beafbf9-7bbd-48af-8c6d-76eae5129a38}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
-      <Filter>Game\Main</Filter>
+      <Filter>Demo\Main</Filter>
     </ClCompile>
     <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp">
-      <Filter>Game\Scenes\MainMenu</Filter>
+      <Filter>Demo\Scenes\MainMenu</Filter>
     </ClCompile>
     <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp">
-      <Filter>Game\Scenes\Test Scene</Filter>
+      <Filter>Demo\Scenes\Test Scene</Filter>
     </ClCompile>
     <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp">
-      <Filter>Game\Scenes\Splashscreen</Filter>
+      <Filter>Demo\Scenes\Splashscreen</Filter>
     </ClCompile>
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp">
       <Filter>Framework\Backend\Asset Management</Filter>
@@ -165,19 +183,16 @@
     <ClCompile Include="Framework\Entity\Entity.cpp">
       <Filter>Framework\Backend\Entity</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Entities\Batman\I%27mBatman.cpp">
-      <Filter>Game\Entities\Batman</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h">
-      <Filter>Game\Scenes\MainMenu</Filter>
+      <Filter>Demo\Scenes\MainMenu</Filter>
     </ClInclude>
     <ClInclude Include="Game\Scenes\Test Scene\TestScene.h">
-      <Filter>Game\Scenes\Test Scene</Filter>
+      <Filter>Demo\Scenes\Test Scene</Filter>
     </ClInclude>
     <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h">
-      <Filter>Game\Scenes\Splashscreen</Filter>
+      <Filter>Demo\Scenes\Splashscreen</Filter>
     </ClInclude>
     <ClInclude Include="Framework\AssetManager\AssetManager.h">
       <Filter>Framework\Backend\Asset Management</Filter>
@@ -235,9 +250,6 @@
     </ClInclude>
     <ClInclude Include="Framework\Entity\Entity.h">
       <Filter>Framework\Backend\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Entities\Batman\I%27mBatman.h">
-      <Filter>Game\Entities\Batman</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

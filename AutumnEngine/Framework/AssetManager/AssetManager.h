@@ -20,10 +20,10 @@ namespace AutumnEngine
 		public:
 			void CheckIfDirectoriesExist(std::string folderPath);
 			void LoadTexture(std::string filePath, std::string resourceName);
-			//void LoadSound(std::string filePath, std::string soundName);
+			void LoadTextureAtlas(std::string filePath, std::string resourceName);
 			void LoadJSON(std::string filePath, std::string jsonFileName);
 			void LoadFont(std::string filePath, std::string resourceName);
-			void ClearAssets() { DeleteAssets(m_LoadedTextures); };
+			void ClearAssets() { DeleteAssets(m_LoadedTextures); DeleteAssets(m_LoadedTextureAtlases); };
 
 			template <typename M>
 			void DeleteAssets(M& amap)
@@ -39,22 +39,22 @@ namespace AutumnEngine
 		// GETTERS AND SETTERS
 		public:
 			sf::Texture& GetTexture(std::string fileName);
+			sf::Texture& GetTextureAtlas(std::string fileName);
 			sf::Font& GetFont(std::string fontName);
-			/*sf::SoundBuffer& GetSound(std::string soundName);*/
 			nlohmann::json& GetJSON(std::string jsonName);
 
 		// RESOURCE MAPS 
 		private:
 			std::map<std::string, sf::Texture*> m_LoadedTextures;
+			std::map<std::string, sf::Texture*> m_LoadedTextureAtlases;
 			std::map<std::string, sf::Font*> m_LoadedFonts;
-			//std::map<std::string, sf::SoundBuffer*> m_LoadedSounds;
 			std::map<std::string, nlohmann::json*> m_LoadedJSON;
 
 		// CONTAINERS FOR LOADED RESOURCES
 		private:
 			sf::Texture* m_NewTexture;
+			sf::Texture* m_NewTextureAtlas;
 			sf::Font* m_NewFont;
-			sf::SoundBuffer m_NewSound;
 			nlohmann::json* m_JsonFile;
 	};
 }

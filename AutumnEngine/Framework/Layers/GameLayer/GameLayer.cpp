@@ -59,11 +59,11 @@ void AutumnEngine::GameLayer::AddScenesToGame()
 	m_MainMenu = new AutumnEngine::MainMenu(*m_Window, *m_Input, *m_GUILayer, *m_SceneManager, *m_AssetManager);
 	m_TestScene = new AutumnEngine::TestScene(*m_Window, *m_Input, *m_GUILayer, *m_AssetManager);
 
-	m_SceneManager->AddScene(0, "Splash Screen", m_Splashscreen);
-	m_SceneManager->AddScene(1, "Main Menu", m_MainMenu);
-	m_SceneManager->AddScene(2, "Game Scene", m_TestScene);
+	m_SceneManager->AddScene(0, "SplashScreen", m_Splashscreen);
+	m_SceneManager->AddScene(1, "MainMenu", m_MainMenu);
+	m_SceneManager->AddScene(2, "GameScene", m_TestScene);
 
-	m_SceneManager->SetDefaultScene("Splash Screen");
+	m_SceneManager->SetDefaultScene("SplashScreen");
 }
 
 void AutumnEngine::GameLayer::Update(float deltaTime)
