@@ -35,6 +35,7 @@
     <ClCompile Include="Framework\Layers\GameLayer\GameLayer.cpp" />
     <ClCompile Include="Framework\Layers\GUILayer\GUILayer.cpp" />
     <ClCompile Include="Framework\SceneManager\SceneManager.cpp" />
+    <ClCompile Include="Framework\TextureAtlas\TextureAtlas.cpp" />
     <ClCompile Include="Framework\Window\Window.cpp" />
     <ClCompile Include="Game\Main.cpp" />
     <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
@@ -60,10 +61,14 @@
     <ClInclude Include="Framework\Layers\GameLayer\GameLayer.h" />
     <ClInclude Include="Framework\Layers\GUILayer\GUILayer.h" />
     <ClInclude Include="Framework\SceneManager\SceneManager.h" />
+    <ClInclude Include="Framework\TextureAtlas\TextureAtlas.h" />
     <ClInclude Include="Framework\Window\Window.h" />
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
     <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h" />
     <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JSON\init.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

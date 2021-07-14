@@ -118,6 +118,12 @@
     <Filter Include="Demo\Entities">
       <UniqueIdentifier>{5beafbf9-7bbd-48af-8c6d-76eae5129a38}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Engine Init">
+      <UniqueIdentifier>{c53fb938-7ef0-47b3-8e50-9c25100d164a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\TextureAtlas">
+      <UniqueIdentifier>{80c7b272-a221-43c3-82c3-117ba1459984}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -182,6 +188,9 @@
     </ClCompile>
     <ClCompile Include="Framework\Entity\Entity.cpp">
       <Filter>Framework\Backend\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\TextureAtlas\TextureAtlas.cpp">
+      <Filter>Framework\Backend\Rendering\TextureAtlas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -251,5 +260,13 @@
     <ClInclude Include="Framework\Entity\Entity.h">
       <Filter>Framework\Backend\Entity</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\TextureAtlas\TextureAtlas.h">
+      <Filter>Framework\Backend\Rendering\TextureAtlas</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JSON\init.json">
+      <Filter>Framework\Engine Init</Filter>
+    </None>
   </ItemGroup>
 </Project>

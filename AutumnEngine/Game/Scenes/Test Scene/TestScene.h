@@ -2,6 +2,7 @@
 #include "../../Framework/BaseScene/BaseScene.h"
 #include "../../Framework/Layers/GUILayer/GUILayer.h"
 #include "../../../Framework/Collision/Collision.h"
+#include "../../../Framework/TextureAtlas/TextureAtlas.h"
 
 #include "SFML/Graphics.hpp"
 
@@ -22,6 +23,6 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
-			
+			AutumnEngine::TextureAtlas m_WorldAtlas;
 	};
 }
