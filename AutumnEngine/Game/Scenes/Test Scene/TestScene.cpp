@@ -19,6 +19,9 @@ void AutumnEngine::TestScene::LoadAssets()
 	GetAssetManager().LoadTexture("Resources/Sprites/UI/SliderHandle.png", "SliderHandle");
 	GetAssetManager().LoadTexture("Resources/Sprites/TextureAtlases/WorldAtlas.jpg", "WorldAtlas");
 
+	// TO MAYBE IMPLEMENT
+	//GetAssetManager().CreateTextureAtlas("Resources/Sprites/TextureAtlases/WorldAtlas.jpg", "WorldAtlas");
+
 	std::cout << "Loaded Assets -> " << GetSceneName() << std::endl;
 }
 
@@ -42,6 +45,7 @@ void AutumnEngine::TestScene::Awake()
 	m_WorldAtlas.AddSprite(sf::IntRect(144, 114, 63, 29), sf::Vector2f(100, 100));
 	m_WorldAtlas.AddSprite(sf::IntRect(50, 64, 44, 16), sf::Vector2f(200, 100));
 	m_WorldAtlas.AddSprite(sf::IntRect(112, 49, 47, 63), sf::Vector2f(300, 100));
+	m_WorldAtlas.Batch();
 
 	std::cout << "Awake Initialised -> " << GetSceneName() << std::endl;
 }

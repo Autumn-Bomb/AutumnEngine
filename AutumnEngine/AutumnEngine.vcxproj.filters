@@ -79,9 +79,6 @@
     <Filter Include="Framework\Backend\TOADD">
       <UniqueIdentifier>{82697686-ad99-4b3d-a8f8-01dc3187b2fb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Backend\TOADD\TiledParser">
-      <UniqueIdentifier>{7194efca-ba5a-4c00-beb8-a03bfa4ce2ef}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Backend\TOADD\Particles">
       <UniqueIdentifier>{6121c9ef-71f5-43dd-809e-dcaaa168ca45}</UniqueIdentifier>
     </Filter>
@@ -123,6 +120,12 @@
     </Filter>
     <Filter Include="Framework\Backend\Rendering\TextureAtlas">
       <UniqueIdentifier>{80c7b272-a221-43c3-82c3-117ba1459984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\TOADD\Tilemap System">
+      <UniqueIdentifier>{7194efca-ba5a-4c00-beb8-a03bfa4ce2ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\TOADD\Sprite Animtion">
+      <UniqueIdentifier>{e263ccf4-689a-456e-9b2a-ebb30d1a8052}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
