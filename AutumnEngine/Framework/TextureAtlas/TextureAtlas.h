@@ -15,16 +15,15 @@ namespace AutumnEngine
 
 		// PUBLIC METHODS FOR USE
 		public:
-			void Render(sf::RenderWindow* window);
-			void AddSprite(sf::IntRect spritePosSize, sf::Vector2f position);
+			void LoadTexture(std::string filePath);
+			void AddTexture(sf::IntRect spritePosSize, sf::Vector2f position);
 			void Batch();
+			void Render(sf::RenderWindow* window);
 
 		// CONTAINERS AND HIDDEN VARIABLES
 		private:
-			std::vector<sf::Sprite*> m_Sprites;
-
-			sf::RenderTexture* m_RenderTexture;
+			sf::RenderTexture m_RenderTexture;
 			sf::Texture* m_Texture;
-			sf::Sprite* m_Sprite;
+			sf::Sprite m_Sprite;
 	};
 }

@@ -14,15 +14,26 @@ void AutumnEngine::AssetManager::LoadTexture(std::string filePath, std::string r
 	m_LoadedTextures[resourceName] = m_NewTexture;
 }
 
-void AutumnEngine::AssetManager::LoadTextureAtlas(std::string filePath, std::string resourceName)
+void AutumnEngine::AssetManager::CreateTextureAtlas(std::string filePath, std::string resourceName)
 {
-	m_NewTextureAtlas = new sf::Texture();
+	sf::Texture* textureAtlas = new sf::Texture();
+	textureAtlas->loadFromFile(filePath);
 
-	if (!m_NewTextureAtlas->loadFromFile(filePath))
-	{
-		std::cout << "Couldn't locate: " << filePath << std::endl;
-	}
+	m_NewTextureAtlas = new AutumnEngine::TextureAtlas(textureAtlas);
 	m_LoadedTextureAtlases[resourceName] = m_NewTextureAtlas;
+
+	std::cout << "Texture Atlas Loaded: " << filePath << std::endl;
+}
+
+void AutumnEngine::AssetManager::CreateSpriteSheet(std::string filePath, std::string resourceName)
+{
+	sf::Texture* spritesheet = new sf::Texture();
+	spritesheet->loadFromFile(filePath);
+
+	m_NewSpriteSheet = new AutumnEngine::Spritesheet(spritesheet);
+	m_LoadedSpritesheet[resourceName] = m_NewSpriteSheet;
+
+	std::cout << "Spritesheet Loaded: " << filePath << std::endl;
 }
 
 void AutumnEngine::AssetManager::LoadFont(std::string filePath, std::string resourceName)
@@ -54,11 +65,21 @@ sf::Texture& AutumnEngine::AssetManager::GetTexture(std::string fileName)
 	}
 }
 
-sf::Texture& AutumnEngine::AssetManager::GetTextureAtlas(std::string fileName)
+AutumnEngine::TextureAtlas& AutumnEngine::AssetManager::GetTextureAtlas(std::string fileName)
 {
 	auto pairFound = m_LoadedTextureAtlases.find(fileName);
 
 	if (pairFound != m_LoadedTextureAtlases.end())
+	{
+		return *pairFound->second;
+	}
+}
+
+AutumnEngine::Spritesheet& AutumnEngine::AssetManager::GetSpriteSheet(std::string fileName)
+{
+	auto pairFound = m_LoadedSpritesheet.find(fileName);
+
+	if (pairFound != m_LoadedSpritesheet.end())
 	{
 		return *pairFound->second;
 	}

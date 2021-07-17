@@ -127,6 +127,9 @@
     <Filter Include="Framework\Backend\TOADD\Sprite Animtion">
       <UniqueIdentifier>{e263ccf4-689a-456e-9b2a-ebb30d1a8052}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Backend\Rendering\SpriteSheet">
+      <UniqueIdentifier>{7c4e1033-473e-4523-bd60-0edd84e461cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -194,6 +197,9 @@
     </ClCompile>
     <ClCompile Include="Framework\TextureAtlas\TextureAtlas.cpp">
       <Filter>Framework\Backend\Rendering\TextureAtlas</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp">
+      <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +271,9 @@
     </ClInclude>
     <ClInclude Include="Framework\TextureAtlas\TextureAtlas.h">
       <Filter>Framework\Backend\Rendering\TextureAtlas</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Spritesheets\Spritesheet.h">
+      <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

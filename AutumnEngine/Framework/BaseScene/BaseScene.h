@@ -15,14 +15,14 @@ namespace AutumnEngine
 			BaseScene();
 			~BaseScene();
 
-			virtual void HandleInput(float dt);
-			virtual void Update(float dt);
-			virtual void Render();
+			virtual void HandleInput(float dt) = 0;
+			virtual void Update(float dt) = 0;
+			virtual void Render() = 0;
 
-			virtual void LoadAssets();
-			virtual void UnloadAssets();
+			virtual void LoadAssets() = 0;
+			virtual void UnloadAssets() = 0;
 
-			virtual void Awake();
+			virtual void Awake() = 0;
 
 			void SetRenderWindow(sf::RenderWindow* window) { m_Window = window; }
 			sf::RenderWindow* GetRenderWindow() { return m_Window; }

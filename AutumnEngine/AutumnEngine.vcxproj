@@ -35,6 +35,7 @@
     <ClCompile Include="Framework\Layers\GameLayer\GameLayer.cpp" />
     <ClCompile Include="Framework\Layers\GUILayer\GUILayer.cpp" />
     <ClCompile Include="Framework\SceneManager\SceneManager.cpp" />
+    <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp" />
     <ClCompile Include="Framework\TextureAtlas\TextureAtlas.cpp" />
     <ClCompile Include="Framework\Window\Window.cpp" />
     <ClCompile Include="Game\Main.cpp" />
@@ -61,6 +62,7 @@
     <ClInclude Include="Framework\Layers\GameLayer\GameLayer.h" />
     <ClInclude Include="Framework\Layers\GUILayer\GUILayer.h" />
     <ClInclude Include="Framework\SceneManager\SceneManager.h" />
+    <ClInclude Include="Framework\Spritesheets\Spritesheet.h" />
     <ClInclude Include="Framework\TextureAtlas\TextureAtlas.h" />
     <ClInclude Include="Framework\Window\Window.h" />
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
