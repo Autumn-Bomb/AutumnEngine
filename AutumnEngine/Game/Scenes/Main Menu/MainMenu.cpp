@@ -50,7 +50,7 @@ void AutumnEngine::MainMenu::Awake()
 	
 	GetGUILayer().AddUIComponent(GetGUILayer().CreateSpriteUIElement(&m_AssetManager->GetTexture("Background"), "Background", {0, 0}, {1920, 1080}, sf::Color::White, 0));
 	GetGUILayer().AddUIComponent(GetGUILayer().CreateSpriteUIElement(&m_AssetManager->GetTexture("Logo"), "Logo", { 835, 200 }, { 250, 250 }, sf::Color::White, 0));
-	GetGUILayer().AddUIComponent(GetGUILayer().CreateTextElement(&m_AssetManager->GetFont("arial"), "MainMenuTitle", "Ping Pong", {740, 10}, 100, sf::Color::White));
+	GetGUILayer().AddUIComponent(GetGUILayer().CreateTextElement(&m_AssetManager->GetFont("arial"), "MainMenuTitle", "Demo Game", {740, 10}, 100, sf::Color::White));
 	GetGUILayer().AddUIComponent(GetGUILayer().CreateTextElement(&m_AssetManager->GetFont("arial"), "VersionNumber", "Autumn Engine - v1.0.0 - Autumn Bomb LTD 2021", { 10, 1045 }, 22, sf::Color::White));
 	GetGUILayer().AddUIComponent(GetGUILayer().CreateButtonElement(&m_AssetManager->GetTexture("ButtonIdle"), &m_AssetManager->GetTexture("ButtonHover"), &m_AssetManager->GetTexture("ButtonPressed"), "MainMenuPlayButton", { 900, 500 }, { 150, 175 }, sf::Color::White, 1));
 	GetGUILayer().AddUIComponent(GetGUILayer().CreateButtonElement(&m_AssetManager->GetTexture("ExitButtonIdle"), &m_AssetManager->GetTexture("ExitButtonHover"), &m_AssetManager->GetTexture("ExitButtonPressed"), "MainMenuExitButton", { 900, 700 }, { 150, 175 }, sf::Color::White, 1));
@@ -81,5 +81,5 @@ void AutumnEngine::MainMenu::Update(float dt)
 
 void AutumnEngine::MainMenu::Render()
 {
-	GetGUILayer().Render(GetRenderWindow());
+	GetGUILayer().Render();
 }

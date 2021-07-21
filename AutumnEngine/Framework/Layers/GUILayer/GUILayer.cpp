@@ -36,13 +36,13 @@ AutumnEngine::UIComponent& AutumnEngine::GUILayer::GetUIComponent(std::string co
 	}
 }
 
-void AutumnEngine::GUILayer::Render(sf::RenderWindow* window)
+void AutumnEngine::GUILayer::Render()
 {
 	// TODO - SORT GUI COMPONENTS BASED ON CURRENT LAYER
-	window->setView(*m_GUICamera);
+	m_Window->setView(*m_GUICamera);
 
 	for (AutumnEngine::UIComponent* components : m_UIElements)
 	{
-		components->Render(window);
+		components->Render(m_Window);
 	}
 }

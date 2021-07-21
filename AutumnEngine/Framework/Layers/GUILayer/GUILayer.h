@@ -16,13 +16,14 @@ namespace AutumnEngine
 				void Awake();
 				void Update(float dt);
 				void HandleCollisions(AutumnEngine::Input input);
-				void Render(sf::RenderWindow* window);
+				void Render();
 				void AddUIComponent(AutumnEngine::UIComponent* uiComponent);
 				void ClearComponents() { m_UIElements.clear(); }
 
-			// GETTERS
+			// SETTERS AND GETTERS
 			public:
 				AutumnEngine::UIComponent& GetUIComponent(std::string componentName);
+				void SetWindow(sf::RenderWindow& window) { m_Window = &window; }
 
 			// METHOD DEFINITIONS FOR CREATING UI ELEMENTS
 			public:
@@ -59,6 +60,7 @@ namespace AutumnEngine
 
 			// VARIABLE DEFINITIONS
 			private:
+				sf::RenderWindow* m_Window;
 				sf::View* m_GUICamera;
 				AutumnEngine::GUI m_GUIManager;
 	};

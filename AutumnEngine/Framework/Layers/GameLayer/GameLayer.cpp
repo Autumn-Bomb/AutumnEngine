@@ -36,6 +36,8 @@ void AutumnEngine::GameLayer::InitialiseGame()
 	m_SceneManager = new AutumnEngine::SceneManager();
 	m_AssetManager = new AutumnEngine::AssetManager();
 	m_GUILayer = new AutumnEngine::GUILayer(sf::Vector2f(static_cast<float>(m_Window->getSize().x / 2), static_cast<float>(m_Window->getSize().y / 2)), sf::Vector2f(static_cast<float>(m_Window->getSize().x), static_cast<float>(m_Window->getSize().y)));
+
+	m_GUILayer->SetWindow(*m_Window);
 	
 	CheckIfGameDirectoriesExist();
 }

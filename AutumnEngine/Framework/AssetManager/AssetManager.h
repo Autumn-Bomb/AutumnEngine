@@ -24,8 +24,10 @@ namespace AutumnEngine
 			void LoadTexture(std::string filePath, std::string resourceName);
 			void LoadJSON(std::string filePath, std::string jsonFileName);
 			void LoadFont(std::string filePath, std::string resourceName);
-			void ClearAssets() { DeleteAssets(m_LoadedTextures); DeleteAssets(m_LoadedTextureAtlases); };
+			void ClearAssets() { DeleteAssets(m_LoadedTextures); DeleteAssets(m_LoadedTextureAtlases); DeleteAssets(m_LoadedSpritesheet); }
 
+		// TEMPLATE FUNCTION TO DELETE OBJECTS FROM VECTORS (ALL ASSETS STORED)
+		public:
 			template <typename M>
 			void DeleteAssets(M& amap)
 			{
@@ -64,7 +66,5 @@ namespace AutumnEngine
 			sf::Font* m_NewFont;
 
 			nlohmann::json* m_JsonFile;
-			AutumnEngine::TextureAtlas* m_NewTextureAtlas;
-			AutumnEngine::Spritesheet* m_NewSpriteSheet;
 	};
 }

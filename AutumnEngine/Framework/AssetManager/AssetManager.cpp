@@ -1,6 +1,6 @@
 #include "AssetManager.h"
 
-AutumnEngine::AssetManager::AssetManager() { m_NewTexture = nullptr; m_JsonFile = nullptr; m_NewFont = nullptr; m_NewTextureAtlas = nullptr; }
+AutumnEngine::AssetManager::AssetManager() { m_NewTexture = nullptr; m_JsonFile = nullptr; m_NewFont = nullptr; }
 AutumnEngine::AssetManager::~AssetManager() {}
 
 void AutumnEngine::AssetManager::LoadTexture(std::string filePath, std::string resourceName)
@@ -19,7 +19,7 @@ void AutumnEngine::AssetManager::CreateTextureAtlas(std::string filePath, std::s
 	sf::Texture* textureAtlas = new sf::Texture();
 	textureAtlas->loadFromFile(filePath);
 
-	m_NewTextureAtlas = new AutumnEngine::TextureAtlas(textureAtlas);
+	AutumnEngine::TextureAtlas* m_NewTextureAtlas = new AutumnEngine::TextureAtlas(textureAtlas);
 	m_LoadedTextureAtlases[resourceName] = m_NewTextureAtlas;
 
 	std::cout << "Texture Atlas Loaded: " << filePath << std::endl;
@@ -30,7 +30,7 @@ void AutumnEngine::AssetManager::CreateSpriteSheet(std::string filePath, std::st
 	sf::Texture* spritesheet = new sf::Texture();
 	spritesheet->loadFromFile(filePath);
 
-	m_NewSpriteSheet = new AutumnEngine::Spritesheet(spritesheet);
+	AutumnEngine::Spritesheet* m_NewSpriteSheet = new AutumnEngine::Spritesheet(spritesheet);
 	m_LoadedSpritesheet[resourceName] = m_NewSpriteSheet;
 
 	std::cout << "Spritesheet Loaded: " << filePath << std::endl;

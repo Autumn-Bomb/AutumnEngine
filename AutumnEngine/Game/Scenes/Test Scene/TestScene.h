@@ -24,6 +24,5 @@ namespace AutumnEngine
 
 		private:
 			AutumnEngine::TextureAtlas* m_WorldAtlas;
-			AutumnEngine::Spritesheet* m_SpriteSheet;
 	};
 }
