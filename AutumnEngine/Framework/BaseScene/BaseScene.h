@@ -28,10 +28,10 @@ namespace AutumnEngine
 			sf::RenderWindow* GetRenderWindow() { return m_Window; }
 
 			void SetSceneIndex(int sceneIndex) { m_SceneIndex = sceneIndex; }
-			int GetSceneIndex() { return m_SceneIndex; }
+			int& GetSceneIndex() { return m_SceneIndex; }
 
 			void SetSceneName(std::string sceneName) { m_SceneName = sceneName; }
-			std::string GetSceneName() { return m_SceneName; }
+			std::string& GetSceneName() { return m_SceneName; }
 
 			void SetInput(AutumnEngine::Input* input) { m_Input = input; }
 			AutumnEngine::Input& GetInput() { return *m_Input; }

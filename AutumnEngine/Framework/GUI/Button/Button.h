@@ -10,10 +10,7 @@ namespace AutumnEngine
 
 		public:
 			Button();
-			Button(
-				
-				sf::Texture* idleTexture,
-				sf::Texture* hoverTexture, sf::Texture* pressedTexture, std::string elementName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
+			Button(sf::Texture* idleTexture, sf::Texture* hoverTexture, sf::Texture* pressedTexture, std::string elementName, sf::Vector2f position, sf::Vector2f size, sf::Color colour, int layer);
 			~Button();
 
 			void ChangeButtonState(m_State buttonState);

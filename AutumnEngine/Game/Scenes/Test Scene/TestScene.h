@@ -23,6 +23,6 @@ namespace AutumnEngine
 			void Render() override;
 
 		private:
-			AutumnEngine::TextureAtlas* m_WorldAtlas;
+			//AutumnEngine::TextureAtlas* m_WorldAtlas;
 	};
 }
