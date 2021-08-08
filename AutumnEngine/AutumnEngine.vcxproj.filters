@@ -130,6 +130,24 @@
     <Filter Include="Framework\Backend\Rendering\SpriteSheet">
       <UniqueIdentifier>{7c4e1033-473e-4523-bd60-0edd84e461cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{4b0239b7-f2aa-4181-aed6-cf0b006694c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\BaseDemoTest">
+      <UniqueIdentifier>{66f1f24d-efd7-4fdf-9e23-dff4ed4f5467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\ImGUI">
+      <UniqueIdentifier>{3d1a433a-d932-4c3b-a9a1-3d62515eea20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\ImGUI\ImGUI">
+      <UniqueIdentifier>{01b535f6-b43e-49c0-92a1-9cff17fe0588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\ImGUI\ImGUISFML">
+      <UniqueIdentifier>{41bbae00-738a-4a51-8efd-e03bc1898002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\BaseEditorWindow">
+      <UniqueIdentifier>{5a809f66-8722-4b1f-82c6-ce335f546dcb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -200,6 +218,30 @@
     </ClCompile>
     <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp">
       <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\DemoTest\IMGUIDemo.cpp">
+      <Filter>Editor\BaseDemoTest</Filter>
+    </ClCompile>
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_demo.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_draw.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_tables.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_widgets.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
+      <Filter>Editor\BaseEditorWindow</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -274,6 +316,24 @@
     </ClInclude>
     <ClInclude Include="Framework\Spritesheets\Spritesheet.h">
       <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="DearIMGUI\Include\imgui\imconfig.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DearIMGUI\Include\imgui\imgui.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imconfig-SFML.h">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClInclude>
+    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.h">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClInclude>
+    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
+      <Filter>Editor\BaseEditorWindow</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

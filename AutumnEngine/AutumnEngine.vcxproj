@@ -19,6 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp" />
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui.cpp" />
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_demo.cpp" />
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_tables.cpp" />
+    <ClCompile Include="DearIMGUI\Include\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp" />
+    <ClCompile Include="Editor\DemoTest\IMGUIDemo.cpp" />
     <ClCompile Include="Framework\Application\Application.cpp" />
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp" />
     <ClCompile Include="Framework\BaseScene\BaseScene.cpp" />
@@ -44,6 +52,12 @@
     <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imconfig-SFML.h" />
+    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.h" />
+    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h" />
+    <ClInclude Include="DearIMGUI\Include\imgui\imconfig.h" />
+    <ClInclude Include="DearIMGUI\Include\imgui\imgui.h" />
+    <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h" />
     <ClInclude Include="Framework\Application\Application.h" />
     <ClInclude Include="Framework\AssetManager\AssetManager.h" />
     <ClInclude Include="Framework\BaseScene\BaseScene.h" />
@@ -163,14 +177,14 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/DearIMGUI/imgui-sfml;$(ProjectDir)/DearIMGUI/imgui;$(ProjectDir)/SFML/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)/SFML/lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -205,7 +219,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\danie\Desktop\AutumnEngine\AutumnEngine\SFML\include\ZLib;$(ProjectDir)/SFML/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/DearIMGUI/imgui-sfml;$(ProjectDir)/DearIMGUI/imgui;$(ProjectDir)/SFML/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -214,7 +228,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)/SFML/lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
