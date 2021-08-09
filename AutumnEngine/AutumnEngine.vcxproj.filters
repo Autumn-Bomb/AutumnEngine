@@ -148,6 +148,9 @@
     <Filter Include="Editor\BaseEditorWindow">
       <UniqueIdentifier>{5a809f66-8722-4b1f-82c6-ce335f546dcb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Backend\Entt">
+      <UniqueIdentifier>{91354bed-c1c3-437d-90e2-2d64aff33a94}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -222,26 +225,26 @@
     <ClCompile Include="Editor\DemoTest\IMGUIDemo.cpp">
       <Filter>Editor\BaseDemoTest</Filter>
     </ClCompile>
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui.cpp">
-      <Filter>Editor\ImGUI\ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_demo.cpp">
-      <Filter>Editor\ImGUI\ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_draw.cpp">
-      <Filter>Editor\ImGUI\ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_tables.cpp">
-      <Filter>Editor\ImGUI\ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_widgets.cpp">
-      <Filter>Editor\ImGUI\ImGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp">
-      <Filter>Editor\ImGUI\ImGUISFML</Filter>
-    </ClCompile>
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
       <Filter>Editor\BaseEditorWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_demo.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_draw.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_tables.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_widgets.cpp">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -317,23 +320,38 @@
     <ClInclude Include="Framework\Spritesheets\Spritesheet.h">
       <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
     </ClInclude>
-    <ClInclude Include="DearIMGUI\Include\imgui\imconfig.h">
-      <Filter>Editor\ImGUI\ImGUI</Filter>
-    </ClInclude>
-    <ClInclude Include="DearIMGUI\Include\imgui\imgui.h">
-      <Filter>Editor\ImGUI\ImGUI</Filter>
-    </ClInclude>
-    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imconfig-SFML.h">
-      <Filter>Editor\ImGUI\ImGUISFML</Filter>
-    </ClInclude>
-    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.h">
-      <Filter>Editor\ImGUI\ImGUISFML</Filter>
-    </ClInclude>
-    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h">
-      <Filter>Editor\ImGUI\ImGUISFML</Filter>
-    </ClInclude>
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
       <Filter>Editor\BaseEditorWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imconfig-SFML.h">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.h">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h">
+      <Filter>Editor\ImGUI\ImGUISFML</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\Entt\Include\entt.hpp">
+      <Filter>Framework\Backend\Entt</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imconfig.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imgui.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imgui_internal.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_rectpack.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_textedit.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_truetype.h">
+      <Filter>Editor\ImGUI\ImGUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

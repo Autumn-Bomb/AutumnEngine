@@ -19,12 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp" />
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui.cpp" />
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_demo.cpp" />
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_draw.cpp" />
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_tables.cpp" />
-    <ClCompile Include="DearIMGUI\Include\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp" />
     <ClCompile Include="Editor\DemoTest\IMGUIDemo.cpp" />
     <ClCompile Include="Framework\Application\Application.cpp" />
@@ -50,13 +44,14 @@
     <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
     <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp" />
     <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp" />
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp" />
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui.cpp" />
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imconfig-SFML.h" />
-    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML.h" />
-    <ClInclude Include="DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h" />
-    <ClInclude Include="DearIMGUI\Include\imgui\imconfig.h" />
-    <ClInclude Include="DearIMGUI\Include\imgui\imgui.h" />
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h" />
     <ClInclude Include="Framework\Application\Application.h" />
     <ClInclude Include="Framework\AssetManager\AssetManager.h" />
@@ -82,6 +77,16 @@
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
     <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h" />
     <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imconfig-SFML.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imconfig.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imgui.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imgui_internal.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_textedit.h" />
+    <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_truetype.h" />
+    <ClInclude Include="Libraries\Entt\Include\entt.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\JSON\init.json" />
@@ -177,13 +182,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/DearIMGUI/imgui-sfml;$(ProjectDir)/DearIMGUI/imgui;$(ProjectDir)/SFML/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/Libraries/DearIMGUI/Include/imgui-sfml/;$(ProjectDir)/Libraries/DearIMGUI/Include/imgui/;$(ProjectDir)/Libraries/Entt/include;$(ProjectDir)/Libraries/SFML/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)/SFML/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)/Libraries/SFML/lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

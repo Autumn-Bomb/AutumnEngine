@@ -1,6 +1,6 @@
 #pragma once
-#include "../../Framework/BaseScene/BaseScene.h"
-#include "../../Framework/Layers/GUILayer/GUILayer.h"
+#include "../../../Framework/BaseScene/BaseScene.h"
+#include "../../../Framework/Layers/GUILayer/GUILayer.h"
 #include "../../../Framework/Collision/Collision.h"
 #include "../../../Framework/TextureAtlas/TextureAtlas.h"
 

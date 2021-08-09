@@ -4,40 +4,39 @@
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
 
-AutumnEngine::BaseEditorWindow baseWindow;
+AutumnEngine::BaseEditorWindow m_Editor;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "");
-    window.setVerticalSyncEnabled(true);
+    sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autism Engine");
 
-    baseWindow.SetRenderWindow(window);
-    baseWindow.InitialiseEditor();
+    m_Editor.SetRenderWindow(window);
+    m_Editor.InitialiseEditor();
 
-    // let's use char array as buffer, see next part
-    // for instructions on using std::string with ImGui
-    char windowTitle[255] = "Autumn Engine";
-
-    window.setTitle(windowTitle);
     window.resetGLStates(); // call it if you only draw ImGui. Otherwise not needed.
     sf::Clock deltaClock;
 
-    while (window.isOpen()) {
+    while (window.isOpen()) 
+    {
         sf::Event event;
-        while (window.pollEvent(event)) {
-            baseWindow.ProcessEditorEvents(event);
+        while (window.pollEvent(event))
+        {
+            m_Editor.ProcessEditorEvents(event);
 
-            if (event.type == sf::Event::Closed) {
+            if (event.type == sf::Event::Closed)
+            {
                 window.close();
             }
         }
 
-        baseWindow.UpdateEditorWindow(deltaClock);
+        m_Editor.UpdateEditorWindow(deltaClock);
 
         window.clear(sf::Color::White); // fill background with color
-        baseWindow.RenderEditor();
+
+        m_Editor.RenderEditor();
+
         window.display();
     }
 
-    baseWindow.ShutDownEditor();
+    m_Editor.ShutDownEditor();
 }

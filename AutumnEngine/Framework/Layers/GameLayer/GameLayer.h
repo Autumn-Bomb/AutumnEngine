@@ -3,9 +3,9 @@
 #include "../../AssetManager/AssetManager.h"
 #include "../../GameState/GameState.h"
 
-#include "../../Game/Scenes/Main Menu/MainMenu.h"
-#include "../../Game/Scenes/Test Scene/TestScene.h"
-#include "../../Game/Scenes/Splashscreen/Splashscreen.h"
+#include "../../../Game/Scenes/Main Menu/MainMenu.h"
+#include "../../../Game/Scenes/Test Scene/TestScene.h"
+#include "../../../Game/Scenes/Splashscreen/Splashscreen.h"
 
 namespace AutumnEngine
 {
