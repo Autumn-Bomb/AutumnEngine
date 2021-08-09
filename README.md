@@ -41,7 +41,7 @@ Once all these systems are in place, the developers will design and build a test
 
 Screenshots:
 
-Editor:
+Editor (WIP):
 ![image](https://user-images.githubusercontent.com/48921196/128702882-e6713006-1e75-46a4-8148-4b5e65df5101.png)
 ![image](https://user-images.githubusercontent.com/48921196/128703061-5d6ba081-c0ef-4f35-a679-1b6511eeadc3.png)
 
