@@ -23,4 +23,17 @@ Sound Class - Used to add sounds, music and access each sound and music in-game 
 
 2D Renderer - Renders anything 2D to the screen, has optimisations such as Sprite Batching to reduce draw calls (Backburner)
 
+Editor:
+
+We have also began work on the visual editor the engine will use, for this we are using the Dear ImGui API for rendering any UI element needed. This editor is currently in the works and will have features such as:
+
+Inspector - Used for controlling Entities and Objects\
+Scene Hierarchy - Used to adding Entities and Objects into a Scene\
+Console - Used for logging messages from the engine\
+Content Browser - Used for controlling assets and scenes for a given project\
+Game Viewport - Used to design and create levels and games in editor\
+Animation - Used to create 2D animations from Spritesheets 
+Properties Window - Used to add components onto Entities and Objects
+Stats - Used to display stats for the Engine such as FPS, Frametime, Entities in scene, Drawcalls, Batches and more.
+
 Once all these systems are in place, the developers will design and build a test scene with everything included to show off the engines capabilities. The engine will also be tested through Game Jams to figure out if there are any issues, missing features or bugs that need to be fixed.
