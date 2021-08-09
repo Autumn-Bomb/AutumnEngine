@@ -44,6 +44,7 @@ Screenshots:
 Editor (WIP):
 ![image](https://user-images.githubusercontent.com/48921196/128702882-e6713006-1e75-46a4-8148-4b5e65df5101.png)
 ![image](https://user-images.githubusercontent.com/48921196/128703061-5d6ba081-c0ef-4f35-a679-1b6511eeadc3.png)
+![image](https://user-images.githubusercontent.com/48921196/128704092-5dfb21fc-40d5-4f0b-9bb2-c3f2ee7e9f56.png)
 
 Without Editor:
 ![image](https://user-images.githubusercontent.com/48921196/128703243-b9ce015b-ed96-43bd-918d-a72e19910b0b.png)
