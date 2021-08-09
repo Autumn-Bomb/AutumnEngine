@@ -40,4 +40,13 @@ Once all these systems are in place, the developers will design and build a test
 
 
 Screenshots:
+
+Editor:
 ![image](https://user-images.githubusercontent.com/48921196/128702882-e6713006-1e75-46a4-8148-4b5e65df5101.png)
+![image](https://user-images.githubusercontent.com/48921196/128703061-5d6ba081-c0ef-4f35-a679-1b6511eeadc3.png)
+
+Without Editor:
+![image](https://user-images.githubusercontent.com/48921196/128703243-b9ce015b-ed96-43bd-918d-a72e19910b0b.png)
+![image](https://user-images.githubusercontent.com/48921196/128703304-a0adf6b9-30ac-451b-85e0-f639c01c95e1.png)
+![image](https://user-images.githubusercontent.com/48921196/128703331-5ae3c798-547d-42dd-a568-10563f764b26.png)
+
