@@ -32,35 +32,26 @@ namespace AutumnEngine
 		// SETUP ELEMENTS INSIDE EDITOR
 		public:
 			void HandleMenuBar();
-			void InitialiseHeirarchy();
-			void InitialiseInspector();
-			void InitialiseStats();
-<<<<<<< Updated upstream
-
-=======
-			void InitialiseConsole();
-			void InitialiseAnimation();
-			void InitialiseProperties();
-			void InitialiseContentBrowser();
-			void IntialiseSceneViewport();
+			void ShowHeirarchy();
+			void ShowInspector();
+			void ShowStats();
+			void ShowConsole();
+			void ShowAnimation();
+			void ShowProperties();
+			void ShowContentBrowser();
+			void ShowSceneViewport();
 
 			void ShowAboutWindow();
 
+			void OpenProjectInExplorer();
 
-			void OpenProjectFolderInExplorer();
->>>>>>> Stashed changes
 		// GETTERS AND SETTERS
 		public:
 			void SetRenderWindow(sf::RenderWindow& window) { m_Window = &window; }
 
 		// PRIVATE VARIABLES WE DON'T NEED OTHER CLASSES TO ACCESS
 		private:
-			float m_FPS;
-			float m_FrameTime;
-
 			sf::RenderWindow* m_Window;
-<<<<<<< Updated upstream
-=======
 
 		// ENGINE VARIABLES 
 		private:
@@ -75,7 +66,6 @@ namespace AutumnEngine
 			bool m_ShowSceneViewport;
 			bool m_ShowConsole;
 			bool m_ShowAboutWindow;
->>>>>>> Stashed changes
 			bool m_ShowInspectorPanel;
 			bool m_ShowStatsPanel;
 			bool m_ShowHierarchyPanel;

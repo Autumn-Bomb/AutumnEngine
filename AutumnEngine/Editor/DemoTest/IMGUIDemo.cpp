@@ -8,7 +8,7 @@ AutumnEngine::BaseEditorWindow m_Editor;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autism Engine");
+    sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine");
 
     m_Editor.SetRenderWindow(window);
     m_Editor.InitialiseEditor();
