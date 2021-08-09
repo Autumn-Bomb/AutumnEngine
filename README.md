@@ -23,4 +23,31 @@ Sound Class - Used to add sounds, music and access each sound and music in-game 
 
 2D Renderer - Renders anything 2D to the screen, has optimisations such as Sprite Batching to reduce draw calls (Backburner)
 
+Editor:
+
+We have also began work on the visual editor the engine will use, for this we are using the Dear ImGui API for rendering any UI element needed. This editor is currently in the works and will have features such as:
+
+Inspector - Used for controlling Entities and Objects\
+Scene Hierarchy - Used to adding Entities and Objects into a Scene\
+Console - Used for logging messages from the engine\
+Content Browser - Used for controlling assets and scenes for a given project\
+Game Viewport - Used to design and create levels and games in editor\
+Animation - Used to create 2D animations from Spritesheets 
+Properties Window - Used to add components onto Entities and Objects
+Stats - Used to display stats for the Engine such as FPS, Frametime, Entities in scene, Drawcalls, Batches and more.
+
 Once all these systems are in place, the developers will design and build a test scene with everything included to show off the engines capabilities. The engine will also be tested through Game Jams to figure out if there are any issues, missing features or bugs that need to be fixed.
+
+
+Screenshots:
+
+Editor (WIP):
+![image](https://user-images.githubusercontent.com/48921196/128702882-e6713006-1e75-46a4-8148-4b5e65df5101.png)
+![image](https://user-images.githubusercontent.com/48921196/128703061-5d6ba081-c0ef-4f35-a679-1b6511eeadc3.png)
+![image](https://user-images.githubusercontent.com/48921196/128704092-5dfb21fc-40d5-4f0b-9bb2-c3f2ee7e9f56.png)
+
+Without Editor:
+![image](https://user-images.githubusercontent.com/48921196/128703243-b9ce015b-ed96-43bd-918d-a72e19910b0b.png)
+![image](https://user-images.githubusercontent.com/48921196/128703304-a0adf6b9-30ac-451b-85e0-f639c01c95e1.png)
+![image](https://user-images.githubusercontent.com/48921196/128703331-5ae3c798-547d-42dd-a568-10563f764b26.png)
+
