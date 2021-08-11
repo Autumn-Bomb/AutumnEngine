@@ -1,79 +1,79 @@
-#pragma once
-
-#include "../imgui/imgui.h"
-#include "../imgui/imgui_internal.h"
-#include "../imgui-sfml/imgui-SFML.h"
+#include "SFML/Graphics.hpp"
 #include "../Panels/Console/Console.h"
 
+#include "imgui.h"
+#include "imgui-SFML.h"
+
+#include <iostream>
+#include <filesystem>
 #include <Windows.h>
 #include <shellapi.h>
-
-#include "SFML/Graphics.hpp"
-#include <filesystem>
 
 namespace AutumnEngine
 {
 	class BaseEditorWindow
 	{
-		// CONSTRUCTORS
 		public:
 			BaseEditorWindow();
 			~BaseEditorWindow();
 
-		// INITIALISE EDITOR WINDOW
+		void ShowHeirarchy();
+		void ShowInspector();
+		void ShowStats();
+		void ShowAnimation();
+		void ShowProperties();
+		void ShowContentBrowser();
+		void ShowSceneViewport();
+		void ShowAboutWindow();
+
+		
+		// Editor Methods
 		public:
-			void InitialiseEditor();
-			void ProcessEditorEvents(sf::Event& events);
-			void UpdateEditorWindow(sf::Clock deltaTime);
-			void RenderEditor();
+		void InitialiseEditor();
+		void ProcessEditorEvents(sf::Event& events);
+		void UpdateEditorWindow(sf::Clock deltaTime);
+		void RenderEditor();
+		void ShutDownEditor();
 
-			void ShutDownEditor();
+		private:
+		void HandleMenuBar();
+		void UpdatePanels();
 
-		// UPDATE PANELS (DISPLAYING OR NOT DISPLAYING)
-		public:
-			void UpdatePanels();
+	public:
+		void OpenProjectInExplorer();
+		void MakeNewProject();
 
-		// SETUP ELEMENTS INSIDE EDITOR
-		public:
-			void HandleMenuBar();
-			void ShowHeirarchy();
-			void ShowInspector();
-			void ShowStats();
-			void ShowConsole();
-			void ShowAnimation();
-			void ShowProperties();
-			void ShowContentBrowser();
-			void ShowSceneViewport();
-
-			void ShowAboutWindow();
-
-			void OpenProjectInExplorer();
+		// Console Methods
+		public :
 
 		// GETTERS AND SETTERS
 		public:
 			void SetRenderWindow(sf::RenderWindow& window) { m_Window = &window; }
 
-		// PRIVATE VARIABLES WE DON'T NEED OTHER CLASSES TO ACCESS
-		private:
-			sf::RenderWindow* m_Window;
-
 		// ENGINE VARIABLES 
 		private:
-			AutumnEngine::Console m_Console;
+		sf::RenderWindow* m_Window;
+		AutumnEngine::Console m_Console;
+		std::filesystem::path m_CurrentPath;
 
-			int m_FPS;
-			float m_FrameTime;
+		int m_FPS;
+		float m_FrameTime;
 
-			char str0[128];
+		char str0[128];
+		char m_Search[128];
+		char m_NewProjectName[128];
+		char m_NewProjectPath[255];
 
-			bool m_ShowAnimation;
-			bool m_ShowProperties;
-			bool m_ShowContentExplorer;
-			bool m_ShowSceneViewport;
-			bool m_ShowConsole;
-			bool m_ShowAboutWindow;
-			bool m_ShowInspectorPanel;
-			bool m_ShowStatsPanel;
-			bool m_ShowHierarchyPanel;
+		bool m_ShowInExplorer;
+		bool m_ShowAnimation;
+		bool m_ShowProperties;
+		bool m_ShowContentExplorer;
+		bool m_ShowInspectorPanel;
+		bool m_ShowStatsPanel;
+		bool m_ShowHierarchyPanel;
+		bool m_ShowNewProjectPopup;
+		bool m_ShowAboutWindow;
+		bool m_ShowConsole;
+		bool m_ShowSceneViewport;
 	};
-}
+};
