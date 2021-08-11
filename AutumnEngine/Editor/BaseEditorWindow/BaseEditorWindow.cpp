@@ -4,21 +4,22 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
 {
     m_Window = nullptr;
 
-    m_ShowHierarchyPanel = false;
-    m_ShowInspectorPanel = false;
-    m_ShowStatsPanel = false;
+    m_ShowHierarchyPanel = true;
+    m_ShowInspectorPanel = true;
+    m_ShowStatsPanel = true;
     m_ShowAboutWindow = false;
-    m_ShowConsole = false;
-    m_ShowContentExplorer = false;
-    m_ShowSceneViewport = false;
-    m_ShowAnimation = false;
-    m_ShowProperties = false;
+    m_ShowConsole = true;
+    m_ShowContentExplorer = true;
+    m_ShowSceneViewport = true;
+    m_ShowAnimation = true;
+    m_ShowProperties = true;
 }
 AutumnEngine::BaseEditorWindow::~BaseEditorWindow(){}
 
 void AutumnEngine::BaseEditorWindow::InitialiseEditor()
 {
 	ImGui::SFML::Init(*m_Window);
+    ImGui::GetIO().ConfigFlags = ImGuiConfigFlags_DockingEnable;
 }
 
 void AutumnEngine::BaseEditorWindow::ProcessEditorEvents(sf::Event& events)
@@ -31,10 +32,11 @@ void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
     ImGui::SFML::Update(*m_Window, deltaTime.restart());
 
     m_FPS = 1.f / deltaTime.restart().asSeconds();
-    m_FrameTime = m_FPS / 1000.f;
+    m_FrameTime = 1.0f / m_FPS;
 
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
-    ImGui::Begin("Editor", 0, ImGuiWindowFlags_::ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_::ImGuiWindowFlags_NoResize | ImGuiWindowFlags_::ImGuiWindowFlags_NoMove);
+    ImGui::Begin("Editor", 0, ImGuiWindowFlags_::ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_::ImGuiWindowFlags_NoResize | ImGuiWindowFlags_::ImGuiWindowFlags_NoMove | ImGuiWindowFlags_::ImGuiWindowFlags_NoBringToFrontOnFocus);
+
     ImGui::SetWindowSize(ImVec2(1920, 1080), 0);
     ImGui::SetWindowPos(ImVec2(0, 0));
 
@@ -81,7 +83,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
         {
             if (ImGui::MenuItem("Create Entity"), "Ctrl+O") { /* Call Create Entity Method */ }
             ImGui::Separator();
-            if (ImGui::MenuItem("Show In Explorer"), "Ctrl+S") { /* OpenProjectFolderInExplorer();*/ }
+            if (ImGui::MenuItem("Show In Explorer"), "Ctrl+S") {  OpenProjectInExplorer(); }
             if (ImGui::MenuItem("Refresh Project"), "Ctrl+F5") { /* Refresh Project */ }
 
             ImGui::EndMenu();
@@ -136,10 +138,15 @@ void AutumnEngine::BaseEditorWindow::ShowHeirarchy()
 
 void AutumnEngine::BaseEditorWindow::ShowInspector()
 {
-    //ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
+    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
     ImGui::Begin("Inspector");
 
-    //ImGui::PopStyleColor();
+    if (ImGui::Button("Add Component", ImVec2(ImGui::GetWindowWidth(), 20)))
+    {
+        m_Console.AddMessage(AutumnEngine::MessageType::MESSAGE, " ADDING COMPONENT \n");
+    }
+
+    ImGui::PopStyleColor();
     ImGui::End();
 }
 
@@ -149,7 +156,7 @@ void AutumnEngine::BaseEditorWindow::ShowStats()
     ImGui::Begin("Stats");
 
     ImGui::Text("FPS: %i", m_FPS);
-    ImGui::Text("Frame Time: %f", 0);
+    ImGui::Text("Frame Time: %f", m_FrameTime);
     ImGui::Text("Entities: %f" , 0);
     ImGui::Text("Batches: %f", 0);
     ImGui::Text("Vertices: %f", 0);
@@ -207,7 +214,14 @@ void AutumnEngine::BaseEditorWindow::ShowSceneViewport()
     ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
     ImGui::Begin("Scene Viewport");
 
-    // INSERT CONTENT HERE
+    ImGui::SameLine(ImGui::GetWindowWidth() - 700);
+    ImGui::Button("Play");
+    ImGui::SameLine();
+    ImGui::Button("Pause");
+    ImGui::SameLine();
+    ImGui::Button("Stop");
+
+    ImGui::Separator();
 
     ImGui::PopStyleColor();
     ImGui::End();
@@ -250,7 +264,7 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
         ShowProperties();
 
     if (m_ShowConsole)
-        ShowConsole();
+        m_Console.ShowConsole();
 
     if (m_ShowSceneViewport)
         ShowSceneViewport();
@@ -261,14 +275,13 @@ void AutumnEngine::BaseEditorWindow::RenderEditor()
     ImGui::SFML::Render(*m_Window);
 }
 
-void AutumnEngine::BaseEditorWindow::ShutDownEditor()
-{
-    ImGui::SFML::Shutdown();
-}
-
 void AutumnEngine::BaseEditorWindow::OpenProjectInExplorer()
 {
     std::filesystem::path currentPath = std::filesystem::current_path();
-    //const char* path = currentPath.string();
-    //system(path);
+    ShellExecute(NULL, "Open", "Explorer.exe", currentPath.string().c_str(), NULL, NULL);
+}
+
+void AutumnEngine::BaseEditorWindow::ShutDownEditor()
+{
+    ImGui::SFML::Shutdown();
 }

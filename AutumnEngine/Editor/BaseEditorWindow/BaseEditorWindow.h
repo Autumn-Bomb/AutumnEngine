@@ -3,6 +3,10 @@
 #include "../imgui/imgui.h"
 #include "../imgui/imgui_internal.h"
 #include "../imgui-sfml/imgui-SFML.h"
+#include "../Panels/Console/Console.h"
+
+#include <Windows.h>
+#include <shellapi.h>
 
 #include "SFML/Graphics.hpp"
 #include <filesystem>
@@ -55,6 +59,8 @@ namespace AutumnEngine
 
 		// ENGINE VARIABLES 
 		private:
+			AutumnEngine::Console m_Console;
+
 			int m_FPS;
 			float m_FrameTime;
 

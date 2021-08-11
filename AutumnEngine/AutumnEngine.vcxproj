@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp" />
     <ClCompile Include="Editor\DemoTest\IMGUIDemo.cpp" />
+    <ClCompile Include="Editor\Panels\Console\Console.cpp" />
     <ClCompile Include="Framework\Application\Application.cpp" />
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp" />
     <ClCompile Include="Framework\BaseScene\BaseScene.cpp" />
@@ -53,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h" />
+    <ClInclude Include="Editor\Panels\Console\Console.h" />
     <ClInclude Include="Framework\Application\Application.h" />
     <ClInclude Include="Framework\AssetManager\AssetManager.h" />
     <ClInclude Include="Framework\BaseScene\BaseScene.h" />
@@ -89,7 +91,7 @@
     <ClInclude Include="Libraries\Entt\Include\entt.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\JSON\init.json" />
+    <None Include="Game\Resources\JSON\init.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -189,7 +191,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)/Libraries/SFML/lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;opengl32.lib;shell32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
