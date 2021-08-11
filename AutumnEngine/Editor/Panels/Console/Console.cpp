@@ -13,8 +13,6 @@ AutumnEngine::Console::~Console(){}
 
 void AutumnEngine::Console::AddMessage(MessageType messageType, const char* message, ...)
 {
-    std::cout << "Adding Message: " << message << " with Message Type: " << messageType;
-
     std::string newMessage;
     switch (messageType)
     {

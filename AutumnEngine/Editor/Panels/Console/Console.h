@@ -1,6 +1,6 @@
 #pragma once
-#include "../imgui/imgui.h"
-#include <iostream>
+#include "imgui.h"
+#include <string>
 
 namespace AutumnEngine
 {
@@ -20,15 +20,10 @@ namespace AutumnEngine
 
 			void Clear() { m_Buffer.clear(); m_LineOffsets.clear(); m_LineOffsets.push_back(0); }
 
-		// Getters and Setters
-		public:
-			void SetShow(bool show) { m_Show = show; }
-
 		// Console Variables
 		private:
 			MessageType m_MessageType;
 			ImVector<int> m_LineOffsets;
-			bool m_Show;
 			bool m_AutoScroll;
 			ImGuiTextBuffer m_Buffer;
 	};

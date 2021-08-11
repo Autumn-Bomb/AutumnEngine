@@ -151,11 +151,41 @@
     <Filter Include="Framework\Backend\Entt">
       <UniqueIdentifier>{91354bed-c1c3-437d-90e2-2d64aff33a94}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Editor\Panels">
+    <Filter Include="Editor\Windows">
+      <UniqueIdentifier>{cdc5ae23-d1a3-412b-b48e-8b402d5be1e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Menus">
+      <UniqueIdentifier>{1419feb6-5458-4f8c-b231-b8c8476294d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels">
       <UniqueIdentifier>{b80b0615-22e2-4cb6-93de-da72cf1bbea2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Editor\Panels\Console">
+    <Filter Include="Editor\Windows\Panels\Console">
       <UniqueIdentifier>{fcc4bba9-e468-4eaa-ae7e-816f66512511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\Hierarchy">
+      <UniqueIdentifier>{ec960bee-2f86-4752-9d6d-4c7774c400a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\SceneViewport">
+      <UniqueIdentifier>{ed045318-d3fd-46bb-b934-f7af54a0ab28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\Inspector">
+      <UniqueIdentifier>{ae0cc2d5-41b8-42d9-812f-9e61dd16b98b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\Stats">
+      <UniqueIdentifier>{2afde878-b9db-43e2-a297-eb756cab1130}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\Animation">
+      <UniqueIdentifier>{1ecb8318-437b-4584-ae63-d480f96217da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\ContentBrowser">
+      <UniqueIdentifier>{51d00977-d62d-49b2-84f4-d4fa5677c883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\Properties">
+      <UniqueIdentifier>{6b32e546-20be-42f5-b6b6-6aec59bb8031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Menus\About">
+      <UniqueIdentifier>{2e408aee-75e9-4753-b164-2c85dc3ae41a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -253,7 +283,31 @@
       <Filter>Editor\ImGUI\ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="Editor\Panels\Console\Console.cpp">
-      <Filter>Editor\Panels\Console</Filter>
+      <Filter>Editor\Windows\Panels\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\Hierarchy\Hierarchy.cpp">
+      <Filter>Editor\Windows\Panels\Hierarchy</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\SceneViewport\SceneViewport.cpp">
+      <Filter>Editor\Windows\Panels\SceneViewport</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\Inspector\Inspector.cpp">
+      <Filter>Editor\Windows\Panels\Inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\Stats\Stats.cpp">
+      <Filter>Editor\Windows\Panels\Stats</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\Animation\Animation.cpp">
+      <Filter>Editor\Windows\Panels\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\ContentBrowser\ContentBrowser.cpp">
+      <Filter>Editor\Windows\Panels\ContentBrowser</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\Properties\Properties.cpp">
+      <Filter>Editor\Windows\Panels\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Menus\About\About.cpp">
+      <Filter>Editor\Windows\Menus\About</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -363,7 +417,31 @@
       <Filter>Editor\ImGUI\ImGUI</Filter>
     </ClInclude>
     <ClInclude Include="Editor\Panels\Console\Console.h">
-      <Filter>Editor\Panels\Console</Filter>
+      <Filter>Editor\Windows\Panels\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\Hierarchy\Hierarchy.h">
+      <Filter>Editor\Windows\Panels\Hierarchy</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\SceneViewport\SceneViewport.h">
+      <Filter>Editor\Windows\Panels\SceneViewport</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\Inspector\Inspector.h">
+      <Filter>Editor\Windows\Panels\Inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\Stats\Stats.h">
+      <Filter>Editor\Windows\Panels\Stats</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\Animation\Animation.h">
+      <Filter>Editor\Windows\Panels\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\ContentBrowser\ContentBrowser.h">
+      <Filter>Editor\Windows\Panels\ContentBrowser</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\Properties\Properties.h">
+      <Filter>Editor\Windows\Panels\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Menus\About\About.h">
+      <Filter>Editor\Windows\Menus\About</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

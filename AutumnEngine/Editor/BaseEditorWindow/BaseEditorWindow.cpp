@@ -13,8 +13,6 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowSceneViewport = true;
     m_ShowAnimation = true;
     m_ShowProperties = true;
-    m_ShowAnimation = false;
-    m_ShowProperties = true;
 
     m_ShowNewProjectPopup = false;
     m_ShowInExplorer = false;
@@ -145,121 +143,6 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
     }
 }
 
-void AutumnEngine::BaseEditorWindow::ShowHeirarchy()
-{
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
-    ImGui::Begin("Scene Hierarchy");
-
-    ImGui::Button("Create", ImVec2(50, 18));
-    ImGui::SameLine();
-    ImGui::InputText("", m_Search, IM_ARRAYSIZE(m_Search));
-    ImGui::Separator();
-
-    ImGui::PopStyleColor();
-    ImGui::End();
-}
-
-void AutumnEngine::BaseEditorWindow::ShowInspector()
-{
-     ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
-     ImGui::Begin("Inspector");
-
-     ImGui::Button("Add Component", ImVec2(ImGui::GetWindowSize().x - 10.f, 30.f));
-
-    ImGui::PopStyleColor();
-    ImGui::End();
-}
-
-void AutumnEngine::BaseEditorWindow::ShowStats()
-{
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
-    ImGui::Begin("Stats");
-
-    ImGui::Text("FPS: %i", m_FPS);
-    ImGui::Text("Frame Time: %f", m_FrameTime);
-
-    ImGui::Text("Entities: %f", 0);
-    ImGui::Text("Batches: %f", 0);
-    ImGui::Text("Vertices: %f", 0);
-
-    ImGui::PopStyleColor();
-    ImGui::End();
-}
-
-void AutumnEngine::BaseEditorWindow::ShowAnimation()
-{
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
-    ImGui::Begin("Animation");
-
-    ImGui::Text("Animation Name:");
-
-    ImGui::PopStyleColor();
-    ImGui::End();
-}
-
-void AutumnEngine::BaseEditorWindow::ShowContentBrowser()
-{
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
-    ImGui::Begin("Content Browser");
-
-    // INSERT CONTENT HERE
-    ImGui::Button("Back", ImVec2(45, 20));
-    ImGui::SameLine();
-    ImGui::Text("Path: ");
-
-    ImGui::Separator();
-
-    ImGui::PopStyleColor();
-    ImGui::End();
-}
-
-void AutumnEngine::BaseEditorWindow::ShowProperties()
-{
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
-    ImGui::Begin("Properties");
-
-    // INSERT CONTENT HERE
-
-    ImGui::PopStyleColor();
-    ImGui::End();
-}
-
-void AutumnEngine::BaseEditorWindow::ShowSceneViewport()
-{
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
-    ImGui::Begin("Scene Viewport");
-
-    ImGui::SameLine(ImGui::GetWindowWidth() / 2 - 60);
-    ImGui::Button("Play", ImVec2(40, 20));
-    ImGui::SameLine();
-    ImGui::Button("Pause", ImVec2(40, 20));
-    ImGui::SameLine();
-    ImGui::Button("Stop", ImVec2(40, 20));
-
-    ImGui::Separator();
-
-    ImGui::PopStyleColor();
-    ImGui::End();
-}
-
-void AutumnEngine::BaseEditorWindow::ShowAboutWindow()
-{
-    ImGui::Begin("About");
-
-    ImGui::Text("Name: Autumn Engine");
-    ImGui::Text("Version: 1.0.0");
-    ImGui::Text("Description: Autumn Engine is a small 2D Game Engine in development by Autumn Bomb LTD");
-    ImGui::Text("The Team");
-    ImGui::Indent();
-    ImGui::BulletText("Daniel Martin - Lead Programmer");
-    ImGui::BulletText("Aaron Gray - Lead Designer");
-    ImGui::Unindent();
-
-    if (ImGui::Button("Exit", ImVec2(150, 50))) { m_ShowAboutWindow = !m_ShowAboutWindow; }
-
-    ImGui::End();
-}
-
 void AutumnEngine::BaseEditorWindow::RenderEditor()
 {
     ImGui::SFML::Render(*m_Window);
@@ -287,31 +170,31 @@ void AutumnEngine::BaseEditorWindow::MakeNewProject()
 void AutumnEngine::BaseEditorWindow::UpdatePanels()
 {
     if (m_ShowHierarchyPanel)
-        ShowHeirarchy();
+        m_Hierarchy.ShowHierarchy();
 
     if (m_ShowInspectorPanel)
-        ShowInspector();
+        m_Inspector.ShowInspector();
 
     if (m_ShowStatsPanel)
-        ShowStats();
+        m_Stats.ShowStats(m_FPS, m_FrameTime);
 
     if (m_ShowAboutWindow)
-        ShowAboutWindow();
+        m_AboutMenu.ShowAboutMenu(m_ShowAboutWindow);
 
     if (m_ShowAnimation)
-        ShowAnimation();
+        m_Animation.ShowAnimation();
 
     if (m_ShowContentExplorer)
-        ShowContentBrowser();
+        m_ContentBrowser.ShowContentBrowser();
 
     if (m_ShowProperties)
-        ShowProperties();
+        m_Properties.ShowProperties();
 
     if (m_ShowConsole)
         m_Console.ShowConsole();
 
     if (m_ShowSceneViewport)
-        ShowSceneViewport();
+        m_SceneViewport.ShowSceneViewport();
 
     if (m_ShowInExplorer)
         OpenProjectInExplorer();

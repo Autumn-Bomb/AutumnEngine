@@ -1,3 +1,5 @@
 ﻿  BaseEditorWindow.cpp
-E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(40,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(38,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  About.cpp
+  Generating Code...
+  AutumnEngine.vcxproj -> C:\Users\Daniel\Desktop\AutumnEngine\x64\Debug\AutumnEngine.exe
