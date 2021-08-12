@@ -16,6 +16,8 @@
 #include "../Menus/About/About.h"
 #include "../Menus/NewProject/NewProject.h"
 
+#include "../../Framework_New/2DRenderer/2DRenderer.h"
+
 #include <iostream>
 #include <filesystem>
 #include <Windows.h>
@@ -41,6 +43,8 @@ namespace AutumnEngine
 			void HandleMenuBar();
 			void HandleDockSpace();
 			void UpdatePanels();
+
+			void AddRectangle();
 
 		public:
 			void OpenProjectInExplorer();
@@ -70,6 +74,8 @@ namespace AutumnEngine
 
 		// ENGINE VARIABLES 
 		private:
+			AutumnEngine::Renderer m_Renderer;
+
 			sf::RenderWindow* m_Window;
 			ImGuiID m_DockSpaceID = 0;
 			std::filesystem::path m_CurrentPath;

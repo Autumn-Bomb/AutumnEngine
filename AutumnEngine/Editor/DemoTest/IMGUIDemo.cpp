@@ -1,4 +1,5 @@
 #include "../BaseEditorWindow/BaseEditorWindow.h"
+#include <time.h>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Clock.hpp>
@@ -8,12 +9,14 @@ AutumnEngine::BaseEditorWindow m_Editor;
 
 int main()
 {
+    srand(time(0));
+
     sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine (No Project Open)");
 
     m_Editor.SetRenderWindow(window);
     m_Editor.InitialiseEditor();
 
-    window.resetGLStates(); // call it if you only draw ImGui. Otherwise not needed.
+    window.resetGLStates();
     sf::Clock deltaClock;
 
     while (window.isOpen()) 
@@ -31,7 +34,7 @@ int main()
 
         m_Editor.UpdateEditorWindow(deltaClock);
 
-        window.clear(sf::Color::White); // fill background with color
+        window.clear(sf::Color::Transparent);
 
         m_Editor.RenderEditor();
 

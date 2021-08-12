@@ -51,6 +51,7 @@
     <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp" />
     <ClCompile Include="Framework\TextureAtlas\TextureAtlas.cpp" />
     <ClCompile Include="Framework\Window\Window.cpp" />
+    <ClCompile Include="Framework_NEw\2DRenderer\2DRenderer.cpp" />
     <ClCompile Include="Game\Main.cpp" />
     <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
     <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp" />
@@ -97,6 +98,7 @@
     <ClInclude Include="Framework\Spritesheets\Spritesheet.h" />
     <ClInclude Include="Framework\TextureAtlas\TextureAtlas.h" />
     <ClInclude Include="Framework\Window\Window.h" />
+    <ClInclude Include="Framework_NEw\2DRenderer\2DRenderer.h" />
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
     <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h" />
     <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />

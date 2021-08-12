@@ -11,7 +11,7 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowConsole = true;
     m_ShowContentExplorer = true;
     m_ShowSceneViewport = true;
-    m_ShowGameViewport = true;
+    m_ShowGameViewport = false;
     m_ShowAnimation = true;
     m_ShowProperties = true;
 
@@ -25,6 +25,8 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     ImGui::SFML::Init(*m_Window);
     ImGui::GetIO().ConfigFlags = ImGuiConfigFlags_DockingEnable;
     m_CurrentPath = std::filesystem::current_path();
+
+    m_SceneViewport.SetRenderer(m_Renderer);
 
     m_Style.SetStyle();
 }
@@ -94,7 +96,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::BeginMenu("Create"))
             {
                 ImGui::MenuItem("Create Empty Entity");
-                ImGui::MenuItem("Create Sprite");
+                if(ImGui::MenuItem("Create Sprite")) { AddRectangle(); }
 
                 ImGui::EndMenu();
             }
@@ -142,6 +144,21 @@ void AutumnEngine::BaseEditorWindow::HandleDockSpace()
 {
     m_DockSpaceID = ImGui::GetID("MainDockSpace");
     ImGui::DockSpace(m_DockSpaceID, ImVec2(0.f, 0.f), ImGuiDockNodeFlags_None | ImGuiDockNodeFlags_PassthruCentralNode);
+}
+
+void AutumnEngine::BaseEditorWindow::AddRectangle()
+{
+    sf::RectangleShape rect = sf::RectangleShape();
+
+    m_Console.AddMessage(AutumnEngine::MessageType::ACTION, "Creating Sprite\n");
+    
+    rect.setPosition(sf::Vector2f(100, 100));
+    rect.setSize(sf::Vector2f(1000, 1000));
+    rect.setFillColor(sf::Color::Red);
+
+    m_Console.AddMessage(AutumnEngine::MessageType::ACTION, "Adding Sprite to RenderTexture\n");
+
+    m_Renderer.AddToRenderTexture(rect);
 }
 
 void AutumnEngine::BaseEditorWindow::UpdatePanels()

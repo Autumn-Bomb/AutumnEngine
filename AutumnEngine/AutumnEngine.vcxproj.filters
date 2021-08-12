@@ -196,6 +196,12 @@
     <Filter Include="Editor\Style">
       <UniqueIdentifier>{e1552f26-f0eb-4f8f-a635-8904e668adb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework_New">
+      <UniqueIdentifier>{ba9fab4c-d7c5-480d-8480-8ad1d7a99674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework_New\2DRenderer">
+      <UniqueIdentifier>{48118b29-d710-4ec3-b8ba-811b2a00bd65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -323,6 +329,9 @@
     </ClCompile>
     <ClCompile Include="Editor\Panels\GameViewport\GameViewport.cpp">
       <Filter>Editor\Windows\Panels\GameViewport</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework_NEw\2DRenderer\2DRenderer.cpp">
+      <Filter>Framework_New\2DRenderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -466,6 +475,9 @@
     </ClInclude>
     <ClInclude Include="Editor\Style\Style.h">
       <Filter>Editor\Style</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework_NEw\2DRenderer\2DRenderer.h">
+      <Filter>Framework_New\2DRenderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
