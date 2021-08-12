@@ -42,7 +42,7 @@ Once all these systems are in place, the developers will design and build a test
 Screenshots:
 
 Editor (WIP):
-![image](https://user-images.githubusercontent.com/48921196/128947624-fe9598d1-988e-42e6-837c-9d04ffd9b25c.png)
+![EngineScreenshot](https://user-images.githubusercontent.com/48921196/129120601-793526ca-52b9-4783-aeef-f14450167e4b.PNG)
 
 Without Editor:
 
