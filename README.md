@@ -38,6 +38,11 @@ Stats - Used to display stats for the Engine such as FPS, Frametime, Entities in
 
 Once all these systems are in place, the developers will design and build a test scene with everything included to show off the engines capabilities. The engine will also be tested through Game Jams to figure out if there are any issues, missing features or bugs that need to be fixed.
 
+License:
+This engine as of 12/08/2021 is currently for private use by Autumn Bomb LTD. This is subject to change as more features are added and the engine becomes more useable.
+
+Discord:
+https://discord.gg/bf7Uy6EUxa Here is a link to the discord channel we are currently using. Feel free to join and ask questions and have a chat :D
 
 Screenshots:
 
