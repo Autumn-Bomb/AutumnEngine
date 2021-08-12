@@ -187,6 +187,15 @@
     <Filter Include="Editor\Windows\Menus\About">
       <UniqueIdentifier>{2e408aee-75e9-4753-b164-2c85dc3ae41a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Editor\Windows\Menus\NewProject">
+      <UniqueIdentifier>{75e86fbf-825a-4b5f-aaa9-42ed273a45a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\GameViewport">
+      <UniqueIdentifier>{46e1d7bb-02d6-4640-8d40-e7d89037c7cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Style">
+      <UniqueIdentifier>{e1552f26-f0eb-4f8f-a635-8904e668adb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -308,6 +317,12 @@
     </ClCompile>
     <ClCompile Include="Editor\Menus\About\About.cpp">
       <Filter>Editor\Windows\Menus\About</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Menus\NewProject\NewProject.cpp">
+      <Filter>Editor\Windows\Menus\NewProject</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\GameViewport\GameViewport.cpp">
+      <Filter>Editor\Windows\Panels\GameViewport</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -442,6 +457,15 @@
     </ClInclude>
     <ClInclude Include="Editor\Menus\About\About.h">
       <Filter>Editor\Windows\Menus\About</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Menus\NewProject\NewProject.h">
+      <Filter>Editor\Windows\Menus\NewProject</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\GameViewport\GameViewport.h">
+      <Filter>Editor\Windows\Panels\GameViewport</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Style\Style.h">
+      <Filter>Editor\Style</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,56 @@
 ﻿  BaseEditorWindow.cpp
-C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(38,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(41,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  IMGUIDemo.cpp
   About.cpp
+  NewProject.cpp
+  Animation.cpp
+  Console.cpp
+  ContentBrowser.cpp
+  GameViewport.cpp
+  Hierarchy.cpp
+  Inspector.cpp
+  Properties.cpp
+  SceneViewport.cpp
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\Panels\SceneViewport\SceneViewport.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Stats.cpp
+  Application.cpp
+  AssetManager.cpp
+  BaseScene.cpp
+  Camera.cpp
+  Collision.cpp
+  Entity.cpp
+  Button.cpp
   Generating Code...
-  AutumnEngine.vcxproj -> C:\Users\Daniel\Desktop\AutumnEngine\x64\Debug\AutumnEngine.exe
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\AssetManager\AssetManager.cpp(66): warning C4715: 'AutumnEngine::AssetManager::GetTexture': not all control paths return a value
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\AssetManager\AssetManager.cpp(76): warning C4715: 'AutumnEngine::AssetManager::GetTextureAtlas': not all control paths return a value
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\AssetManager\AssetManager.cpp(86): warning C4715: 'AutumnEngine::AssetManager::GetSpriteSheet': not all control paths return a value
+  Compiling...
+  GUI.cpp
+  Slider.cpp
+  Sprite.cpp
+  Text.cpp
+  Toggle.cpp
+  Input.cpp
+  GameLayer.cpp
+  GUILayer.cpp
+  SceneManager.cpp
+  Spritesheet.cpp
+  TextureAtlas.cpp
+  Window.cpp
+  Main.cpp
+  MainMenu.cpp
+  Splashscreen.cpp
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Scenes\Splashscreen\Splashscreen.cpp(50,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  TestScene.cpp
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(63,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  imgui-SFML.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  Generating Code...
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Framework\Layers\GUILayer\GUILayer.cpp(37): warning C4715: 'AutumnEngine::GUILayer::GetUIComponent': not all control paths return a value
+  Compiling...
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Generating Code...
+  AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

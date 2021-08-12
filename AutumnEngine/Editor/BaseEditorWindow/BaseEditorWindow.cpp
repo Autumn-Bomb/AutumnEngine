@@ -11,6 +11,7 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowConsole = true;
     m_ShowContentExplorer = true;
     m_ShowSceneViewport = true;
+    m_ShowGameViewport = true;
     m_ShowAnimation = true;
     m_ShowProperties = true;
 
@@ -24,6 +25,8 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     ImGui::SFML::Init(*m_Window);
     ImGui::GetIO().ConfigFlags = ImGuiConfigFlags_DockingEnable;
     m_CurrentPath = std::filesystem::current_path();
+
+    m_Style.SetStyle();
 }
 
 void AutumnEngine::BaseEditorWindow::ProcessEditorEvents(sf::Event& events)
@@ -39,10 +42,8 @@ void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
     m_FrameTime = 0.1f / m_FPS;
 
     ImGui::Begin("Editor", 0, ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoTitleBar);
-    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 
-    ImGui::SetWindowSize(ImVec2(1920, 1080), 0);
-    ImGui::SetWindowPos(ImVec2(0, 0));
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 
     ImVec2 vWindowSize = ImGui::GetMainViewport()->Size;
     ImVec2 vPos0 = ImGui::GetMainViewport()->Pos;
@@ -50,16 +51,13 @@ void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
     ImGui::SetWindowPos(ImVec2((float)vPos0.x, (float)vPos0.y), ImGuiCond_Always);
     ImGui::SetWindowSize(ImVec2((float)vWindowSize.x, (float)vWindowSize.y), ImGuiCond_Always);
 
-    ImGui::StyleColorsDark();
-    ImGui::GetStyle().WindowMenuButtonPosition = ImGuiDir_None;
-    ImGui::GetStyle().WindowRounding = 0.f;
-
     ImGui::PopStyleVar();
 
     HandleMenuBar();
+    HandleDockSpace();
     UpdatePanels();
 
-    ImGui::End(); // end window
+    ImGui::End();
 }
 
 void AutumnEngine::BaseEditorWindow::HandleMenuBar()
@@ -68,25 +66,26 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
     {
         if (ImGui::BeginMenu("File"))
         {
-            ImGui::MenuItem("New Project", "Ctrl+N", &m_ShowNewProjectPopup);
+            ImGui::MenuItem("New Project", NULL, &m_ShowNewProjectPopup);
 
-            if (ImGui::MenuItem("Open Project"), "Ctrl+O") { /* Call Open Project Method */ }
-            if (ImGui::MenuItem("Save Project"), "Ctrl+S") { /* Call Save Project Method */ }
-            if (ImGui::MenuItem("Build Project"), "Ctrl+B") { /* Call Build Project Method */ }
+            if (ImGui::MenuItem("Open Project"), NULL) { /* Call Open Project Method */ }
+            if (ImGui::MenuItem("Save Project"), NULL) { /* Call Save Project Method */ }
+            if (ImGui::MenuItem("Build Project"), NULL) { /* Call Build Project Method */ }
             ImGui::Separator();
 
-            if (ImGui::MenuItem("Exit"), "Ctrl+W") {}
+            if (ImGui::MenuItem("Exit"), NULL) {}
 
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Edit"))
         {
-            if (ImGui::MenuItem("Play"), "Ctrl+P") { /* Call Play Method */ }
-            if (ImGui::MenuItem("Pause"), "Ctrl+P") { /* Call Pause Method */ }
+            if (ImGui::MenuItem("Play"), NULL) { /* Call Play Method */ }
+            if (ImGui::MenuItem("Pause"), NULL) { /* Call Pause Method */ }
+            if (ImGui::MenuItem("Stop"), NULL) { /* Call Pause Method */ }
             ImGui::Separator();
-            if (ImGui::MenuItem("Copy"), "Ctrl+C") { /* Call Copy Method */ }
-            if (ImGui::MenuItem("Cut"), "Ctrl+X") { /* Call Cut Method */ }
-            if (ImGui::MenuItem("Paste"), "Ctrl+V") { /* Call Paste Method */ }
+            if (ImGui::MenuItem("Copy"), NULL) { /* Call Copy Method */ }
+            if (ImGui::MenuItem("Cut"), NULL) { /* Call Cut Method */ }
+            if (ImGui::MenuItem("Paste"), NULL) { /* Call Paste Method */ }
 
             ImGui::EndMenu();
         }
@@ -112,16 +111,12 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::BeginMenu("Panels"))
             {
                 ImGui::MenuItem("Content Explorer", NULL, &m_ShowContentExplorer);
-
                 ImGui::MenuItem("Console", NULL, &m_ShowConsole);
-
                 ImGui::MenuItem("Scene Viewport", NULL, &m_ShowSceneViewport);
-
+                ImGui::MenuItem("Game Viewport", NULL, &m_ShowGameViewport);
                 ImGui::MenuItem("Inspector", NULL, &m_ShowInspectorPanel);
-
                 ImGui::MenuItem("Animation", NULL, &m_ShowAnimation);
                 ImGui::MenuItem("Properties", NULL, &m_ShowProperties);
-
                 ImGui::MenuItem("Stats", NULL, &m_ShowStatsPanel);
                 ImGui::MenuItem("Scene Hierarchy", NULL, &m_ShowHierarchyPanel);
 
@@ -143,28 +138,10 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
     }
 }
 
-void AutumnEngine::BaseEditorWindow::RenderEditor()
+void AutumnEngine::BaseEditorWindow::HandleDockSpace()
 {
-    ImGui::SFML::Render(*m_Window);
-}
-
-void AutumnEngine::BaseEditorWindow::MakeNewProject()
-{
-    ImGui::Begin("Create a new project", NULL, ImGuiWindowFlags_NoResize);
-    ImGui::SetWindowSize(ImVec2(450, 300));
-
-    ImGui::SameLine(ImGui::GetWindowWidth() - 35);
-    if (ImGui::Button("X", ImVec2(30, 20))) { m_ShowNewProjectPopup = !m_ShowNewProjectPopup; }
-    ImGui::Text("Project Name");
-    ImGui::InputText("##Name", m_NewProjectName, IM_ARRAYSIZE(m_NewProjectName));
-    ImGui::Text("Project Path");
-    ImGui::InputText("##Path", m_NewProjectPath, IM_ARRAYSIZE(m_NewProjectPath));
-
-    ImGui::Separator();
-
-    if (ImGui::Button("Create", ImVec2(ImGui::GetWindowWidth(), 20))) { m_Console.AddMessage(AutumnEngine::MessageType::MESSAGE, "Created New Project\n"); m_ShowNewProjectPopup = !m_ShowNewProjectPopup; }
-
-    ImGui::End();
+    m_DockSpaceID = ImGui::GetID("MainDockSpace");
+    ImGui::DockSpace(m_DockSpaceID, ImVec2(0.f, 0.f), ImGuiDockNodeFlags_None | ImGuiDockNodeFlags_PassthruCentralNode);
 }
 
 void AutumnEngine::BaseEditorWindow::UpdatePanels()
@@ -196,11 +173,19 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
     if (m_ShowSceneViewport)
         m_SceneViewport.ShowSceneViewport();
 
-    if (m_ShowInExplorer)
-        OpenProjectInExplorer();
+    if (m_ShowGameViewport)
+        m_GameViewport.ShowGameViewport();
 
     if (m_ShowNewProjectPopup)
-        MakeNewProject();
+        m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console);
+
+    if (m_ShowInExplorer)
+        OpenProjectInExplorer();
+}
+
+void AutumnEngine::BaseEditorWindow::RenderEditor()
+{
+    ImGui::SFML::Render(*m_Window);
 }
 
 void AutumnEngine::BaseEditorWindow::OpenProjectInExplorer()

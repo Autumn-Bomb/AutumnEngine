@@ -5,7 +5,6 @@ AutumnEngine::SceneViewport::~SceneViewport() {}
 
 void AutumnEngine::SceneViewport::ShowSceneViewport()
 {
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
     ImGui::Begin("Scene Viewport");
 
     ImGui::SameLine(ImGui::GetWindowWidth() / 2 - 60);
@@ -17,6 +16,5 @@ void AutumnEngine::SceneViewport::ShowSceneViewport()
 
     ImGui::Separator();
 
-    ImGui::PopStyleColor();
     ImGui::End();
 }

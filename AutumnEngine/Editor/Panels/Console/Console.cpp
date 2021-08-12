@@ -4,10 +4,6 @@ AutumnEngine::Console::Console()
 {
     m_AutoScroll = true;
     Clear();
-
-    AddMessage(MessageType::MESSAGE, "This is a normal message\n");
-    AddMessage(MessageType::WARNING, "This is a warning message\n");
-    AddMessage(MessageType::ERROR, "This is an error message\n");
 }
 AutumnEngine::Console::~Console(){}
 
@@ -31,6 +27,11 @@ void AutumnEngine::Console::AddMessage(MessageType messageType, const char* mess
             newMessage = "[ERROR] " + std::string(message);
         }
             break;
+        case MessageType::ACTION:
+        {
+            newMessage = "[ACTION] " + std::string(message);
+        }
+        break;
     }
 
     const char* finalMessage = newMessage.c_str();
@@ -52,13 +53,12 @@ void AutumnEngine::Console::AddMessage(MessageType messageType, const char* mess
 
 void AutumnEngine::Console::ShowConsole()
 {
-      ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
       ImGui::Begin("Console");
 
       if (ImGui::MenuItem("Clear")) { Clear(); }
 
       ImGui::Separator();
-      ImGui::BeginChild("Scrollbar", ImVec2(0, 0), false, ImGuiWindowFlags_AlwaysVerticalScrollbar);
+      ImGui::BeginChild("ScrollbarVertical", ImVec2(0, 0), false, ImGuiWindowFlags_AlwaysVerticalScrollbar);
 
       ImGuiListClipper clipper;
       clipper.Begin(m_LineOffsets.Size);
@@ -74,11 +74,9 @@ void AutumnEngine::Console::ShowConsole()
       }
       clipper.End();
 
-      ImGui::PopStyleColor();
-
       if (m_AutoScroll && ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
           ImGui::SetScrollHereY(1.0f);
-
+      
       ImGui::EndChild();
       ImGui::End();
 }

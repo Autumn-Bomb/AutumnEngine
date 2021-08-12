@@ -4,7 +4,7 @@
 
 namespace AutumnEngine
 {
-	enum MessageType { MESSAGE, WARNING, ERROR };
+	enum MessageType { MESSAGE, WARNING, ERROR, ACTION };
 
 	class Console
 	{

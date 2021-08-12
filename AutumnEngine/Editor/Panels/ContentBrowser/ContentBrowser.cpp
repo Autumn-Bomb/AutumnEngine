@@ -5,7 +5,6 @@ AutumnEngine::ContentBrowser::~ContentBrowser() {}
 
 void AutumnEngine::ContentBrowser::ShowContentBrowser()
 {
-    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 255));
     ImGui::Begin("Content Browser");
 
     // INSERT CONTENT HERE
@@ -15,6 +14,5 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
 
     ImGui::Separator();
 
-    ImGui::PopStyleColor();
     ImGui::End();
 }

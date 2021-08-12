@@ -1,4 +1,5 @@
 #include "SFML/Graphics.hpp"
+#include "imgui-SFML.h"
 
 #include "../Panels/Console/Console.h"
 #include "../Panels/Hierarchy/Hierarchy.h"
@@ -8,10 +9,12 @@
 #include "../Panels/Animation/Animation.h"
 #include "../Panels/ContentBrowser/ContentBrowser.h"
 #include "../Panels/Properties/Properties.h"
+#include "../Panels/GameViewport/GameViewport.h"
+
+#include "../Style/Style.h"
 
 #include "../Menus/About/About.h"
-
-#include "imgui-SFML.h"
+#include "../Menus/NewProject/NewProject.h"
 
 #include <iostream>
 #include <filesystem>
@@ -36,25 +39,22 @@ namespace AutumnEngine
 
 		private:
 			void HandleMenuBar();
+			void HandleDockSpace();
 			void UpdatePanels();
 
 		public:
 			void OpenProjectInExplorer();
-			void MakeNewProject();
 
 		// GETTERS AND SETTERS
 		public:
 			void SetRenderWindow(sf::RenderWindow& window) { m_Window = &window; }
-
-		// ENGINE VARIABLES 
-		private:
-			sf::RenderWindow* m_Window;
 		
 		// PANELS USED IN THE EDITOR
 		private:
 			AutumnEngine::Console m_Console;
 			AutumnEngine::Hierarchy m_Hierarchy;
 			AutumnEngine::SceneViewport m_SceneViewport;
+			AutumnEngine::GameViewport m_GameViewport;
 			AutumnEngine::Inspector m_Inspector;
 			AutumnEngine::Stats m_Stats;
 			AutumnEngine::Animation m_Animation;
@@ -64,15 +64,18 @@ namespace AutumnEngine
 		// MENUS USED IN THE EDITOR
 		private:
 			AutumnEngine::About m_AboutMenu;
+			AutumnEngine::CreateNewProject m_NewProjectMenu;
 
+			AutumnEngine::ImGuiStlye m_Style;
+
+		// ENGINE VARIABLES 
+		private:
+			sf::RenderWindow* m_Window;
+			ImGuiID m_DockSpaceID = 0;
 			std::filesystem::path m_CurrentPath;
 
 			int m_FPS;
 			float m_FrameTime;
-				
-			char str0[128];
-			char m_NewProjectName[128];
-			char m_NewProjectPath[255];
 
 			bool m_ShowInExplorer;
 			bool m_ShowAnimation;
@@ -85,5 +88,6 @@ namespace AutumnEngine
 			bool m_ShowAboutWindow;
 			bool m_ShowConsole;
 			bool m_ShowSceneViewport;
+			bool m_ShowGameViewport;
 	};
 };
