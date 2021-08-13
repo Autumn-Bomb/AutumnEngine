@@ -34,10 +34,8 @@ int main()
 
         m_Editor.UpdateEditorWindow(deltaClock);
 
-        window.clear(sf::Color::Transparent);
-
+        window.clear(sf::Color::White);
         m_Editor.RenderEditor();
-
         window.display();
     }
 

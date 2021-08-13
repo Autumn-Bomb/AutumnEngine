@@ -2,6 +2,7 @@
 
 AutumnEngine::BaseEditorWindow::BaseEditorWindow()
 {
+    m_FPS = 0;
     m_Window = nullptr;
 
     m_ShowHierarchyPanel = true;
@@ -44,7 +45,6 @@ void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
     m_FrameTime = 0.1f / m_FPS;
 
     ImGui::Begin("Editor", 0, ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoTitleBar);
-
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 
     ImVec2 vWindowSize = ImGui::GetMainViewport()->Size;
@@ -95,16 +95,16 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
         {
             if (ImGui::BeginMenu("Create"))
             {
+                if (ImGui::MenuItem("Create Sprite")) { AddRectangle(); }
                 ImGui::MenuItem("Create Empty Entity");
-                if(ImGui::MenuItem("Create Sprite")) { AddRectangle(); }
 
                 ImGui::EndMenu();
             }
 
             ImGui::Separator();
 
-            ImGui::MenuItem("Show In Explorer", "Ctrl+S", &m_ShowInExplorer);
-            ImGui::MenuItem("Refresh Project", "Ctrl+F5", nullptr);
+            ImGui::MenuItem("Show In Explorer", NULL, &m_ShowInExplorer);
+            ImGui::MenuItem("Refresh Project", NULL, nullptr);
 
             ImGui::EndMenu();
         }
@@ -144,21 +144,6 @@ void AutumnEngine::BaseEditorWindow::HandleDockSpace()
 {
     m_DockSpaceID = ImGui::GetID("MainDockSpace");
     ImGui::DockSpace(m_DockSpaceID, ImVec2(0.f, 0.f), ImGuiDockNodeFlags_None | ImGuiDockNodeFlags_PassthruCentralNode);
-}
-
-void AutumnEngine::BaseEditorWindow::AddRectangle()
-{
-    sf::RectangleShape rect = sf::RectangleShape();
-
-    m_Console.AddMessage(AutumnEngine::MessageType::ACTION, "Creating Sprite\n");
-    
-    rect.setPosition(sf::Vector2f(100, 100));
-    rect.setSize(sf::Vector2f(1000, 1000));
-    rect.setFillColor(sf::Color::Red);
-
-    m_Console.AddMessage(AutumnEngine::MessageType::ACTION, "Adding Sprite to RenderTexture\n");
-
-    m_Renderer.AddToRenderTexture(rect);
 }
 
 void AutumnEngine::BaseEditorWindow::UpdatePanels()
@@ -214,4 +199,14 @@ void AutumnEngine::BaseEditorWindow::OpenProjectInExplorer()
 void AutumnEngine::BaseEditorWindow::ShutDownEditor()
 {
     ImGui::SFML::Shutdown();
+}
+
+void AutumnEngine::BaseEditorWindow::AddRectangle()
+{
+    m_Console.AddMessage(AutumnEngine::ACTION, "Creating Sprite\n");
+    rect.setPosition(sf::Vector2f(0, 0));
+    rect.setSize(sf::Vector2f(100, 100));
+    rect.setFillColor(sf::Color::Red);
+    m_Renderer.AddToRenderTexture(rect);
+    m_Console.AddMessage(AutumnEngine::ACTION, "Sprite Created\n");
 }
