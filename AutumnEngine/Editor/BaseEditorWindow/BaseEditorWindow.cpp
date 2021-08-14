@@ -12,7 +12,7 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowConsole = true;
     m_ShowContentExplorer = true;
     m_ShowSceneViewport = true;
-    m_ShowGameViewport = false;
+    m_ShowGameViewport = true;
     m_ShowAnimation = true;
     m_ShowProperties = true;
 
@@ -29,6 +29,7 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
 
     m_Renderer = new AutumnEngine::Renderer();
     m_SceneViewport.SetRenderer(*m_Renderer);
+    m_GameViewport.SetRenderer(*m_Renderer);
 
     m_Style.SetStyle();
 }
