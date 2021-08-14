@@ -27,7 +27,8 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     ImGui::GetIO().ConfigFlags = ImGuiConfigFlags_DockingEnable;
     m_CurrentPath = std::filesystem::current_path();
 
-    m_SceneViewport.SetRenderer(m_Renderer);
+    m_Renderer = new AutumnEngine::Renderer();
+    m_SceneViewport.SetRenderer(*m_Renderer);
 
     m_Style.SetStyle();
 }
@@ -203,10 +204,9 @@ void AutumnEngine::BaseEditorWindow::ShutDownEditor()
 
 void AutumnEngine::BaseEditorWindow::AddRectangle()
 {
-    m_Console.AddMessage(AutumnEngine::ACTION, "Creating Sprite\n");
-    rect.setPosition(sf::Vector2f(0, 0));
+    sf::Vector2f randomPos = sf::Vector2f(rand() % 500 + 1, rand() % 300 + 1);
     rect.setSize(sf::Vector2f(100, 100));
-    rect.setFillColor(sf::Color::Red);
-    m_Renderer.AddToRenderTexture(rect);
-    m_Console.AddMessage(AutumnEngine::ACTION, "Sprite Created\n");
+    rect.setPosition(randomPos);
+    rect.setFillColor(sf::Color::Black);
+    m_Renderer->AddToRenderTexture(rect);
 }

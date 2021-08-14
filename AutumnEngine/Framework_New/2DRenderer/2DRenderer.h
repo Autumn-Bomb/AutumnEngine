@@ -2,6 +2,7 @@
 #include <SFML/Graphics/RenderTexture.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/RectangleShape.hpp>
 
 namespace AutumnEngine
 {
@@ -15,7 +16,6 @@ namespace AutumnEngine
 			void AddToRenderTexture(sf::Drawable& drawable);
 
 			void Create(const unsigned int x, const unsigned int y);
-			void Display();
 			void Clear(sf::Color color);
 			void Clear();
 
@@ -23,11 +23,11 @@ namespace AutumnEngine
 			unsigned int width;
 			unsigned int height;
 
-			sf::RenderTexture* GetRenderTexture() { return m_RenderTexture; }
-			unsigned int GetWidth() { return m_RenderTexture->getSize().x; }
-			unsigned int GetHeight() { return m_RenderTexture->getSize().y; }
+			sf::RenderTexture* GetRenderTexture() { return &m_RenderTexture; }
+			unsigned int GetWidth() { return m_RenderTexture.getSize().x; }
+			unsigned int GetHeight() { return m_RenderTexture.getSize().y; }
 
 		private:
-			sf::RenderTexture* m_RenderTexture;
+			sf::RenderTexture m_RenderTexture;
 	};
 }

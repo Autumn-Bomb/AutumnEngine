@@ -13,10 +13,11 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine (No Project Open)");
 
+    window.resetGLStates();
+
     m_Editor.SetRenderWindow(window);
     m_Editor.InitialiseEditor();
 
-    window.resetGLStates();
     sf::Clock deltaClock;
 
     while (window.isOpen()) 

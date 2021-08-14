@@ -44,10 +44,10 @@ namespace AutumnEngine
 			void HandleDockSpace();
 			void UpdatePanels();
 
+			void AddRectangle();
+
 		public:
 			void OpenProjectInExplorer();
-
-			void AddRectangle();
 
 		// GETTERS AND SETTERS
 		public:
@@ -55,8 +55,6 @@ namespace AutumnEngine
 		
 		// PANELS USED IN THE EDITOR
 		private:
-			sf::RectangleShape rect;
-
 			AutumnEngine::Console m_Console;
 			AutumnEngine::Hierarchy m_Hierarchy;
 			AutumnEngine::SceneViewport m_SceneViewport;
@@ -76,7 +74,8 @@ namespace AutumnEngine
 
 		// ENGINE VARIABLES 
 		private:
-			AutumnEngine::Renderer m_Renderer;
+			sf::RectangleShape rect;
+			AutumnEngine::Renderer* m_Renderer;
 
 			sf::RenderWindow* m_Window;
 			ImGuiID m_DockSpaceID = 0;
