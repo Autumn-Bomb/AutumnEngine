@@ -204,9 +204,11 @@ void AutumnEngine::BaseEditorWindow::ShutDownEditor()
 
 void AutumnEngine::BaseEditorWindow::AddRectangle()
 {
+    m_Console.AddMessage(AutumnEngine::ACTION, "Creating Sprite\n");
     sf::Vector2f randomPos = sf::Vector2f(rand() % 500 + 1, rand() % 300 + 1);
     rect.setSize(sf::Vector2f(100, 100));
     rect.setPosition(randomPos);
     rect.setFillColor(sf::Color::Black);
     m_Renderer->AddToRenderTexture(rect);
+    m_Console.AddMessage(AutumnEngine::MESSAGE, "Created Sprite\n");
 }

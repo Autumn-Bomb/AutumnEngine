@@ -13,6 +13,7 @@ void AutumnEngine::Renderer::Create(const unsigned int width, const unsigned int
 	m_RenderTexture.create(width, height);
 	this->width = width;
 	this->height = height;
+	m_RenderTexture.clear(sf::Color::White);
 	std::cout << "\nCreated RenderTexture!\n";
 }
 
