@@ -202,6 +202,9 @@
     <Filter Include="Framework_New\2DRenderer">
       <UniqueIdentifier>{48118b29-d710-4ec3-b8ba-811b2a00bd65}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Editor\Windows\Menus\MenuBar">
+      <UniqueIdentifier>{5126f83a-95a4-4e5d-9cd7-cfe6eddfd423}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -332,6 +335,9 @@
     </ClCompile>
     <ClCompile Include="Framework_NEw\2DRenderer\2DRenderer.cpp">
       <Filter>Framework_New\2DRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Menus\MenuBar\MenuBar.cpp">
+      <Filter>Editor\Windows\Menus\MenuBar</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -478,6 +484,9 @@
     </ClInclude>
     <ClInclude Include="Framework_NEw\2DRenderer\2DRenderer.h">
       <Filter>Framework_New\2DRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Menus\MenuBar\MenuBar.h">
+      <Filter>Editor\Windows\Menus\MenuBar</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

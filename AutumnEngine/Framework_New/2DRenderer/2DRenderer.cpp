@@ -27,6 +27,11 @@ void AutumnEngine::Renderer::AddToRenderTexture(sf::Drawable& drawable)
 	std::cout << "Drawable has been Drawn!\n";
 }
 
+void AutumnEngine::Renderer::RenderScene()
+{
+	// TODO: Add the ability to add all entities in a scene to a list and draw them to the FBO
+}
+
 void AutumnEngine::Renderer::Clear(sf::Color color)
 {
 	m_RenderTexture.clear(color);

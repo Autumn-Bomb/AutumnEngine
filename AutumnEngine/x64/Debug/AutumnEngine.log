@@ -1,6 +1,16 @@
-﻿  GameViewport.cpp
-  SceneViewport.cpp
-C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Panels\SceneViewport\SceneViewport.cpp(12,85): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Panels\SceneViewport\SceneViewport.cpp(12,52): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+﻿  BaseEditorWindow.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(46,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(204,74): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(204,56): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  IMGUIDemo.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\DemoTest\IMGUIDemo.cpp(12,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
   AutumnEngine.vcxproj -> C:\Users\Daniel\Desktop\AutumnEngine\x64\Debug\AutumnEngine.exe

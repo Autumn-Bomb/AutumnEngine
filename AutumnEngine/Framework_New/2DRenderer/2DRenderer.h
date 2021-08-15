@@ -14,6 +14,7 @@ namespace AutumnEngine
 
 		public:
 			void AddToRenderTexture(sf::Drawable& drawable);
+			void RenderScene();
 
 			void Create(const unsigned int x, const unsigned int y);
 			void Clear(sf::Color color);
@@ -23,6 +24,7 @@ namespace AutumnEngine
 			unsigned int width;
 			unsigned int height;
 
+		public:
 			sf::RenderTexture* GetRenderTexture() { return &m_RenderTexture; }
 			unsigned int GetWidth() { return m_RenderTexture.getSize().x; }
 			unsigned int GetHeight() { return m_RenderTexture.getSize().y; }

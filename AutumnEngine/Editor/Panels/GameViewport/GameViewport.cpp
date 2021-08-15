@@ -1,6 +1,6 @@
 #include "../GameViewport/GameViewport.h"
 
-AutumnEngine::GameViewport::GameViewport() {}
+AutumnEngine::GameViewport::GameViewport() { m_Renderer = nullptr; }
 AutumnEngine::GameViewport::~GameViewport() {}
 
 void AutumnEngine::GameViewport::ShowGameViewport()

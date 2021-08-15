@@ -198,11 +198,6 @@ void AutumnEngine::BaseEditorWindow::OpenProjectInExplorer()
     m_ShowInExplorer = false;
 }
 
-void AutumnEngine::BaseEditorWindow::ShutDownEditor()
-{
-    ImGui::SFML::Shutdown();
-}
-
 void AutumnEngine::BaseEditorWindow::AddRectangle()
 {
     m_Console.AddMessage(AutumnEngine::ACTION, "Creating Sprite\n");
@@ -212,4 +207,9 @@ void AutumnEngine::BaseEditorWindow::AddRectangle()
     rect.setFillColor(sf::Color::Black);
     m_Renderer->AddToRenderTexture(rect);
     m_Console.AddMessage(AutumnEngine::MESSAGE, "Created Sprite\n");
+}
+
+void AutumnEngine::BaseEditorWindow::ShutDownEditor()
+{
+    ImGui::SFML::Shutdown();
 }

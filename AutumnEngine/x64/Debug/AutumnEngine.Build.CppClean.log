@@ -1,54 +1,55 @@
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\vc142.pdb
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\vc142.idb
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\button.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\entity.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\collision.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\camera.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\basescene.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\assetmanager.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\application.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\stats.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\properties.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\inspector.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\hierarchy.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\gameviewport.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\contentbrowser.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\console.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\animation.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\newproject.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\about.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui_demo.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui-sfml.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\testscene.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\splashscreen.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\mainmenu.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\main.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\2drenderer.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\window.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\textureatlas.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\spritesheet.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\scenemanager.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\guilayer.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\gamelayer.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\input.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\toggle.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\text.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\sprite.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\slider.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\gui.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui_widgets.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui_tables.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui_draw.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\sceneviewport.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imguidemo.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\baseeditorwindow.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.exe
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.ilk
-e:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.pdb
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.command.1.tlog
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.read.1.tlog
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.write.1.tlog
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.command.1.tlog
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.read.1.tlog
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.write.1.tlog
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\vc142.pdb
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\vc142.idb
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\button.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\entity.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\collision.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\camera.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\basescene.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\assetmanager.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\application.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\stats.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\sceneviewport.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\properties.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\inspector.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\hierarchy.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\gameviewport.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\contentbrowser.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\console.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\animation.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\newproject.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\about.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imguidemo.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\baseeditorwindow.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_demo.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui-sfml.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\testscene.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\splashscreen.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\mainmenu.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\main.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\2drenderer.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\window.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\textureatlas.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\spritesheet.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\scenemanager.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\guilayer.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\gamelayer.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\input.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\toggle.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\text.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\sprite.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\slider.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\gui.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_widgets.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_tables.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_draw.obj
+c:\users\daniel\desktop\autumnengine\x64\debug\autumnengine.exe
+c:\users\daniel\desktop\autumnengine\x64\debug\autumnengine.ilk
+c:\users\daniel\desktop\autumnengine\x64\debug\autumnengine.pdb
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.command.1.tlog
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.read.1.tlog
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.write.1.tlog
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.command.1.tlog
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.delete.1.tlog
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.read.1.tlog
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.write.1.tlog

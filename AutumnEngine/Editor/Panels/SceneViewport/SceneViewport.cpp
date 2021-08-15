@@ -1,15 +1,19 @@
 #include "../SceneViewport/SceneViewport.h"
 
-AutumnEngine::SceneViewport::SceneViewport(){}
+AutumnEngine::SceneViewport::SceneViewport() { m_Renderer = nullptr; m_RendererCreated = false; }
 AutumnEngine::SceneViewport::~SceneViewport() {}
 
 void AutumnEngine::SceneViewport::ShowSceneViewport()
 {
     ImGui::Begin("Scene Viewport", NULL, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_None);
 
+    ImVec2 vWindowSize = ImGui::GetMainViewport()->Size;
+
+    ImGui::SetWindowSize(ImVec2((float)vWindowSize.x, (float)vWindowSize.y), ImGuiCond_Always);
+
     if (!m_RendererCreated)
     {
-        m_Renderer->Create(ImGui::GetWindowWidth() - 25.f, ImGui::GetWindowHeight() - 65.f);
+        m_Renderer->Create(vWindowSize.x, vWindowSize.y);
         m_RendererCreated = true;
     }
 
