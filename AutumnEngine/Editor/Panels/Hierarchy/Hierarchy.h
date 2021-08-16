@@ -1,6 +1,7 @@
 #pragma once
 #include "../imgui/imgui.h"
-
+#include <iostream>
+#include <unordered_map>
 namespace AutumnEngine
 {
 	class Hierarchy
@@ -11,6 +12,9 @@ namespace AutumnEngine
 
 		public:
 			void ShowHierarchy();
+
+			void DisplayNodes();
+			void AddEntityToSceneGraph(std::string name);
 
 		private:
 			char m_Search[128];

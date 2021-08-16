@@ -10,10 +10,7 @@ AutumnEngine::BaseEditorWindow m_Editor;
 int main()
 {
     srand(time(0));
-
     sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine (No Project Open)");
-
-    window.resetGLStates();
 
     m_Editor.SetRenderWindow(window);
     m_Editor.InitialiseEditor();

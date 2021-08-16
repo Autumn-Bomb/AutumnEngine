@@ -205,6 +205,18 @@
     <Filter Include="Editor\Windows\Menus\MenuBar">
       <UniqueIdentifier>{5126f83a-95a4-4e5d-9cd7-cfe6eddfd423}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework_New\Entities">
+      <UniqueIdentifier>{bd01a17d-a008-4ca1-9446-ea3ae8f3a1f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework_New\Entities\Components">
+      <UniqueIdentifier>{87cb8798-9cee-4a75-85b0-e819b113e747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework_New\Entities\BaseEntity">
+      <UniqueIdentifier>{85fc0578-cc00-4d5b-bef7-9a1adf15b6cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework_New\SceneSerializer">
+      <UniqueIdentifier>{19d307ff-362d-4b1a-bbb3-f5888abbf347}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -338,6 +350,12 @@
     </ClCompile>
     <ClCompile Include="Editor\Menus\MenuBar\MenuBar.cpp">
       <Filter>Editor\Windows\Menus\MenuBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework_New\Entities\BaseEntity\Entity.cpp">
+      <Filter>Framework_New\Entities\BaseEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework_New\SceneSerializer\SceneSerializer.cpp">
+      <Filter>Framework_New\SceneSerializer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -487,6 +505,15 @@
     </ClInclude>
     <ClInclude Include="Editor\Menus\MenuBar\MenuBar.h">
       <Filter>Editor\Windows\Menus\MenuBar</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework_New\Entities\Components\Components.h">
+      <Filter>Framework_New\Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework_New\Entities\BaseEntity\Entity.h">
+      <Filter>Framework_New\Entities\BaseEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework_New\SceneSerializer\SceneSerializer.h">
+      <Filter>Framework_New\SceneSerializer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

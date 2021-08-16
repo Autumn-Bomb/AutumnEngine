@@ -12,5 +12,17 @@ void AutumnEngine::Hierarchy::ShowHierarchy()
     ImGui::InputText("##Search", m_Search, IM_ARRAYSIZE(m_Search));
     ImGui::Separator();
 
+    DisplayNodes();
+
     ImGui::End();
+}
+
+void AutumnEngine::Hierarchy::AddEntityToSceneGraph(std::string name)
+{
+    
+}
+
+void AutumnEngine::Hierarchy::DisplayNodes()
+{
+
 }

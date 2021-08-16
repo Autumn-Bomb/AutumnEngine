@@ -8,15 +8,16 @@ namespace AutumnEngine
 	class ImGuiStlye
 	{
 		public:
-			/*ImFont* font;
-			const char* fontPath = "../AutumnEngine/Editor/Style/Font/arial.ttf";*/
-
 			void SetStyle()
 			{
 				ImGuiStyle& style = ImGui::GetStyle();
 				style.WindowRounding = 5.3f;
 				style.FrameRounding = 2.3f;
 				style.ScrollbarRounding = 0;
+
+				ImFont* font;
+				float fontSize = 14.0f;
+				const char* fontPath = "../AutumnEngine/Editor/Style/Font/font.ttf";
 
 				style.Colors[ImGuiCol_Text] = ImVec4(0.90f, 0.90f, 0.90f, 0.90f);
 				style.Colors[ImGuiCol_TextDisabled] = ImVec4(0.60f, 0.60f, 0.60f, 1.00f);
@@ -57,8 +58,9 @@ namespace AutumnEngine
 				style.WindowMenuButtonPosition = ImGuiDir_None;
 				style.WindowRounding = 0.f;
 
-				/*font = ImGui::GetIO().Fonts->AddFontFromFileTTF("../AutumnEngine/Editor/Style/Font/arial.ttf", 16.0f);
-				ImGui::PushFont(font);*/
+				ImGui::GetIO().Fonts->Clear();
+				font = ImGui::GetIO().Fonts->AddFontFromFileTTF(fontPath, fontSize);
+				ImGui::SFML::UpdateFontTexture();
 			}
 	};
 }

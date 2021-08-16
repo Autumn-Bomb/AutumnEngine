@@ -1,7 +1,13 @@
 #pragma once
 
 #include "../../Panels/Console/Console.h"
+
+#include<filesystem>
+#include <fstream>
 #include <iostream>
+#include <direct.h>
+
+#include "SFML/Graphics/RenderWindow.hpp"
 
 namespace AutumnEngine
 {
@@ -12,11 +18,11 @@ namespace AutumnEngine
 			~CreateNewProject();
 
 		public:
-			void OpenNewProjectMenu(bool& open, AutumnEngine::Console& console);
-			void CreateProjectDirectory(AutumnEngine::Console& console);
+			void OpenNewProjectMenu(bool& open, AutumnEngine::Console& console, sf::RenderWindow& window);
+			void CreateProjectDirectory(AutumnEngine::Console& console, sf::RenderWindow& window);
 
 		private:
-			char m_NewProjectName[128] = "";
-			char m_NewProjectPath[511] = "";
+			char m_NewProjectName[255];
+			char m_NewProjectPath[255];
 	};
 }

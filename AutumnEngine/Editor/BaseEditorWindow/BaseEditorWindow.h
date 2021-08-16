@@ -42,9 +42,8 @@ namespace AutumnEngine
 		private:
 			void HandleMenuBar();
 			void HandleDockSpace();
+			void HandleControlButtons();
 			void UpdatePanels();
-
-			void AddRectangle();
 
 		public:
 			void OpenProjectInExplorer();

@@ -3,6 +3,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
+#include "imgui.h"
 
 namespace AutumnEngine
 {
@@ -16,13 +17,15 @@ namespace AutumnEngine
 			void AddToRenderTexture(sf::Drawable& drawable);
 			void RenderScene();
 
-			void Create(const unsigned int x, const unsigned int y);
+			void Create(const unsigned int x, const unsigned int y, sf::Color colour);
 			void Clear(sf::Color color);
 			void Clear();
 
 		public:
-			unsigned int width;
-			unsigned int height;
+			sf::Color m_ClearColour;
+
+			unsigned int m_Width;
+			unsigned int m_Height;
 
 		public:
 			sf::RenderTexture* GetRenderTexture() { return &m_RenderTexture; }

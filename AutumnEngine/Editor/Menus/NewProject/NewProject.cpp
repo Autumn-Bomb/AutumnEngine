@@ -3,7 +3,7 @@
 AutumnEngine::CreateNewProject::CreateNewProject() {}
 AutumnEngine::CreateNewProject::~CreateNewProject() {}
 
-void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine::Console& console)
+void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine::Console& console, sf::RenderWindow& window)
 {
     ImGui::Begin("Create a new project", NULL, ImGuiWindowFlags_NoResize);
     ImGui::SetWindowSize(ImVec2(450, 300));
@@ -11,21 +11,29 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
     ImGui::SameLine(ImGui::GetWindowWidth() - 35);
     if (ImGui::Button("X", ImVec2(30, 20))) { open = !open; }
     ImGui::Text("Project Name");
-    ImGui::InputText("##Name", m_NewProjectName, IM_ARRAYSIZE(m_NewProjectName));
+    ImGui::InputText("##Name", m_NewProjectName, 128);
     ImGui::Text("Project Path");
-    ImGui::InputText("##Path", m_NewProjectPath, IM_ARRAYSIZE(m_NewProjectPath));
+    ImGui::InputText("##Path", m_NewProjectPath, 255);
     ImGui::SameLine();
     ImGui::Button("Choose Path", ImVec2(90, 20));
 
     ImGui::Separator();
 
-    if (ImGui::Button("Create", ImVec2(ImGui::GetWindowWidth(), 20))) { console.AddMessage(AutumnEngine::MessageType::ACTION, "Created New Project\n"); CreateProjectDirectory(console); open = !open; }
+    if (ImGui::Button("Create", ImVec2(ImGui::GetWindowWidth(), 20))) { console.AddMessage(AutumnEngine::MessageType::ACTION, ("Created New Project\n")); CreateProjectDirectory(console, window); open = !open; }
 
     ImGui::End();
 }
 
-void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Console& console)
+void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Console& console, sf::RenderWindow& window)
 {
-    console.AddMessage(AutumnEngine::MessageType::MESSAGE, "Project name: \n");
-    console.AddMessage(AutumnEngine::MessageType::MESSAGE, "Project Directory: \n");
+    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName);
+    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Contents");
+    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Build");
+    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Library");
+
+    // Creates the .ae project file and the first empty scene for the game
+    std::ofstream project((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + (std::string)m_NewProjectName + ".ae");
+    std::ofstream scene((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/Contents/" + (std::string)m_NewProjectName + ".json");
+
+    window.setTitle("Autumn Engine Project Open: "  + (std::string)m_NewProjectName + "(" + (std::string)m_NewProjectName + ".json )");
 }

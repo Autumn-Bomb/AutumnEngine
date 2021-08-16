@@ -57,6 +57,7 @@ void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
 
     ImGui::PopStyleVar();
 
+    HandleControlButtons();
     HandleMenuBar();
     HandleDockSpace();
     UpdatePanels();
@@ -75,6 +76,11 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::MenuItem("Open Project"), NULL) { /* Call Open Project Method */ }
             if (ImGui::MenuItem("Save Project"), NULL) { /* Call Save Project Method */ }
             if (ImGui::MenuItem("Build Project"), NULL) { /* Call Build Project Method */ }
+            ImGui::Separator();
+
+            if (ImGui::MenuItem("Create New Scene"), NULL) {}
+            if (ImGui::MenuItem("Open Scene"), NULL) {}
+            if (ImGui::MenuItem("Save Scene"), NULL) {}
             ImGui::Separator();
 
             if (ImGui::MenuItem("Exit"), NULL) {}
@@ -97,7 +103,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
         {
             if (ImGui::BeginMenu("Create"))
             {
-                if (ImGui::MenuItem("Create Sprite")) { AddRectangle(); }
+                if (ImGui::MenuItem("Create Sprite")) { }
                 ImGui::MenuItem("Create Empty Entity");
 
                 ImGui::EndMenu();
@@ -142,6 +148,18 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
     }
 }
 
+void AutumnEngine::BaseEditorWindow::HandleControlButtons()
+{
+    ImGui::SameLine(ImGui::GetWindowWidth() / 2 - 60);
+    ImGui::Button("Play", ImVec2(40, 20));
+    ImGui::SameLine();
+    ImGui::Button("Pause", ImVec2(50, 20));
+    ImGui::SameLine();
+    ImGui::Button("Stop", ImVec2(40, 20));
+
+    ImGui::Separator();
+}
+
 void AutumnEngine::BaseEditorWindow::HandleDockSpace()
 {
     m_DockSpaceID = ImGui::GetID("MainDockSpace");
@@ -181,7 +199,7 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
         m_GameViewport.ShowGameViewport();
 
     if (m_ShowNewProjectPopup)
-        m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console);
+        m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console, *m_Window);
 
     if (m_ShowInExplorer)
         OpenProjectInExplorer();
@@ -196,17 +214,6 @@ void AutumnEngine::BaseEditorWindow::OpenProjectInExplorer()
 {
     ShellExecute(NULL, "OPEN", "EXPLORER.EXE", m_CurrentPath.string().c_str(), NULL, 1);
     m_ShowInExplorer = false;
-}
-
-void AutumnEngine::BaseEditorWindow::AddRectangle()
-{
-    m_Console.AddMessage(AutumnEngine::ACTION, "Creating Sprite\n");
-    sf::Vector2f randomPos = sf::Vector2f(rand() % 500 + 1, rand() % 300 + 1);
-    rect.setSize(sf::Vector2f(100, 100));
-    rect.setPosition(randomPos);
-    rect.setFillColor(sf::Color::Black);
-    m_Renderer->AddToRenderTexture(rect);
-    m_Console.AddMessage(AutumnEngine::MESSAGE, "Created Sprite\n");
 }
 
 void AutumnEngine::BaseEditorWindow::ShutDownEditor()

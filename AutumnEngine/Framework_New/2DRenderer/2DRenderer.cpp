@@ -7,20 +7,22 @@ AutumnEngine::Renderer::Renderer()
 }
 AutumnEngine::Renderer::~Renderer(){}
 
-void AutumnEngine::Renderer::Create(const unsigned int width, const unsigned int height)
+void AutumnEngine::Renderer::Create(const unsigned int width, const unsigned int height, sf::Color colour)
 {
+	m_ClearColour = colour;
+
 	std::cout << "\nCreating RenderTexture!\n";
 	m_RenderTexture.create(width, height);
-	this->width = width;
-	this->height = height;
-	m_RenderTexture.clear(sf::Color::White);
+	m_Width = width;
+	m_Height = height;
+	m_RenderTexture.clear(colour);
 	std::cout << "\nCreated RenderTexture!\n";
 }
 
 void AutumnEngine::Renderer::AddToRenderTexture(sf::Drawable& drawable)
 {
 	std::cout << "\nDrawing Drawable!\n";
-	m_RenderTexture.clear(sf::Color::White);
+	m_RenderTexture.clear(m_ClearColour);
 	m_RenderTexture.draw(drawable);
 	m_RenderTexture.display();
 
