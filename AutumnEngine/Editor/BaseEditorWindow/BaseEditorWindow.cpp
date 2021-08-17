@@ -25,18 +25,13 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
 {
     ImGui::SFML::Init(*m_Window);
     ImGui::GetIO().ConfigFlags = ImGuiConfigFlags_DockingEnable;
-    m_CurrentPath = std::filesystem::current_path();
 
-    m_Renderer = new AutumnEngine::Renderer();
+    m_Renderer = std::make_unique<AutumnEngine::Renderer>();
+
     m_SceneViewport.SetRenderer(*m_Renderer);
     m_GameViewport.SetRenderer(*m_Renderer);
 
     m_Style.SetStyle();
-}
-
-void AutumnEngine::BaseEditorWindow::ProcessEditorEvents(sf::Event& events)
-{
-    ImGui::SFML::ProcessEvent(events);
 }
 
 void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
@@ -65,6 +60,11 @@ void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
     ImGui::End();
 }
 
+void AutumnEngine::BaseEditorWindow::ProcessEditorEvents(sf::Event& events)
+{
+    ImGui::SFML::ProcessEvent(events);
+}
+
 void AutumnEngine::BaseEditorWindow::HandleMenuBar()
 {
     if (ImGui::BeginMenuBar())
@@ -73,7 +73,8 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
         {
             ImGui::MenuItem("New Project", NULL, &m_ShowNewProjectPopup);
 
-            if (ImGui::MenuItem("Open Project"), NULL) { /* Call Open Project Method */ }
+            ImGui::MenuItem("Open Project", NULL, &m_ShowOpenProjectPopup);
+
             if (ImGui::MenuItem("Save Project"), NULL) { /* Call Save Project Method */ }
             if (ImGui::MenuItem("Build Project"), NULL) { /* Call Build Project Method */ }
             ImGui::Separator();
@@ -83,7 +84,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::MenuItem("Save Scene"), NULL) {}
             ImGui::Separator();
 
-            if (ImGui::MenuItem("Exit"), NULL) {}
+            if (ImGui::MenuItem("Exit"), NULL) { ShutDownEditor(); }
 
             ImGui::EndMenu();
         }
@@ -198,8 +199,11 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
     if (m_ShowGameViewport)
         m_GameViewport.ShowGameViewport();
 
-    if (m_ShowNewProjectPopup)
+    if (m_ShowNewProjectPopup) 
         m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console, *m_Window);
+        
+    if (m_ShowOpenProjectPopup)
+        m_OpenProjectMenu.OpenProject(m_ShowOpenProjectPopup, m_Console, &m_CurrentPath);
 
     if (m_ShowInExplorer)
         OpenProjectInExplorer();

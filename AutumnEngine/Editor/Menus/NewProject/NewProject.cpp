@@ -27,13 +27,13 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
 void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Console& console, sf::RenderWindow& window)
 {
     std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName);
-    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Contents");
+    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Assets");
     std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Build");
     std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Library");
 
     // Creates the .ae project file and the first empty scene for the game
     std::ofstream project((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + (std::string)m_NewProjectName + ".ae");
-    std::ofstream scene((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/Contents/" + (std::string)m_NewProjectName + ".json");
+    std::ofstream scene((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/Assets/" + (std::string)m_NewProjectName + ".scene");
 
-    window.setTitle("Autumn Engine Project Open: "  + (std::string)m_NewProjectName + "(" + (std::string)m_NewProjectName + ".json )");
+    window.setTitle("Autumn Engine Project Open: "  + (std::string)m_NewProjectName + "(" + (std::string)m_NewProjectName + ".scene )");
 }

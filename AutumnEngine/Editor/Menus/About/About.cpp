@@ -7,9 +7,9 @@ void AutumnEngine::About::ShowAboutMenu(bool& open)
 {
     ImGui::Begin("About");
 
-    ImGui::Text("Name: Autumn Engine");
-    ImGui::Text("Version: 1.0.0");
-    ImGui::Text("Description: Autumn Engine is a small 2D Game Engine in development by Autumn Bomb LTD");
+    ImGui::Text("Engine Name: Autumn Engine");
+    ImGui::Text("Engine Version: 0.0.1");
+    ImGui::Text("Engine Description: Autumn Engine is a small 2D Game Engine in development by Autumn Bomb LTD");
 
     ImGui::Separator();
 
@@ -19,7 +19,9 @@ void AutumnEngine::About::ShowAboutMenu(bool& open)
     ImGui::BulletText("Aaron Gray - Lead Designer");
     ImGui::Unindent();
 
-    if (ImGui::Button("Exit", ImVec2(150, 50))) { open = !open; }
+    ImGui::Separator();
+
+    if (ImGui::Button("Ok", ImVec2(30, 20))) { open = !open; }
 
     ImGui::End();
 }

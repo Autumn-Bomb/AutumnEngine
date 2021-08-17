@@ -24,6 +24,7 @@
     <ClCompile Include="Editor\Menus\About\About.cpp" />
     <ClCompile Include="Editor\Menus\MenuBar\MenuBar.cpp" />
     <ClCompile Include="Editor\Menus\NewProject\NewProject.cpp" />
+    <ClCompile Include="Editor\Menus\OpenProject\OpenProject.cpp" />
     <ClCompile Include="Editor\Panels\Animation\Animation.cpp" />
     <ClCompile Include="Editor\Panels\Console\Console.cpp" />
     <ClCompile Include="Editor\Panels\ContentBrowser\ContentBrowser.cpp" />
@@ -71,6 +72,7 @@
     <ClInclude Include="Editor\Menus\About\About.h" />
     <ClInclude Include="Editor\Menus\MenuBar\MenuBar.h" />
     <ClInclude Include="Editor\Menus\NewProject\NewProject.h" />
+    <ClInclude Include="Editor\Menus\OpenProject\OpenProject.h" />
     <ClInclude Include="Editor\Panels\Animation\Animation.h" />
     <ClInclude Include="Editor\Panels\Console\Console.h" />
     <ClInclude Include="Editor\Panels\ContentBrowser\ContentBrowser.h" />

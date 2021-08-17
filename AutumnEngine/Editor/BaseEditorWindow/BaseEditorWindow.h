@@ -15,6 +15,7 @@
 
 #include "../Menus/About/About.h"
 #include "../Menus/NewProject/NewProject.h"
+#include "../Menus/OpenProject/OpenProject.h"
 
 #include "../../Framework_New/2DRenderer/2DRenderer.h"
 
@@ -51,34 +52,20 @@ namespace AutumnEngine
 		// GETTERS AND SETTERS
 		public:
 			void SetRenderWindow(sf::RenderWindow& window) { m_Window = &window; }
-		
-		// PANELS USED IN THE EDITOR
-		private:
-			AutumnEngine::Console m_Console;
-			AutumnEngine::Hierarchy m_Hierarchy;
-			AutumnEngine::SceneViewport m_SceneViewport;
-			AutumnEngine::GameViewport m_GameViewport;
-			AutumnEngine::Inspector m_Inspector;
-			AutumnEngine::Stats m_Stats;
-			AutumnEngine::Animation m_Animation;
-			AutumnEngine::ContentBrowser m_ContentBrowser;
-			AutumnEngine::Properties m_Properties;
 
 		// MENUS USED IN THE EDITOR
 		private:
-			AutumnEngine::About m_AboutMenu;
-			AutumnEngine::CreateNewProject m_NewProjectMenu;
-
 			AutumnEngine::ImGuiStlye m_Style;
 
 		// ENGINE VARIABLES 
 		private:
 			sf::RectangleShape rect;
-			AutumnEngine::Renderer* m_Renderer;
+			std::unique_ptr<AutumnEngine::Renderer> m_Renderer;
 
 			sf::RenderWindow* m_Window;
 			ImGuiID m_DockSpaceID = 0;
-			std::filesystem::path m_CurrentPath;
+
+			std::filesystem::path m_CurrentPath = "c:/users/danie/Desktop/Test/";
 
 			int m_FPS;
 			float m_FrameTime;
@@ -91,9 +78,29 @@ namespace AutumnEngine
 			bool m_ShowStatsPanel;
 			bool m_ShowHierarchyPanel;
 			bool m_ShowNewProjectPopup;
+			bool m_ShowOpenProjectPopup;
 			bool m_ShowAboutWindow;
 			bool m_ShowConsole;
 			bool m_ShowSceneViewport;
 			bool m_ShowGameViewport;
+
+		// MENUS USED IN THE EDITOR
+		private:
+			AutumnEngine::About m_AboutMenu;
+			AutumnEngine::CreateNewProject m_NewProjectMenu;
+			AutumnEngine::OpenProjectMenu m_OpenProjectMenu;
+
+
+		// PANELS USED IN THE EDITOR
+		private:
+			AutumnEngine::Console m_Console;
+			AutumnEngine::Hierarchy m_Hierarchy;
+			AutumnEngine::SceneViewport m_SceneViewport;
+			AutumnEngine::GameViewport m_GameViewport;
+			AutumnEngine::Inspector m_Inspector;
+			AutumnEngine::Stats m_Stats;
+			AutumnEngine::Animation m_Animation;
+			AutumnEngine::ContentBrowser m_ContentBrowser = AutumnEngine::ContentBrowser(m_CurrentPath);
+			AutumnEngine::Properties m_Properties;
 	};
 };
