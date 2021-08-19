@@ -13,14 +13,21 @@ namespace AutumnEngine
 	{
 		public:			
 			ContentBrowser();
-			ContentBrowser(std::filesystem::path& projectDirectory);
 			~ContentBrowser();
 
 		public:
 			void ShowContentBrowser();
 			void ShowLoadedProjectContent();
 
+			void CreateNewFolder();
+			void CreateNewFile();
+
+			void RefreshDirectory();
+
+			void UpdateProjectPath(std::filesystem::path& projectDirectory);
+
 		private:
+			char m_Search[48];
 			std::filesystem::path m_DefaultPath;
 			std::filesystem::path m_CurrentPath;
 			std::filesystem::path m_AssetsString = "Assets";

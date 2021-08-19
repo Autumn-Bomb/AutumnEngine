@@ -65,7 +65,7 @@ namespace AutumnEngine
 			sf::RenderWindow* m_Window;
 			ImGuiID m_DockSpaceID = 0;
 
-			std::filesystem::path m_CurrentPath = "c:/users/danie/Desktop/Test/";
+			std::filesystem::path m_CurrentPath = "c:\\users\\daniel\\desktop\\test";
 
 			int m_FPS;
 			float m_FrameTime;
@@ -100,7 +100,7 @@ namespace AutumnEngine
 			AutumnEngine::Inspector m_Inspector;
 			AutumnEngine::Stats m_Stats;
 			AutumnEngine::Animation m_Animation;
-			AutumnEngine::ContentBrowser m_ContentBrowser = AutumnEngine::ContentBrowser(m_CurrentPath);
+			AutumnEngine::ContentBrowser m_ContentBrowser;
 			AutumnEngine::Properties m_Properties;
 	};
 };
