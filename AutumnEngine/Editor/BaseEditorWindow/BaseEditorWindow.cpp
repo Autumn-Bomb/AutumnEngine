@@ -31,8 +31,6 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     m_SceneViewport.SetRenderer(*m_Renderer);
     m_GameViewport.SetRenderer(*m_Renderer);
 
-    m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
-
     m_Style.SetStyle();
 }
 
@@ -201,11 +199,25 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
     if (m_ShowGameViewport)
         m_GameViewport.ShowGameViewport();
 
-    if (m_ShowNewProjectPopup) 
-        m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console, *m_Window);
+    if (m_ShowNewProjectPopup)
+    {
+        m_CurrentPath = "";
+        m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console, &m_CurrentPath);
+
+        if (!m_ShowNewProjectPopup && m_CurrentPath != "")
+        {
+            std::cout << "Path: " << m_CurrentPath;
+            m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
+        }
+    }
         
     if (m_ShowOpenProjectPopup)
+    {
         m_OpenProjectMenu.OpenProject(m_ShowOpenProjectPopup, m_Console, &m_CurrentPath);
+
+        if(!m_ShowOpenProjectPopup && m_CurrentPath != "")
+            m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
+    }
 
     if (m_ShowInExplorer)
         OpenProjectInExplorer();

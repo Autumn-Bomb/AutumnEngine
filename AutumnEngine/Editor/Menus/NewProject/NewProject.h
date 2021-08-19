@@ -18,8 +18,8 @@ namespace AutumnEngine
 			~CreateNewProject();
 
 		public:
-			void OpenNewProjectMenu(bool& open, AutumnEngine::Console& console, sf::RenderWindow& window);
-			void CreateProjectDirectory(AutumnEngine::Console& console, sf::RenderWindow& window);
+			void OpenNewProjectMenu(bool& open, AutumnEngine::Console& console, std::filesystem::path* newProjectPath);
+			void CreateProjectDirectory(AutumnEngine::Console& console);
 
 
 		public:

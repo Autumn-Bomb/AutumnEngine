@@ -65,7 +65,7 @@ namespace AutumnEngine
 			sf::RenderWindow* m_Window;
 			ImGuiID m_DockSpaceID = 0;
 
-			std::filesystem::path m_CurrentPath = "c:\\users\\daniel\\desktop\\test";
+			std::filesystem::path m_CurrentPath;
 
 			int m_FPS;
 			float m_FrameTime;
@@ -89,7 +89,6 @@ namespace AutumnEngine
 			AutumnEngine::About m_AboutMenu;
 			AutumnEngine::CreateNewProject m_NewProjectMenu;
 			AutumnEngine::OpenProjectMenu m_OpenProjectMenu;
-
 
 		// PANELS USED IN THE EDITOR
 		private:
