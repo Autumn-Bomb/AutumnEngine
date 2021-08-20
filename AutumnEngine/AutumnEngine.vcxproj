@@ -22,6 +22,7 @@
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp" />
     <ClCompile Include="Editor\DemoTest\IMGUIDemo.cpp" />
     <ClCompile Include="Editor\Menus\About\About.cpp" />
+    <ClCompile Include="Editor\Menus\EditColours\EditColours.cpp" />
     <ClCompile Include="Editor\Menus\MenuBar\MenuBar.cpp" />
     <ClCompile Include="Editor\Menus\NewProject\NewProject.cpp" />
     <ClCompile Include="Editor\Menus\OpenProject\OpenProject.cpp" />
@@ -70,6 +71,7 @@
   <ItemGroup>
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h" />
     <ClInclude Include="Editor\Menus\About\About.h" />
+    <ClInclude Include="Editor\Menus\EditColours\EditColours.h" />
     <ClInclude Include="Editor\Menus\MenuBar\MenuBar.h" />
     <ClInclude Include="Editor\Menus\NewProject\NewProject.h" />
     <ClInclude Include="Editor\Menus\OpenProject\OpenProject.h" />

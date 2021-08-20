@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../../Panels/Console/Console.h"
-
 #include<filesystem>
 #include <fstream>
 #include <iostream>
@@ -21,7 +20,7 @@ namespace AutumnEngine
 			void OpenNewProjectMenu(bool& open, AutumnEngine::Console& console, std::filesystem::path* newProjectPath);
 			void CreateProjectDirectory(AutumnEngine::Console& console);
 
-
+			void SelectPath();
 		public:
 			char* GetProjectPath() { return m_NewProjectPath; }
 

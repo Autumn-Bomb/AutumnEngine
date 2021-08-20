@@ -13,6 +13,7 @@
 
 #include "../Style/Style.h"
 
+#include "../Menus/EditColours/EditColours.h"
 #include "../Menus/About/About.h"
 #include "../Menus/NewProject/NewProject.h"
 #include "../Menus/OpenProject/OpenProject.h"
@@ -55,7 +56,7 @@ namespace AutumnEngine
 
 		// MENUS USED IN THE EDITOR
 		private:
-			AutumnEngine::ImGuiStlye m_Style;
+			AutumnEngine::Style m_Style;
 
 		// ENGINE VARIABLES 
 		private:
@@ -83,12 +84,14 @@ namespace AutumnEngine
 			bool m_ShowConsole;
 			bool m_ShowSceneViewport;
 			bool m_ShowGameViewport;
+			bool m_ShowEditColoursMenu;
 
 		// MENUS USED IN THE EDITOR
 		private:
 			AutumnEngine::About m_AboutMenu;
 			AutumnEngine::CreateNewProject m_NewProjectMenu;
 			AutumnEngine::OpenProjectMenu m_OpenProjectMenu;
+			AutumnEngine::EditEditorColoursMenu m_EditColoursMenu = AutumnEngine::EditEditorColoursMenu();
 
 		// PANELS USED IN THE EDITOR
 		private:

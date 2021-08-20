@@ -220,6 +220,9 @@
     <Filter Include="Editor\Windows\Menus\OpenProject">
       <UniqueIdentifier>{33a553f7-d002-4a40-ac64-0049a07db322}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Editor\Windows\Menus\EditColours">
+      <UniqueIdentifier>{def17e57-c87c-480e-9a59-c6c59dd7368c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -362,6 +365,9 @@
     </ClCompile>
     <ClCompile Include="Editor\Menus\OpenProject\OpenProject.cpp">
       <Filter>Editor\Windows\Menus\OpenProject</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Menus\EditColours\EditColours.cpp">
+      <Filter>Editor\Windows\Menus\EditColours</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -523,6 +529,9 @@
     </ClInclude>
     <ClInclude Include="Editor\Menus\OpenProject\OpenProject.h">
       <Filter>Editor\Windows\Menus\OpenProject</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Menus\EditColours\EditColours.h">
+      <Filter>Editor\Windows\Menus\EditColours</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

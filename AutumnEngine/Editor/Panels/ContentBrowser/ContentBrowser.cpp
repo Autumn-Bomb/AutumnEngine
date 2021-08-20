@@ -19,9 +19,14 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
     ImGui::SameLine();
     ImGui::Button("New File", ImVec2(100, 20));
     ImGui::SameLine();
+
+    ImGui::PushItemWidth(150.f);
     ImGui::InputText("##Search", m_Search, IM_ARRAYSIZE(m_Search));
+    ImGui::SameLine();
     ImGui::SliderFloat("Thumbnail Size", &m_ThumbnailSize, 50, 100);
+    ImGui::SameLine();
     ImGui::SliderFloat("Thumbnail Padding", &m_Padding, 10, 100);
+    ImGui::PopItemWidth();
 
     ImGui::Separator();
 

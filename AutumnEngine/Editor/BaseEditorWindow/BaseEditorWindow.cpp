@@ -17,6 +17,8 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowProperties = true;
 
     m_ShowNewProjectPopup = false;
+    m_ShowEditColoursMenu = false;
+    m_ShowOpenProjectPopup = false;
     m_ShowInExplorer = false;
 }
 AutumnEngine::BaseEditorWindow::~BaseEditorWindow() {}
@@ -97,7 +99,9 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::MenuItem("Copy"), NULL) { /* Call Copy Method */ }
             if (ImGui::MenuItem("Cut"), NULL) { /* Call Cut Method */ }
             if (ImGui::MenuItem("Paste"), NULL) { /* Call Paste Method */ }
+            ImGui::Separator();
 
+            ImGui::MenuItem("Edit Editor Colours", NULL, &m_ShowEditColoursMenu);
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Assets"))
@@ -218,6 +222,9 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
         if(!m_ShowOpenProjectPopup && m_CurrentPath != "")
             m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
     }
+
+    if (m_ShowEditColoursMenu)
+        m_EditColoursMenu.ShowEditColoursMenu(m_Style);
 
     if (m_ShowInExplorer)
         OpenProjectInExplorer();

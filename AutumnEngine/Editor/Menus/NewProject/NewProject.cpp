@@ -37,6 +37,7 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
     ImGui::End();
 }
 
+void AutumnEngine::CreateNewProject::SelectPath(){}
 void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Console& console)
 {
     std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName);

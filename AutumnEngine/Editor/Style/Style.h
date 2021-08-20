@@ -1,11 +1,11 @@
 #pragma once
 
 #include "imgui.h"
-#include "imconfig-SFML.h"
+#include "imgui-SFML.h"
 
 namespace AutumnEngine
 {
-	class ImGuiStlye
+	class Style
 	{
 		public:
 			void SetStyle()
@@ -62,5 +62,7 @@ namespace AutumnEngine
 				font = ImGui::GetIO().Fonts->AddFontFromFileTTF(fontPath, fontSize);
 				ImGui::SFML::UpdateFontTexture();
 			}
+
+			ImColor GetBackgroundColour() { return ImGui::GetStyle().Colors[ImGuiCol_ChildBg]; }
 	};
 }
