@@ -1,3 +1,230 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: Two or more files with the name of Entity.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are Framework\Entity\Entity.cpp, Framework_New\Entities\BaseEntity\Entity.cpp.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1069,5): warning MSB8027: Two or more files with the name of Entity.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are Framework\Entity\Entity.cpp, Framework_New\Entities\BaseEntity\Entity.cpp.
+  BaseEditorWindow.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Menus\EditColours\EditColours.h(3,1): error C2059: syntax error: '<<'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Menus\EditColours\EditColours.h(9,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Menus\EditColours\EditColours.h(9,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,18): error C2039: 'EditEditorColoursMenu': is not a member of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(28): message : see declaration of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,58): error C3646: 'm_EditColoursMenu': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,58): error C2059: syntax error: '='
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,74): error C2039: 'EditEditorColoursMenu': is not a member of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(28): message : see declaration of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,97): error C2238: unexpected token(s) preceding ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(43,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(103,1): error C2059: syntax error: '<<'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(106,1): error C2059: syntax error: '=='
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(107,63): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(108,1): error C2059: syntax error: '>>'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(231,9): error C2065: 'm_EditColoursMenu': undeclared identifier
+  IMGUIDemo.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Menus\EditColours\EditColours.h(3,1): error C2059: syntax error: '<<'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Menus\EditColours\EditColours.h(9,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Menus\EditColours\EditColours.h(9,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,18): error C2039: 'EditEditorColoursMenu': is not a member of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(28): message : see declaration of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,58): error C3646: 'm_EditColoursMenu': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,58): error C2059: syntax error: '='
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,74): error C2039: 'EditEditorColoursMenu': is not a member of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(28): message : see declaration of 'AutumnEngine'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.h(94,97): error C2238: unexpected token(s) preceding ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\DemoTest\IMGUIDemo.cpp(12,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  About.cpp
   EditColours.cpp
-  AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Menus\EditColours\EditColours.h(3,1): error C2059: syntax error: '<<'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Config.hpp(207,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Config.hpp(207,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(62,10): error C2061: syntax error: identifier 'Uint8'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(62,10): error C2535: 'sf::Color::Color(void)': member function already defined or declared
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(51): message : see declaration of 'sf::Color::Color'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(70,19): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(70,19): error C2535: 'sf::Color::Color(void)': member function already defined or declared
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(51): message : see declaration of 'sf::Color::Color'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(78,21): error C3646: 'toInteger': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(78,21): error C2059: syntax error: '('
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(78,29): error C2238: unexpected token(s) preceding ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(96,12): error C3646: 'r': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(96,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(97,12): error C3646: 'g': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(97,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(98,12): error C3646: 'b': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(98,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(99,12): error C3646: 'a': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\Graphics\Color.hpp(99,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(70,25): error C3646: 'asMilliseconds': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(70,25): error C2059: syntax error: '('
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(70,33): error C2238: unexpected token(s) preceding ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(80,25): error C3646: 'asMicroseconds': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(80,25): error C2059: syntax error: '('
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(80,33): error C2238: unexpected token(s) preceding ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(90,51): error C2061: syntax error: identifier 'Int32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(91,51): error C2061: syntax error: identifier 'Int64'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(102,18): error C2061: syntax error: identifier 'Int64'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(102,18): error C2535: 'sf::Time::Time(void)': member function already defined or declared
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(50): message : see declaration of 'sf::Time::Time'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(109,25): error C3646: 'm_microseconds': unknown override specifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(109,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(136,35): error C2065: 'Int32': undeclared identifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(136,41): error C2146: syntax error: missing ')' before identifier 'amount'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(149,35): error C2065: 'Int64': undeclared identifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(149,41): error C2146: syntax error: missing ')' before identifier 'amount'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(304,50): error C2061: syntax error: identifier 'Int64'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(328,33): error C2065: 'Int64': undeclared identifier
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(328,39): error C2146: syntax error: missing ')' before identifier 'left'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(352,53): error C2061: syntax error: identifier 'Int64'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(352,59): error C2805: binary 'operator *=' has too few parameters
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(376,50): error C2061: syntax error: identifier 'Int64'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(376,56): error C2805: binary 'operator /' has too few parameters
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(400,53): error C2061: syntax error: identifier 'Int64'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Time.hpp(400,59): error C2805: binary 'operator /=' has too few parameters
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(67,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(83,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(274,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(290,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(482,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(499,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(678,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(678,5): error C2061: syntax error: identifier 'decodeAnsi'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(678,5): error C2238: unexpected token(s) preceding ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(693,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(693,5): error C2061: syntax error: identifier 'decodeWide'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(693,1): error C2238: unexpected token(s) preceding ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(711,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(728,5): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(39,1): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(53,18): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(53,18): message : This diagnostic occurred in the compiler generated function 'In sf::Utf<8>::decode(In,In)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(87,27): error C2146: syntax error: missing ')' before identifier 'input'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(88,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(88,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(135,12): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(135,12): message : This diagnostic occurred in the compiler generated function 'In sf::Utf<8>::next(In,In)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(161,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(161,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<8>::fromAnsi(In,In,Out,const std::locale &)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(175,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(175,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<8>::fromWide(In,In,Out)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(202,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(202,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<8>::toAnsi(In,In,Out,char,const std::locale &)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(217,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(217,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<8>::toWide(In,In,Out,wchar_t)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(234,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(234,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<8>::toLatin1(In,In,Out,char)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(257,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(257,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<8>::toUtf16(In,In,Out)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(272,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(272,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<8>::toUtf32(In,In,Out)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(283,1): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(285,12): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(285,12): message : This diagnostic occurred in the compiler generated function 'In sf::Utf<16>::decode(In,In)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(323,28): error C2146: syntax error: missing ')' before identifier 'input'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(324,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(324,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(362,12): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(362,12): message : This diagnostic occurred in the compiler generated function 'In sf::Utf<16>::next(In,In)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(388,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(388,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<16>::fromAnsi(In,In,Out,const std::locale &)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(402,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(402,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<16>::fromWide(In,In,Out)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(426,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(426,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<16>::toAnsi(In,In,Out,char,const std::locale &)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(441,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(441,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<16>::toWide(In,In,Out,wchar_t)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(472,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(472,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<16>::toUtf8(In,In,Out)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(495,16): error C2760: syntax error: unexpected token 'identifier', expected ';'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(495,16): message : This diagnostic occurred in the compiler generated function 'Out sf::Utf<16>::toUtf32(In,In,Out)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(506,1): error C2061: syntax error: identifier 'Uint32'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(508,5): error C3861: 'output': identifier not found
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(508,5): message : This diagnostic occurred in the compiler generated function 'In sf::Utf<32>::decode(In,In)'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(515,28): error C2146: syntax error: missing ')' before identifier 'input'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(516,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(516,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(639,17): error C2039: 'decodeAnsi': is not a member of 'sf::Utf<32>'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(463): message : see declaration of 'sf::Utf<32>'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(639,1): error C2061: syntax error: identifier 'decodeAnsi'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(640,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(640,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(670,17): error C2039: 'decodeWide': is not a member of 'sf::Utf<32>'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.hpp(463): message : see declaration of 'sf::Utf<32>'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(670,1): error C2061: syntax error: identifier 'decodeWide'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(671,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(671,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(684,32): error C2146: syntax error: missing ')' before identifier 'codepoint'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(685,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(685,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(721,32): error C2146: syntax error: missing ')' before identifier 'codepoint'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(722,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\Utf.inl(722,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(540,52): error C2955: 'sf::String': use of class template requires template argument list
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(46): message : see declaration of 'sf::String'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(540,48): error C2955: 'sf::String': use of class template requires template argument list
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(46): message : see declaration of 'sf::String'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(540,73): error C2955: 'sf::String': use of class template requires template argument list
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(46): message : see declaration of 'sf::String'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(540,68): error C2955: 'sf::String': use of class template requires template argument list
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(46): message : see declaration of 'sf::String'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(552,52): error C2955: 'sf::String': use of class template requires template argument list
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(46): message : see declaration of 'sf::String'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(552,48): error C2955: 'sf::String': use of class template requires template argument list
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(46): message : see declaration of 'sf::String'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(552,73): error C2955: 'sf::String': use of class template requires template argument list
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(46): message : see declaration of 'sf::String'
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Libraries\SFML\include\SFML\System\String.hpp(552,73): fatal error C1003: error count exceeds 100; stopping compilation
+  MenuBar.cpp
+  NewProject.cpp
+  OpenProject.cpp
+  Animation.cpp
+  Console.cpp
+  ContentBrowser.cpp
+  GameViewport.cpp
+  Hierarchy.cpp
+  Inspector.cpp
+  Properties.cpp
+  SceneViewport.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Panels\SceneViewport\SceneViewport.cpp(16,54): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Panels\SceneViewport\SceneViewport.cpp(16,39): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Panels\SceneViewport\SceneViewport.cpp(37,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Editor\Panels\SceneViewport\SceneViewport.cpp(45,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Stats.cpp
+  Application.cpp
+  AssetManager.cpp
+  BaseScene.cpp
+  Camera.cpp
+  Generating Code...
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\AssetManager\AssetManager.cpp(76): warning C4715: 'AutumnEngine::AssetManager::GetTextureAtlas': not all control paths return a value
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\AssetManager\AssetManager.cpp(86): warning C4715: 'AutumnEngine::AssetManager::GetSpriteSheet': not all control paths return a value
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\AssetManager\AssetManager.cpp(66): warning C4715: 'AutumnEngine::AssetManager::GetTexture': not all control paths return a value
+  Compiling...
+  Collision.cpp
+  Entity.cpp
+  Button.cpp
+  GUI.cpp
+  Slider.cpp
+  Sprite.cpp
+  Text.cpp
+  Toggle.cpp
+  Input.cpp
+  GUILayer.cpp
+  GameLayer.cpp
+  SceneManager.cpp
+  Spritesheet.cpp
+  TextureAtlas.cpp
+  Window.cpp
+  2DRenderer.cpp
+  Entity.cpp
+  SceneSerializer.cpp
+  Main.cpp
+  MainMenu.cpp
+  Generating Code...
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Framework\Layers\GUILayer\GUILayer.cpp(37): warning C4715: 'AutumnEngine::GUILayer::GetUIComponent': not all control paths return a value
+  Compiling...
+  Splashscreen.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Game\Scenes\Splashscreen\Splashscreen.cpp(50,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  TestScene.cpp
+C:\Users\Daniel\Desktop\AutumnEngine\AutumnEngine\Game\Scenes\Test Scene\TestScene.cpp(63,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  imgui-SFML.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Generating Code...

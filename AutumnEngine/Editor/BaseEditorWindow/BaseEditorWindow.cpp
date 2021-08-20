@@ -100,8 +100,12 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::MenuItem("Cut"), NULL) { /* Call Cut Method */ }
             if (ImGui::MenuItem("Paste"), NULL) { /* Call Paste Method */ }
             ImGui::Separator();
+<<<<<<< Updated upstream
 
             ImGui::MenuItem("Edit Editor Colours", NULL, &m_ShowEditColoursMenu);
+=======
+            if (ImGui::MenuItem("Edit Editor Colours", NULL)) { /* Open Editor Colours Menu*/ }
+>>>>>>> Stashed changes
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Assets"))
