@@ -29,7 +29,7 @@ namespace AutumnEngine
 		private:
 			float m_PanelWidth = 0;
 			float m_Padding = 13.f;
-			float m_ThumbnailSize = 50.f;
+			float m_ThumbnailSize = 60.f;
 			float m_CellSize = 0;
 			int m_ColumnCount = 0;
 

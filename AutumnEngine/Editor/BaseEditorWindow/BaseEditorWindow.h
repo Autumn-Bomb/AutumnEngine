@@ -65,7 +65,7 @@ namespace AutumnEngine
 			sf::RenderWindow* m_Window;
 			ImGuiID m_DockSpaceID = 0;
 
-			std::filesystem::path m_CurrentPath = "c:/users/danie/desktop/test";
+			std::filesystem::path m_CurrentPath;
 
 			int m_FPS;
 			float m_FrameTime;
