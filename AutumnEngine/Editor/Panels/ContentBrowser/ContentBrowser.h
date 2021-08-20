@@ -27,7 +27,13 @@ namespace AutumnEngine
 			void UpdateProjectPath(std::filesystem::path& projectDirectory);
 
 		private:
-			char m_Search[48];
+			float m_PanelWidth = 0;
+			float m_Padding = 13.f;
+			float m_ThumbnailSize = 50.f;
+			float m_CellSize = 0;
+			int m_ColumnCount = 0;
+
+			char m_Search[128];
 			std::filesystem::path m_DefaultPath;
 			std::filesystem::path m_CurrentPath;
 			std::filesystem::path m_AssetsString = "Assets";

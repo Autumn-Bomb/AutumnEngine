@@ -5,7 +5,6 @@ AutumnEngine::ContentBrowser::ContentBrowser()
     m_FolderTexture = std::make_unique<sf::Texture>();
 
     if (!m_FolderTexture->loadFromFile("Editor/Style/Icons/FolderIcon.png")) {}
-
     m_FolderIcon.setTexture(*m_FolderTexture);
 }
 AutumnEngine::ContentBrowser::~ContentBrowser() {}
@@ -21,6 +20,8 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
     ImGui::Button("New File", ImVec2(100, 20));
     ImGui::SameLine();
     ImGui::InputText("##Search", m_Search, IM_ARRAYSIZE(m_Search));
+    ImGui::SliderFloat("Thumbnail Size", &m_ThumbnailSize, 50, 100);
+    ImGui::SliderFloat("Thumbnail Padding", &m_Padding, 10, 100);
 
     ImGui::Separator();
 
@@ -42,24 +43,32 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
         ImGui::Separator();
     }
 
+    m_PanelWidth = ImGui::GetContentRegionAvail().x;
+    m_CellSize = m_ThumbnailSize + m_Padding;
+    m_ColumnCount = (int)(m_PanelWidth / m_CellSize);
+
+    if (m_ColumnCount < 1) m_ColumnCount = 1;
+
+    ImGui::Columns(m_ColumnCount, 0, false);
+
     for (auto& directoryEntry : std::filesystem::directory_iterator(m_CurrentPath))
     {
         const auto& path = directoryEntry.path();
         auto relativePath = std::filesystem::relative(path, m_CurrentPath);
-        std::string filenameString = relativePath.string();
+        std::string filenameString = relativePath.filename().string();
 
-        if (directoryEntry.is_directory())
+        ImGui::ImageButton(m_FolderIcon, { m_ThumbnailSize, m_ThumbnailSize });
+        if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
         {
-            if(ImGui::Button(filenameString.c_str()))
-            {
+            if (directoryEntry.is_directory())
                 m_CurrentPath /= path.filename();
-            }
         }
-        else
-        {
-            if (ImGui::Button(filenameString.c_str())) {}
-        }
+
+        ImGui::Text(filenameString.c_str());
+        ImGui::NextColumn();
     }
+
+    ImGui::Columns(1);
 }
 
 void AutumnEngine::ContentBrowser::RefreshDirectory()

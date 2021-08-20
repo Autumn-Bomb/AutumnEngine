@@ -31,6 +31,8 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     m_SceneViewport.SetRenderer(*m_Renderer);
     m_GameViewport.SetRenderer(*m_Renderer);
 
+    m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
+
     m_Style.SetStyle();
 }
 

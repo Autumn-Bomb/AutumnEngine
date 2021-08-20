@@ -17,7 +17,19 @@ void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Consol
 
     ImGui::Separator();
 
-    if (ImGui::Button("Open", ImVec2(ImGui::GetWindowWidth(), 20))) { console.AddMessage(AutumnEngine::MessageType::ACTION, ("Opened Project\n")); *newProjectPath = m_ExistingProjectPath; open = !open; }
+    if (ImGui::Button("Open", ImVec2(ImGui::GetWindowWidth(), 20)))
+    { 
+        if ((std::string)m_ExistingProjectPath != "")
+        {
+            console.AddMessage(AutumnEngine::MessageType::ACTION, ("Opened Project\n"));
+            *newProjectPath = m_ExistingProjectPath;
+            open = !open;
+        }
+        else
+        {
+            console.AddMessage(AutumnEngine::MessageType::ERROR, "Opening Project, make sure you've specified a project path!\n");
+        }
+    }
 
     ImGui::End();
 }

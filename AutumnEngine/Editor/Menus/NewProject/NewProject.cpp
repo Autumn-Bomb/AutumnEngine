@@ -19,7 +19,20 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
 
     ImGui::Separator();
 
-    if (ImGui::Button("Create", ImVec2(ImGui::GetWindowWidth(), 20))) { console.AddMessage(AutumnEngine::MessageType::ACTION, ("Created New Project\n")); CreateProjectDirectory(console); *newProjectPath = (std::string)m_NewProjectPath + "\\" + (std::string)m_NewProjectName;  open = !open; }
+    if (ImGui::Button("Create", ImVec2(ImGui::GetWindowWidth(), 20))) 
+    { 
+        if (std::string(m_NewProjectName) != "" && std::string(m_NewProjectPath) != "")
+        {
+            console.AddMessage(AutumnEngine::MessageType::ACTION, ("Created New Project\n"));
+            CreateProjectDirectory(console);
+            *newProjectPath = (std::string)m_NewProjectPath + "\\" + (std::string)m_NewProjectName;
+            open = !open;
+        }
+        else
+        {
+            console.AddMessage(AutumnEngine::ERROR, "Creating Project, make sure your project has a path and a name!\n");
+        }
+    }
 
     ImGui::End();
 }
