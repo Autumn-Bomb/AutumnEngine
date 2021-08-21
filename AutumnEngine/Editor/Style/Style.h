@@ -61,8 +61,8 @@ namespace AutumnEngine
 				ImGui::GetIO().Fonts->Clear();
 				font = ImGui::GetIO().Fonts->AddFontFromFileTTF(fontPath, fontSize);
 				ImGui::SFML::UpdateFontTexture();
-			}
-
+			}                     
+		
 			ImColor GetBackgroundColour() { return ImGui::GetStyle().Colors[ImGuiCol_ChildBg]; }
 	};
 }

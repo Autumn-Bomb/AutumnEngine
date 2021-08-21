@@ -9,4 +9,4 @@ void AutumnEngine::EditEditorColoursMenu::ShowEditColoursMenu(AutumnEngine::Styl
 	ImGui::Text("Use this menu to change the colours of the main editor");
 	ImGui::Separator();
 	ImGui::End();
-}
+}       

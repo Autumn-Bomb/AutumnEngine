@@ -55,7 +55,10 @@ void AutumnEngine::Console::ShowConsole()
 {
       ImGui::Begin("Console");
 
-      if (ImGui::MenuItem("Clear")) { Clear(); }
+      if (ImGui::Button("Clear")) { Clear(); }
+
+      ImGui::SameLine(ImGui::GetWindowWidth() - 100);
+      ImGui::Checkbox("Auto Scroll", &m_AutoScroll);
 
       ImGui::Separator();
       ImGui::BeginChild("ScrollbarVertical", ImVec2(0, 0), false, ImGuiWindowFlags_AlwaysVerticalScrollbar);

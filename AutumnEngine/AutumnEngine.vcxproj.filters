@@ -223,6 +223,9 @@
     <Filter Include="Editor\Windows\Menus\EditColours">
       <UniqueIdentifier>{def17e57-c87c-480e-9a59-c6c59dd7368c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework_New\Scene">
+      <UniqueIdentifier>{6a3adb34-6251-4eff-a05e-ec0e33a2c7be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -368,6 +371,9 @@
     </ClCompile>
     <ClCompile Include="Editor\Menus\EditColours\EditColours.cpp">
       <Filter>Editor\Windows\Menus\EditColours</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework_New\Scene\Scene.cpp">
+      <Filter>Framework_New\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -532,6 +538,9 @@
     </ClInclude>
     <ClInclude Include="Editor\Menus\EditColours\EditColours.h">
       <Filter>Editor\Windows\Menus\EditColours</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework_New\Scene\Scene.h">
+      <Filter>Framework_New\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -57,6 +57,7 @@
     <ClCompile Include="Framework_NEw\2DRenderer\2DRenderer.cpp" />
     <ClCompile Include="Framework_New\Entities\BaseEntity\Entity.cpp" />
     <ClCompile Include="Framework_New\SceneSerializer\SceneSerializer.cpp" />
+    <ClCompile Include="Framework_New\Scene\Scene.cpp" />
     <ClCompile Include="Game\Main.cpp" />
     <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
     <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp" />
@@ -110,6 +111,7 @@
     <ClInclude Include="Framework_New\Entities\BaseEntity\Entity.h" />
     <ClInclude Include="Framework_New\Entities\Components\Components.h" />
     <ClInclude Include="Framework_New\SceneSerializer\SceneSerializer.h" />
+    <ClInclude Include="Framework_New\Scene\Scene.h" />
     <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
     <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h" />
     <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />
