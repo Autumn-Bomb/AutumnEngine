@@ -66,7 +66,13 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
         if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
         {
             if (directoryEntry.is_directory())
+            {
                 m_CurrentPath /= path.filename();
+            }
+            else if (directoryEntry.path().extension() == ".scene")
+            {
+                // DESIRALIZE SCENE
+            }
         }
 
         ImGui::Text(filenameString.c_str());

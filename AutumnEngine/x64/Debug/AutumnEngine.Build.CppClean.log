@@ -1,6 +1,5 @@
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\vc142.pdb
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\vc142.idb
-c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\collision.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\camera.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\basescene.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\assetmanager.obj
@@ -15,11 +14,9 @@ c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\contentbrowser.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\console.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\animation.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\openproject.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\newproject.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\menubar.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\about.obj
-c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imguidemo.obj
-c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\baseeditorwindow.obj
-c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\splashscreen.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\mainmenu.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\main.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\sceneserializer.obj
@@ -29,8 +26,8 @@ c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\window.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\textureatlas.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\spritesheet.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\scenemanager.obj
-c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\guilayer.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\gamelayer.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\guilayer.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\input.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\toggle.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\text.obj
@@ -38,6 +35,7 @@ c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\sprite.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\slider.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\gui.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\button.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\collision.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_widgets.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_tables.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_draw.obj
@@ -45,10 +43,13 @@ c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui_demo.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imgui-sfml.obj
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\testscene.obj
-c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\newproject.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\splashscreen.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\baseeditorwindow.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\editcolours.obj
+c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\imguidemo.obj
+c:\users\daniel\desktop\autumnengine\x64\debug\autumnengine.pdb
 c:\users\daniel\desktop\autumnengine\x64\debug\autumnengine.exe
 c:\users\daniel\desktop\autumnengine\x64\debug\autumnengine.ilk
-c:\users\daniel\desktop\autumnengine\x64\debug\autumnengine.pdb
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.command.1.tlog
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.read.1.tlog
 c:\users\daniel\desktop\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.write.1.tlog
