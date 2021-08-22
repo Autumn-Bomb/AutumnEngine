@@ -1,5 +1,8 @@
 #pragma once
 #include "../Scene/Scene.h"
+#include "../../Json/json.hpp"
+
+#include <fstream>
 #include <iostream>
 
 namespace AutumnEngine
@@ -18,8 +21,10 @@ namespace AutumnEngine
 
 		public:
 			AutumnEngine::Scene& GetCurrentLoadedScene() { return m_CurrentScene; }
-
+			nlohmann::json& GetSceneData() { return m_SceneData; }
+		
 		private:
+			nlohmann::json m_SceneData;
 			AutumnEngine::Scene m_CurrentScene;
 	};
 }
