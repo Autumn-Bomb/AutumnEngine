@@ -3,9 +3,17 @@
 AutumnEngine::ContentBrowser::ContentBrowser() 
 { 
     m_FolderTexture = std::make_unique<sf::Texture>();
+    m_FileTexture = std::make_unique<sf::Texture>();
+    m_FileTextTexture = std::make_unique<sf::Texture>();
 
     if (!m_FolderTexture->loadFromFile("Editor/Style/Icons/FolderIcon.png")) {}
     m_FolderIcon.setTexture(*m_FolderTexture);
+
+    if (!m_FileTexture->loadFromFile("Editor/Style/Icons/FileIcon.png")) {}
+    m_FileIcon.setTexture(*m_FileTexture);
+
+    if (!m_FileTextTexture->loadFromFile("Editor/Style/Icons/FileTextIcon.png")) {}
+    m_FileTextIcon.setTexture(*m_FileTextTexture);
 }
 AutumnEngine::ContentBrowser::~ContentBrowser() {}
 
@@ -23,7 +31,7 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
     ImGui::PushItemWidth(150.f);  
     ImGui::SliderFloat("##Thumbnail Size", &m_ThumbnailSize, 50, 100);
     ImGui::SameLine();
-    ImGui::SliderFloat("##Thumbnail Padding", &m_Padding, 10, 100);
+    ImGui::SliderFloat("##Thumbnail Padding", &m_Padding, 10, 20);
     ImGui::SameLine(ImGui::GetWindowWidth() - 150);
     ImGui::InputText("##Search", m_Search, IM_ARRAYSIZE(m_Search));
     ImGui::SameLine(ImGui::GetWindowWidth() - 200);
@@ -53,7 +61,7 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
     m_PanelWidth = ImGui::GetContentRegionAvail().x;
     m_CellSize = m_ThumbnailSize + m_Padding;
     m_ColumnCount = (int)(m_PanelWidth / m_CellSize);
-
+    
     if (m_ColumnCount < 1) m_ColumnCount = 1;
 
     ImGui::Columns(m_ColumnCount, 0, false);
@@ -64,16 +72,33 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
         auto relativePath = std::filesystem::relative(path, m_CurrentPath);
         std::string filenameString = relativePath.filename().string();
 
-        ImGui::ImageButton(m_FolderIcon, { m_ThumbnailSize, m_ThumbnailSize });
-        if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
+        if (directoryEntry.is_directory())
         {
-            if (directoryEntry.is_directory())
+            ImGui::ImageButton(m_FolderIcon, { m_ThumbnailSize, m_ThumbnailSize });
+            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
             {
                 m_CurrentPath /= path.filename();
             }
-            else if (directoryEntry.path().extension() == ".scene")
+        }
+        else if (directoryEntry.is_regular_file())
+        {
+            ImGui::ImageButton(m_FileIcon, { m_ThumbnailSize, m_ThumbnailSize });
+            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
             {
-                // DESIRALIZE SCENE
+                if (directoryEntry.path().extension() == ".scene")
+                {
+                    std::cout << "Clicked on a Scene file" << std::endl;
+
+                    if (m_SceneSerializer.GetCurrentLoadedScene().GetSceneFilePath() != directoryEntry.path())
+                    {
+                        m_SceneSerializer.CreateScene(directoryEntry.path());
+                        m_SceneSerializer.DeserializeScene();
+                    }
+                    else
+                    {
+                        std::cout << "Scene: " << directoryEntry.path() << " is already loaded!" << std::endl;
+                    }
+                }
             }
         }
 

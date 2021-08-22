@@ -30,14 +30,13 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
         }
         else
         {
-            console.AddMessage(AutumnEngine::ERROR, "Creating Project, make sure your project has a path and a name!\n");
+            console.AddMessage(AutumnEngine::MESSAGE, "Creating Project, make sure your project has a path and a name!\n");
         }
     }
 
     ImGui::End();
 }
 
-void AutumnEngine::CreateNewProject::SelectPath(){}
 void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Console& console)
 {
     std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName);

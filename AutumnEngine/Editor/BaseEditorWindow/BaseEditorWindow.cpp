@@ -3,6 +3,7 @@
 AutumnEngine::BaseEditorWindow::BaseEditorWindow()
 {
     m_FPS = 0;
+    m_FrameTime = 0;
     m_Window = nullptr;
 
     m_ShowHierarchyPanel = true;
@@ -208,9 +209,8 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
         m_CurrentPath = "";
         m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console, &m_CurrentPath);
 
-        if (!m_ShowNewProjectPopup && m_CurrentPath != "")
+        if (!m_ShowNewProjectPopup && m_CurrentPath.compare(""))
         {
-            std::cout << "Path: " << m_CurrentPath;
             m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
         }
     }
@@ -219,7 +219,7 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
     {
         m_OpenProjectMenu.OpenProject(m_ShowOpenProjectPopup, m_Console, &m_CurrentPath);
 
-        if(!m_ShowOpenProjectPopup && m_CurrentPath != "")
+        if(!m_ShowOpenProjectPopup && m_CurrentPath.compare(""))
             m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
     }
 

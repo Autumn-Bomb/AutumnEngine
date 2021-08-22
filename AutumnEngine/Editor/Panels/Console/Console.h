@@ -20,11 +20,14 @@ namespace AutumnEngine
 
 			void Clear() { m_Buffer.clear(); m_LineOffsets.clear(); m_LineOffsets.push_back(0); }
 
-		// Console Variables
+		// CONSOLE VARIABLES
 		private:
+			const char* m_Filters[5] = { "NONE", "MESSAGE", "ACTION", "WARNING", "ERROR"};
+			const char* m_CurrentItem = "No Filter";
+			bool m_AutoScroll;
+
 			MessageType m_MessageType;
 			ImVector<int> m_LineOffsets;
-			bool m_AutoScroll;
 			ImGuiTextBuffer m_Buffer;
 	};
 }

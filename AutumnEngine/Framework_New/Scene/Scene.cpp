@@ -13,7 +13,15 @@ void AutumnEngine::Scene::RemoveEntityFromScene(AutumnEngine::Entity& entity)
 
 }
 
-void AutumnEngine::Scene::DrawScene(sf::RenderTexture& renderTexture)
+void AutumnEngine::Scene::BatchScene()
 {
+	for (auto& entity : m_Entities)
+	{
+		// LOOP THROUGH ALL ENTITIES WITH SPRITE RENDERER AND DRAW
+	}
+}
 
+void AutumnEngine::Scene::DrawScene()
+{
+	m_SceneTexture.display();
 }

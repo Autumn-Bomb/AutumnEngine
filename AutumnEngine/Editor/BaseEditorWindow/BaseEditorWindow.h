@@ -19,6 +19,7 @@
 #include "../Menus/OpenProject/OpenProject.h"
 
 #include "../../Framework_New/2DRenderer/2DRenderer.h"
+#include "../../Framework_New/SceneSerializer/SceneSerializer.h"
 
 #include <iostream>
 #include <filesystem>
@@ -60,7 +61,6 @@ namespace AutumnEngine
 
 		// ENGINE VARIABLES 
 		private:
-			sf::RectangleShape rect;
 			std::unique_ptr<AutumnEngine::Renderer> m_Renderer;
 
 			sf::RenderWindow* m_Window;

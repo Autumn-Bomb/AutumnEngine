@@ -4,6 +4,8 @@ AutumnEngine::Console::Console()
 {
     m_AutoScroll = true;
     Clear();
+
+    m_CurrentItem = m_Filters[0];
 }
 AutumnEngine::Console::~Console(){}
 
@@ -59,9 +61,29 @@ void AutumnEngine::Console::ShowConsole()
 
       ImGui::SameLine(ImGui::GetWindowWidth() - 100);
       ImGui::Checkbox("Auto Scroll", &m_AutoScroll);
+      ImGui::SameLine(ImGui::GetWindowWidth() - 210);
+      
+      ImGui::PushItemWidth(100);
+      if (ImGui::BeginCombo("##Filter", m_CurrentItem))
+      {
+          for (int filter = 0; filter < IM_ARRAYSIZE(m_Filters); filter++)
+          {
+              bool isSelected = (m_CurrentItem == m_Filters[filter]);
+
+              if (ImGui::Selectable(m_Filters[filter], isSelected))
+                  m_CurrentItem = m_Filters[filter];
+
+              if (isSelected)
+                  ImGui::SetItemDefaultFocus();
+          }
+          ImGui::EndCombo();
+      }
+      ImGui::PopItemWidth();
 
       ImGui::Separator();
-      ImGui::BeginChild("ScrollbarVertical", ImVec2(0, 0), false, ImGuiWindowFlags_AlwaysVerticalScrollbar);
+
+      if(!m_AutoScroll)
+        ImGui::BeginChild("ScrollbarVertical", ImVec2(0, 0), false, ImGuiWindowFlags_AlwaysVerticalScrollbar);
 
       ImGuiListClipper clipper;
       clipper.Begin(m_LineOffsets.Size);
@@ -80,6 +102,8 @@ void AutumnEngine::Console::ShowConsole()
       if (m_AutoScroll && ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
           ImGui::SetScrollHereY(1.0f);
       
-      ImGui::EndChild();
+      if(!m_AutoScroll)
+        ImGui::EndChild();
+
       ImGui::End();
 }

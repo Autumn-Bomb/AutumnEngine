@@ -129,6 +129,9 @@
   <ItemGroup>
     <None Include="Game\Resources\JSON\init.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Framework\TO BE REPLACED WITH FRAMEWORK_NEW.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{8F520D79-1B6D-459D-A675-3DF6036FB322}</ProjectGuid>

@@ -13,11 +13,21 @@ namespace AutumnEngine
 
 		// FUNCTIONS USED BY THE ENTITY CLASS
 		public:
-		template <typename T>
-		void AddComponent(T component);
+			template <typename T>
+			void AddComponent(T component);
 
-		template <typename T>
-		void RemoveComponent(T component);
+			template <typename T>
+			void RemoveComponent(T component);
+
+		public:
+			template <typename T>
+			bool HasComponent(T component)
+			{
+				if (component != nullptr)
+					return true;
+				else
+					return false;
+			}
 
 		// VARIABLES USED BY THE ENTITY CLASS
 		private:
@@ -25,6 +35,7 @@ namespace AutumnEngine
 			std::string m_Name;
 			std::string m_Tag;
 
+			int m_Layer;
 			bool m_IsActive;
 	};
 }

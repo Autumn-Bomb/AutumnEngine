@@ -1,5 +1,6 @@
 #pragma once
-#include "../../Libraries/Json/json.hpp"
+#include "../Scene/Scene.h"
+#include <iostream>
 
 namespace AutumnEngine
 {
@@ -10,10 +11,15 @@ namespace AutumnEngine
 			~SceneSerializer();
 
 		public:
-			void SerializeScene(nlohmann::json& scene);
-			void DeserializeScene(nlohmann::json& scene);
+			void SerializeScene();
+			void DeserializeScene();
+
+			void CreateScene(std::filesystem::path scenePath);
+
+		public:
+			AutumnEngine::Scene& GetCurrentLoadedScene() { return m_CurrentScene; }
 
 		private:
-			nlohmann::json m_CurrentScene;
+			AutumnEngine::Scene m_CurrentScene;
 	};
 }

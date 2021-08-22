@@ -548,4 +548,9 @@
       <Filter>Framework\Engine Init</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Framework\TO BE REPLACED WITH FRAMEWORK_NEW.txt">
+      <Filter>Framework</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
