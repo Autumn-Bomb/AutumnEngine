@@ -47,7 +47,7 @@ https://discord.gg/bf7Uy6EUxa Here is a link to the discord channel we are curre
 Screenshots:
 
 Editor (WIP):
-![image](https://user-images.githubusercontent.com/48921196/130407644-bb04bdd0-e123-4f4b-b1df-f53c6d96f85d.png)
+![image](https://user-images.githubusercontent.com/48921196/130524053-ea34b4d8-dbb0-4013-847f-0b46a801e8f6.png)
 
 Without Editor:
 
