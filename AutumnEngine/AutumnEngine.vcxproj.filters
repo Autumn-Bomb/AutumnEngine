@@ -1,99 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Framework">
-      <UniqueIdentifier>{8a2ac361-80d3-46e4-9ab3-70a922cb372a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend">
-      <UniqueIdentifier>{938c723b-c09c-43d3-b256-9111d072d30f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Window">
-      <UniqueIdentifier>{a0e10f28-497a-49eb-b8c8-fcd19ad90f4b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Application">
-      <UniqueIdentifier>{31331c1d-f8fc-432c-b3b5-23f5b27a08b0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Scene Management">
-      <UniqueIdentifier>{c29a48ae-d361-4465-b59a-4b35347555c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Scene Management\Scene Manager">
-      <UniqueIdentifier>{6840c432-124c-49e3-b5f6-cf738ebaa136}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Scene Management\Base Scene">
-      <UniqueIdentifier>{e98e95dd-f236-40af-9124-68faae963291}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering">
-      <UniqueIdentifier>{cc5d24dd-9b6c-4a36-96ed-d08bb1bd8343}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Asset Management">
-      <UniqueIdentifier>{21ba74b8-9962-4e2d-a14e-57b1aadc22d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Camera">
-      <UniqueIdentifier>{e24f5a0e-4b40-4ee6-9f46-0ad59a0b3e31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI">
-      <UniqueIdentifier>{95b8e526-4c37-4d33-8808-094c4ca38b00}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\Sprite">
-      <UniqueIdentifier>{4bfe9324-c62e-41bd-bd08-8811295398f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\GUIManager">
-      <UniqueIdentifier>{9bae6ca1-db94-4049-a99a-d9359372d7eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Slider">
-      <UniqueIdentifier>{ec7f1f53-a094-458a-9c3c-c83fe2cfb78b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Toggle">
-      <UniqueIdentifier>{e1e5bb19-9b22-44ea-9b67-65fda6666276}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Button">
-      <UniqueIdentifier>{0d05a671-ed63-4a0e-b834-ff727d45df2d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Text">
-      <UniqueIdentifier>{f04fcb62-cc3b-4a67-a89a-3f864e250082}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Input">
-      <UniqueIdentifier>{ad600b67-7438-435f-b7c3-7cf62abacb81}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Collision">
-      <UniqueIdentifier>{07af4773-3c39-4cc5-94d1-3b1b2cbb280f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Layers">
-      <UniqueIdentifier>{e721cdf0-e62f-4baa-8ece-211e2686f22c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Layers\GUI Layer">
-      <UniqueIdentifier>{b60cb53e-63af-41e5-b2f4-b5b740eb30c2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\UIComponent">
-      <UniqueIdentifier>{2302595f-b322-455d-865d-0b110de6392f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Layers\Game Layer">
-      <UniqueIdentifier>{fd9c2c79-3ef3-41b8-8152-cededa6bade1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Gamestate">
-      <UniqueIdentifier>{ee3fa0f5-efd0-40d9-bc42-a0a280152689}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entity">
-      <UniqueIdentifier>{e7f224eb-7ec7-4dae-bf88-77aeb83b7fcd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD">
-      <UniqueIdentifier>{82697686-ad99-4b3d-a8f8-01dc3187b2fb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD\Particles">
-      <UniqueIdentifier>{6121c9ef-71f5-43dd-809e-dcaaa168ca45}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD\Shaders">
-      <UniqueIdentifier>{4fc53bbb-c328-45e2-988d-7a5034609580}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD\EntityComponentSystem">
-      <UniqueIdentifier>{5003ae9e-ec1d-44da-ba1e-2579c58da903}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD\Sound">
-      <UniqueIdentifier>{16b1e1d8-9272-4bbf-a133-5e94bbb50386}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD\Physics %28Component in ECS%29">
-      <UniqueIdentifier>{4a83ad8e-1f72-4571-b1dc-2082cdbbc878}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Demo">
       <UniqueIdentifier>{19580ab7-22b6-47c4-adb0-12e636772a1a}</UniqueIdentifier>
     </Filter>
@@ -115,26 +22,8 @@
     <Filter Include="Demo\Entities">
       <UniqueIdentifier>{5beafbf9-7bbd-48af-8c6d-76eae5129a38}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Engine Init">
-      <UniqueIdentifier>{c53fb938-7ef0-47b3-8e50-9c25100d164a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\TextureAtlas">
-      <UniqueIdentifier>{80c7b272-a221-43c3-82c3-117ba1459984}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD\Tilemap System">
-      <UniqueIdentifier>{7194efca-ba5a-4c00-beb8-a03bfa4ce2ef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\TOADD\Sprite Animtion">
-      <UniqueIdentifier>{e263ccf4-689a-456e-9b2a-ebb30d1a8052}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\SpriteSheet">
-      <UniqueIdentifier>{7c4e1033-473e-4523-bd60-0edd84e461cb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor">
       <UniqueIdentifier>{4b0239b7-f2aa-4181-aed6-cf0b006694c5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Editor\BaseDemoTest">
-      <UniqueIdentifier>{66f1f24d-efd7-4fdf-9e23-dff4ed4f5467}</UniqueIdentifier>
     </Filter>
     <Filter Include="Editor\ImGUI">
       <UniqueIdentifier>{3d1a433a-d932-4c3b-a9a1-3d62515eea20}</UniqueIdentifier>
@@ -147,9 +36,6 @@
     </Filter>
     <Filter Include="Editor\BaseEditorWindow">
       <UniqueIdentifier>{5a809f66-8722-4b1f-82c6-ce335f546dcb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entt">
-      <UniqueIdentifier>{91354bed-c1c3-437d-90e2-2d64aff33a94}</UniqueIdentifier>
     </Filter>
     <Filter Include="Editor\Windows">
       <UniqueIdentifier>{cdc5ae23-d1a3-412b-b48e-8b402d5be1e4}</UniqueIdentifier>
@@ -187,9 +73,6 @@
     <Filter Include="Editor\Windows\Menus\About">
       <UniqueIdentifier>{2e408aee-75e9-4753-b164-2c85dc3ae41a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Editor\Windows\Menus\NewProject">
-      <UniqueIdentifier>{75e86fbf-825a-4b5f-aaa9-42ed273a45a0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor\Windows\Panels\GameViewport">
       <UniqueIdentifier>{46e1d7bb-02d6-4640-8d40-e7d89037c7cd}</UniqueIdentifier>
     </Filter>
@@ -220,11 +103,104 @@
     <Filter Include="Editor\Windows\Menus\OpenProject">
       <UniqueIdentifier>{33a553f7-d002-4a40-ac64-0049a07db322}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Editor\Windows\Menus\EditColours">
-      <UniqueIdentifier>{def17e57-c87c-480e-9a59-c6c59dd7368c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework_New\Scene">
       <UniqueIdentifier>{6a3adb34-6251-4eff-a05e-ec0e33a2c7be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Application">
+      <UniqueIdentifier>{66f1f24d-efd7-4fdf-9e23-dff4ed4f5467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework_New\Entt">
+      <UniqueIdentifier>{91354bed-c1c3-437d-90e2-2d64aff33a94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{8a2ac361-80d3-46e4-9ab3-70a922cb372a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend">
+      <UniqueIdentifier>{938c723b-c09c-43d3-b256-9111d072d30f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Window">
+      <UniqueIdentifier>{a0e10f28-497a-49eb-b8c8-fcd19ad90f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Scene Management">
+      <UniqueIdentifier>{c29a48ae-d361-4465-b59a-4b35347555c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Scene Management\Scene Manager">
+      <UniqueIdentifier>{6840c432-124c-49e3-b5f6-cf738ebaa136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Scene Management\Base Scene">
+      <UniqueIdentifier>{e98e95dd-f236-40af-9124-68faae963291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering">
+      <UniqueIdentifier>{cc5d24dd-9b6c-4a36-96ed-d08bb1bd8343}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI">
+      <UniqueIdentifier>{95b8e526-4c37-4d33-8808-094c4ca38b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\GUIManager">
+      <UniqueIdentifier>{9bae6ca1-db94-4049-a99a-d9359372d7eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\Slider">
+      <UniqueIdentifier>{ec7f1f53-a094-458a-9c3c-c83fe2cfb78b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\Toggle">
+      <UniqueIdentifier>{e1e5bb19-9b22-44ea-9b67-65fda6666276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\Button">
+      <UniqueIdentifier>{0d05a671-ed63-4a0e-b834-ff727d45df2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\Text">
+      <UniqueIdentifier>{f04fcb62-cc3b-4a67-a89a-3f864e250082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\GUI\UIComponent">
+      <UniqueIdentifier>{2302595f-b322-455d-865d-0b110de6392f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\Sprite">
+      <UniqueIdentifier>{4bfe9324-c62e-41bd-bd08-8811295398f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\TextureAtlas">
+      <UniqueIdentifier>{80c7b272-a221-43c3-82c3-117ba1459984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Rendering\SpriteSheet">
+      <UniqueIdentifier>{7c4e1033-473e-4523-bd60-0edd84e461cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Asset Management">
+      <UniqueIdentifier>{21ba74b8-9962-4e2d-a14e-57b1aadc22d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Camera">
+      <UniqueIdentifier>{e24f5a0e-4b40-4ee6-9f46-0ad59a0b3e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Input">
+      <UniqueIdentifier>{ad600b67-7438-435f-b7c3-7cf62abacb81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Collision">
+      <UniqueIdentifier>{07af4773-3c39-4cc5-94d1-3b1b2cbb280f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Layers">
+      <UniqueIdentifier>{e721cdf0-e62f-4baa-8ece-211e2686f22c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Layers\GUI Layer">
+      <UniqueIdentifier>{b60cb53e-63af-41e5-b2f4-b5b740eb30c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Layers\Game Layer">
+      <UniqueIdentifier>{fd9c2c79-3ef3-41b8-8152-cededa6bade1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Gamestate">
+      <UniqueIdentifier>{ee3fa0f5-efd0-40d9-bc42-a0a280152689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Backend\Entity">
+      <UniqueIdentifier>{e7f224eb-7ec7-4dae-bf88-77aeb83b7fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Application">
+      <UniqueIdentifier>{31331c1d-f8fc-432c-b3b5-23f5b27a08b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Engine Init">
+      <UniqueIdentifier>{c53fb938-7ef0-47b3-8e50-9c25100d164a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Menus\EditorSettings">
+      <UniqueIdentifier>{def17e57-c87c-480e-9a59-c6c59dd7368c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Menus\NewProjectMenu">
+      <UniqueIdentifier>{271e9123-b916-449c-b1dc-618cbd1bfc2c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -297,8 +273,8 @@
     <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp">
       <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
     </ClCompile>
-    <ClCompile Include="Editor\DemoTest\IMGUIDemo.cpp">
-      <Filter>Editor\BaseDemoTest</Filter>
+    <ClCompile Include="Editor\DemoTest\Application.cpp">
+      <Filter>Editor\Application</Filter>
     </ClCompile>
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
       <Filter>Editor\BaseEditorWindow</Filter>
@@ -348,9 +324,6 @@
     <ClCompile Include="Editor\Menus\About\About.cpp">
       <Filter>Editor\Windows\Menus\About</Filter>
     </ClCompile>
-    <ClCompile Include="Editor\Menus\NewProject\NewProject.cpp">
-      <Filter>Editor\Windows\Menus\NewProject</Filter>
-    </ClCompile>
     <ClCompile Include="Editor\Panels\GameViewport\GameViewport.cpp">
       <Filter>Editor\Windows\Panels\GameViewport</Filter>
     </ClCompile>
@@ -369,11 +342,14 @@
     <ClCompile Include="Editor\Menus\OpenProject\OpenProject.cpp">
       <Filter>Editor\Windows\Menus\OpenProject</Filter>
     </ClCompile>
-    <ClCompile Include="Editor\Menus\EditColours\EditColours.cpp">
-      <Filter>Editor\Windows\Menus\EditColours</Filter>
-    </ClCompile>
     <ClCompile Include="Framework_New\Scene\Scene.cpp">
       <Filter>Framework_New\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Menus\EditorSettings\EditorSettings.cpp">
+      <Filter>Editor\Windows\Menus\EditorSettings</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Menus\NewProject\NewProject.cpp">
+      <Filter>Editor\Windows\Menus\NewProjectMenu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -462,7 +438,7 @@
       <Filter>Editor\ImGUI\ImGUISFML</Filter>
     </ClInclude>
     <ClInclude Include="Libraries\Entt\Include\entt.hpp">
-      <Filter>Framework\Backend\Entt</Filter>
+      <Filter>Framework_New\Entt</Filter>
     </ClInclude>
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imconfig.h">
       <Filter>Editor\ImGUI\ImGUI</Filter>
@@ -509,9 +485,6 @@
     <ClInclude Include="Editor\Menus\About\About.h">
       <Filter>Editor\Windows\Menus\About</Filter>
     </ClInclude>
-    <ClInclude Include="Editor\Menus\NewProject\NewProject.h">
-      <Filter>Editor\Windows\Menus\NewProject</Filter>
-    </ClInclude>
     <ClInclude Include="Editor\Panels\GameViewport\GameViewport.h">
       <Filter>Editor\Windows\Panels\GameViewport</Filter>
     </ClInclude>
@@ -536,11 +509,14 @@
     <ClInclude Include="Editor\Menus\OpenProject\OpenProject.h">
       <Filter>Editor\Windows\Menus\OpenProject</Filter>
     </ClInclude>
-    <ClInclude Include="Editor\Menus\EditColours\EditColours.h">
-      <Filter>Editor\Windows\Menus\EditColours</Filter>
+    <ClInclude Include="Editor\Menus\EditColours\EditorSettings.h">
+      <Filter>Editor\Windows\Menus\EditorSettings</Filter>
     </ClInclude>
     <ClInclude Include="Framework_New\Scene\Scene.h">
       <Filter>Framework_New\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Menus\NewProject\NewProject.h">
+      <Filter>Editor\Windows\Menus\NewProjectMenu</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 #include "OpenProject.h"
 
-AutumnEngine::OpenProjectMenu::OpenProjectMenu() {}
+AutumnEngine::OpenProjectMenu::OpenProjectMenu() { m_ShowOpenFileExplorer = false; }
 AutumnEngine::OpenProjectMenu::~OpenProjectMenu() {}
 
 void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Console& console, std::filesystem::path* newProjectPath)
@@ -13,7 +13,14 @@ void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Consol
     ImGui::Text("Project Path");
     ImGui::InputText("##Path", m_ExistingProjectPath, 255);
     ImGui::SameLine();
-    ImGui::Button("Choose Project Path", ImVec2(130, 20));
+    
+    if (ImGui::Button("Choose Project Path", ImVec2(130, 20)))
+    {
+        if (!m_ShowOpenFileExplorer)
+        {
+            m_ShowOpenFileExplorer = true;
+        }
+    }
 
     ImGui::Separator();
 
@@ -27,7 +34,7 @@ void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Consol
         }
         else
         {
-            console.AddMessage(AutumnEngine::MessageType::ERROR, "Opening Project, make sure you've specified a project path!\n");
+            console.AddMessage(AutumnEngine::MessageType::MESSAGE, "Opening Project, make sure you've specified a project path!\n");
         }
     }
 

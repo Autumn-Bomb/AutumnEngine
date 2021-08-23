@@ -44,6 +44,12 @@ namespace AutumnEngine
 			sf::Sprite m_FolderIcon;
 			std::unique_ptr<sf::Texture> m_FolderTexture;
 
+			sf::Sprite m_FileCodeIcon;
+			std::unique_ptr<sf::Texture> m_FileCodeTexture;
+
+			sf::Sprite m_FileSceneIcon;
+			std::unique_ptr<sf::Texture> m_FileSceneTexture;
+
 			sf::Sprite m_FileIcon;
 			std::unique_ptr<sf::Texture> m_FileTexture;
 

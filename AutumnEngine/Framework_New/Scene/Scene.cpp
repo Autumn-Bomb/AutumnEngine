@@ -23,5 +23,5 @@ void AutumnEngine::Scene::BatchScene()
 
 void AutumnEngine::Scene::DrawScene()
 {
-	m_SceneTexture.display();
+	
 }

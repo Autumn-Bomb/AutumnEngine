@@ -13,7 +13,7 @@
 
 #include "../Style/Style.h"
 
-#include "../Menus/EditColours/EditColours.h"
+#include "../Menus/EditorSettings/EditorSettings.h"
 #include "../Menus/About/About.h"
 #include "../Menus/NewProject/NewProject.h"
 #include "../Menus/OpenProject/OpenProject.h"
@@ -37,6 +37,7 @@ namespace AutumnEngine
 		// Editor Methods
 		public:
 			void InitialiseEditor();
+			void LoadEditorIcons();
 			void ProcessEditorEvents(sf::Event& events);
 			void UpdateEditorWindow(sf::Clock deltaTime);
 			void RenderEditor();
@@ -63,6 +64,15 @@ namespace AutumnEngine
 		private:
 			std::unique_ptr<AutumnEngine::Renderer> m_Renderer;
 
+			sf::Sprite m_PlayButtonIcon;
+			std::unique_ptr<sf::Texture> m_PlayButtonTexture;
+
+			sf::Sprite m_PauseButtonIcon;
+			std::unique_ptr<sf::Texture> m_PauseButtonTexture;
+
+			sf::Sprite m_StopButtonIcon;
+			std::unique_ptr<sf::Texture> m_StopButtonTexture;
+
 			sf::RenderWindow* m_Window;
 			ImGuiID m_DockSpaceID = 0;
 
@@ -84,14 +94,14 @@ namespace AutumnEngine
 			bool m_ShowConsole;
 			bool m_ShowSceneViewport;
 			bool m_ShowGameViewport;
-			bool m_ShowEditColoursMenu;
+			bool m_ShowEditorSettings;
 
 		// MENUS USED IN THE EDITOR
 		private:
 			AutumnEngine::About m_AboutMenu;
 			AutumnEngine::CreateNewProject m_NewProjectMenu;
 			AutumnEngine::OpenProjectMenu m_OpenProjectMenu;
-			AutumnEngine::EditEditorColoursMenu m_EditColoursMenu = AutumnEngine::EditEditorColoursMenu();
+			AutumnEngine::EditorSettings m_EditorSettings;
 
 		// PANELS USED IN THE EDITOR
 		private:

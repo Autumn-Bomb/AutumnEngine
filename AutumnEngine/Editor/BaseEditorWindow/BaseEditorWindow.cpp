@@ -18,7 +18,7 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowProperties = true;
 
     m_ShowNewProjectPopup = false;
-    m_ShowEditColoursMenu = false;
+    m_ShowEditorSettings = false;
     m_ShowOpenProjectPopup = false;
     m_ShowInExplorer = false;
 }
@@ -35,6 +35,23 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     m_GameViewport.SetRenderer(*m_Renderer);
 
     m_Style.SetStyle();
+
+    LoadEditorIcons();
+}
+
+void AutumnEngine::BaseEditorWindow::LoadEditorIcons()
+{
+    m_PlayButtonTexture = std::make_unique<sf::Texture>();
+    if (!m_PlayButtonTexture->loadFromFile("Editor/Style/Icons/Buttons/PlayButton.png")) {}
+    m_PlayButtonIcon.setTexture(*m_PlayButtonTexture);
+
+    m_PauseButtonTexture = std::make_unique<sf::Texture>();
+    if (!m_PauseButtonTexture->loadFromFile("Editor/Style/Icons/Buttons/PauseButton.png")) {}
+    m_PauseButtonIcon.setTexture(*m_PauseButtonTexture);
+
+    m_StopButtonTexture = std::make_unique<sf::Texture>();
+    if (!m_StopButtonTexture->loadFromFile("Editor/Style/Icons/Buttons/StopButton.png")) {}
+    m_StopButtonIcon.setTexture(*m_StopButtonTexture);
 }
 
 void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
@@ -102,7 +119,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::MenuItem("Paste"), NULL) { /* Call Paste Method */ }
             ImGui::Separator();
 
-            ImGui::MenuItem("Edit Editor Colours", NULL, &m_ShowEditColoursMenu);
+            ImGui::MenuItem("Editor Settings", NULL, &m_ShowEditorSettings);
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Assets"))
@@ -157,11 +174,11 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
 void AutumnEngine::BaseEditorWindow::HandleControlButtons()
 {
     ImGui::SameLine(ImGui::GetWindowWidth() / 2 - 60);
-    ImGui::Button("Play", ImVec2(40, 20));
+    ImGui::ImageButton(m_PlayButtonIcon);
     ImGui::SameLine();
-    ImGui::Button("Pause", ImVec2(50, 20));
+    ImGui::ImageButton(m_PauseButtonIcon);
     ImGui::SameLine();
-    ImGui::Button("Stop", ImVec2(40, 20));
+    ImGui::ImageButton(m_StopButtonIcon);
 
     ImGui::Separator();
 }
@@ -223,8 +240,8 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
             m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
     }
 
-    if (m_ShowEditColoursMenu)
-        m_EditColoursMenu.ShowEditColoursMenu(m_Style);
+    if (m_ShowEditorSettings)
+        m_EditorSettings.OnImGuiRender(m_ShowEditorSettings);
 
     if (m_ShowInExplorer)
         OpenProjectInExplorer();

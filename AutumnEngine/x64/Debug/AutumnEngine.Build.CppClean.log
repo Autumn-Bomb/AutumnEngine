@@ -10,6 +10,7 @@ e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\inspector.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\hierarchy.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\gameviewport.obj
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\contentbrowser.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\console.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\animation.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\openproject.obj
@@ -17,6 +18,7 @@ e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\menubar.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\editcolours.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\about.obj
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\baseeditorwindow.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\main.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\scene.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\sceneserializer.obj
@@ -45,6 +47,13 @@ e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\testscene.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\splashscreen.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\mainmenu.obj
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\editorsettingsmenu.obj
+e:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.exe
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.ilk
+e:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.pdb
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.command.1.tlog
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.read.1.tlog
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\cl.write.1.tlog
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.command.1.tlog
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.read.1.tlog
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.tlog\link.write.1.tlog

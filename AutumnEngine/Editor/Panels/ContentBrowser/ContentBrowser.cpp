@@ -5,15 +5,23 @@ AutumnEngine::ContentBrowser::ContentBrowser()
     m_FolderTexture = std::make_unique<sf::Texture>();
     m_FileTexture = std::make_unique<sf::Texture>();
     m_FileTextTexture = std::make_unique<sf::Texture>();
+    m_FileCodeTexture = std::make_unique<sf::Texture>();
+    m_FileSceneTexture = std::make_unique<sf::Texture>();
 
-    if (!m_FolderTexture->loadFromFile("Editor/Style/Icons/FolderIcon.png")) {}
+    if (!m_FolderTexture->loadFromFile("Editor/Style/Icons/FileIcons/FolderIcon.png")) {}
     m_FolderIcon.setTexture(*m_FolderTexture);
 
-    if (!m_FileTexture->loadFromFile("Editor/Style/Icons/FileIcon.png")) {}
+    if (!m_FileTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileIcon.png")) {}
     m_FileIcon.setTexture(*m_FileTexture);
 
-    if (!m_FileTextTexture->loadFromFile("Editor/Style/Icons/FileTextIcon.png")) {}
+    if (!m_FileTextTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileTextIcon.png")) {}
     m_FileTextIcon.setTexture(*m_FileTextTexture);
+
+    if (!m_FileCodeTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileCodeIcon.png")) {}
+    m_FileCodeIcon.setTexture(*m_FileCodeTexture);
+
+    if (!m_FileSceneTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileSceneIcon.png")) {}
+    m_FileSceneIcon.setTexture(*m_FileSceneTexture);
 }
 AutumnEngine::ContentBrowser::~ContentBrowser() {}
 
@@ -28,7 +36,7 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
     ImGui::Button("New File", ImVec2(100, 20));
     ImGui::SameLine();
 
-    ImGui::PushItemWidth(150.f);  
+    ImGui::PushItemWidth(150.f);
     ImGui::SliderFloat("##Thumbnail Size", &m_ThumbnailSize, 50, 100);
     ImGui::SameLine();
     ImGui::SliderFloat("##Thumbnail Padding", &m_Padding, 10, 20);
@@ -80,26 +88,33 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
                 m_CurrentPath /= path.filename();
             }
         }
-        else if (directoryEntry.is_regular_file())
+        else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".scene"))
         {
-            ImGui::ImageButton(m_FileIcon, { m_ThumbnailSize, m_ThumbnailSize });
+            ImGui::ImageButton(m_FileSceneIcon, { m_ThumbnailSize, m_ThumbnailSize });
             if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
             {
-                if (directoryEntry.path().extension() == ".scene")
-                {
-                    std::cout << "Clicked on a Scene file" << std::endl;
+                std::cout << "Clicked on a Scene file" << std::endl;
 
-                    if (m_SceneSerializer.GetCurrentLoadedScene().GetSceneFilePath() != directoryEntry.path())
-                    {
-                        m_SceneSerializer.CreateScene(directoryEntry.path());
-                        m_SceneSerializer.DeserializeScene();
-                    }
-                    else
-                    {
-                        std::cout << "Scene: " << directoryEntry.path() << " is already loaded!" << std::endl;
-                    }
+                if (m_SceneSerializer.GetCurrentLoadedScene().GetSceneFilePath() != directoryEntry.path())
+                {
+                    m_SceneSerializer.CreateScene(directoryEntry.path());
+                    m_SceneSerializer.DeserializeScene();
+                }
+                else
+                {
+                    std::cout << "Scene: " << directoryEntry.path() << " is already loaded!" << std::endl;
                 }
             }
+        }
+        else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".cpp"))
+        {
+            ImGui::ImageButton(m_FileCodeIcon, { m_ThumbnailSize, m_ThumbnailSize });
+            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
+        }
+        else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".txt"))
+        {
+            ImGui::ImageButton(m_FileTextIcon, { m_ThumbnailSize, m_ThumbnailSize });
+            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
         }
 
         ImGui::Text(filenameString.c_str());

@@ -1,7 +1,7 @@
 #pragma once
 #include "../../Panels/Console/Console.h"
 
-#include<filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <direct.h>
@@ -21,6 +21,7 @@ namespace AutumnEngine
 			char* GetProjectPath() { return m_ExistingProjectPath; }
 
 		private:
+			bool m_ShowOpenFileExplorer;
 			char m_ExistingProjectPath[255];
 	};
 }
