@@ -49,9 +49,3 @@ Screenshots:
 Editor (WIP):
 ![image](https://user-images.githubusercontent.com/48921196/130524053-ea34b4d8-dbb0-4013-847f-0b46a801e8f6.png)
 
-Without Editor:
-
-![image](https://user-images.githubusercontent.com/48921196/128703243-b9ce015b-ed96-43bd-918d-a72e19910b0b.png)
-![image](https://user-images.githubusercontent.com/48921196/128703304-a0adf6b9-30ac-451b-85e0-f639c01c95e1.png)
-![image](https://user-images.githubusercontent.com/48921196/128703331-5ae3c798-547d-42dd-a568-10563f764b26.png)
-
