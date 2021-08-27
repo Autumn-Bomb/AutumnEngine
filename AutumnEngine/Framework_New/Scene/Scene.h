@@ -13,10 +13,12 @@ namespace AutumnEngine
 
 		// FUNCTIONS USED BY THE SCENE CLASS
 		public:
-			void AddEntityToScene(AutumnEngine::Entity& entity);
-			void RemoveEntityFromScene(AutumnEngine::Entity& entity);
-	
-			void BatchScene();
+			void OnCreate();
+			void OnDestroy();
+			void OnActivate();
+			void OnDeactivate();
+
+		public:
 			void DrawScene();
 
 		// GETTERS AND SETTERS FOR USE BY OTHER CLASSES

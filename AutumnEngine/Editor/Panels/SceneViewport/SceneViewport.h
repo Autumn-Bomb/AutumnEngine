@@ -13,13 +13,11 @@ namespace AutumnEngine
 
 		public:
 			void ShowSceneViewport();
-			void DrawGrid(int rows, int columns);
 
 		public:
 			void SetRenderer(AutumnEngine::Renderer& renderer) { m_Renderer = &renderer; }
 
 		private:
-			sf::VertexArray m_Grid;
 			bool m_RendererCreated;
 			AutumnEngine::Renderer* m_Renderer;
 	};

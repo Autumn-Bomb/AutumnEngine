@@ -54,7 +54,7 @@ namespace AutumnEngine
 				style.Colors[ImGuiCol_PlotHistogram] = ImVec4(0.90f, 0.70f, 0.00f, 1.00f);
 				style.Colors[ImGuiCol_PlotHistogramHovered] = ImVec4(1.00f, 0.60f, 0.00f, 1.00f);
 				style.Colors[ImGuiCol_TextSelectedBg] = ImVec4(0.00f, 0.00f, 1.00f, 0.35f);
-
+				
 				style.WindowMenuButtonPosition = ImGuiDir_None;
 				style.WindowRounding = 0.f;
 

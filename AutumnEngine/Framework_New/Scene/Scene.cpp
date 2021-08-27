@@ -3,23 +3,10 @@
 AutumnEngine::Scene::Scene() {}
 AutumnEngine::Scene::~Scene() {}
 
-void AutumnEngine::Scene::AddEntityToScene(AutumnEngine::Entity& entity)
-{
-
-}
-
-void AutumnEngine::Scene::RemoveEntityFromScene(AutumnEngine::Entity& entity)
-{
-
-}
-
-void AutumnEngine::Scene::BatchScene()
-{
-	for (auto& entity : m_Entities)
-	{
-		// LOOP THROUGH ALL ENTITIES WITH SPRITE RENDERER AND DRAW
-	}
-}
+void AutumnEngine::Scene::OnCreate() {}
+void AutumnEngine::Scene::OnDestroy() {}
+void AutumnEngine::Scene::OnActivate() {}
+void AutumnEngine::Scene::OnDeactivate() {}
 
 void AutumnEngine::Scene::DrawScene()
 {
