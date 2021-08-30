@@ -512,14 +512,14 @@
     <ClInclude Include="Editor\Menus\OpenProject\OpenProject.h">
       <Filter>Editor\Windows\Menus\OpenProject</Filter>
     </ClInclude>
-    <ClInclude Include="Editor\Menus\EditColours\EditorSettings.h">
-      <Filter>Editor\Windows\Menus\EditorSettings</Filter>
-    </ClInclude>
     <ClInclude Include="Framework_New\Scene\Scene.h">
       <Filter>Framework_New\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Editor\Menus\NewProject\NewProject.h">
       <Filter>Editor\Windows\Menus\NewProjectMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Menus\EditorSettings\EditorSettings.h">
+      <Filter>Editor\Windows\Menus\EditorSettings</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -20,7 +20,6 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowNewProjectPopup = false;
     m_ShowEditorSettings = false;
     m_ShowOpenProjectPopup = false;
-    m_ShowInExplorer = false;
 }
 AutumnEngine::BaseEditorWindow::~BaseEditorWindow() {}
 
@@ -31,10 +30,13 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
 
     m_Renderer = std::make_unique<AutumnEngine::Renderer>();
 
+    m_Style = AutumnEngine::Style(ImGui::GetStyle());
+
     m_SceneViewport.SetRenderer(*m_Renderer);
     m_GameViewport.SetRenderer(*m_Renderer);
 
-    m_Style.SetStyle();
+    m_EditorSettings.SetContentBroswer(&m_ContentBrowser);
+    m_EditorSettings.SetStyle(&m_Style);
 
     LoadEditorIcons();
 }
@@ -134,7 +136,6 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
 
             ImGui::Separator();
 
-            ImGui::MenuItem("Show In Explorer", NULL, &m_ShowInExplorer);
             ImGui::MenuItem("Refresh Project", NULL, nullptr);
 
             ImGui::EndMenu();
@@ -242,20 +243,11 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
 
     if (m_ShowEditorSettings)
         m_EditorSettings.OnImGuiRender(m_ShowEditorSettings);
-
-    if (m_ShowInExplorer)
-        OpenProjectInExplorer();
 }
 
 void AutumnEngine::BaseEditorWindow::RenderEditor()
 {
     ImGui::SFML::Render(*m_Window);
-}
-
-void AutumnEngine::BaseEditorWindow::OpenProjectInExplorer()
-{
-    ShellExecute(NULL, "OPEN", "EXPLORER.EXE", m_CurrentPath.string().c_str(), NULL, 1);
-    m_ShowInExplorer = false;
 }
 
 void AutumnEngine::BaseEditorWindow::ShutDownEditor()

@@ -11,14 +11,6 @@ namespace AutumnEngine
 			Entity();
 			~Entity();
 
-		// FUNCTIONS USED BY THE ENTITY CLASS
-		public:
-			template <typename T>
-			void AddComponent(T component);
-
-			template <typename T>
-			void RemoveComponent(T component);
-
 		public:
 			template <typename T>
 			bool HasComponent(T component)

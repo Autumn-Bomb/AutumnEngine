@@ -49,9 +49,6 @@ namespace AutumnEngine
 			void HandleControlButtons();
 			void UpdatePanels();
 
-		public:
-			void OpenProjectInExplorer();
-
 		// GETTERS AND SETTERS
 		public:
 			void SetRenderWindow(sf::RenderWindow& window) { m_Window = &window; }
@@ -81,7 +78,6 @@ namespace AutumnEngine
 			int m_FPS;
 			float m_FrameTime;
 
-			bool m_ShowInExplorer;
 			bool m_ShowAnimation;
 			bool m_ShowProperties;
 			bool m_ShowContentExplorer;

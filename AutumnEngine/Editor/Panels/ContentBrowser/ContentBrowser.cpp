@@ -29,17 +29,14 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
 {
     ImGui::Begin("Content Browser");
 
-    ImGui::Button("Refresh", ImVec2(100, 20));
+    if (ImGui::Button("Refresh", ImVec2(100, 20))) { RefreshProject(); }
     ImGui::SameLine();
-    ImGui::Button("New Folder", ImVec2(100, 20));
+    if (ImGui::Button("New Folder", ImVec2(100, 20))) { CreateNewFolder(); }
     ImGui::SameLine();
-    ImGui::Button("New File", ImVec2(100, 20));
+    if (ImGui::Button("New File", ImVec2(100, 20))) { CreateNewFile(); }
     ImGui::SameLine();
 
     ImGui::PushItemWidth(150.f);
-    ImGui::SliderFloat("##Thumbnail Size", &m_ThumbnailSize, 50, 100);
-    ImGui::SameLine();
-    ImGui::SliderFloat("##Thumbnail Padding", &m_Padding, 10, 20);
     ImGui::SameLine(ImGui::GetWindowWidth() - 150);
     ImGui::InputText("##Search", m_Search, IM_ARRAYSIZE(m_Search));
     ImGui::SameLine(ImGui::GetWindowWidth() - 200);
@@ -67,7 +64,7 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
     }
 
     m_PanelWidth = ImGui::GetContentRegionAvail().x;
-    m_CellSize = m_ThumbnailSize + m_Padding;
+    m_CellSize = m_ThumbnailSize + m_ThumbnailPadding;
     m_ColumnCount = (int)(m_PanelWidth / m_CellSize);
     
     if (m_ColumnCount < 1) m_ColumnCount = 1;
@@ -124,7 +121,7 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
     ImGui::Columns(1);
 }
 
-void AutumnEngine::ContentBrowser::RefreshDirectory()
+void AutumnEngine::ContentBrowser::RefreshProject()
 {
     // TO BE USED FOR REFRESHING THE FOLDER STRUCTURE SO ITS NOT DOING IT EVERY FRAME
 }
@@ -132,11 +129,15 @@ void AutumnEngine::ContentBrowser::RefreshDirectory()
 void AutumnEngine::ContentBrowser::CreateNewFolder()
 {
     // TO BE USED FOR CREATING A NEW FOLDER IN THE CURRENT DIRECTORY
+    if(m_CurrentPath.compare(""))
+        std::filesystem::create_directory(m_CurrentPath.string() + "\\" + m_NewFolderName);
 }
 
 void AutumnEngine::ContentBrowser::CreateNewFile()
 {
     // TO BE USED FOR CREATING A NEW FILE IN THE CURRENT DIRECTORY
+    if (m_CurrentPath.compare(""))
+        std::ofstream(m_CurrentPath.string() + "\\" + m_NewFileName);
 }
 
 void AutumnEngine::ContentBrowser::UpdateProjectPath(std::filesystem::path& projectDirectory)

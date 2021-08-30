@@ -4,7 +4,6 @@
 #include<filesystem>
 #include <fstream>
 #include <iostream>
-#include <direct.h>
 
 #include "SFML/Graphics/RenderWindow.hpp"
 
@@ -18,6 +17,7 @@ namespace AutumnEngine
 
 		public:
 			void OpenNewProjectMenu(bool& open, AutumnEngine::Console& console, std::filesystem::path* newProjectPath);
+			void ChooseProjectPath();
 			void CreateProjectDirectory(AutumnEngine::Console& console);
 
 		public:

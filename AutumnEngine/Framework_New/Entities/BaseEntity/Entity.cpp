@@ -10,15 +10,3 @@ AutumnEngine::Entity::Entity()
 	m_IsActive = true;
 }
 AutumnEngine::Entity::~Entity() {}
-
-template <typename T>
-void AutumnEngine::Entity::AddComponent(T component)
-{
-
-}
-
-template <typename T>
-void AutumnEngine::Entity::RemoveComponent(T component)
-{
-
-}
