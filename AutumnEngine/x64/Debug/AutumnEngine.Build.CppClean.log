@@ -1,12 +1,12 @@
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\vc142.pdb
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\vc142.idb
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\camera.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\basescene.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\assetmanager.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\application.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\stats.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\sceneviewport.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\properties.obj
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\panelmanager.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\inspector.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\hierarchy.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\gameviewport.obj
@@ -19,7 +19,6 @@ e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\editorsettings.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\about.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\baseeditorwindow.obj
-e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\main.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\scene.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\sceneserializer.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\entity.obj
@@ -38,6 +37,7 @@ e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\gui.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\button.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\collision.obj
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\camera.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui_widgets.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui_tables.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\imgui_draw.obj
@@ -47,6 +47,7 @@ e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\testscene.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\splashscreen.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\mainmenu.obj
+e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\main.obj
 e:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.exe
 e:\autumn bomb ltd\current projects\windows\autumnengine\autumnengine\x64\debug\autumnengine.ilk
 e:\autumn bomb ltd\current projects\windows\autumnengine\x64\debug\autumnengine.pdb

@@ -28,16 +28,16 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     ImGui::SFML::Init(*m_Window);
     ImGui::GetIO().ConfigFlags = ImGuiConfigFlags_DockingEnable;
 
-    m_Renderer = std::make_unique<AutumnEngine::Renderer>();
-
     m_Style = AutumnEngine::Style(ImGui::GetStyle());
 
-    m_SceneViewport.SetRenderer(*m_Renderer);
-    m_GameViewport.SetRenderer(*m_Renderer);
+    m_SceneViewport.SetRenderer(m_Renderer);
+    m_GameViewport.SetRenderer(m_Renderer);
 
     m_EditorSettings.SetContentBroswer(&m_ContentBrowser);
     m_EditorSettings.SetStyle(&m_Style);
-
+    
+    //m_EditorSettings.ApplyLastStyle();
+    
     LoadEditorIcons();
 }
 

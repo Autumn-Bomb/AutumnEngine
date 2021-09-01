@@ -1,5 +1,6 @@
 #pragma once
 #include "imgui.h"
+#include "../../Json/json.hpp"
 #include "../../Style/Style.h"
 #include "../../Panels/ContentBrowser/ContentBrowser.h"
 
@@ -14,6 +15,11 @@ namespace AutumnEngine
 		public:
 			void OnImGuiRender(bool& open);
 			void ApplyChanges();
+
+			void ApplyLastStyle();
+
+		public:
+			void SaveEditorSettings();
 
 		public:
 			void RenderContentBrowserSettings();
@@ -31,6 +37,9 @@ namespace AutumnEngine
 			float m_BackgroundColour[4]{ 0.09f, 0.09f, 0.15f, 1.00f };
 
 		private:
+			std::ifstream m_SettingsFile;
+			std::string m_EditorSettingsPath = "Editor/Resources/EditorSettings/settings.resource";
+			nlohmann::json m_EditorSettingsFile;
 			AutumnEngine::Style m_CurrentStyle;
 			AutumnEngine::ContentBrowser* m_ContentBrowser;
 	};

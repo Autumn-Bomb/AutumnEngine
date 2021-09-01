@@ -22,17 +22,15 @@ namespace AutumnEngine
 			void Clear();
 
 		public:
-			sf::Color m_ClearColour;
-
-			unsigned int m_Width;
-			unsigned int m_Height;
-
-		public:
 			sf::RenderTexture* GetRenderTexture() { return &m_RenderTexture; }
 			unsigned int GetWidth() { return m_RenderTexture.getSize().x; }
 			unsigned int GetHeight() { return m_RenderTexture.getSize().y; }
 
 		private:
 			sf::RenderTexture m_RenderTexture;
+			sf::Color m_ClearColour;
+
+			unsigned int m_Width;
+			unsigned int m_Height;
 	};
 }

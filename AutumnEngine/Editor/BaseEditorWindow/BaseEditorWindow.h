@@ -59,7 +59,7 @@ namespace AutumnEngine
 
 		// ENGINE VARIABLES 
 		private:
-			std::unique_ptr<AutumnEngine::Renderer> m_Renderer;
+			AutumnEngine::Renderer m_Renderer;
 
 			sf::Sprite m_PlayButtonIcon;
 			std::unique_ptr<sf::Texture> m_PlayButtonTexture;

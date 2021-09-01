@@ -205,6 +205,12 @@
     <Filter Include="Framework_New\ECS\Systems">
       <UniqueIdentifier>{01b0821a-b1d6-48b0-858a-45396cbeacfe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Editor\Windows\Panel Manager">
+      <UniqueIdentifier>{db847984-eef1-4ab3-ad81-d2ef044e0923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor\Windows\Panels\BasePanel">
+      <UniqueIdentifier>{6324635c-8f1e-42ae-aa50-f0e3dde192dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Main.cpp">
@@ -275,9 +281,6 @@
     </ClCompile>
     <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp">
       <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
-    </ClCompile>
-    <ClCompile Include="Editor\DemoTest\Application.cpp">
-      <Filter>Editor\Application</Filter>
     </ClCompile>
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
       <Filter>Editor\BaseEditorWindow</Filter>
@@ -353,6 +356,12 @@
     </ClCompile>
     <ClCompile Include="Editor\Menus\NewProject\NewProject.cpp">
       <Filter>Editor\Windows\Menus\NewProjectMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Panels\PanelManager\PanelManager.cpp">
+      <Filter>Editor\Windows\Panel Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\Application\Application.cpp">
+      <Filter>Editor\Application</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -520,6 +529,12 @@
     </ClInclude>
     <ClInclude Include="Editor\Menus\EditorSettings\EditorSettings.h">
       <Filter>Editor\Windows\Menus\EditorSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\PanelManager\PanelManager.h">
+      <Filter>Editor\Windows\Panel Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\Panels\BasePanel\BasePanel.h">
+      <Filter>Editor\Windows\Panels\BasePanel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

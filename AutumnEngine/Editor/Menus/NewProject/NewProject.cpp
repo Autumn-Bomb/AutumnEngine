@@ -34,7 +34,7 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
         }
         else
         {
-            console.AddMessage(AutumnEngine::MESSAGE, "Creating Project, make sure your project has a path and a name!\n");
+            console.AddMessage(AutumnEngine::ERROR, "Creating Project, make sure your project has a path and a name!\n");
         }
     }
 
@@ -48,12 +48,15 @@ void AutumnEngine::CreateNewProject::ChooseProjectPath()
 
 void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Console& console)
 {
-    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName);
-    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Assets");
-    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Build");
-    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Library");
-    std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Project Settings");
+    if (std::filesystem::exists(m_NewProjectPath))
+    {
+        std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName);
+        std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Assets");
+        std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Build");
+        std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Library");
+        std::filesystem::create_directory((std::string)m_NewProjectPath + "/" + (std::string)m_NewProjectName + "/" + "Project Settings");
 
-    // Creates the .ae project file and the first empty scene for the game
-    std::ofstream scene((std::string)m_NewProjectPath + "\\" + (std::string)m_NewProjectName + "/Assets/" + (std::string)m_NewProjectName + ".scene");
+        // Creates the .ae project file and the first empty scene for the game
+        std::ofstream scene((std::string)m_NewProjectPath + "\\" + (std::string)m_NewProjectName + "/Assets/" + (std::string)m_NewProjectName + ".scene");
+    }
 }

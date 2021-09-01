@@ -1,7 +1,20 @@
 #include "EditorSettings.h"
 
-AutumnEngine::EditorSettings::EditorSettings() {}
+AutumnEngine::EditorSettings::EditorSettings()
+{
+	m_SettingsFile = std::ifstream("Editor/Resources/EditorSettings/settings.resource");
+	m_SettingsFile >> m_EditorSettingsFile;
+}
 AutumnEngine::EditorSettings::~EditorSettings() {}
+
+void AutumnEngine::EditorSettings::ApplyLastStyle()
+{
+	for (int line = 0; line < m_EditorSettingsFile["Theme"].size(); line++)
+	{
+		m_CurrentStyle.SetBackgroundColour(ImVec4(m_EditorSettingsFile["Theme"][line]["BGR_R"], m_EditorSettingsFile["Theme"][line]["BGR_G"], m_EditorSettingsFile["Theme"][line]["BGR_B"], m_EditorSettingsFile["Theme"][line]["BGR_A"]));
+		m_CurrentStyle.SetTextColour(ImVec4(m_EditorSettingsFile["Theme"][line]["TXT_R"], m_EditorSettingsFile["Theme"][line]["TXT_G"], m_EditorSettingsFile["Theme"][line]["TXT_B"], m_EditorSettingsFile["Theme"][line]["TXT_A"]));
+	}
+}
 
 void AutumnEngine::EditorSettings::OnImGuiRender(bool& open)
 {
@@ -10,13 +23,11 @@ void AutumnEngine::EditorSettings::OnImGuiRender(bool& open)
 	ImGui::Text("Use this menu to change the avaliable Editor Settings");
 	ImGui::Separator();
 
-	// CONTENT BROWSER SETTINGS
+	// RENDER SETTINGS MENUS FOR EACH PANEL
 	RenderContentBrowserSettings();
-
-	// ENGINE SETTINGS
 	RenderOverallStyleSettings();
 
-	if (ImGui::Button("Apply", ImVec2(50, 30))) { ApplyChanges(); open = !open; }
+	if (ImGui::Button("Apply", ImVec2(50, 30))) { ApplyChanges(); }
 
 	ImGui::End();
 }
@@ -62,4 +73,22 @@ void AutumnEngine::EditorSettings::ApplyChanges()
 	m_CurrentStyle.SetTextColour(ImVec4(m_TextColour[0], m_TextColour[1], m_TextColour[2], m_TextColour[3]));
 	m_CurrentStyle.SetBackgroundColour(ImVec4(m_BackgroundColour[0], m_BackgroundColour[1], m_BackgroundColour[2], m_BackgroundColour[3]));
 	m_CurrentStyle.SetFont(m_CurrentStyle.GetFontPath().c_str());
+
+	//SaveEditorSettings();
+}
+
+void AutumnEngine::EditorSettings::SaveEditorSettings()
+{
+	std::ofstream stream(m_EditorSettingsPath);
+
+	m_EditorSettingsFile =
+	{
+	   "Theme",
+	   {
+			"BRG", m_EditorSettingsFile["BGR"] = { m_BackgroundColour[0] * 255, m_BackgroundColour[1] * 255, m_BackgroundColour[2] * 255, m_BackgroundColour[3] * 255} ,
+			"TXT", m_EditorSettingsFile["TXT"] = { m_TextColour[0] * 255, m_TextColour[1] * 255, m_TextColour[2] * 255, m_TextColour[3] * 255}
+	   }
+	};
+
+	stream << std::setw(4) << m_EditorSettingsFile;
 }

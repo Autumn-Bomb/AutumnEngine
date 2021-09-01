@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Editor\Application\Application.cpp" />
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp" />
-    <ClCompile Include="Editor\DemoTest\Application.cpp" />
     <ClCompile Include="Editor\Menus\About\About.cpp" />
     <ClCompile Include="Editor\Menus\EditorSettings\EditorSettings.cpp" />
     <ClCompile Include="Editor\Menus\MenuBar\MenuBar.cpp" />
@@ -32,6 +32,7 @@
     <ClCompile Include="Editor\Panels\GameViewport\GameViewport.cpp" />
     <ClCompile Include="Editor\Panels\Hierarchy\Hierarchy.cpp" />
     <ClCompile Include="Editor\Panels\Inspector\Inspector.cpp" />
+    <ClCompile Include="Editor\Panels\PanelManager\PanelManager.cpp" />
     <ClCompile Include="Editor\Panels\Properties\Properties.cpp" />
     <ClCompile Include="Editor\Panels\SceneViewport\SceneViewport.cpp" />
     <ClCompile Include="Editor\Panels\Stats\Stats.cpp" />
@@ -77,11 +78,13 @@
     <ClInclude Include="Editor\Menus\NewProject\NewProject.h" />
     <ClInclude Include="Editor\Menus\OpenProject\OpenProject.h" />
     <ClInclude Include="Editor\Panels\Animation\Animation.h" />
+    <ClInclude Include="Editor\Panels\BasePanel\BasePanel.h" />
     <ClInclude Include="Editor\Panels\Console\Console.h" />
     <ClInclude Include="Editor\Panels\ContentBrowser\ContentBrowser.h" />
     <ClInclude Include="Editor\Panels\GameViewport\GameViewport.h" />
     <ClInclude Include="Editor\Panels\Hierarchy\Hierarchy.h" />
     <ClInclude Include="Editor\Panels\Inspector\Inspector.h" />
+    <ClInclude Include="Editor\Panels\PanelManager\PanelManager.h" />
     <ClInclude Include="Editor\Panels\Properties\Properties.h" />
     <ClInclude Include="Editor\Panels\SceneViewport\SceneViewport.h" />
     <ClInclude Include="Editor\Panels\Stats\Stats.h" />
