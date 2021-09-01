@@ -44,7 +44,9 @@ This engine as of 12/08/2021 is currently for private use by Autumn Bomb LTD. Th
 Discord:
 https://discord.gg/bf7Uy6EUxa Here is a link to the discord channel we are currently using. Feel free to join and ask questions and have a chat :D
 
+Trello: https://trello.com/b/TZNfdqGI/autumn-engine Here is a link to the public trello board where (most) of the tasks that are being tackled are documented. 
+
 Screenshots:
 
 Editor (WIP):
-![image](https://user-images.githubusercontent.com/48921196/131406145-34c23806-bd8e-41cf-aa18-c7e6104c3bb0.png)
+![Capture](https://user-images.githubusercontent.com/48921196/131739418-009adac8-1376-4a6a-9a02-7c575bad83ac.PNG)
