@@ -18,7 +18,7 @@ int main()
 
     sf::Clock deltaClock;
 
-    while (window.isOpen()) 
+    while (window.isOpen())
     {
         sf::Event event;
         while (window.pollEvent(event))

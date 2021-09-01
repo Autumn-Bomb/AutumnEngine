@@ -36,33 +36,11 @@
     <ClCompile Include="Editor\Panels\Properties\Properties.cpp" />
     <ClCompile Include="Editor\Panels\SceneViewport\SceneViewport.cpp" />
     <ClCompile Include="Editor\Panels\Stats\Stats.cpp" />
-    <ClCompile Include="Framework\Application\Application.cpp" />
-    <ClCompile Include="Framework\AssetManager\AssetManager.cpp" />
-    <ClCompile Include="Framework\BaseScene\BaseScene.cpp" />
-    <ClCompile Include="Framework\Camera\Camera.cpp" />
-    <ClCompile Include="Framework\Collision\Collision.cpp" />
-    <ClCompile Include="Framework\Entity\Entity.cpp" />
-    <ClCompile Include="Framework\GUI\Button\Button.cpp" />
-    <ClCompile Include="Framework\GUI\GUIManager\GUI.cpp" />
-    <ClCompile Include="Framework\GUI\Slider\Slider.cpp" />
-    <ClCompile Include="Framework\GUI\Sprite\Sprite.cpp" />
-    <ClCompile Include="Framework\GUI\Text\Text.cpp" />
-    <ClCompile Include="Framework\GUI\Toggle\Toggle.cpp" />
-    <ClCompile Include="Framework\Input\Input.cpp" />
-    <ClCompile Include="Framework\Layers\GameLayer\GameLayer.cpp" />
-    <ClCompile Include="Framework\Layers\GUILayer\GUILayer.cpp" />
-    <ClCompile Include="Framework\SceneManager\SceneManager.cpp" />
-    <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp" />
-    <ClCompile Include="Framework\TextureAtlas\TextureAtlas.cpp" />
-    <ClCompile Include="Framework\Window\Window.cpp" />
-    <ClCompile Include="Framework_NEw\2DRenderer\2DRenderer.cpp" />
-    <ClCompile Include="Framework_New\Entities\BaseEntity\Entity.cpp" />
-    <ClCompile Include="Framework_New\SceneSerializer\SceneSerializer.cpp" />
-    <ClCompile Include="Framework_New\Scene\Scene.cpp" />
-    <ClCompile Include="Game\Main.cpp" />
-    <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp" />
-    <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp" />
-    <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp" />
+    <ClCompile Include="Framework\2DRenderer\2DRenderer.cpp" />
+    <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp" />
+    <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp" />
+    <ClCompile Include="Framework\Scene\Scene.cpp" />
+    <ClCompile Include="Framework\Sprite\Sprite.cpp" />
     <ClCompile Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp" />
     <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui.cpp" />
     <ClCompile Include="Libraries\DearIMGUI\Include\imgui\imgui_demo.cpp" />
@@ -89,35 +67,12 @@
     <ClInclude Include="Editor\Panels\SceneViewport\SceneViewport.h" />
     <ClInclude Include="Editor\Panels\Stats\Stats.h" />
     <ClInclude Include="Editor\Style\Style.h" />
-    <ClInclude Include="Framework\Application\Application.h" />
-    <ClInclude Include="Framework\AssetManager\AssetManager.h" />
-    <ClInclude Include="Framework\BaseScene\BaseScene.h" />
-    <ClInclude Include="Framework\Camera\Camera.h" />
-    <ClInclude Include="Framework\Collision\Collision.h" />
-    <ClInclude Include="Framework\Entity\Entity.h" />
-    <ClInclude Include="Framework\GameState\GameState.h" />
-    <ClInclude Include="Framework\GUI\Button\Button.h" />
-    <ClInclude Include="Framework\GUI\GUIManager\GUI.h" />
-    <ClInclude Include="Framework\GUI\Slider\Slider.h" />
-    <ClInclude Include="Framework\GUI\Sprite\Sprite.h" />
-    <ClInclude Include="Framework\GUI\Text\Text.h" />
-    <ClInclude Include="Framework\GUI\Toggle\Toggle.h" />
-    <ClInclude Include="Framework\GUI\UIComponent\UIComponent.h" />
-    <ClInclude Include="Framework\Input\Input.h" />
-    <ClInclude Include="Framework\Layers\GameLayer\GameLayer.h" />
-    <ClInclude Include="Framework\Layers\GUILayer\GUILayer.h" />
-    <ClInclude Include="Framework\SceneManager\SceneManager.h" />
-    <ClInclude Include="Framework\Spritesheets\Spritesheet.h" />
-    <ClInclude Include="Framework\TextureAtlas\TextureAtlas.h" />
-    <ClInclude Include="Framework\Window\Window.h" />
-    <ClInclude Include="Framework_NEw\2DRenderer\2DRenderer.h" />
-    <ClInclude Include="Framework_New\Entities\BaseEntity\Entity.h" />
-    <ClInclude Include="Framework_New\Entities\Components\Components.h" />
-    <ClInclude Include="Framework_New\SceneSerializer\SceneSerializer.h" />
-    <ClInclude Include="Framework_New\Scene\Scene.h" />
-    <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h" />
-    <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h" />
-    <ClInclude Include="Game\Scenes\Test Scene\TestScene.h" />
+    <ClInclude Include="Framework\2DRenderer\2DRenderer.h" />
+    <ClInclude Include="Framework\Entities\BaseEntity\Entity.h" />
+    <ClInclude Include="Framework\Entities\Components\Components.h" />
+    <ClInclude Include="Framework\SceneSerializer\SceneSerializer.h" />
+    <ClInclude Include="Framework\Scene\Scene.h" />
+    <ClInclude Include="Framework\Sprite\Sprite.h" />
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imconfig-SFML.h" />
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.h" />
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h" />
@@ -128,12 +83,6 @@
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_textedit.h" />
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_truetype.h" />
     <ClInclude Include="Libraries\Entt\Include\entt.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Game\Resources\JSON\init.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Framework\TO BE REPLACED WITH FRAMEWORK_NEW.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

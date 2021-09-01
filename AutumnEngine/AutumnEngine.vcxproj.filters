@@ -1,27 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Demo">
-      <UniqueIdentifier>{19580ab7-22b6-47c4-adb0-12e636772a1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Demo\Scenes">
-      <UniqueIdentifier>{5e44969e-fefc-4acd-84de-50c42dea461a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Demo\Scenes\Test Scene">
-      <UniqueIdentifier>{b5a6568d-b4b8-40e9-a2bf-a2050874216f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Demo\Scenes\MainMenu">
-      <UniqueIdentifier>{2125d8a4-baf3-4ee0-a225-7adc7d0bc932}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Demo\Scenes\Splashscreen">
-      <UniqueIdentifier>{35fe2572-2572-4d9c-be7e-d5ebd36192b8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Demo\Main">
-      <UniqueIdentifier>{c57bf1db-416d-4863-ae41-201ed45c430f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Demo\Entities">
-      <UniqueIdentifier>{5beafbf9-7bbd-48af-8c6d-76eae5129a38}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor">
       <UniqueIdentifier>{4b0239b7-f2aa-4181-aed6-cf0b006694c5}</UniqueIdentifier>
     </Filter>
@@ -79,113 +58,14 @@
     <Filter Include="Editor\Style">
       <UniqueIdentifier>{e1552f26-f0eb-4f8f-a635-8904e668adb0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework_New">
-      <UniqueIdentifier>{ba9fab4c-d7c5-480d-8480-8ad1d7a99674}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework_New\2DRenderer">
-      <UniqueIdentifier>{48118b29-d710-4ec3-b8ba-811b2a00bd65}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor\Windows\Menus\MenuBar">
       <UniqueIdentifier>{5126f83a-95a4-4e5d-9cd7-cfe6eddfd423}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework_New\SceneSerializer">
-      <UniqueIdentifier>{19d307ff-362d-4b1a-bbb3-f5888abbf347}</UniqueIdentifier>
     </Filter>
     <Filter Include="Editor\Windows\Menus\OpenProject">
       <UniqueIdentifier>{33a553f7-d002-4a40-ac64-0049a07db322}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework_New\Scene">
-      <UniqueIdentifier>{6a3adb34-6251-4eff-a05e-ec0e33a2c7be}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor\Application">
       <UniqueIdentifier>{66f1f24d-efd7-4fdf-9e23-dff4ed4f5467}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework_New\Entt">
-      <UniqueIdentifier>{91354bed-c1c3-437d-90e2-2d64aff33a94}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework">
-      <UniqueIdentifier>{8a2ac361-80d3-46e4-9ab3-70a922cb372a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend">
-      <UniqueIdentifier>{938c723b-c09c-43d3-b256-9111d072d30f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Window">
-      <UniqueIdentifier>{a0e10f28-497a-49eb-b8c8-fcd19ad90f4b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Scene Management">
-      <UniqueIdentifier>{c29a48ae-d361-4465-b59a-4b35347555c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Scene Management\Scene Manager">
-      <UniqueIdentifier>{6840c432-124c-49e3-b5f6-cf738ebaa136}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Scene Management\Base Scene">
-      <UniqueIdentifier>{e98e95dd-f236-40af-9124-68faae963291}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering">
-      <UniqueIdentifier>{cc5d24dd-9b6c-4a36-96ed-d08bb1bd8343}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI">
-      <UniqueIdentifier>{95b8e526-4c37-4d33-8808-094c4ca38b00}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\GUIManager">
-      <UniqueIdentifier>{9bae6ca1-db94-4049-a99a-d9359372d7eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Slider">
-      <UniqueIdentifier>{ec7f1f53-a094-458a-9c3c-c83fe2cfb78b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Toggle">
-      <UniqueIdentifier>{e1e5bb19-9b22-44ea-9b67-65fda6666276}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Button">
-      <UniqueIdentifier>{0d05a671-ed63-4a0e-b834-ff727d45df2d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\Text">
-      <UniqueIdentifier>{f04fcb62-cc3b-4a67-a89a-3f864e250082}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\GUI\UIComponent">
-      <UniqueIdentifier>{2302595f-b322-455d-865d-0b110de6392f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\Sprite">
-      <UniqueIdentifier>{4bfe9324-c62e-41bd-bd08-8811295398f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\TextureAtlas">
-      <UniqueIdentifier>{80c7b272-a221-43c3-82c3-117ba1459984}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Rendering\SpriteSheet">
-      <UniqueIdentifier>{7c4e1033-473e-4523-bd60-0edd84e461cb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Asset Management">
-      <UniqueIdentifier>{21ba74b8-9962-4e2d-a14e-57b1aadc22d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Camera">
-      <UniqueIdentifier>{e24f5a0e-4b40-4ee6-9f46-0ad59a0b3e31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Input">
-      <UniqueIdentifier>{ad600b67-7438-435f-b7c3-7cf62abacb81}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Collision">
-      <UniqueIdentifier>{07af4773-3c39-4cc5-94d1-3b1b2cbb280f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Layers">
-      <UniqueIdentifier>{e721cdf0-e62f-4baa-8ece-211e2686f22c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Layers\GUI Layer">
-      <UniqueIdentifier>{b60cb53e-63af-41e5-b2f4-b5b740eb30c2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Layers\Game Layer">
-      <UniqueIdentifier>{fd9c2c79-3ef3-41b8-8152-cededa6bade1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Gamestate">
-      <UniqueIdentifier>{ee3fa0f5-efd0-40d9-bc42-a0a280152689}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Backend\Entity">
-      <UniqueIdentifier>{e7f224eb-7ec7-4dae-bf88-77aeb83b7fcd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Application">
-      <UniqueIdentifier>{31331c1d-f8fc-432c-b3b5-23f5b27a08b0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Engine Init">
-      <UniqueIdentifier>{c53fb938-7ef0-47b3-8e50-9c25100d164a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Editor\Windows\Menus\EditorSettings">
       <UniqueIdentifier>{def17e57-c87c-480e-9a59-c6c59dd7368c}</UniqueIdentifier>
@@ -193,95 +73,53 @@
     <Filter Include="Editor\Windows\Menus\NewProjectMenu">
       <UniqueIdentifier>{271e9123-b916-449c-b1dc-618cbd1bfc2c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework_New\ECS">
-      <UniqueIdentifier>{58cc4532-f77f-4a78-8908-86c901f3153b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework_New\ECS\BaseEntity">
-      <UniqueIdentifier>{85fc0578-cc00-4d5b-bef7-9a1adf15b6cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework_New\ECS\Components">
-      <UniqueIdentifier>{87cb8798-9cee-4a75-85b0-e819b113e747}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework_New\ECS\Systems">
-      <UniqueIdentifier>{01b0821a-b1d6-48b0-858a-45396cbeacfe}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor\Windows\Panel Manager">
       <UniqueIdentifier>{db847984-eef1-4ab3-ad81-d2ef044e0923}</UniqueIdentifier>
     </Filter>
     <Filter Include="Editor\Windows\Panels\BasePanel">
       <UniqueIdentifier>{6324635c-8f1e-42ae-aa50-f0e3dde192dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{ba9fab4c-d7c5-480d-8480-8ad1d7a99674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\2DRenderer">
+      <UniqueIdentifier>{48118b29-d710-4ec3-b8ba-811b2a00bd65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\SceneSerializer">
+      <UniqueIdentifier>{19d307ff-362d-4b1a-bbb3-f5888abbf347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Scene">
+      <UniqueIdentifier>{6a3adb34-6251-4eff-a05e-ec0e33a2c7be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Entt">
+      <UniqueIdentifier>{91354bed-c1c3-437d-90e2-2d64aff33a94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\ECS">
+      <UniqueIdentifier>{58cc4532-f77f-4a78-8908-86c901f3153b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\ECS\BaseEntity">
+      <UniqueIdentifier>{85fc0578-cc00-4d5b-bef7-9a1adf15b6cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\ECS\Components">
+      <UniqueIdentifier>{87cb8798-9cee-4a75-85b0-e819b113e747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\ECS\Systems">
+      <UniqueIdentifier>{01b0821a-b1d6-48b0-858a-45396cbeacfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\To Be Added">
+      <UniqueIdentifier>{eabafa77-98fa-4d20-a9c1-08c7ebaf9366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\To Be Added\ResourceManagement">
+      <UniqueIdentifier>{2d0aae58-7840-4dcc-93cf-e31fe0f0477e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\To Be Added\MemoryAllocator">
+      <UniqueIdentifier>{f3446d6a-e43c-420d-8df0-fd133f89f4ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Sprite">
+      <UniqueIdentifier>{3da505df-ccd8-447c-a656-feed11043d63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game\Main.cpp">
-      <Filter>Demo\Main</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Scenes\Main Menu\MainMenu.cpp">
-      <Filter>Demo\Scenes\MainMenu</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Scenes\Test Scene\TestScene.cpp">
-      <Filter>Demo\Scenes\Test Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Scenes\Splashscreen\Splashscreen.cpp">
-      <Filter>Demo\Scenes\Splashscreen</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\AssetManager\AssetManager.cpp">
-      <Filter>Framework\Backend\Asset Management</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Camera\Camera.cpp">
-      <Filter>Framework\Backend\Camera</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Collision\Collision.cpp">
-      <Filter>Framework\Backend\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Input\Input.cpp">
-      <Filter>Framework\Backend\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Layers\GUILayer\GUILayer.cpp">
-      <Filter>Framework\Backend\Layers\GUI Layer</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Layers\GameLayer\GameLayer.cpp">
-      <Filter>Framework\Backend\Layers\Game Layer</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\GUI\Button\Button.cpp">
-      <Filter>Framework\Backend\Rendering\GUI\Button</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\GUI\GUIManager\GUI.cpp">
-      <Filter>Framework\Backend\Rendering\GUI\GUIManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\GUI\Slider\Slider.cpp">
-      <Filter>Framework\Backend\Rendering\GUI\Slider</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\GUI\Text\Text.cpp">
-      <Filter>Framework\Backend\Rendering\GUI\Text</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\GUI\Toggle\Toggle.cpp">
-      <Filter>Framework\Backend\Rendering\GUI\Toggle</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\GUI\Sprite\Sprite.cpp">
-      <Filter>Framework\Backend\Rendering\Sprite</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\BaseScene\BaseScene.cpp">
-      <Filter>Framework\Backend\Scene Management\Base Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\SceneManager\SceneManager.cpp">
-      <Filter>Framework\Backend\Scene Management\Scene Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Window\Window.cpp">
-      <Filter>Framework\Backend\Window</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Application\Application.cpp">
-      <Filter>Framework\Application</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Entity\Entity.cpp">
-      <Filter>Framework\Backend\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\TextureAtlas\TextureAtlas.cpp">
-      <Filter>Framework\Backend\Rendering\TextureAtlas</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Spritesheets\Spritesheet.cpp">
-      <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
-    </ClCompile>
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
       <Filter>Editor\BaseEditorWindow</Filter>
     </ClCompile>
@@ -333,23 +171,11 @@
     <ClCompile Include="Editor\Panels\GameViewport\GameViewport.cpp">
       <Filter>Editor\Windows\Panels\GameViewport</Filter>
     </ClCompile>
-    <ClCompile Include="Framework_NEw\2DRenderer\2DRenderer.cpp">
-      <Filter>Framework_New\2DRenderer</Filter>
-    </ClCompile>
     <ClCompile Include="Editor\Menus\MenuBar\MenuBar.cpp">
       <Filter>Editor\Windows\Menus\MenuBar</Filter>
     </ClCompile>
-    <ClCompile Include="Framework_New\Entities\BaseEntity\Entity.cpp">
-      <Filter>Framework_New\ECS\BaseEntity</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework_New\SceneSerializer\SceneSerializer.cpp">
-      <Filter>Framework_New\SceneSerializer</Filter>
-    </ClCompile>
     <ClCompile Include="Editor\Menus\OpenProject\OpenProject.cpp">
       <Filter>Editor\Windows\Menus\OpenProject</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework_New\Scene\Scene.cpp">
-      <Filter>Framework_New\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Editor\Menus\EditorSettings\EditorSettings.cpp">
       <Filter>Editor\Windows\Menus\EditorSettings</Filter>
@@ -363,80 +189,23 @@
     <ClCompile Include="Editor\Application\Application.cpp">
       <Filter>Editor\Application</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\Sprite\Sprite.cpp">
+      <Filter>Framework\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\2DRenderer\2DRenderer.cpp">
+      <Filter>Framework\2DRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp">
+      <Filter>Framework\ECS\BaseEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Scene\Scene.cpp">
+      <Filter>Framework\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp">
+      <Filter>Framework\SceneSerializer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game\Scenes\Main Menu\MainMenu.h">
-      <Filter>Demo\Scenes\MainMenu</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Scenes\Test Scene\TestScene.h">
-      <Filter>Demo\Scenes\Test Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Scenes\Splashscreen\Splashscreen.h">
-      <Filter>Demo\Scenes\Splashscreen</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\AssetManager\AssetManager.h">
-      <Filter>Framework\Backend\Asset Management</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Camera\Camera.h">
-      <Filter>Framework\Backend\Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Collision\Collision.h">
-      <Filter>Framework\Backend\Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GameState\GameState.h">
-      <Filter>Framework\Backend\Gamestate</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Input\Input.h">
-      <Filter>Framework\Backend\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Layers\GUILayer\GUILayer.h">
-      <Filter>Framework\Backend\Layers\GUI Layer</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Layers\GameLayer\GameLayer.h">
-      <Filter>Framework\Backend\Layers\Game Layer</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GUI\Button\Button.h">
-      <Filter>Framework\Backend\Rendering\GUI\Button</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GUI\GUIManager\GUI.h">
-      <Filter>Framework\Backend\Rendering\GUI\GUIManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GUI\Slider\Slider.h">
-      <Filter>Framework\Backend\Rendering\GUI\Slider</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GUI\Text\Text.h">
-      <Filter>Framework\Backend\Rendering\GUI\Text</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GUI\Toggle\Toggle.h">
-      <Filter>Framework\Backend\Rendering\GUI\Toggle</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GUI\UIComponent\UIComponent.h">
-      <Filter>Framework\Backend\Rendering\GUI\UIComponent</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GUI\Sprite\Sprite.h">
-      <Filter>Framework\Backend\Rendering\Sprite</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\BaseScene\BaseScene.h">
-      <Filter>Framework\Backend\Scene Management\Base Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\SceneManager\SceneManager.h">
-      <Filter>Framework\Backend\Scene Management\Scene Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Window\Window.h">
-      <Filter>Framework\Backend\Window</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Application\Application.h">
-      <Filter>Framework\Application</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Entity\Entity.h">
-      <Filter>Framework\Backend\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\TextureAtlas\TextureAtlas.h">
-      <Filter>Framework\Backend\Rendering\TextureAtlas</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Spritesheets\Spritesheet.h">
-      <Filter>Framework\Backend\Rendering\SpriteSheet</Filter>
-    </ClInclude>
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
       <Filter>Editor\BaseEditorWindow</Filter>
     </ClInclude>
@@ -450,7 +219,7 @@
       <Filter>Editor\ImGUI\ImGUISFML</Filter>
     </ClInclude>
     <ClInclude Include="Libraries\Entt\Include\entt.hpp">
-      <Filter>Framework_New\Entt</Filter>
+      <Filter>Framework\Entt</Filter>
     </ClInclude>
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imconfig.h">
       <Filter>Editor\ImGUI\ImGUI</Filter>
@@ -503,26 +272,11 @@
     <ClInclude Include="Editor\Style\Style.h">
       <Filter>Editor\Style</Filter>
     </ClInclude>
-    <ClInclude Include="Framework_NEw\2DRenderer\2DRenderer.h">
-      <Filter>Framework_New\2DRenderer</Filter>
-    </ClInclude>
     <ClInclude Include="Editor\Menus\MenuBar\MenuBar.h">
       <Filter>Editor\Windows\Menus\MenuBar</Filter>
     </ClInclude>
-    <ClInclude Include="Framework_New\Entities\Components\Components.h">
-      <Filter>Framework_New\ECS\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework_New\Entities\BaseEntity\Entity.h">
-      <Filter>Framework_New\ECS\BaseEntity</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework_New\SceneSerializer\SceneSerializer.h">
-      <Filter>Framework_New\SceneSerializer</Filter>
-    </ClInclude>
     <ClInclude Include="Editor\Menus\OpenProject\OpenProject.h">
       <Filter>Editor\Windows\Menus\OpenProject</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework_New\Scene\Scene.h">
-      <Filter>Framework_New\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Editor\Menus\NewProject\NewProject.h">
       <Filter>Editor\Windows\Menus\NewProjectMenu</Filter>
@@ -536,15 +290,23 @@
     <ClInclude Include="Editor\Panels\BasePanel\BasePanel.h">
       <Filter>Editor\Windows\Panels\BasePanel</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Game\Resources\JSON\init.json">
-      <Filter>Framework\Engine Init</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Framework\TO BE REPLACED WITH FRAMEWORK_NEW.txt">
-      <Filter>Framework</Filter>
-    </Text>
+    <ClInclude Include="Framework\Sprite\Sprite.h">
+      <Filter>Framework\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\2DRenderer\2DRenderer.h">
+      <Filter>Framework\2DRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Entities\BaseEntity\Entity.h">
+      <Filter>Framework\ECS\BaseEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Entities\Components\Components.h">
+      <Filter>Framework\ECS\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Scene\Scene.h">
+      <Filter>Framework\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\SceneSerializer\SceneSerializer.h">
+      <Filter>Framework\SceneSerializer</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -228,13 +228,12 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
         m_NewProjectMenu.OpenNewProjectMenu(m_ShowNewProjectPopup, m_Console, &m_CurrentPath);
 
         if (!m_ShowNewProjectPopup && m_CurrentPath.compare(""))
-        {
             m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
-        }
     }
         
     if (m_ShowOpenProjectPopup)
     {
+        m_CurrentPath = "";
         m_OpenProjectMenu.OpenProject(m_ShowOpenProjectPopup, m_Console, &m_CurrentPath);
 
         if(!m_ShowOpenProjectPopup && m_CurrentPath.compare(""))

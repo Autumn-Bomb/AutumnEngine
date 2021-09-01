@@ -18,8 +18,8 @@
 #include "../Menus/NewProject/NewProject.h"
 #include "../Menus/OpenProject/OpenProject.h"
 
-#include "../../Framework_New/2DRenderer/2DRenderer.h"
-#include "../../Framework_New/SceneSerializer/SceneSerializer.h"
+#include "../../Framework/2DRenderer/2DRenderer.h"
+#include "../../Framework/SceneSerializer/SceneSerializer.h"
 
 #include <iostream>
 #include <filesystem>
