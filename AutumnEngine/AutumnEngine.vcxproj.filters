@@ -204,6 +204,9 @@
     <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp">
       <Filter>Framework\SceneSerializer</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\AssetManager\AssetManager.cpp">
+      <Filter>Framework\To Be Added\ResourceManagement</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
@@ -307,6 +310,9 @@
     </ClInclude>
     <ClInclude Include="Framework\SceneSerializer\SceneSerializer.h">
       <Filter>Framework\SceneSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\AssetManager\AssetManager.h">
+      <Filter>Framework\To Be Added\ResourceManagement</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

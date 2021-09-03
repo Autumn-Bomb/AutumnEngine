@@ -37,6 +37,7 @@
     <ClCompile Include="Editor\Panels\SceneViewport\SceneViewport.cpp" />
     <ClCompile Include="Editor\Panels\Stats\Stats.cpp" />
     <ClCompile Include="Framework\2DRenderer\2DRenderer.cpp" />
+    <ClCompile Include="Framework\AssetManager\AssetManager.cpp" />
     <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp" />
     <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp" />
     <ClCompile Include="Framework\Scene\Scene.cpp" />
@@ -68,6 +69,7 @@
     <ClInclude Include="Editor\Panels\Stats\Stats.h" />
     <ClInclude Include="Editor\Style\Style.h" />
     <ClInclude Include="Framework\2DRenderer\2DRenderer.h" />
+    <ClInclude Include="Framework\AssetManager\AssetManager.h" />
     <ClInclude Include="Framework\Entities\BaseEntity\Entity.h" />
     <ClInclude Include="Framework\Entities\Components\Components.h" />
     <ClInclude Include="Framework\SceneSerializer\SceneSerializer.h" />
