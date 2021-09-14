@@ -21,7 +21,7 @@ void AutumnEngine::About::ShowAboutMenu(bool& open)
 
     ImGui::Separator();
 
-    if (ImGui::Button("Ok", ImVec2(30, 20))) { open = !open; }
+    if (ImGui::Button("OK", ImVec2(30, 20))) { open = !open; }
 
     ImGui::End();
 }

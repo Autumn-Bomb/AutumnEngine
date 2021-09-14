@@ -15,18 +15,26 @@ void AutumnEngine::SceneSerializer::DeserializeScene()
 	std::ifstream sceneData (m_CurrentScene.GetSceneFilePath());
 	sceneData >> m_SceneData;
 
-	for (int line = 0; line < m_SceneData["Entities"].size(); line++)
+	if (m_SceneData["Entities"].size() != 0)
 	{
-		std::cout << "Entity Name: " << m_SceneData["Entities"][line]["m_Name"] << std::endl;
-		std::cout << "Entity Tag: " << m_SceneData["Entities"][line]["m_Tag"] << std::endl;
-		std::cout << "Entity Layer: " << m_SceneData["Entities"][line]["m_Layer"] << std::endl;
-		std::cout << "Entity ID: " << m_SceneData["Entities"][line]["m_ID"] << std::endl;
-		std::cout << "Entity Active State: " << m_SceneData["Entities"][line]["m_IsActive"] << std::endl;
-		std::cout << "Entity Component IDs: " << m_SceneData["Entities"][line]["m_Components"] << std::endl;
+		for (int line = 0; line < m_SceneData["Entities"].size(); line++)
+		{
+			std::cout << "Entity Name: " << m_SceneData["Entities"][line]["m_Name"] << std::endl;
+			std::cout << "Entity Tag: " << m_SceneData["Entities"][line]["m_Tag"] << std::endl;
+			std::cout << "Entity Layer: " << m_SceneData["Entities"][line]["m_Layer"] << std::endl;
+			std::cout << "Entity ID: " << m_SceneData["Entities"][line]["m_ID"] << std::endl;
+			std::cout << "Entity Active State: " << m_SceneData["Entities"][line]["m_IsActive"] << std::endl;
+			std::cout << "Entity Component IDs: " << m_SceneData["Entities"][line]["m_Components"] << std::endl;
+		}
 	}
 }
 
 void AutumnEngine::SceneSerializer::SerializeScene()
 {
 	std::cout << "Serializing Scene" << std::endl;
+
+	/*for (Entity entity : m_CurrentScene.GetAllEntitysFromScene())
+	{
+
+	}*/
 }

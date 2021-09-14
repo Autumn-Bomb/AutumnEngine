@@ -13,6 +13,5 @@ namespace AutumnEngine
 			void LoadResource(T resource);
 
 		private:
-
 	};
 }

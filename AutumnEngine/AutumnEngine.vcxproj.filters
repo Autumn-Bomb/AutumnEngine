@@ -106,17 +106,14 @@
     <Filter Include="Framework\ECS\Systems">
       <UniqueIdentifier>{01b0821a-b1d6-48b0-858a-45396cbeacfe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\To Be Added">
-      <UniqueIdentifier>{eabafa77-98fa-4d20-a9c1-08c7ebaf9366}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\To Be Added\ResourceManagement">
-      <UniqueIdentifier>{2d0aae58-7840-4dcc-93cf-e31fe0f0477e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\To Be Added\MemoryAllocator">
-      <UniqueIdentifier>{f3446d6a-e43c-420d-8df0-fd133f89f4ca}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Sprite">
       <UniqueIdentifier>{3da505df-ccd8-447c-a656-feed11043d63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\ResourceManagement">
+      <UniqueIdentifier>{2d0aae58-7840-4dcc-93cf-e31fe0f0477e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\MemoryAllocator">
+      <UniqueIdentifier>{f3446d6a-e43c-420d-8df0-fd133f89f4ca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -205,7 +202,7 @@
       <Filter>Framework\SceneSerializer</Filter>
     </ClCompile>
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp">
-      <Filter>Framework\To Be Added\ResourceManagement</Filter>
+      <Filter>Framework\ResourceManagement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -312,7 +309,7 @@
       <Filter>Framework\SceneSerializer</Filter>
     </ClInclude>
     <ClInclude Include="Framework\AssetManager\AssetManager.h">
-      <Filter>Framework\To Be Added\ResourceManagement</Filter>
+      <Filter>Framework\ResourceManagement</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

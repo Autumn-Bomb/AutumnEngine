@@ -25,7 +25,7 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
 
     if (ImGui::Button("Create", ImVec2(ImGui::GetWindowWidth(), 20))) 
     { 
-        if (std::string(m_NewProjectName) != "" && std::string(m_NewProjectPath) != "")
+        if (m_NewProjectName != "" && m_NewProjectPath != "")
         {
             console.AddMessage(AutumnEngine::MessageType::ACTION, ("Created New Project\n"));
             CreateProjectDirectory(console);
@@ -34,7 +34,7 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
         }
         else
         {
-            console.AddMessage(AutumnEngine::ERROR, "Creating Project, make sure your project has a path and a name!\n");
+            console.AddMessage(AutumnEngine::ERROR, "Creating project, make sure you've specified a project path or project name!");
         }
     }
 
@@ -58,5 +58,13 @@ void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Consol
 
         // Creates the .ae project file and the first empty scene for the game
         std::ofstream scene((std::string)m_NewProjectPath + "\\" + (std::string)m_NewProjectName + "/Assets/" + (std::string)m_NewProjectName + ".scene");
+
+        // TODO - Change Format written to file, this format crashes the serialiser!
+        m_SceneFile["Entities"] = {};
+        scene << std::setw(4) << m_SceneFile;
+    }
+    else
+    {
+        console.AddMessage(AutumnEngine::ERROR, "Creating project, make sure you've specified a project path or project name!");
     }
 }

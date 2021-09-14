@@ -4,6 +4,7 @@
 #include<filesystem>
 #include <fstream>
 #include <iostream>
+#include "../../Json/json.hpp"
 
 #include "SFML/Graphics/RenderWindow.hpp"
 
@@ -24,6 +25,7 @@ namespace AutumnEngine
 			char* GetProjectPath() { return m_NewProjectPath; }
 
 		private:
+			nlohmann::json m_SceneFile;
 			char m_NewProjectName[255];
 			char m_NewProjectPath[255];
 	};

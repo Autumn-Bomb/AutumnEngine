@@ -38,7 +38,7 @@ namespace AutumnEngine
 
 			AutumnEngine::Entity& GetAllEntitysFromScene()
 			{
-				for (auto& entity : m_Entities)
+				for (auto entity : m_Entities)
 				{
 					return entity.second;
 				}
