@@ -46,9 +46,6 @@
     <Filter Include="Editor\Windows\Panels\ContentBrowser">
       <UniqueIdentifier>{51d00977-d62d-49b2-84f4-d4fa5677c883}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Editor\Windows\Panels\Properties">
-      <UniqueIdentifier>{6b32e546-20be-42f5-b6b6-6aec59bb8031}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor\Windows\Menus\About">
       <UniqueIdentifier>{2e408aee-75e9-4753-b164-2c85dc3ae41a}</UniqueIdentifier>
     </Filter>
@@ -159,9 +156,6 @@
     <ClCompile Include="Editor\Panels\ContentBrowser\ContentBrowser.cpp">
       <Filter>Editor\Windows\Panels\ContentBrowser</Filter>
     </ClCompile>
-    <ClCompile Include="Editor\Panels\Properties\Properties.cpp">
-      <Filter>Editor\Windows\Panels\Properties</Filter>
-    </ClCompile>
     <ClCompile Include="Editor\Menus\About\About.cpp">
       <Filter>Editor\Windows\Menus\About</Filter>
     </ClCompile>
@@ -259,9 +253,6 @@
     </ClInclude>
     <ClInclude Include="Editor\Panels\ContentBrowser\ContentBrowser.h">
       <Filter>Editor\Windows\Panels\ContentBrowser</Filter>
-    </ClInclude>
-    <ClInclude Include="Editor\Panels\Properties\Properties.h">
-      <Filter>Editor\Windows\Panels\Properties</Filter>
     </ClInclude>
     <ClInclude Include="Editor\Menus\About\About.h">
       <Filter>Editor\Windows\Menus\About</Filter>

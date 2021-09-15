@@ -15,7 +15,6 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
     m_ShowSceneViewport = true;
     m_ShowGameViewport = true;
     m_ShowAnimation = true;
-    m_ShowProperties = true;
 
     m_ShowNewProjectPopup = false;
     m_ShowEditorSettings = false;
@@ -150,7 +149,6 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
                 ImGui::MenuItem("Game Viewport", NULL, &m_ShowGameViewport);
                 ImGui::MenuItem("Inspector", NULL, &m_ShowInspectorPanel);
                 ImGui::MenuItem("Animation", NULL, &m_ShowAnimation);
-                ImGui::MenuItem("Properties", NULL, &m_ShowProperties);
                 ImGui::MenuItem("Stats", NULL, &m_ShowStatsPanel);
                 ImGui::MenuItem("Scene Hierarchy", NULL, &m_ShowHierarchyPanel);
 
@@ -209,9 +207,6 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
 
     if (m_ShowContentExplorer)
         m_ContentBrowser.ShowContentBrowser();
-
-    if (m_ShowProperties)
-        m_Properties.ShowProperties();
 
     if (m_ShowConsole)
         m_Console.ShowConsole();

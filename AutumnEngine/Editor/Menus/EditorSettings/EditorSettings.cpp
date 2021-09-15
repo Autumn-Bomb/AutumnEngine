@@ -14,6 +14,12 @@ void AutumnEngine::EditorSettings::ApplyLastStyle()
 		m_CurrentStyle.SetBackgroundColour(ImVec4(m_EditorSettingsFile["Theme"][line]["BGR_R"], m_EditorSettingsFile["Theme"][line]["BGR_G"], m_EditorSettingsFile["Theme"][line]["BGR_B"], m_EditorSettingsFile["Theme"][line]["BGR_A"]));
 		m_CurrentStyle.SetTextColour(ImVec4(m_EditorSettingsFile["Theme"][line]["TXT_R"], m_EditorSettingsFile["Theme"][line]["TXT_G"], m_EditorSettingsFile["Theme"][line]["TXT_B"], m_EditorSettingsFile["Theme"][line]["TXT_A"]));
 	}
+
+	// Used to initialise panels active before last restart
+	for (int line = 0; line < m_EditorSettingsFile["Panels"].size(); line++)
+	{
+		
+	}
 }
 
 void AutumnEngine::EditorSettings::OnImGuiRender(bool& open)
@@ -87,6 +93,18 @@ void AutumnEngine::EditorSettings::SaveEditorSettings()
 	   {
 			"BRG", m_EditorSettingsFile["BGR"] = { m_BackgroundColour[0] * 255, m_BackgroundColour[1] * 255, m_BackgroundColour[2] * 255, m_BackgroundColour[3] * 255} ,
 			"TXT", m_EditorSettingsFile["TXT"] = { m_TextColour[0] * 255, m_TextColour[1] * 255, m_TextColour[2] * 255, m_TextColour[3] * 255}
+	   },
+	   "Panels",
+	   {
+			"Animation", m_EditorSettingsFile["Animation"] = { "true" },
+			"Console", m_EditorSettingsFile["Console"] = { "true" },
+			"ContentBrowser", m_EditorSettingsFile["ContentBrowser"] = { "true" },
+			"GameViewport", m_EditorSettingsFile["GameViewport"] = { "true" },
+			"SceneViewport", m_EditorSettingsFile["SceneViewport"] = { "true" },
+			"Hierarchy", m_EditorSettingsFile["Hierarchy"] = { "true" },
+			"Inspector", m_EditorSettingsFile["Inspector"] = { "true" },
+			"SceneViewport", m_EditorSettingsFile["SceneViewport"] = { "true" },
+			"Stats", m_EditorSettingsFile["Stats"] = { "true" },
 	   }
 	};
 

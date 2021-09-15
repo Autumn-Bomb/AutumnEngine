@@ -1,4 +1,5 @@
 #pragma once
+#include "../../../Framework/Entities/BaseEntity/Entity.h"
 #include "imgui.h"
 
 namespace AutumnEngine
@@ -11,5 +12,8 @@ namespace AutumnEngine
 
 		public:
 			void ShowInspector();
+
+		private:
+			AutumnEngine::Entity* m_Entity;
 	};
 }

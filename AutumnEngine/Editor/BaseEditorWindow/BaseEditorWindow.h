@@ -8,7 +8,6 @@
 #include "../Panels/Stats/Stats.h"
 #include "../Panels/Animation/Animation.h"
 #include "../Panels/ContentBrowser/ContentBrowser.h"
-#include "../Panels/Properties/Properties.h"
 #include "../Panels/GameViewport/GameViewport.h"
 
 #include "../Style/Style.h"
@@ -79,7 +78,6 @@ namespace AutumnEngine
 			float m_FrameTime;
 
 			bool m_ShowAnimation;
-			bool m_ShowProperties;
 			bool m_ShowContentExplorer;
 			bool m_ShowInspectorPanel;
 			bool m_ShowStatsPanel;
@@ -109,6 +107,5 @@ namespace AutumnEngine
 			AutumnEngine::Stats m_Stats;
 			AutumnEngine::Animation m_Animation;
 			AutumnEngine::ContentBrowser m_ContentBrowser;
-			AutumnEngine::Properties m_Properties;
 	};
 };

@@ -2,9 +2,9 @@
       "Theme":[
        {
            
-            "BGR_R": 22,
+            "BGR_R": 253,
             "BGR_G": 23,
-            "BGR_B": 42,
+            "BGR_B": 38,
             "BGR_A": 255,
        
             "TXT_R": 255,
