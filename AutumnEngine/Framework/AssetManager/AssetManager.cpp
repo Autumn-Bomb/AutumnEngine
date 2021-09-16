@@ -3,8 +3,8 @@
 AutumnEngine::AssetManager::AssetManager() {}
 AutumnEngine::AssetManager::~AssetManager() {}
 
-template <class T>
-void AutumnEngine::AssetManager::LoadResource(T resource)
+void AutumnEngine::AssetManager::LoadTexture(const char* textureName)
 {
-
+	m_Texture->loadFromFile(m_TexturePath + textureName);
+	m_LoadedTextures.emplace(textureName, m_Texture);
 }

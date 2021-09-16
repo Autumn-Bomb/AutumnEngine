@@ -22,12 +22,13 @@ namespace AutumnEngine
 
 		// CONSOLE VARIABLES
 		private:
-			const char* m_Filters[5] = { "NONE", "MESSAGE", "ACTION", "WARNING", "ERROR"};
+			const char* m_FilterText[5] = { "NONE", "MESSAGE", "ACTION", "WARNING", "ERROR"};
 			const char* m_CurrentItem = "No Filter";
 			bool m_AutoScroll;
 
 			MessageType m_MessageType;
 			ImVector<int> m_LineOffsets;
 			ImGuiTextBuffer m_Buffer;
+			ImGuiTextFilter m_Filter;
 	};
 }

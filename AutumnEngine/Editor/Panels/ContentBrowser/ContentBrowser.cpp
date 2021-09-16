@@ -8,19 +8,19 @@ AutumnEngine::ContentBrowser::ContentBrowser()
     m_FileCodeTexture = std::make_unique<sf::Texture>();
     m_FileSceneTexture = std::make_unique<sf::Texture>();
 
-    if (!m_FolderTexture->loadFromFile("Editor/Style/Icons/FileIcons/FolderIcon.png")) {}
+    if (!m_FolderTexture->loadFromFile("Editor/Resources/Icons/FileIcons/FolderIcon.png")) {}
     m_FolderIcon.setTexture(*m_FolderTexture);
 
-    if (!m_FileTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileIcon.png")) {}
+    if (!m_FileTexture->loadFromFile("Editor/Resources/Icons/FileIcons/FileIcon.png")) {}
     m_FileIcon.setTexture(*m_FileTexture);
 
-    if (!m_FileTextTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileTextIcon.png")) {}
+    if (!m_FileTextTexture->loadFromFile("Editor/Resources/Icons/FileIcons/FileTextIcon.png")) {}
     m_FileTextIcon.setTexture(*m_FileTextTexture);
 
-    if (!m_FileCodeTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileCodeIcon.png")) {}
+    if (!m_FileCodeTexture->loadFromFile("Editor/Resources/Icons/FileIcons/FileCodeIcon.png")) {}
     m_FileCodeIcon.setTexture(*m_FileCodeTexture);
 
-    if (!m_FileSceneTexture->loadFromFile("Editor/Style/Icons/FileIcons/FileSceneIcon.png")) {}
+    if (!m_FileSceneTexture->loadFromFile("Editor/Resources/Icons/FileIcons/FileSceneIcon.png")) {}
     m_FileSceneIcon.setTexture(*m_FileSceneTexture);
 }
 AutumnEngine::ContentBrowser::~ContentBrowser() {}
@@ -45,8 +45,20 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
 
     ImGui::Separator();
 
-    if(m_CurrentPath.compare(""))
+    if (m_CurrentPath.compare(""))
         ShowLoadedProjectContent();
+
+    if (ImGui::BeginPopupContextWindow("Options", ImGuiPopupFlags_MouseButtonRight))
+    {
+        if (ImGui::MenuItem("Create Folder")) { CreateNewFolder(); }
+        ImGui::Separator();
+        if (ImGui::MenuItem("Create File")) { CreateNewFile(); }
+        ImGui::Separator();
+        if (ImGui::MenuItem("Refresh Project")) { RefreshProject(); }
+        ImGui::Separator();
+
+        ImGui::EndPopup();
+    }
 
     ImGui::End();
 }

@@ -18,6 +18,9 @@ namespace AutumnEngine
 			void SetRenderer(AutumnEngine::Renderer& renderer) { m_Renderer = &renderer; }
 
 		private:
+			std::unique_ptr<sf::Texture> m_MoveIcon;
+			sf::Sprite m_Move;
+
 			bool m_RendererCreated;
 			AutumnEngine::Renderer* m_Renderer;
 	};

@@ -1,12 +1,12 @@
 #pragma once
 
 #include "../../Panels/Console/Console.h"
+#include "../../Json/json.hpp"
+#include "SFML/Graphics/RenderWindow.hpp"
+
 #include<filesystem>
 #include <fstream>
 #include <iostream>
-#include "../../Json/json.hpp"
-
-#include "SFML/Graphics/RenderWindow.hpp"
 
 namespace AutumnEngine
 {

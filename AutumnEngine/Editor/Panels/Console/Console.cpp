@@ -5,7 +5,7 @@ AutumnEngine::Console::Console()
     m_AutoScroll = true;
     Clear();
 
-    m_CurrentItem = m_Filters[0];
+    m_CurrentItem = m_FilterText[0];
 }
 AutumnEngine::Console::~Console(){}
 
@@ -66,12 +66,12 @@ void AutumnEngine::Console::ShowConsole()
       ImGui::PushItemWidth(100);
       if (ImGui::BeginCombo("##Filter", m_CurrentItem))
       {
-          for (int filter = 0; filter < IM_ARRAYSIZE(m_Filters); filter++)
+          for (int filter = 0; filter < IM_ARRAYSIZE(m_FilterText); filter++)
           {
-              bool isSelected = (m_CurrentItem == m_Filters[filter]);
+              bool isSelected = (m_CurrentItem == m_FilterText[filter]);
 
-              if (ImGui::Selectable(m_Filters[filter], isSelected))
-                  m_CurrentItem = m_Filters[filter];
+              if (ImGui::Selectable(m_FilterText[filter], isSelected))
+                  m_CurrentItem = m_FilterText[filter];
 
               if (isSelected)
                   ImGui::SetItemDefaultFocus();
@@ -94,6 +94,7 @@ void AutumnEngine::Console::ShowConsole()
           {
               const char* lineStart = m_Buffer.begin() + m_LineOffsets[lineNo];
               const char* lineEnd = (lineNo + 1 < m_LineOffsets.Size) ? (m_Buffer.begin() + m_LineOffsets[lineNo + 1] - 1) : m_Buffer.end();
+
               ImGui::TextUnformatted(lineStart, lineEnd);
           }
       }

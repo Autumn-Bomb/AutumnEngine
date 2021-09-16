@@ -10,7 +10,7 @@ AutumnEngine::BaseEditorWindow m_Editor;
 int main()
 {
     srand(time(0));
-    sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine (No Project Open)");
+    sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine");
     window.setFramerateLimit(144);
 
     m_Editor.SetRenderWindow(window);

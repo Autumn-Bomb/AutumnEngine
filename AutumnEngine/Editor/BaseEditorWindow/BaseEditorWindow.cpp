@@ -43,15 +43,15 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
 void AutumnEngine::BaseEditorWindow::LoadEditorIcons()
 {
     m_PlayButtonTexture = std::make_unique<sf::Texture>();
-    if (!m_PlayButtonTexture->loadFromFile("Editor/Style/Icons/Buttons/PlayButton.png")) {}
+    if (!m_PlayButtonTexture->loadFromFile("Editor/Resources/Icons/Buttons/PlayButton.png")) {}
     m_PlayButtonIcon.setTexture(*m_PlayButtonTexture);
 
     m_PauseButtonTexture = std::make_unique<sf::Texture>();
-    if (!m_PauseButtonTexture->loadFromFile("Editor/Style/Icons/Buttons/PauseButton.png")) {}
+    if (!m_PauseButtonTexture->loadFromFile("Editor/Resources/Icons/Buttons/PauseButton.png")) {}
     m_PauseButtonIcon.setTexture(*m_PauseButtonTexture);
 
     m_StopButtonTexture = std::make_unique<sf::Texture>();
-    if (!m_StopButtonTexture->loadFromFile("Editor/Style/Icons/Buttons/StopButton.png")) {}
+    if (!m_StopButtonTexture->loadFromFile("Editor/Resources/Icons/Buttons/StopButton.png")) {}
     m_StopButtonIcon.setTexture(*m_StopButtonTexture);
 }
 

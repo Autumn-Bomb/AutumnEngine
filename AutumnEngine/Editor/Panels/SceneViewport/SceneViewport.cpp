@@ -1,6 +1,15 @@
 #include "../SceneViewport/SceneViewport.h"
 
-AutumnEngine::SceneViewport::SceneViewport() { m_Renderer = nullptr; m_RendererCreated = false; }
+AutumnEngine::SceneViewport::SceneViewport()
+{
+    m_Renderer = nullptr;
+    m_RendererCreated = false; 
+    
+    m_MoveIcon = std::make_unique<sf::Texture>();
+
+    m_MoveIcon->loadFromFile("Editor/Resources/Icons/Buttons/MoveButton.png");
+    m_Move.setTexture(*m_MoveIcon);
+}
 AutumnEngine::SceneViewport::~SceneViewport() {}
 
 void AutumnEngine::SceneViewport::ShowSceneViewport()
@@ -18,6 +27,7 @@ void AutumnEngine::SceneViewport::ShowSceneViewport()
     }
 
     ImGui::Image(*m_Renderer->GetRenderTexture(), sf::Color::White);
+    ImGui::ImageButton(m_Move);
 
     ImGui::End();
 }
