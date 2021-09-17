@@ -1,6 +1,7 @@
 #pragma once
 #include <map>
 #include <string>
+#include <iostream>
 
 #include "SFML/Graphics/Texture.hpp"
 
@@ -16,7 +17,7 @@ namespace AutumnEngine
 			void LoadTexture(const char* textureName);
 
 		private:
-			std::map<char*, sf::Texture> m_LoadedTextures;
+			std::map<const char*, sf::Texture> m_LoadedTextures;
 
 		private:
 			sf::Texture* m_Texture;

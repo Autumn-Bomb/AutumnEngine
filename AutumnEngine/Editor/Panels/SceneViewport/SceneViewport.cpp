@@ -6,9 +6,12 @@ AutumnEngine::SceneViewport::SceneViewport()
     m_RendererCreated = false; 
     
     m_MoveIcon = std::make_unique<sf::Texture>();
+    m_CursorIcon = std::make_unique<sf::Texture>();
 
     m_MoveIcon->loadFromFile("Editor/Resources/Icons/Buttons/MoveButton.png");
     m_Move.setTexture(*m_MoveIcon);
+    m_CursorIcon->loadFromFile("Editor/Resources/Icons/Buttons/CursorButton.png");
+    m_Cursor.setTexture(*m_CursorIcon);
 }
 AutumnEngine::SceneViewport::~SceneViewport() {}
 
@@ -27,7 +30,13 @@ void AutumnEngine::SceneViewport::ShowSceneViewport()
     }
 
     ImGui::Image(*m_Renderer->GetRenderTexture(), sf::Color::White);
+    
+    ImGui::SetCursorPos(ImVec2(10, 30));
+    ImGui::BeginChild("Tools", ImVec2(100, 45), true, ImGuiWindowFlags_NoResize);
     ImGui::ImageButton(m_Move);
+    ImGui::SameLine();
+    ImGui::ImageButton(m_Cursor);
+    ImGui::EndChild();
 
     ImGui::End();
 }

@@ -55,11 +55,11 @@ void AutumnEngine::BaseEditorWindow::LoadEditorIcons()
     m_StopButtonIcon.setTexture(*m_StopButtonTexture);
 }
 
-void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock deltaTime)
+void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock& deltaTime)
 {
     ImGui::SFML::Update(*m_Window, deltaTime.restart());
 
-    m_FPS = 1.f / deltaTime.restart().asSeconds();
+    m_FPS = 1.f / ImGui::GetIO().DeltaTime;
     m_FrameTime = 0.1f / m_FPS;
 
     ImGui::Begin("Editor", 0, ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoTitleBar);

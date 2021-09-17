@@ -83,54 +83,61 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
 
     ImGui::Columns(m_ColumnCount, 0, false);
 
-    for (auto& directoryEntry : std::filesystem::directory_iterator(m_CurrentPath))
+    try
     {
-        const auto& path = directoryEntry.path();
-        auto relativePath = std::filesystem::relative(path, m_CurrentPath);
-        std::string filenameString = relativePath.filename().string();
-
-        if (directoryEntry.is_directory())
+        for (auto& directoryEntry : std::filesystem::directory_iterator(m_CurrentPath))
         {
-            ImGui::ImageButton(m_FolderIcon, { m_ThumbnailSize, m_ThumbnailSize });
-            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
-            {
-                m_CurrentPath /= path.filename();
-            }
-        }
-        else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".scene"))
-        {
-            ImGui::ImageButton(m_FileSceneIcon, { m_ThumbnailSize, m_ThumbnailSize });
-            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
-            {
-                std::cout << "Clicked on a Scene file" << std::endl;
+            const auto& path = directoryEntry.path();
+            auto relativePath = std::filesystem::relative(path, m_CurrentPath);
+            std::string filenameString = relativePath.filename().string();
 
-                if (m_SceneSerializer.GetCurrentLoadedScene().GetSceneFilePath() != directoryEntry.path())
+            if (directoryEntry.is_directory())
+            {
+                ImGui::ImageButton(m_FolderIcon, { m_ThumbnailSize, m_ThumbnailSize });
+                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
                 {
-                    m_SceneSerializer.CreateScene(directoryEntry.path());
-                    m_SceneSerializer.DeserializeScene();
-                }
-                else
-                {
-                    std::cout << "Scene: " << directoryEntry.path() << " is already loaded!" << std::endl;
+                    m_CurrentPath /= path.filename();
                 }
             }
-        }
-        else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".cpp"))
-        {
-            ImGui::ImageButton(m_FileCodeIcon, { m_ThumbnailSize, m_ThumbnailSize });
-            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
-        }
-        else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".txt"))
-        {
-            ImGui::ImageButton(m_FileTextIcon, { m_ThumbnailSize, m_ThumbnailSize });
-            if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
-        }
+            else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".scene"))
+            {
+                ImGui::ImageButton(m_FileSceneIcon, { m_ThumbnailSize, m_ThumbnailSize });
+                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
+                {
+                    std::cout << "Clicked on a Scene file" << std::endl;
 
-        ImGui::Text(filenameString.c_str());
-        ImGui::NextColumn();
+                    if (m_SceneSerializer.GetCurrentLoadedScene().GetSceneFilePath() != directoryEntry.path())
+                    {
+                        m_SceneSerializer.CreateScene(directoryEntry.path());
+                        m_SceneSerializer.DeserializeScene();
+                    }
+                    else
+                    {
+                        std::cout << "Scene: " << directoryEntry.path() << " is already loaded!" << std::endl;
+                    }
+                }
+            }
+            else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".cpp"))
+            {
+                ImGui::ImageButton(m_FileCodeIcon, { m_ThumbnailSize, m_ThumbnailSize });
+                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
+            }
+            else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".txt"))
+            {
+                ImGui::ImageButton(m_FileTextIcon, { m_ThumbnailSize, m_ThumbnailSize });
+                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
+            }
+
+            ImGui::Text(filenameString.c_str());
+            ImGui::NextColumn();
+        }
+        ImGui::Columns(1);
     }
-
-    ImGui::Columns(1);
+    catch (std::filesystem::filesystem_error& e)
+    {
+        std::cout << "Error: " << e.what();
+        return;
+    }
 }
 
 void AutumnEngine::ContentBrowser::RefreshProject()

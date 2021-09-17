@@ -27,7 +27,6 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
     { 
         if (m_NewProjectName != "" && m_NewProjectPath != "")
         {
-            console.AddMessage(AutumnEngine::MessageType::ACTION, ("Created New Project\n"));
             CreateProjectDirectory(console);
             *newProjectPath = (std::string)m_NewProjectPath + "\\" + (std::string)m_NewProjectName;
             open = !open;
@@ -62,9 +61,11 @@ void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Consol
         // TODO - Change Format written to file, this format crashes the serialiser!
         m_SceneFile["Entities"] = {};
         scene << std::setw(4) << m_SceneFile;
+
+        console.AddMessage(AutumnEngine::MessageType::ACTION, ("Created New Project\n"));
     }
     else
     {
-        console.AddMessage(AutumnEngine::ERROR, "Creating project, make sure you've specified a project path or project name!");
+        console.AddMessage(AutumnEngine::MessageType::ERROR, "Cannot create project, path invalid");
     }
 }

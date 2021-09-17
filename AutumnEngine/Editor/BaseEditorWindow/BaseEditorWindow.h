@@ -38,7 +38,7 @@ namespace AutumnEngine
 			void InitialiseEditor();
 			void LoadEditorIcons();
 			void ProcessEditorEvents(sf::Event& events);
-			void UpdateEditorWindow(sf::Clock deltaTime);
+			void UpdateEditorWindow(sf::Clock& deltaTime);
 			void RenderEditor();
 			void ShutDownEditor();
 

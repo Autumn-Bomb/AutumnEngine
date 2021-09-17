@@ -26,15 +26,15 @@ void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Consol
 
     if (ImGui::Button("Open", ImVec2(ImGui::GetWindowWidth(), 20)))
     { 
-        if ((std::string)m_ExistingProjectPath != "")
+        if ((std::string)m_ExistingProjectPath != "" && std::filesystem::exists(m_ExistingProjectPath))
         {
-            console.AddMessage(AutumnEngine::MessageType::ACTION, ("Opened Project\n"));
             *newProjectPath = m_ExistingProjectPath;
             open = !open;
+            console.AddMessage(AutumnEngine::MessageType::ACTION, ("Opened Project\n"));
         }
         else
         {
-            console.AddMessage(AutumnEngine::MessageType::MESSAGE, "Opening Project, make sure you've specified a project path!\n");
+            console.AddMessage(AutumnEngine::MessageType::MESSAGE, "Opening Project, make sure you've specified a valid project path!\n");
         }
     }
 
