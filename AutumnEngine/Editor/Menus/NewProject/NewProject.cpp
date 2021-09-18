@@ -66,6 +66,7 @@ void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Consol
     }
     else
     {
-        console.AddMessage(AutumnEngine::MessageType::ERROR, "Cannot create project, path invalid");
+        console.AddMessage(AutumnEngine::MessageType::ERROR, "Cannot create project, invalid path\n");
+        return;
     }
 }

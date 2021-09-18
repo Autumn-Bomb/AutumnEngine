@@ -29,12 +29,12 @@ void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Consol
         if ((std::string)m_ExistingProjectPath != "" && std::filesystem::exists(m_ExistingProjectPath))
         {
             *newProjectPath = m_ExistingProjectPath;
+            console.AddMessage(AutumnEngine::MessageType::ACTION, "Opened Project\n");
             open = !open;
-            console.AddMessage(AutumnEngine::MessageType::ACTION, ("Opened Project\n"));
         }
         else
         {
-            console.AddMessage(AutumnEngine::MessageType::MESSAGE, "Opening Project, make sure you've specified a valid project path!\n");
+            console.AddMessage(AutumnEngine::MessageType::ERROR, "Opening Project, make sure you've specified a valid project path!\n");
         }
     }
 

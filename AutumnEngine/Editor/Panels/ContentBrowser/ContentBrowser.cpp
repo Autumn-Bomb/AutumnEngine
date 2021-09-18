@@ -29,22 +29,6 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
 {
     ImGui::Begin("Content Browser");
 
-    if (ImGui::Button("Refresh", ImVec2(100, 20))) { RefreshProject(); }
-    ImGui::SameLine();
-    if (ImGui::Button("New Folder", ImVec2(100, 20))) { CreateNewFolder(); }
-    ImGui::SameLine();
-    if (ImGui::Button("New File", ImVec2(100, 20))) { CreateNewFile(); }
-    ImGui::SameLine();
-
-    ImGui::PushItemWidth(150.f);
-    ImGui::SameLine(ImGui::GetWindowWidth() - 150);
-    ImGui::InputText("##Search", m_Search, IM_ARRAYSIZE(m_Search));
-    ImGui::SameLine(ImGui::GetWindowWidth() - 200);
-    ImGui::Text("Search");
-    ImGui::PopItemWidth();
-
-    ImGui::Separator();
-
     if (m_CurrentPath.compare(""))
         ShowLoadedProjectContent();
 
@@ -67,10 +51,25 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
 {
     if (m_CurrentPath != m_DefaultPath)
     {
-        if (ImGui::Button("Back", ImVec2(45, 20)))
-        {
-            m_CurrentPath = m_CurrentPath.parent_path();
-        }
+        if (ImGui::Button("Back", ImVec2(45, 20))) { m_CurrentPath = m_CurrentPath.parent_path(); }
+        ImGui::SameLine();
+    }
+
+    if(m_CurrentPath.compare(""))
+    {
+        if (ImGui::Button("Refresh", ImVec2(100, 20))) { RefreshProject(); }
+        ImGui::SameLine();
+        if (ImGui::Button("New Folder", ImVec2(100, 20))) { CreateNewFolder(); }
+        ImGui::SameLine();
+        if (ImGui::Button("New File", ImVec2(100, 20))) { CreateNewFile(); }
+        ImGui::SameLine();
+
+        ImGui::PushItemWidth(150.f);
+        ImGui::SameLine(ImGui::GetWindowWidth() - 150);
+        ImGui::InputText("##Search", m_Search, IM_ARRAYSIZE(m_Search));
+        ImGui::SameLine(ImGui::GetWindowWidth() - 200);
+        ImGui::Text("Search");
+        ImGui::PopItemWidth();
 
         ImGui::Separator();
     }
@@ -94,7 +93,7 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
             if (directoryEntry.is_directory())
             {
                 ImGui::ImageButton(m_FolderIcon, { m_ThumbnailSize, m_ThumbnailSize });
-                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
+                if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left))
                 {
                     m_CurrentPath /= path.filename();
                 }
@@ -102,7 +101,7 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
             else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".scene"))
             {
                 ImGui::ImageButton(m_FileSceneIcon, { m_ThumbnailSize, m_ThumbnailSize });
-                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left))
+                if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left))
                 {
                     std::cout << "Clicked on a Scene file" << std::endl;
 
@@ -120,12 +119,12 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
             else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".cpp"))
             {
                 ImGui::ImageButton(m_FileCodeIcon, { m_ThumbnailSize, m_ThumbnailSize });
-                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
+                if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left)) {}
             }
             else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".txt"))
             {
                 ImGui::ImageButton(m_FileTextIcon, { m_ThumbnailSize, m_ThumbnailSize });
-                if (ImGui::IsItemHovered() && ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {}
+                if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left)) {}
             }
 
             ImGui::Text(filenameString.c_str());
