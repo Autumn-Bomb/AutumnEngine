@@ -36,7 +36,7 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     m_EditorSettings.SetStyle(&m_Style);
     
     //m_EditorSettings.ApplyLastStyle();
-    
+
     LoadEditorIcons();
 }
 
@@ -95,6 +95,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             ImGui::MenuItem("New Project", NULL, &m_ShowNewProjectPopup);
 
             ImGui::MenuItem("Open Project", NULL, &m_ShowOpenProjectPopup);
+            if (ImGui::MenuItem("Unload Project")) { }
 
             if (ImGui::MenuItem("Save Project"), NULL) { /* Call Save Project Method */ }
             if (ImGui::MenuItem("Build Project"), NULL) { /* Call Build Project Method */ }

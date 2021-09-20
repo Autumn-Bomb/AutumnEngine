@@ -88,9 +88,6 @@
     <Filter Include="Framework\Scene">
       <UniqueIdentifier>{6a3adb34-6251-4eff-a05e-ec0e33a2c7be}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Entt">
-      <UniqueIdentifier>{91354bed-c1c3-437d-90e2-2d64aff33a94}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\ECS">
       <UniqueIdentifier>{58cc4532-f77f-4a78-8908-86c901f3153b}</UniqueIdentifier>
     </Filter>
@@ -111,6 +108,9 @@
     </Filter>
     <Filter Include="Framework\MemoryAllocator">
       <UniqueIdentifier>{f3446d6a-e43c-420d-8df0-fd133f89f4ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Fuse">
+      <UniqueIdentifier>{a705363c-3360-4b23-a1c4-641f1790bec9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +198,12 @@
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp">
       <Filter>Framework\ResourceManagement</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\MemoryAllocator\MemoryAllocator.cpp">
+      <Filter>Framework\MemoryAllocator</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\FuseUI\Fuse.cpp">
+      <Filter>Framework\Fuse</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
@@ -211,9 +217,6 @@
     </ClInclude>
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML_export.h">
       <Filter>Editor\ImGUI\ImGUISFML</Filter>
-    </ClInclude>
-    <ClInclude Include="Libraries\Entt\Include\entt.hpp">
-      <Filter>Framework\Entt</Filter>
     </ClInclude>
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imconfig.h">
       <Filter>Editor\ImGUI\ImGUI</Filter>
@@ -301,6 +304,12 @@
     </ClInclude>
     <ClInclude Include="Framework\AssetManager\AssetManager.h">
       <Filter>Framework\ResourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\MemoryAllocator\MemoryAllocator.h">
+      <Filter>Framework\MemoryAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\FuseUI\Fuse.h">
+      <Filter>Framework\Fuse</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

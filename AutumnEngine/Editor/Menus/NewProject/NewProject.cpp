@@ -28,6 +28,7 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
         if (m_NewProjectName != "" && m_NewProjectPath != "")
         {
             CreateProjectDirectory(console);
+
             *newProjectPath = (std::string)m_NewProjectPath + "\\" + (std::string)m_NewProjectName;
             open = !open;
         }

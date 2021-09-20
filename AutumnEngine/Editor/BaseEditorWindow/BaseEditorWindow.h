@@ -20,10 +20,16 @@
 #include "../../Framework/2DRenderer/2DRenderer.h"
 #include "../../Framework/SceneSerializer/SceneSerializer.h"
 
+#include <time.h>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/System/Clock.hpp>
+#include <SFML/Window/Event.hpp>
+
 #include <iostream>
 #include <filesystem>
 #include <Windows.h>
 #include <shellapi.h>
+#include <math.h>
 
 namespace AutumnEngine
 {
@@ -74,7 +80,7 @@ namespace AutumnEngine
 
 			std::filesystem::path m_CurrentPath;
 
-			int m_FPS;
+			unsigned int m_FPS;
 			float m_FrameTime;
 
 			bool m_ShowAnimation;

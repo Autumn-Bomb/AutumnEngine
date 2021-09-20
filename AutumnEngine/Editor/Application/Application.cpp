@@ -1,16 +1,11 @@
 #include "../BaseEditorWindow/BaseEditorWindow.h"
-#include <time.h>
-
-#include <SFML/Graphics/RenderWindow.hpp>
-#include <SFML/System/Clock.hpp>
-#include <SFML/Window/Event.hpp>
 
 AutumnEngine::BaseEditorWindow m_Editor;
 
 int main()
 {
     FreeConsole();
-    srand(time(0));
+    srand((unsigned int)time(NULL));
     sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine");
     window.setFramerateLimit(60);
 

@@ -1,34 +1,3 @@
-﻿  Application.cpp
-E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\Application\Application.cpp(13,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  BaseEditorWindow.cpp
-E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(62,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  About.cpp
-  EditorSettings.cpp
-  MenuBar.cpp
-  NewProject.cpp
-  OpenProject.cpp
-  Animation.cpp
-  Console.cpp
-  ContentBrowser.cpp
-  GameViewport.cpp
-  Hierarchy.cpp
-  Inspector.cpp
-  PanelManager.cpp
-  SceneViewport.cpp
-  Stats.cpp
-  2DRenderer.cpp
-  AssetManager.cpp
-  Entity.cpp
-  SceneSerializer.cpp
-  Generating Code...
-  Compiling...
-  Scene.cpp
-  Sprite.cpp
-  imgui-SFML.cpp
-  imgui.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_tables.cpp
-  imgui_widgets.cpp
-  Generating Code...
+﻿  BaseEditorWindow.cpp
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(62,17): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
   AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

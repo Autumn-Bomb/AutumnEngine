@@ -10,6 +10,6 @@ namespace AutumnEngine
 			~Stats();
 
 		public:
-			void ShowStats(int& fps, float& frameTime);
+			void ShowStats(unsigned int& fps, float& frameTime);
 	};
 }

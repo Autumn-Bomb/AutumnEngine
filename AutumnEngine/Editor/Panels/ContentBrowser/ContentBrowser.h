@@ -19,6 +19,7 @@ namespace AutumnEngine
 		public:
 			void ShowContentBrowser();
 			void ShowLoadedProjectContent();
+			void ShowProjectTree();
 
 			void CreateNewFolder();
 			void CreateNewFile();
@@ -38,6 +39,7 @@ namespace AutumnEngine
 		private:
 			AutumnEngine::SceneSerializer m_SceneSerializer;
 			bool m_IsCompact;
+			bool m_SameLineText;
 
 			float m_PanelWidth = 0;
 			float m_ThumbnailPadding = 13.f;

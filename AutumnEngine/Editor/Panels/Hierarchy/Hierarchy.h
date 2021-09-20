@@ -15,6 +15,7 @@ namespace AutumnEngine
 
 			void DisplayNodes();
 			void AddEntityToSceneGraph(std::string name);
+			void OnCreateButton();
 
 		private:
 			char m_Search[128];

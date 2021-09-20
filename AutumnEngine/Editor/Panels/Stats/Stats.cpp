@@ -1,9 +1,10 @@
 #include "Stats.h"
+#include <string>
 
 AutumnEngine::Stats::Stats() {}
 AutumnEngine::Stats::~Stats() {}
 
-void AutumnEngine::Stats::ShowStats(int& fps, float& frameTime)
+void AutumnEngine::Stats::ShowStats(unsigned int& fps, float& frameTime)
 {
     ImGui::Begin("Stats");
 

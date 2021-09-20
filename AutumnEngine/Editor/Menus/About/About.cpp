@@ -5,7 +5,7 @@ AutumnEngine::About::~About() {}
 
 void AutumnEngine::About::ShowAboutMenu(bool& open)
 {
-    ImGui::Begin("About");
+    ImGui::Begin("About", NULL, ImGuiWindowFlags_NoResize);
 
     ImGui::Text("Engine Name: Autumn Engine");
     ImGui::Text("Engine Version: 0.0.1");

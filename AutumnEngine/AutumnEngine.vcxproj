@@ -38,6 +38,8 @@
     <ClCompile Include="Framework\2DRenderer\2DRenderer.cpp" />
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp" />
     <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp" />
+    <ClCompile Include="Framework\FuseUI\Fuse.cpp" />
+    <ClCompile Include="Framework\MemoryAllocator\MemoryAllocator.cpp" />
     <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp" />
     <ClCompile Include="Framework\Scene\Scene.cpp" />
     <ClCompile Include="Framework\Sprite\Sprite.cpp" />
@@ -70,6 +72,8 @@
     <ClInclude Include="Framework\AssetManager\AssetManager.h" />
     <ClInclude Include="Framework\Entities\BaseEntity\Entity.h" />
     <ClInclude Include="Framework\Entities\Components\Components.h" />
+    <ClInclude Include="Framework\FuseUI\Fuse.h" />
+    <ClInclude Include="Framework\MemoryAllocator\MemoryAllocator.h" />
     <ClInclude Include="Framework\SceneSerializer\SceneSerializer.h" />
     <ClInclude Include="Framework\Scene\Scene.h" />
     <ClInclude Include="Framework\Sprite\Sprite.h" />
@@ -82,7 +86,6 @@
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_rectpack.h" />
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_textedit.h" />
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui\imstb_truetype.h" />
-    <ClInclude Include="Libraries\Entt\Include\entt.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

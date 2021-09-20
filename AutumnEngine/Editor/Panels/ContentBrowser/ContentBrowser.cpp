@@ -30,18 +30,8 @@ void AutumnEngine::ContentBrowser::ShowContentBrowser()
     ImGui::Begin("Content Browser");
 
     if (m_CurrentPath.compare(""))
-        ShowLoadedProjectContent();
-
-    if (ImGui::BeginPopupContextWindow("Options", ImGuiPopupFlags_MouseButtonRight))
     {
-        if (ImGui::MenuItem("Create Folder")) { CreateNewFolder(); }
-        ImGui::Separator();
-        if (ImGui::MenuItem("Create File")) { CreateNewFile(); }
-        ImGui::Separator();
-        if (ImGui::MenuItem("Refresh Project")) { RefreshProject(); }
-        ImGui::Separator();
-
-        ImGui::EndPopup();
+        ShowLoadedProjectContent();
     }
 
     ImGui::End();
@@ -72,15 +62,39 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
         ImGui::PopItemWidth();
 
         ImGui::Separator();
+
+        if (ImGui::BeginPopupContextWindow("Options", ImGuiPopupFlags_MouseButtonRight))
+        {
+            if (ImGui::MenuItem("Create Folder")) { CreateNewFolder(); }
+            ImGui::Separator();
+            if (ImGui::MenuItem("Create File")) { CreateNewFile(); }
+            ImGui::Separator();
+            if (ImGui::MenuItem("Refresh Project")) { RefreshProject(); }
+            ImGui::Separator();
+
+            ImGui::EndPopup();
+        }
     }
 
-    m_PanelWidth = ImGui::GetContentRegionAvail().x;
-    m_CellSize = m_ThumbnailSize + m_ThumbnailPadding;
-    m_ColumnCount = (int)(m_PanelWidth / m_CellSize);
-    
-    if (m_ColumnCount < 1) m_ColumnCount = 1;
+    if (!m_IsCompact)
+    {
+        m_ThumbnailSize = 60.f;
+        m_SameLineText = false;
+        m_PanelWidth = ImGui::GetContentRegionAvail().x;
+        m_CellSize = m_ThumbnailSize + m_ThumbnailPadding;
+        m_ColumnCount = (int)(m_PanelWidth / m_CellSize);
+        
+        if (m_ColumnCount < 1) m_ColumnCount = 1;
 
-    ImGui::Columns(m_ColumnCount, 0, false);
+        ImGui::Columns(m_ColumnCount, 0, false);
+    }
+    else
+    {
+        m_ColumnCount = 1;
+        m_SameLineText = true;
+        m_ThumbnailSize = 20;
+        ImGui::Columns(m_ColumnCount, 0, false);
+    }
 
     try
     {
@@ -126,8 +140,17 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
                 ImGui::ImageButton(m_FileTextIcon, { m_ThumbnailSize, m_ThumbnailSize });
                 if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left)) {}
             }
+            
+            if (!m_SameLineText)
+            {
+                ImGui::Text(filenameString.c_str());
+            }
+            else
+            {
+                ImGui::SameLine();
+                ImGui::Text(filenameString.c_str());
+            }
 
-            ImGui::Text(filenameString.c_str());
             ImGui::NextColumn();
         }
         ImGui::Columns(1);
@@ -162,4 +185,17 @@ void AutumnEngine::ContentBrowser::UpdateProjectPath(std::filesystem::path& proj
 {
     m_DefaultPath = projectDirectory.string() + "\\" + m_AssetsString.string();
     m_CurrentPath = m_DefaultPath;
+}
+
+void AutumnEngine::ContentBrowser::ShowProjectTree()
+{
+    ImGui::SetCursorPos(ImVec2(0, 0));
+    ImGui::BeginChild("ProjectTree", ImVec2(100, 100));
+
+    for (auto& directoryEntry : std::filesystem::directory_iterator(m_CurrentPath))
+    {
+       
+    }
+
+    ImGui::EndChild();
 }
