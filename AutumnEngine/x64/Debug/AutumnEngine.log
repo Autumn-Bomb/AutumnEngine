@@ -1,3 +1,2 @@
-﻿  BaseEditorWindow.cpp
-E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\BaseEditorWindow\BaseEditorWindow.cpp(62,17): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+﻿  ContentBrowser.cpp
   AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

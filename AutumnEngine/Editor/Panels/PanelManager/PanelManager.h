@@ -1,6 +1,5 @@
 #pragma once
 #include "../BasePanel/BasePanel.h"
-#include <iostream>
 #include <unordered_map>
 
 namespace AutumnEngine

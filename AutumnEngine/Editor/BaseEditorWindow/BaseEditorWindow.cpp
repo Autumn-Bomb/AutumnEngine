@@ -8,7 +8,7 @@ AutumnEngine::BaseEditorWindow::BaseEditorWindow()
 
     m_ShowHierarchyPanel = true;
     m_ShowInspectorPanel = true;
-    m_ShowStatsPanel = true;
+    m_ShowProfilerPanel = true;
     m_ShowAboutWindow = false;
     m_ShowConsole = true;
     m_ShowContentExplorer = true;
@@ -150,7 +150,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
                 ImGui::MenuItem("Game Viewport", NULL, &m_ShowGameViewport);
                 ImGui::MenuItem("Inspector", NULL, &m_ShowInspectorPanel);
                 ImGui::MenuItem("Animation", NULL, &m_ShowAnimation);
-                ImGui::MenuItem("Stats", NULL, &m_ShowStatsPanel);
+                ImGui::MenuItem("Stats", NULL, &m_ShowProfilerPanel);
                 ImGui::MenuItem("Scene Hierarchy", NULL, &m_ShowHierarchyPanel);
 
                 ImGui::EndMenu();
@@ -197,8 +197,8 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
     if (m_ShowInspectorPanel)
         m_Inspector.ShowInspector();
 
-    if (m_ShowStatsPanel)
-        m_Stats.ShowStats(m_FPS, m_FrameTime);
+    if (m_ShowProfilerPanel)
+        m_Profiler.ShowStats(m_FPS, m_FrameTime);
 
     if (m_ShowAboutWindow)
         m_AboutMenu.ShowAboutMenu(m_ShowAboutWindow);

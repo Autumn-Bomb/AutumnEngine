@@ -3,11 +3,11 @@
 
 namespace AutumnEngine
 {
-	class Stats
+	class Profiler
 	{
 		public:
-			Stats();
-			~Stats();
+			Profiler();
+			~Profiler();
 
 		public:
 			void ShowStats(unsigned int& fps, float& frameTime);

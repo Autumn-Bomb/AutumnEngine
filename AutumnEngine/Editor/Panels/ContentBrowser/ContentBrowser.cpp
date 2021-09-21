@@ -130,7 +130,8 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
                     }
                 }
             }
-            else if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".cpp"))
+            
+            if (directoryEntry.is_regular_file() && !directoryEntry.path().extension().compare(".cpp"))
             {
                 ImGui::ImageButton(m_FileCodeIcon, { m_ThumbnailSize, m_ThumbnailSize });
                 if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left)) {}

@@ -37,9 +37,6 @@
     <Filter Include="Editor\Windows\Panels\Inspector">
       <UniqueIdentifier>{ae0cc2d5-41b8-42d9-812f-9e61dd16b98b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Editor\Windows\Panels\Stats">
-      <UniqueIdentifier>{2afde878-b9db-43e2-a297-eb756cab1130}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor\Windows\Panels\Animation">
       <UniqueIdentifier>{1ecb8318-437b-4584-ae63-d480f96217da}</UniqueIdentifier>
     </Filter>
@@ -109,8 +106,8 @@
     <Filter Include="Framework\MemoryAllocator">
       <UniqueIdentifier>{f3446d6a-e43c-420d-8df0-fd133f89f4ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Fuse">
-      <UniqueIdentifier>{a705363c-3360-4b23-a1c4-641f1790bec9}</UniqueIdentifier>
+    <Filter Include="Editor\Windows\Panels\Profiler">
+      <UniqueIdentifier>{2afde878-b9db-43e2-a297-eb756cab1130}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -146,9 +143,6 @@
     </ClCompile>
     <ClCompile Include="Editor\Panels\Inspector\Inspector.cpp">
       <Filter>Editor\Windows\Panels\Inspector</Filter>
-    </ClCompile>
-    <ClCompile Include="Editor\Panels\Stats\Stats.cpp">
-      <Filter>Editor\Windows\Panels\Stats</Filter>
     </ClCompile>
     <ClCompile Include="Editor\Panels\Animation\Animation.cpp">
       <Filter>Editor\Windows\Panels\Animation</Filter>
@@ -201,8 +195,8 @@
     <ClCompile Include="Framework\MemoryAllocator\MemoryAllocator.cpp">
       <Filter>Framework\MemoryAllocator</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\FuseUI\Fuse.cpp">
-      <Filter>Framework\Fuse</Filter>
+    <ClCompile Include="Editor\Panels\Profiler\Profiler.cpp">
+      <Filter>Editor\Windows\Panels\Profiler</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -248,8 +242,8 @@
     <ClInclude Include="Editor\Panels\Inspector\Inspector.h">
       <Filter>Editor\Windows\Panels\Inspector</Filter>
     </ClInclude>
-    <ClInclude Include="Editor\Panels\Stats\Stats.h">
-      <Filter>Editor\Windows\Panels\Stats</Filter>
+    <ClInclude Include="Editor\Panels\Stats\Profiler.h">
+      <Filter>Editor\Windows\Panels\Profiler</Filter>
     </ClInclude>
     <ClInclude Include="Editor\Panels\Animation\Animation.h">
       <Filter>Editor\Windows\Panels\Animation</Filter>
@@ -307,9 +301,6 @@
     </ClInclude>
     <ClInclude Include="Framework\MemoryAllocator\MemoryAllocator.h">
       <Filter>Framework\MemoryAllocator</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\FuseUI\Fuse.h">
-      <Filter>Framework\Fuse</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@
 #include "../Panels/Hierarchy/Hierarchy.h"
 #include "../Panels/SceneViewport/SceneViewport.h"
 #include "../Panels/Inspector/Inspector.h"
-#include "../Panels/Stats/Stats.h"
+#include "../Panels/Profiler/Profiler.h"
 #include "../Panels/Animation/Animation.h"
 #include "../Panels/ContentBrowser/ContentBrowser.h"
 #include "../Panels/GameViewport/GameViewport.h"
@@ -86,7 +86,7 @@ namespace AutumnEngine
 			bool m_ShowAnimation;
 			bool m_ShowContentExplorer;
 			bool m_ShowInspectorPanel;
-			bool m_ShowStatsPanel;
+			bool m_ShowProfilerPanel;
 			bool m_ShowHierarchyPanel;
 			bool m_ShowNewProjectPopup;
 			bool m_ShowOpenProjectPopup;
@@ -110,7 +110,7 @@ namespace AutumnEngine
 			AutumnEngine::SceneViewport m_SceneViewport;
 			AutumnEngine::GameViewport m_GameViewport;
 			AutumnEngine::Inspector m_Inspector;
-			AutumnEngine::Stats m_Stats;
+			AutumnEngine::Profiler m_Profiler;
 			AutumnEngine::Animation m_Animation;
 			AutumnEngine::ContentBrowser m_ContentBrowser;
 	};
