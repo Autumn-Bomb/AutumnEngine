@@ -8,8 +8,8 @@ AutumnEngine::AssetManager::~AssetManager() {}
 
 void AutumnEngine::AssetManager::LoadTexture(const char* textureName)
 {
-	/*m_Texture = new sf::Texture();
+	m_Texture = new sf::Texture();
 
 	m_Texture->loadFromFile(m_TexturePath + textureName);
-	m_LoadedTextures.emplace(std::make_pair(textureName, m_Texture));*/
+	m_LoadedTextures[textureName] = *m_Texture;
 }

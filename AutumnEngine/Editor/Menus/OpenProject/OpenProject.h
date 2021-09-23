@@ -21,7 +21,6 @@ namespace AutumnEngine
 			char* GetProjectPath() { return m_ExistingProjectPath; }
 
 		private:
-			bool m_ShowOpenFileExplorer;
 			char m_ExistingProjectPath[255];
 	};
 }

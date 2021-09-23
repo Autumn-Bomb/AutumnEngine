@@ -18,7 +18,6 @@ namespace AutumnEngine
 
 		public:
 			void OpenNewProjectMenu(bool& open, AutumnEngine::Console& console, std::filesystem::path* newProjectPath);
-			void ChooseProjectPath();
 			void CreateProjectDirectory(AutumnEngine::Console& console);
 
 		public:

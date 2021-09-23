@@ -1,5 +1,6 @@
 #pragma once
 #include "../BasePanel/BasePanel.h"
+#include <iostream>
 #include <unordered_map>
 
 namespace AutumnEngine
@@ -16,16 +17,16 @@ namespace AutumnEngine
 
 		public:
 			Panel& GetPanel(std::string name)
-			{ 
+			{
 				auto pairFound = m_Panels.find(name);
 
 				if (pairFound != m_Panels.end())
 				{
-					return pairFound->second;
+					return *pairFound->second;
 				}
 			}
 
 		private:
-			std::unordered_map<std::string, AutumnEngine::Panel> m_Panels;
+			std::unordered_map<std::string, AutumnEngine::Panel*> m_Panels;
 	};
 }

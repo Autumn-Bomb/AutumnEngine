@@ -1,18 +1,17 @@
 #pragma once
 #include "../../../Framework/2DRenderer/2DRenderer.h"
-#include "imgui.h"
-#include "imgui-SFML.h"
+#include "../BasePanel/BasePanel.h"
 
 namespace AutumnEngine
 {
-	class SceneViewport
+	class SceneViewport : public AutumnEngine::Panel
 	{
 		public:
 			SceneViewport();
 			~SceneViewport();
 
 		public:
-			void ShowSceneViewport();
+			void OnImGuiRender();
 
 		public:
 			void SetRenderer(AutumnEngine::Renderer& renderer) { m_Renderer = &renderer; }

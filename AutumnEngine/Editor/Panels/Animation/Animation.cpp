@@ -3,7 +3,7 @@
 AutumnEngine::Animation::Animation() {}
 AutumnEngine::Animation::~Animation() {}
 
-void AutumnEngine::Animation::ShowAnimation()
+void AutumnEngine::Animation::OnImGuiRender()
 {
     ImGui::Begin("Animation");
 

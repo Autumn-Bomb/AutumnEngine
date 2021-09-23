@@ -1,15 +1,20 @@
 #pragma once
-#include "imgui.h"
+#include "../BasePanel/BasePanel.h"
 
 namespace AutumnEngine
 {
-	class Profiler
+	class Profiler : public AutumnEngine::Panel
 	{
 		public:
 			Profiler();
 			~Profiler();
 
 		public:
-			void ShowStats(unsigned int& fps, float& frameTime);
+			void CalculateFPSAndFrameTime();
+			void OnImGuiRender() override;
+
+		private:
+			unsigned int m_FPS;
+			float m_FrameTime;
 	};
 }

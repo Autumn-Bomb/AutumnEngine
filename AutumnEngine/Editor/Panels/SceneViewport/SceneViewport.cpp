@@ -7,7 +7,7 @@ AutumnEngine::SceneViewport::SceneViewport()
 }
 AutumnEngine::SceneViewport::~SceneViewport() {}
 
-void AutumnEngine::SceneViewport::ShowSceneViewport()
+void AutumnEngine::SceneViewport::OnImGuiRender()
 {
     ImGui::Begin("Scene Viewport", NULL, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_None);
 

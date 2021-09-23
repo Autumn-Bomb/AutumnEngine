@@ -1,17 +1,17 @@
 #pragma once
 #include "../../../Framework/Entities/BaseEntity/Entity.h"
-#include "imgui.h"
+#include "../BasePanel/BasePanel.h"
 
 namespace AutumnEngine
 {
-	class Inspector
+	class Inspector : public AutumnEngine::Panel
 	{
 		public:
 			Inspector();
 			~Inspector();
 
 		public:
-			void ShowInspector();
+			void OnImGuiRender() override;
 
 		private:
 			AutumnEngine::Entity* m_Entity;

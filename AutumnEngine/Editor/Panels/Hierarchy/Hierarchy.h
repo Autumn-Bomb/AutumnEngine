@@ -1,17 +1,17 @@
 #pragma once
-#include "../imgui/imgui.h"
-#include <iostream>
 #include <unordered_map>
+#include "../BasePanel/BasePanel.h"
+
 namespace AutumnEngine
 {
-	class Hierarchy
+	class Hierarchy : public AutumnEngine::Panel
 	{
 		public:
 			Hierarchy();
 			~Hierarchy();
 
 		public:
-			void ShowHierarchy();
+			void OnImGuiRender() override;
 
 			void DisplayNodes();
 			void AddEntityToSceneGraph(std::string name);

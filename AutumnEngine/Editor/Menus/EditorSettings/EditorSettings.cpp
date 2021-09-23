@@ -4,6 +4,8 @@ AutumnEngine::EditorSettings::EditorSettings()
 {
 	m_SettingsFile = std::ifstream("Editor/Resources/EditorSettings/settings.resource");
 	m_SettingsFile >> m_EditorSettingsFile;
+
+	ShowPanel(false);
 }
 AutumnEngine::EditorSettings::~EditorSettings() {}
 
@@ -22,9 +24,9 @@ void AutumnEngine::EditorSettings::ApplyLastStyle()
 	}
 }
 
-void AutumnEngine::EditorSettings::OnImGuiRender(bool& open)
+void AutumnEngine::EditorSettings::OnImGuiRender()
 {
-	ImGui::Begin("Editor Settings", &open, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoDocking);
+	ImGui::Begin("Editor Settings", &GetActiveState(), ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoDocking);
 	ImGui::SetWindowSize(ImVec2(700, 500));
 	ImGui::Text("Use this menu to change the avaliable Editor Settings");
 	ImGui::Separator();

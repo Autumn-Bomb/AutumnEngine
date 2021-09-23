@@ -7,7 +7,7 @@ namespace AutumnEngine
 	class Panel
 	{
 		public:
-			Panel() { m_Show = true; }
+			Panel() { ShowPanel(true); }
 			~Panel() {}
 
 		public:
@@ -17,7 +17,7 @@ namespace AutumnEngine
 			void ShowPanel(bool show) { m_Show = show; }
 
 		public:
-			bool* GetActiveState() { return &m_Show; }
+			bool& GetActiveState() { return m_Show; }
 
 		protected:
 			bool m_Show;

@@ -1,5 +1,6 @@
 #pragma once
 #include "../Entities/BaseEntity/Entity.h"
+#include "../../../Editor/Panels/Hierarchy/Hierarchy.h"
 #include <filesystem>
 
 namespace AutumnEngine
@@ -13,10 +14,12 @@ namespace AutumnEngine
 
 		// FUNCTIONS USED BY THE SCENE CLASS
 		public:
+			void OnSceneOpened(AutumnEngine::Hierarchy& SceneHierarchy);
 			void OnCreate();
 			void OnDestroy();
 			void OnActivate();
 			void OnDeactivate();
+			void OnSceneClosed();
 
 		public:
 			void DrawScene();
@@ -25,6 +28,7 @@ namespace AutumnEngine
 		public:
 			void SetSceneFilePath(std::filesystem::path sceneFilePath) { m_SceneFilePath = sceneFilePath; }
 			std::filesystem::path& GetSceneFilePath() { return m_SceneFilePath; }
+			std::string& GetSceneName() { return m_SceneName; }
 
 			AutumnEngine::Entity& GetEntityFromScene(std::string entityName)
 			{
@@ -52,9 +56,9 @@ namespace AutumnEngine
 		// PRIVATE VARIABLES USED BY THE SCENE CLASS
 		private:
 			std::string m_SceneName;
-
-			sf::RenderTexture m_SceneTexture;
 			std::filesystem::path m_SceneFilePath;
 			std::unordered_map<std::string, AutumnEngine::Entity> m_Entities;
+
+			sf::RenderTexture m_SceneTexture;
 	};
 }

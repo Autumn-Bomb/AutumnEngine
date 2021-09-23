@@ -1,15 +1,15 @@
 #pragma once
-#include "imgui.h"
+#include "../BasePanel/BasePanel.h"
 
 namespace AutumnEngine
 {
-	class Animation
+	class Animation : public AutumnEngine::Panel
 	{
 		public:
 			Animation();
 			~Animation();
 
 		public:
-			void ShowAnimation();
+			void OnImGuiRender() override;
 	};
 }

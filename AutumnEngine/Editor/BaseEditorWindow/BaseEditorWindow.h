@@ -1,5 +1,5 @@
 #include "SFML/Graphics.hpp"
-#include "imgui-SFML.h"
+#include "../../../Editor/Panels/PanelManager/PanelManager.h"
 
 #include "../Panels/Console/Console.h"
 #include "../Panels/Hierarchy/Hierarchy.h"
@@ -60,6 +60,7 @@ namespace AutumnEngine
 
 		// MENUS USED IN THE EDITOR
 		private:
+			AutumnEngine::PanelManager m_PanelManager;
 			AutumnEngine::Style m_Style;
 
 		// ENGINE VARIABLES 
@@ -80,21 +81,8 @@ namespace AutumnEngine
 
 			std::filesystem::path m_CurrentPath;
 
-			unsigned int m_FPS;
-			float m_FrameTime;
-
-			bool m_ShowAnimation;
-			bool m_ShowContentExplorer;
-			bool m_ShowInspectorPanel;
-			bool m_ShowProfilerPanel;
-			bool m_ShowHierarchyPanel;
 			bool m_ShowNewProjectPopup;
 			bool m_ShowOpenProjectPopup;
-			bool m_ShowAboutWindow;
-			bool m_ShowConsole;
-			bool m_ShowSceneViewport;
-			bool m_ShowGameViewport;
-			bool m_ShowEditorSettings;
 
 		// MENUS USED IN THE EDITOR
 		private:

@@ -1,19 +1,20 @@
 #pragma once
-#include "imgui.h"
 #include "../../Json/json.hpp"
 #include "../../Style/Style.h"
 #include "../../Panels/ContentBrowser/ContentBrowser.h"
 
+#include "../../Panels/BasePanel/BasePanel.h"
+
 namespace AutumnEngine
 {
-	class EditorSettings
+	class EditorSettings : public AutumnEngine::Panel
 	{
 		public:
 			EditorSettings();
 			~EditorSettings();
 
 		public:
-			void OnImGuiRender(bool& open);
+			void OnImGuiRender() override;
 			void ApplyChanges();
 
 			void ApplyLastStyle();

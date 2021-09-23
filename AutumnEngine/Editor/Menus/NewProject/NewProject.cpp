@@ -19,7 +19,6 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
     ImGui::Text("Project Path");
     ImGui::InputText("##Path", m_NewProjectPath, 255);
     ImGui::SameLine();
-    if (ImGui::Button("Choose Path", ImVec2(90, 20))) { ChooseProjectPath(); }
 
     ImGui::Separator();
 
@@ -39,11 +38,6 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
     }
 
     ImGui::End();
-}
-
-void AutumnEngine::CreateNewProject::ChooseProjectPath()
-{
-    // TODO - SELECT THE FOLDER PATH FOR NEW PROJECTS
 }
 
 void AutumnEngine::CreateNewProject::CreateProjectDirectory(AutumnEngine::Console& console)

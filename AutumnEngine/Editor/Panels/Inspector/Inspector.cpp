@@ -3,7 +3,7 @@
 AutumnEngine::Inspector::Inspector() { m_Entity = nullptr; }
 AutumnEngine::Inspector::~Inspector() {}
 
-void AutumnEngine::Inspector::ShowInspector()
+void AutumnEngine::Inspector::OnImGuiRender()
 {
     ImGui::Begin("Inspector");
 

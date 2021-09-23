@@ -3,7 +3,7 @@
 AutumnEngine::Hierarchy::Hierarchy() { }
 AutumnEngine::Hierarchy::~Hierarchy() {}
 
-void AutumnEngine::Hierarchy::ShowHierarchy()
+void AutumnEngine::Hierarchy::OnImGuiRender()
 {
     ImGui::Begin("Scene Hierarchy");
 

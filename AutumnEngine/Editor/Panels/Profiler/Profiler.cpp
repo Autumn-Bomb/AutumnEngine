@@ -4,12 +4,14 @@
 AutumnEngine::Profiler::Profiler() {}
 AutumnEngine::Profiler::~Profiler() {}
 
-void AutumnEngine::Profiler::ShowStats(unsigned int& fps, float& frameTime)
+void AutumnEngine::Profiler::OnImGuiRender()
 {
+    CalculateFPSAndFrameTime();
+
     ImGui::Begin("Profiler");
 
-    ImGui::Text("FPS: %i", fps);
-    ImGui::Text("Frame Time: %f", frameTime);
+    ImGui::Text("FPS: %i", m_FPS);
+    ImGui::Text("Frame Time: %f", m_FrameTime);
    
     ImGui::Separator();
 
@@ -21,4 +23,10 @@ void AutumnEngine::Profiler::ShowStats(unsigned int& fps, float& frameTime)
     ImGui::Text("Memory: %i", 0);
 
     ImGui::End();
+}
+
+void AutumnEngine::Profiler::CalculateFPSAndFrameTime()
+{
+    m_FPS = 1.f / ImGui::GetIO().DeltaTime;
+    m_FrameTime = 0.1f / m_FPS;
 }

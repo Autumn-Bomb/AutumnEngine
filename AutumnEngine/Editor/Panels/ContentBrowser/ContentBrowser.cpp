@@ -25,7 +25,7 @@ AutumnEngine::ContentBrowser::ContentBrowser()
 }
 AutumnEngine::ContentBrowser::~ContentBrowser() {}
 
-void AutumnEngine::ContentBrowser::ShowContentBrowser()
+void AutumnEngine::ContentBrowser::OnImGuiRender()
 {
     ImGui::Begin("Content Browser");
 

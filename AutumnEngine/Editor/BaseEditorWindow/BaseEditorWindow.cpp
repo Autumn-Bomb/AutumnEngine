@@ -1,23 +1,10 @@
 #include "BaseEditorWindow.h"
 
 AutumnEngine::BaseEditorWindow::BaseEditorWindow()
-{
-    m_FPS = 0;
-    m_FrameTime = 0;
+{   
     m_Window = nullptr;
 
-    m_ShowHierarchyPanel = true;
-    m_ShowInspectorPanel = true;
-    m_ShowProfilerPanel = true;
-    m_ShowAboutWindow = false;
-    m_ShowConsole = true;
-    m_ShowContentExplorer = true;
-    m_ShowSceneViewport = true;
-    m_ShowGameViewport = true;
-    m_ShowAnimation = true;
-
     m_ShowNewProjectPopup = false;
-    m_ShowEditorSettings = false;
     m_ShowOpenProjectPopup = false;
 }
 AutumnEngine::BaseEditorWindow::~BaseEditorWindow() {}
@@ -36,6 +23,18 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     m_EditorSettings.SetStyle(&m_Style);
     
     //m_EditorSettings.ApplyLastStyle();
+
+    m_PanelManager.AddPanel("Console", &m_Console);
+    m_PanelManager.AddPanel("Animation", &m_Animation);
+    m_PanelManager.AddPanel("Content Browser", &m_ContentBrowser);
+    m_PanelManager.AddPanel("Game Viewport", &m_GameViewport);
+    m_PanelManager.AddPanel("Hierarchy", &m_Hierarchy);
+    m_PanelManager.AddPanel("Inspector", &m_Inspector);
+    m_PanelManager.AddPanel("Scene Viewport", &m_SceneViewport);
+    m_PanelManager.AddPanel("Profilier", &m_Profiler);
+
+    m_PanelManager.AddPanel("About", &m_AboutMenu);
+    m_PanelManager.AddPanel("Editor Settings", &m_EditorSettings);
 
     LoadEditorIcons();
 }
@@ -58,9 +57,6 @@ void AutumnEngine::BaseEditorWindow::LoadEditorIcons()
 void AutumnEngine::BaseEditorWindow::UpdateEditorWindow(sf::Clock& deltaTime)
 {
     ImGui::SFML::Update(*m_Window, deltaTime.restart());
-
-    m_FPS = 1.f / ImGui::GetIO().DeltaTime;
-    m_FrameTime = 0.1f / m_FPS;
 
     ImGui::Begin("Editor", 0, ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoTitleBar);
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
@@ -121,7 +117,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::MenuItem("Paste"), NULL) { /* Call Paste Method */ }
             ImGui::Separator();
 
-            ImGui::MenuItem("Editor Settings", NULL, &m_ShowEditorSettings);
+            ImGui::MenuItem("Editor Settings", NULL, &m_PanelManager.GetPanel("Editor Settings").GetActiveState());
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Assets"))
@@ -144,14 +140,14 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
         {
             if (ImGui::BeginMenu("Panels"))
             {
-                ImGui::MenuItem("Content Explorer", NULL, &m_ShowContentExplorer);
-                ImGui::MenuItem("Console", NULL, &m_ShowConsole);
-                ImGui::MenuItem("Scene Viewport", NULL, &m_ShowSceneViewport);
-                ImGui::MenuItem("Game Viewport", NULL, &m_ShowGameViewport);
-                ImGui::MenuItem("Inspector", NULL, &m_ShowInspectorPanel);
-                ImGui::MenuItem("Animation", NULL, &m_ShowAnimation);
-                ImGui::MenuItem("Stats", NULL, &m_ShowProfilerPanel);
-                ImGui::MenuItem("Scene Hierarchy", NULL, &m_ShowHierarchyPanel);
+                ImGui::MenuItem("Content Explorer", NULL, &m_PanelManager.GetPanel("Content Browser").GetActiveState());
+                ImGui::MenuItem("Console", NULL, &m_PanelManager.GetPanel("Console").GetActiveState());
+                ImGui::MenuItem("Scene Viewport", NULL, &m_PanelManager.GetPanel("Scene Viewport").GetActiveState());
+                ImGui::MenuItem("Game Viewport", NULL, &m_PanelManager.GetPanel("Game Viewport").GetActiveState());
+                ImGui::MenuItem("Inspector", NULL, &m_PanelManager.GetPanel("Inspector").GetActiveState());
+                ImGui::MenuItem("Animation", NULL, &m_PanelManager.GetPanel("Animation").GetActiveState());
+                ImGui::MenuItem("Profiler", NULL, &m_PanelManager.GetPanel("Profiler").GetActiveState());
+                ImGui::MenuItem("Scene Hierarchy", NULL, &m_PanelManager.GetPanel("Hierarchy").GetActiveState());
 
                 ImGui::EndMenu();
             }
@@ -160,7 +156,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
         }
         if (ImGui::BeginMenu("Help"))
         {
-            ImGui::MenuItem("About", NULL, &m_ShowAboutWindow);
+            ImGui::MenuItem("About", NULL, &m_PanelManager.GetPanel("About").GetActiveState());
             ImGui::Separator();
             if (ImGui::MenuItem("Scripting Reference"), "Ctrl+S") { /* Open Documentation */ }
             if (ImGui::MenuItem("Documentation"), "Ctrl+S") { /* Open Documentation */ }
@@ -191,33 +187,6 @@ void AutumnEngine::BaseEditorWindow::HandleDockSpace()
 
 void AutumnEngine::BaseEditorWindow::UpdatePanels()
 {
-    if (m_ShowHierarchyPanel)
-        m_Hierarchy.ShowHierarchy();
-
-    if (m_ShowInspectorPanel)
-        m_Inspector.ShowInspector();
-
-    if (m_ShowProfilerPanel)
-        m_Profiler.ShowStats(m_FPS, m_FrameTime);
-
-    if (m_ShowAboutWindow)
-        m_AboutMenu.ShowAboutMenu(m_ShowAboutWindow);
-
-    if (m_ShowAnimation)
-        m_Animation.ShowAnimation();
-
-    if (m_ShowContentExplorer)
-        m_ContentBrowser.ShowContentBrowser();
-
-    if (m_ShowConsole)
-        m_Console.ShowConsole();
-
-    if (m_ShowSceneViewport)
-        m_SceneViewport.ShowSceneViewport();
-
-    if (m_ShowGameViewport)
-        m_GameViewport.ShowGameViewport();
-
     if (m_ShowNewProjectPopup)
     {
         m_CurrentPath = "";
@@ -236,8 +205,7 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
             m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
     }
 
-    if (m_ShowEditorSettings)
-        m_EditorSettings.OnImGuiRender(m_ShowEditorSettings);
+    m_PanelManager.ShowPanels();
 }
 
 void AutumnEngine::BaseEditorWindow::RenderEditor()

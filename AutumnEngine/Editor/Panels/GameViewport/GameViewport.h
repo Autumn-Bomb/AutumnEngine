@@ -1,19 +1,17 @@
 #pragma once
-#include "imgui.h"
-#include "imgui-SFML.h"
-
+#include "../BasePanel/BasePanel.h"
 #include "../../../Framework/2DRenderer/2DRenderer.h"
 
 namespace AutumnEngine
 {
-	class GameViewport
+	class GameViewport : public AutumnEngine::Panel
 	{
 		public:
 			GameViewport();
 			~GameViewport();
 
 		public:
-			void ShowGameViewport();
+			void OnImGuiRender() override;
 
 		public:
 			void SetRenderer(AutumnEngine::Renderer& renderer) { m_Renderer = &renderer; }

@@ -5,16 +5,18 @@ AutumnEngine::PanelManager::~PanelManager() {}
 
 void AutumnEngine::PanelManager::AddPanel(std::string name, AutumnEngine::Panel* panel)
 {
-	m_Panels[name] = *panel;
+	m_Panels[name] = panel;
+	std::cout << "\nPanel Added:" << name;
+	std::cout << "\nPanel State:" << panel->GetActiveState();
 }
 
 void AutumnEngine::PanelManager::ShowPanels()
 {
-	for (std::pair<std::string, AutumnEngine::Panel> panel : m_Panels)
+	for (auto& panel : m_Panels)
 	{
-		if (panel.second.GetActiveState())
-		{
-			panel.second.OnImGuiRender();
-		}
+		if (panel.second->GetActiveState())
+			panel.second->OnImGuiRender();
+		else
+			return;
 	}
 }

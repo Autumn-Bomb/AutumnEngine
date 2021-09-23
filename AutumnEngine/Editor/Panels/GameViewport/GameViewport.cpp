@@ -3,7 +3,7 @@
 AutumnEngine::GameViewport::GameViewport() { m_Renderer = nullptr; }
 AutumnEngine::GameViewport::~GameViewport() {}
 
-void AutumnEngine::GameViewport::ShowGameViewport()
+void AutumnEngine::GameViewport::OnImGuiRender()
 {
     ImGui::Begin("Game Viewport", NULL, ImGuiWindowFlags_NoScrollbar);
 

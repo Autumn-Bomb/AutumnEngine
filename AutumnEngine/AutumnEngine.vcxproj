@@ -64,8 +64,8 @@
     <ClInclude Include="Editor\Panels\Hierarchy\Hierarchy.h" />
     <ClInclude Include="Editor\Panels\Inspector\Inspector.h" />
     <ClInclude Include="Editor\Panels\PanelManager\PanelManager.h" />
+    <ClInclude Include="Editor\Panels\Profiler\Profiler.h" />
     <ClInclude Include="Editor\Panels\SceneViewport\SceneViewport.h" />
-    <ClInclude Include="Editor\Panels\Stats\Profiler.h" />
     <ClInclude Include="Editor\Style\Style.h" />
     <ClInclude Include="Framework\2DRenderer\2DRenderer.h" />
     <ClInclude Include="Framework\AssetManager\AssetManager.h" />

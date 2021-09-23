@@ -1,11 +1,14 @@
 #include "About.h"
 
-AutumnEngine::About::About() {}
+AutumnEngine::About::About()
+{ 
+    ShowPanel(false); 
+}
 AutumnEngine::About::~About() {}
 
-void AutumnEngine::About::ShowAboutMenu(bool& open)
+void AutumnEngine::About::OnImGuiRender()
 {
-    ImGui::Begin("About", NULL, ImGuiWindowFlags_NoResize);
+    ImGui::Begin("About", &GetActiveState(), ImGuiWindowFlags_NoResize);
 
     ImGui::Text("Engine Name: Autumn Engine");
     ImGui::Text("Engine Version: 0.0.1");
@@ -21,7 +24,7 @@ void AutumnEngine::About::ShowAboutMenu(bool& open)
 
     ImGui::Separator();
 
-    if (ImGui::Button("OK", ImVec2(30, 20))) { open = !open; }
+    if (ImGui::Button("OK", ImVec2(30, 20))) { ShowPanel(!GetActiveState()); }
 
     ImGui::End();
 }

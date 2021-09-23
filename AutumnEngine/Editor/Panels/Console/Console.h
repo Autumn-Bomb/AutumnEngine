@@ -1,12 +1,12 @@
 #pragma once
-#include "imgui.h"
+#include "../BasePanel/BasePanel.h"
 #include <string>
 
 namespace AutumnEngine
 {
 	enum MessageType { MESSAGE, WARNING, ERROR, ACTION };
 
-	class Console
+	class Console : public AutumnEngine::Panel
 	{
 		// CONSTRUCTOR AND DESTRUCTOR
 		public:
@@ -15,7 +15,7 @@ namespace AutumnEngine
 
 		// METHODS TO CALL TO SHOW AND HIDE CONSOLE
 		public:
-			void ShowConsole();
+			void OnImGuiRender() override;
 			void AddMessage(MessageType messageType, const char* message, ...);
 
 			void Clear() { m_Buffer.clear(); m_LineOffsets.clear(); m_LineOffsets.push_back(0); }

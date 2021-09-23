@@ -1,8 +1,7 @@
 #pragma once
 
-#include "imgui.h"
-#include "imgui-SFML.h"
 #include "SFML/Graphics.hpp"
+#include "../BasePanel/BasePanel.h"
 #include "../../../Framework/SceneSerializer/SceneSerializer.h"
 
 #include <iostream>
@@ -10,14 +9,14 @@
 
 namespace AutumnEngine
 {
-	class ContentBrowser
+	class ContentBrowser : public AutumnEngine::Panel
 	{
 		public:			
 			ContentBrowser();
 			~ContentBrowser();
 
 		public:
-			void ShowContentBrowser();
+			void OnImGuiRender() override;
 			void ShowLoadedProjectContent();
 			void ShowProjectTree();
 

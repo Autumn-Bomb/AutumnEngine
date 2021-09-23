@@ -1,16 +1,16 @@
 #pragma once
 
-#include "imgui.h"
+#include "../../../Editor/Panels/BasePanel/BasePanel.h"
 
 namespace AutumnEngine
 {
-	class About
+	class About : public AutumnEngine::Panel
 	{
 		public:
 			About();
 			~About();
 
 		public:
-			void ShowAboutMenu(bool& open);
+			void OnImGuiRender() override;
 	};
 }

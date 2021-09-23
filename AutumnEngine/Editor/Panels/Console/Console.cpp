@@ -53,7 +53,7 @@ void AutumnEngine::Console::AddMessage(MessageType messageType, const char* mess
     }
 }
 
-void AutumnEngine::Console::ShowConsole()
+void AutumnEngine::Console::OnImGuiRender()
 {
       ImGui::Begin("Console");
 

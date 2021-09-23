@@ -4,7 +4,6 @@ AutumnEngine::BaseEditorWindow m_Editor;
 
 int main()
 {
-    FreeConsole();
     srand((unsigned int)time(NULL));
     sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "Autumn Engine");
     window.setFramerateLimit(60);
