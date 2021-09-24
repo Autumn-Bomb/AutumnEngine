@@ -31,7 +31,7 @@ void AutumnEngine::BaseEditorWindow::InitialiseEditor()
     m_PanelManager.AddPanel("Hierarchy", &m_Hierarchy);
     m_PanelManager.AddPanel("Inspector", &m_Inspector);
     m_PanelManager.AddPanel("Scene Viewport", &m_SceneViewport);
-    m_PanelManager.AddPanel("Profilier", &m_Profiler);
+    m_PanelManager.AddPanel("Profiler", &m_Profiler);
 
     m_PanelManager.AddPanel("About", &m_AboutMenu);
     m_PanelManager.AddPanel("Editor Settings", &m_EditorSettings);
@@ -195,7 +195,7 @@ void AutumnEngine::BaseEditorWindow::UpdatePanels()
         if (!m_ShowNewProjectPopup && m_CurrentPath.compare(""))
             m_ContentBrowser.UpdateProjectPath(m_CurrentPath);
     }
-        
+    
     if (m_ShowOpenProjectPopup)
     {
         m_CurrentPath = "";

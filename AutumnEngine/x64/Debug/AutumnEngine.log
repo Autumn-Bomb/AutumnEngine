@@ -1,2 +1,3 @@
-﻿  EditorSettings.cpp
-  AutumnEngine.vcxproj -> C:\Users\Daniel\Desktop\AutumnEngine\x64\Debug\AutumnEngine.exe
+﻿  BaseEditorWindow.cpp
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\Panels\PanelManager\PanelManager.h(25): warning C4715: 'AutumnEngine::PanelManager::GetPanel': not all control paths return a value
+  AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

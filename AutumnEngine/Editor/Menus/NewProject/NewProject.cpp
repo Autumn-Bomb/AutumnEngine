@@ -24,7 +24,7 @@ void AutumnEngine::CreateNewProject::OpenNewProjectMenu(bool& open, AutumnEngine
 
     if (ImGui::Button("Create", ImVec2(ImGui::GetWindowWidth(), 20))) 
     { 
-        if (m_NewProjectName != "" && m_NewProjectPath != "")
+        if (static_cast<std::string>(m_NewProjectName) != "" && static_cast<std::string>(m_NewProjectPath) != "")
         {
             CreateProjectDirectory(console);
 

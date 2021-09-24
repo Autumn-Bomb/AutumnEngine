@@ -8,7 +8,7 @@ namespace AutumnEngine
 	class Style
 	{
 		public:
-			Style() { m_Font = nullptr; m_Style = nullptr; }
+			Style() { m_Font = nullptr; m_Style = nullptr; m_FontSize = 14.0f; }
 			Style(ImGuiStyle& style)
 			{ 
 				m_Style = &style; 

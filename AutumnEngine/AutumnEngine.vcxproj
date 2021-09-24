@@ -39,6 +39,7 @@
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp" />
     <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp" />
     <ClCompile Include="Framework\MemoryAllocator\MemoryAllocator.cpp" />
+    <ClCompile Include="Framework\Scene Manager\SceneManager.cpp" />
     <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp" />
     <ClCompile Include="Framework\Scene\Scene.cpp" />
     <ClCompile Include="Framework\Sprite\Sprite.cpp" />
@@ -72,6 +73,7 @@
     <ClInclude Include="Framework\Entities\BaseEntity\Entity.h" />
     <ClInclude Include="Framework\Entities\Components\Components.h" />
     <ClInclude Include="Framework\MemoryAllocator\MemoryAllocator.h" />
+    <ClInclude Include="Framework\Scene Manager\SceneManager.h" />
     <ClInclude Include="Framework\SceneSerializer\SceneSerializer.h" />
     <ClInclude Include="Framework\Scene\Scene.h" />
     <ClInclude Include="Framework\Sprite\Sprite.h" />

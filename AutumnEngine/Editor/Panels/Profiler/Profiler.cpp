@@ -27,6 +27,6 @@ void AutumnEngine::Profiler::OnImGuiRender()
 
 void AutumnEngine::Profiler::CalculateFPSAndFrameTime()
 {
-    m_FPS = 1.f / ImGui::GetIO().DeltaTime;
+    m_FPS = 1 / ImGui::GetIO().DeltaTime;
     m_FrameTime = 0.1f / m_FPS;
 }

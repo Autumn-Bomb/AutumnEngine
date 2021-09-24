@@ -88,9 +88,6 @@
     <Filter Include="Framework\Sprite">
       <UniqueIdentifier>{3da505df-ccd8-447c-a656-feed11043d63}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\ResourceManagement">
-      <UniqueIdentifier>{2d0aae58-7840-4dcc-93cf-e31fe0f0477e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\MemoryAllocator">
       <UniqueIdentifier>{f3446d6a-e43c-420d-8df0-fd133f89f4ca}</UniqueIdentifier>
     </Filter>
@@ -108,6 +105,12 @@
     </Filter>
     <Filter Include="Framework\Panel Manager">
       <UniqueIdentifier>{db847984-eef1-4ab3-ad81-d2ef044e0923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Scene Manager">
+      <UniqueIdentifier>{f101a386-c7c9-4b99-91fc-14cdc93142d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Asset Manager">
+      <UniqueIdentifier>{2d0aae58-7840-4dcc-93cf-e31fe0f0477e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -183,20 +186,20 @@
     <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp">
       <Filter>Framework\ECS\BaseEntity</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Scene\Scene.cpp">
-      <Filter>Framework\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp">
       <Filter>Framework\SceneSerializer</Filter>
     </ClCompile>
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp">
-      <Filter>Framework\ResourceManagement</Filter>
+      <Filter>Framework\Asset Manager</Filter>
     </ClCompile>
     <ClCompile Include="Framework\MemoryAllocator\MemoryAllocator.cpp">
       <Filter>Framework\MemoryAllocator</Filter>
     </ClCompile>
     <ClCompile Include="Editor\Panels\Profiler\Profiler.cpp">
       <Filter>Editor\Windows\Panels\Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Scene Manager\SceneManager.cpp">
+      <Filter>Framework\Scene Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -294,13 +297,16 @@
       <Filter>Framework\SceneSerializer</Filter>
     </ClInclude>
     <ClInclude Include="Framework\AssetManager\AssetManager.h">
-      <Filter>Framework\ResourceManagement</Filter>
+      <Filter>Framework\Asset Manager</Filter>
     </ClInclude>
     <ClInclude Include="Framework\MemoryAllocator\MemoryAllocator.h">
       <Filter>Framework\MemoryAllocator</Filter>
     </ClInclude>
     <ClInclude Include="Editor\Panels\Profiler\Profiler.h">
       <Filter>Editor\Windows\Panels\Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Scene Manager\SceneManager.h">
+      <Filter>Framework\Scene Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

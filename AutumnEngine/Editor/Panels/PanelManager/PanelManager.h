@@ -21,9 +21,7 @@ namespace AutumnEngine
 				auto pairFound = m_Panels.find(name);
 
 				if (pairFound != m_Panels.end())
-				{
 					return *pairFound->second;
-				}
 			}
 
 		private:

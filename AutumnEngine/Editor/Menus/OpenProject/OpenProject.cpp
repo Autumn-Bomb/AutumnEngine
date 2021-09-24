@@ -1,6 +1,6 @@
 #include "OpenProject.h"
 
-AutumnEngine::OpenProjectMenu::OpenProjectMenu() {}
+AutumnEngine::OpenProjectMenu::OpenProjectMenu() { static_cast<std::string>(m_ExistingProjectPath) = ""; }
 AutumnEngine::OpenProjectMenu::~OpenProjectMenu() {}
 
 void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Console& console, std::filesystem::path* newProjectPath)
@@ -18,7 +18,7 @@ void AutumnEngine::OpenProjectMenu::OpenProject(bool& open, AutumnEngine::Consol
 
     if (ImGui::Button("Open", ImVec2(ImGui::GetWindowWidth(), 20)))
     { 
-        if ((std::string)m_ExistingProjectPath != "" && std::filesystem::exists(m_ExistingProjectPath))
+        if (static_cast<std::string>(m_ExistingProjectPath) != "" && std::filesystem::exists(m_ExistingProjectPath))
         {
             *newProjectPath = m_ExistingProjectPath;
             console.AddMessage(AutumnEngine::MessageType::ACTION, "Opened Project\n");
