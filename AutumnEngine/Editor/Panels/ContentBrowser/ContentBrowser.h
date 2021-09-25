@@ -2,8 +2,8 @@
 
 #include "SFML/Graphics.hpp"
 #include "../BasePanel/BasePanel.h"
-#include "../../../Framework/SceneSerializer/SceneSerializer.h"
 
+#include <fstream>
 #include <iostream>
 #include <filesystem>
 
@@ -36,7 +36,6 @@ namespace AutumnEngine
 			float* GetThumbnailSize() { return &m_ThumbnailSize; }
 
 		private:
-			AutumnEngine::SceneSerializer m_SceneSerializer;
 			bool m_IsCompact;
 			bool m_SameLineText;
 
@@ -54,6 +53,7 @@ namespace AutumnEngine
 			std::filesystem::path m_CurrentPath;
 			std::filesystem::path m_AssetsString = "Assets";
 
+			// TOGO WHEN THE ASSET MANAGER IS IMPLEMENTED
 			sf::Sprite m_FolderIcon;
 			std::unique_ptr<sf::Texture> m_FolderTexture;
 

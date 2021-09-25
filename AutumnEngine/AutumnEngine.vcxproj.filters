@@ -4,9 +4,6 @@
     <Filter Include="Editor">
       <UniqueIdentifier>{4b0239b7-f2aa-4181-aed6-cf0b006694c5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Editor\BaseEditorWindow">
-      <UniqueIdentifier>{5a809f66-8722-4b1f-82c6-ce335f546dcb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Editor\Windows">
       <UniqueIdentifier>{cdc5ae23-d1a3-412b-b48e-8b402d5be1e4}</UniqueIdentifier>
     </Filter>
@@ -67,12 +64,6 @@
     <Filter Include="Framework\2DRenderer">
       <UniqueIdentifier>{48118b29-d710-4ec3-b8ba-811b2a00bd65}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\SceneSerializer">
-      <UniqueIdentifier>{19d307ff-362d-4b1a-bbb3-f5888abbf347}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Scene">
-      <UniqueIdentifier>{6a3adb34-6251-4eff-a05e-ec0e33a2c7be}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\ECS">
       <UniqueIdentifier>{58cc4532-f77f-4a78-8908-86c901f3153b}</UniqueIdentifier>
     </Filter>
@@ -106,17 +97,14 @@
     <Filter Include="Framework\Panel Manager">
       <UniqueIdentifier>{db847984-eef1-4ab3-ad81-d2ef044e0923}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework\Scene Manager">
-      <UniqueIdentifier>{f101a386-c7c9-4b99-91fc-14cdc93142d8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework\Asset Manager">
       <UniqueIdentifier>{2d0aae58-7840-4dcc-93cf-e31fe0f0477e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Editor\EditorWindow">
+      <UniqueIdentifier>{817060e9-cbc1-4c8b-9a3a-5df21ac0f025}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
-      <Filter>Editor\BaseEditorWindow</Filter>
-    </ClCompile>
     <ClCompile Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp">
       <Filter>ImGui\ImGUISFML</Filter>
     </ClCompile>
@@ -186,9 +174,6 @@
     <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp">
       <Filter>Framework\ECS\BaseEntity</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\SceneSerializer\SceneSerializer.cpp">
-      <Filter>Framework\SceneSerializer</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp">
       <Filter>Framework\Asset Manager</Filter>
     </ClCompile>
@@ -198,14 +183,11 @@
     <ClCompile Include="Editor\Panels\Profiler\Profiler.cpp">
       <Filter>Editor\Windows\Panels\Profiler</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Scene Manager\SceneManager.cpp">
-      <Filter>Framework\Scene Manager</Filter>
+    <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
+      <Filter>Editor\EditorWindow</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
-      <Filter>Editor\BaseEditorWindow</Filter>
-    </ClInclude>
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imconfig-SFML.h">
       <Filter>ImGui\ImGUISFML</Filter>
     </ClInclude>
@@ -290,12 +272,6 @@
     <ClInclude Include="Framework\Entities\Components\Components.h">
       <Filter>Framework\ECS\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\Scene\Scene.h">
-      <Filter>Framework\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\SceneSerializer\SceneSerializer.h">
-      <Filter>Framework\SceneSerializer</Filter>
-    </ClInclude>
     <ClInclude Include="Framework\AssetManager\AssetManager.h">
       <Filter>Framework\Asset Manager</Filter>
     </ClInclude>
@@ -305,8 +281,8 @@
     <ClInclude Include="Editor\Panels\Profiler\Profiler.h">
       <Filter>Editor\Windows\Panels\Profiler</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\Scene Manager\SceneManager.h">
-      <Filter>Framework\Scene Manager</Filter>
+    <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
+      <Filter>Editor\EditorWindow</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

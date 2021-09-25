@@ -4,7 +4,6 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
 
-#include "../Scene/Scene.h"
 #include "imgui.h"
 
 namespace AutumnEngine
@@ -16,11 +15,14 @@ namespace AutumnEngine
 			~Renderer();
 
 		public:
-			void RenderScene(AutumnEngine::Scene scene);
-
 			void Create(const unsigned int x, const unsigned int y, sf::Color colour);
-			void Clear(sf::Color color);
-			void Clear();
+			void Clear(sf::Color color) { m_RenderTexture.clear(color); }
+			void Clear() { m_RenderTexture.clear(); }
+			void Draw(sf::Drawable& drawable) { m_RenderTexture.draw(drawable); }
+			void Display() { m_RenderTexture.display(); }
+
+		public:
+			void RenderEntity(sf::Drawable& entity);
 
 		public:
 			sf::RenderTexture* GetRenderTexture() { return &m_RenderTexture; }
@@ -28,6 +30,7 @@ namespace AutumnEngine
 			unsigned int GetHeight() { return m_RenderTexture.getSize().y; }
 
 		private:
+			sf::RenderStates m_RenderState;
 			sf::RenderTexture m_RenderTexture;
 			sf::Color m_ClearColour;
 

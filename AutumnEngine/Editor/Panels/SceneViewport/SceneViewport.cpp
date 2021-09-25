@@ -9,7 +9,7 @@ AutumnEngine::SceneViewport::~SceneViewport() {}
 
 void AutumnEngine::SceneViewport::OnImGuiRender()
 {
-    ImGui::Begin("Scene Viewport", NULL, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_None);
+    ImGui::Begin("Scene Viewport", &GetActiveState(), ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_None);
 
     ImVec2 vWindowSize = ImGui::GetMainViewport()->Size;
     ImGui::SetWindowSize(ImVec2((float)vWindowSize.x, (float)vWindowSize.y), ImGuiCond_Always);

@@ -55,7 +55,7 @@ void AutumnEngine::Console::AddMessage(MessageType messageType, const char* mess
 
 void AutumnEngine::Console::OnImGuiRender()
 {
-      ImGui::Begin("Console");
+      ImGui::Begin("Console", &GetActiveState());
 
       if (ImGui::Button("Clear")) { Clear(); }
 

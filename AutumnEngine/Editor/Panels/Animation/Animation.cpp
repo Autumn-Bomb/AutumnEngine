@@ -5,7 +5,7 @@ AutumnEngine::Animation::~Animation() {}
 
 void AutumnEngine::Animation::OnImGuiRender()
 {
-    ImGui::Begin("Animation");
+    ImGui::Begin("Animation", &GetActiveState());
 
     ImGui::Button("Load Animation", ImVec2(110, 25));
     ImGui::Separator();

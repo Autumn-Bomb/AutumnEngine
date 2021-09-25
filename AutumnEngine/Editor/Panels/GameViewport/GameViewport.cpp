@@ -5,7 +5,7 @@ AutumnEngine::GameViewport::~GameViewport() {}
 
 void AutumnEngine::GameViewport::OnImGuiRender()
 {
-    ImGui::Begin("Game Viewport", NULL, ImGuiWindowFlags_NoScrollbar);
+    ImGui::Begin("Game Viewport", &GetActiveState(), ImGuiWindowFlags_NoScrollbar);
 
     ImGui::Image(*m_Renderer->GetRenderTexture(), sf::Color::White);
 

@@ -5,7 +5,7 @@ AutumnEngine::Hierarchy::~Hierarchy() {}
 
 void AutumnEngine::Hierarchy::OnImGuiRender()
 {
-    ImGui::Begin("Scene Hierarchy");
+    ImGui::Begin("Scene Hierarchy", &GetActiveState());
 
     if (ImGui::Button("Create", ImVec2(50, 20))) { OnCreateButton(); }
     ImGui::SameLine(ImGui::GetWindowWidth() - 100);

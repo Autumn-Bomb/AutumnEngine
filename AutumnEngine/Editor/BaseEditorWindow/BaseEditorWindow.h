@@ -18,7 +18,6 @@
 #include "../Menus/OpenProject/OpenProject.h"
 
 #include "../../Framework/2DRenderer/2DRenderer.h"
-#include "../../Framework/SceneSerializer/SceneSerializer.h"
 
 #include <time.h>
 #include <SFML/Graphics/RenderWindow.hpp>

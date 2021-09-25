@@ -1,3 +1,11 @@
-﻿  BaseEditorWindow.cpp
-E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\Panels\PanelManager\PanelManager.h(25): warning C4715: 'AutumnEngine::PanelManager::GetPanel': not all control paths return a value
+﻿  Animation.cpp
+  Console.cpp
+  ContentBrowser.cpp
+  GameViewport.cpp
+  Hierarchy.cpp
+  Inspector.cpp
+  Profiler.cpp
+E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\Panels\Profiler\Profiler.cpp(30,15): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+  SceneViewport.cpp
+  Generating Code...
   AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

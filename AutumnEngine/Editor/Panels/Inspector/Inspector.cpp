@@ -5,7 +5,7 @@ AutumnEngine::Inspector::~Inspector() {}
 
 void AutumnEngine::Inspector::OnImGuiRender()
 {
-    ImGui::Begin("Inspector");
+    ImGui::Begin("Inspector", &GetActiveState());
 
     if (m_Entity != nullptr)
         ImGui::Button("Add Component", ImVec2(ImGui::GetWindowSize().x - 10.f, 30.f));

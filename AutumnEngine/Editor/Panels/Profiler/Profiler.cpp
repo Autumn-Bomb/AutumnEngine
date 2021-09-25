@@ -1,14 +1,14 @@
 #include "Profiler.h"
 #include <string>
 
-AutumnEngine::Profiler::Profiler() {}
+AutumnEngine::Profiler::Profiler() { m_FPS = 0; m_FrameTime = 0; }
 AutumnEngine::Profiler::~Profiler() {}
 
 void AutumnEngine::Profiler::OnImGuiRender()
 {
     CalculateFPSAndFrameTime();
 
-    ImGui::Begin("Profiler");
+    ImGui::Begin("Profiler", &GetActiveState());
 
     ImGui::Text("FPS: %i", m_FPS);
     ImGui::Text("Frame Time: %f", m_FrameTime);

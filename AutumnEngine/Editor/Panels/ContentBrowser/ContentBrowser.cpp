@@ -27,7 +27,7 @@ AutumnEngine::ContentBrowser::~ContentBrowser() {}
 
 void AutumnEngine::ContentBrowser::OnImGuiRender()
 {
-    ImGui::Begin("Content Browser");
+    ImGui::Begin("Content Browser", &GetActiveState());
 
     if (m_CurrentPath.compare(""))
     {
@@ -118,16 +118,7 @@ void AutumnEngine::ContentBrowser::ShowLoadedProjectContent()
                 if (ImGui::IsItemHovered() && ImGui::IsMouseDoubleClicked(ImGuiMouseButton_Left))
                 {
                     std::cout << "Clicked on a Scene file" << std::endl;
-
-                    if (m_SceneSerializer.GetCurrentLoadedScene().GetSceneFilePath() != directoryEntry.path())
-                    {
-                        m_SceneSerializer.CreateScene(directoryEntry.path());
-                        m_SceneSerializer.DeserializeScene();
-                    }
-                    else
-                    {
-                        std::cout << "Scene: " << directoryEntry.path() << " is already loaded!" << std::endl;
-                    }
+                    
                 }
             }
             
