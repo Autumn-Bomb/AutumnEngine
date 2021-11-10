@@ -55,7 +55,7 @@ namespace AutumnEngine
 
 		// GETTERS AND SETTERS
 		public:
-			void SetRenderWindow(sf::RenderWindow& window) { m_Window = &window; }
+			void SetRenderWindow(sf::RenderWindow* window) { m_Window = window; }
 
 		// MENUS USED IN THE EDITOR
 		private:

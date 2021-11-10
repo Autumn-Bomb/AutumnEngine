@@ -97,7 +97,7 @@ void AutumnEngine::BaseEditorWindow::HandleMenuBar()
             if (ImGui::MenuItem("Build Project"), NULL) { /* Call Build Project Method */ }
             ImGui::Separator();
 
-            if (ImGui::MenuItem("Create New Scene"), NULL) {}
+            if (ImGui::MenuItem("New Scene"), NULL) {}
             if (ImGui::MenuItem("Open Scene"), NULL) {}
             if (ImGui::MenuItem("Save Scene"), NULL) {}
             ImGui::Separator();
@@ -216,4 +216,5 @@ void AutumnEngine::BaseEditorWindow::RenderEditor()
 void AutumnEngine::BaseEditorWindow::ShutDownEditor()
 {
     ImGui::SFML::Shutdown();
+    m_Window->close();
 }

@@ -103,6 +103,9 @@
     <Filter Include="Editor\EditorWindow">
       <UniqueIdentifier>{817060e9-cbc1-4c8b-9a3a-5df21ac0f025}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\JsonToolkit">
+      <UniqueIdentifier>{329e0bff-bd0c-4b99-b48b-db57c602595b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp">
@@ -185,6 +188,9 @@
     </ClCompile>
     <ClCompile Include="Editor\BaseEditorWindow\BaseEditorWindow.cpp">
       <Filter>Editor\EditorWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\JsonToolkit\JsonToolkit.cpp">
+      <Filter>Framework\JsonToolkit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -283,6 +289,9 @@
     </ClInclude>
     <ClInclude Include="Editor\BaseEditorWindow\BaseEditorWindow.h">
       <Filter>Editor\EditorWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\JsonToolkit\JsonToolkit.h">
+      <Filter>Framework\JsonToolkit</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

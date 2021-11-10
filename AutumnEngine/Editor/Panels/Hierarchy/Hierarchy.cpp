@@ -1,6 +1,6 @@
 #include "../Hierarchy/Hierarchy.h"
 
-AutumnEngine::Hierarchy::Hierarchy() { }
+AutumnEngine::Hierarchy::Hierarchy() { static_cast<std::string>(m_Search) = ""; }
 AutumnEngine::Hierarchy::~Hierarchy() {}
 
 void AutumnEngine::Hierarchy::OnImGuiRender()

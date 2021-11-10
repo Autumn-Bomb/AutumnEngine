@@ -5,7 +5,7 @@ AutumnEngine::SceneViewport::SceneViewport()
     m_Renderer = nullptr;
     m_RendererCreated = false; 
 }
-AutumnEngine::SceneViewport::~SceneViewport() {}
+AutumnEngine::SceneViewport::~SceneViewport() {} 
 
 void AutumnEngine::SceneViewport::OnImGuiRender()
 {

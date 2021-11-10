@@ -10,9 +10,9 @@ void AutumnEngine::About::OnImGuiRender()
 {
     ImGui::Begin("About", &GetActiveState(), ImGuiWindowFlags_NoResize);
 
-    ImGui::Text("Engine Name: Autumn Engine");
-    ImGui::Text("Engine Version: 0.0.1");
-    ImGui::Text("Engine Description: Autumn Engine is a small 2D Game Engine in development by Autumn Bomb LTD");
+    ImGui::Text("Name: Autumn Engine");
+    ImGui::Text("Version: 0.0.1");
+    ImGui::Text("Description: Autumn Engine is a small 2D Game Engine in development by Autumn Bomb LTD");
 
     ImGui::Separator();
 

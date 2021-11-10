@@ -83,12 +83,14 @@ namespace AutumnEngine
 		public:
 			ImColor GetBackgroundColour() { return m_Style->Colors[ImGuiCol_WindowBg]; }
 			ImColor GetTextColour() { return m_Style->Colors[ImGuiCol_Text]; }
-			std::string& GetFontPath() { return m_FontPath; }
+			std::string GetFontPath() { return m_FontPath; }
 			
 		private:
-			ImFont* m_Font;
 			std::string m_FontPath = "Editor/Style/Font/font.ttf";
 			float m_FontSize;
+
+		private:
+			ImFont* m_Font;
 			ImGuiStyle* m_Style;
 	};
 }

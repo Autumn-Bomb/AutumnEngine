@@ -1,11 +1,3 @@
-﻿  Animation.cpp
-  Console.cpp
-  ContentBrowser.cpp
-  GameViewport.cpp
-  Hierarchy.cpp
-  Inspector.cpp
-  Profiler.cpp
+﻿  Profiler.cpp
 E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\AutumnEngine\Editor\Panels\Profiler\Profiler.cpp(30,15): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
-  SceneViewport.cpp
-  Generating Code...
   AutumnEngine.vcxproj -> E:\Autumn Bomb LTD\Current Projects\Windows\AutumnEngine\x64\Debug\AutumnEngine.exe

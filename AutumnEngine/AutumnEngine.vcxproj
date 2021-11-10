@@ -38,6 +38,7 @@
     <ClCompile Include="Framework\2DRenderer\2DRenderer.cpp" />
     <ClCompile Include="Framework\AssetManager\AssetManager.cpp" />
     <ClCompile Include="Framework\Entities\BaseEntity\Entity.cpp" />
+    <ClCompile Include="Framework\JsonToolkit\JsonToolkit.cpp" />
     <ClCompile Include="Framework\MemoryAllocator\MemoryAllocator.cpp" />
     <ClCompile Include="Framework\Sprite\Sprite.cpp" />
     <ClCompile Include="Libraries\DearIMGUI\Include\imgui-sfml\imgui-SFML.cpp" />
@@ -69,6 +70,7 @@
     <ClInclude Include="Framework\AssetManager\AssetManager.h" />
     <ClInclude Include="Framework\Entities\BaseEntity\Entity.h" />
     <ClInclude Include="Framework\Entities\Components\Components.h" />
+    <ClInclude Include="Framework\JsonToolkit\JsonToolkit.h" />
     <ClInclude Include="Framework\MemoryAllocator\MemoryAllocator.h" />
     <ClInclude Include="Framework\Sprite\Sprite.h" />
     <ClInclude Include="Libraries\DearIMGUI\Include\imgui-sfml\imconfig-SFML.h" />
